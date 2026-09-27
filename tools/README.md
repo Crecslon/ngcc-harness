@@ -81,6 +81,23 @@ the break is specific: the submission ships `polarkem_recover_message(pk, ct, mu
 and `polarkem_derive_valid_secret(mu, ct, ss)`, which together recover the
 session key from public data alone. `reproduce.sh` runs it.
 
+The September 27 findings are available through `tools/reproduce.sh` by
+candidate ID. `kem-03-3` checks the archived BAG-Loong sampler at all four
+levels and recovers the secret PKE matrix from five fresh 128-bit public keys;
+`kem-29-2` checks the aligned-basis assignments in the archived Polar-KEM
+specification. The Polar-KEM paper reports full-size recovery experiments.
+`sign-01-5` checks the submitted Aigis-Sig+-I and -II reference, AVX2,
+NEON and AArch64 samplers, including their uneven challenge probabilities.
+`sign-14-1` fetches a pinned public Lynxer reproducer, verifies the official
+archive hash and runs all six full-size forgery and changed-message checks; it
+needs Git, curl, unzip and a C compiler. `sign-15-5` compiles all four submitted
+ATLAS decoders with AddressSanitizer. `sign-15-6` is withdrawn because its
+undefined rotation comes from the shared official NICCS DRNG file.
+`sign-15-7` rebuilds an equivalent signing key from stored recovered values
+and verifies a fresh-message forgery. Set `ATLAS_FULL=1` and
+`NGCC_SAGE_PYTHON` to a Python with NumPy, SciPy and fpylll to generate three
+million signatures and repeat the full ATLAS recovery; allow about two hours.
+
 Amoeba-576's `kem-02/recover_amoeba576.py` uses NumPy and SciPy to recover all
 576 secret coefficients through the submitted decapsulation path, then rebuilds
 a key and checks fresh honest shared secrets. Set `AMOEBA_PYTHON` when running

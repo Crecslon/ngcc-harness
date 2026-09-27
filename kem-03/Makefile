@@ -31,3 +31,7 @@ $(eval $(call LOONG,BAG-Loong-384,Loong-Block-ms-384,83))
 $(eval $(call LOONG,BAG-Loong-512,Loong-Block-ms-512,97))
 
 include ../api/link_finish.mk
+
+.PHONY: reproduce-public-supports
+reproduce-public-supports:
+	./reproduce_public_support_recovery.sh

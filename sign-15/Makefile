@@ -28,3 +28,10 @@ $(eval $(call MA,lwrdsa256))
 $(eval $(call MA,lwrdsa512))
 
 include ../api/link_finish.mk
+
+.PHONY: exploit-memory-safety exploit-spec-key-recovery
+exploit-memory-safety:
+	./reproduce_new_memory_safety.sh
+
+exploit-spec-key-recovery:
+	./reproduce_spec_key_recovery.sh

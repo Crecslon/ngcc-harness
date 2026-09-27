@@ -207,6 +207,11 @@ echo "== kem-03-2 BAG-Loong: rejection key omits received ciphertext (High) =="
 run_target kem-03 "kem-03-2" python3 kem-03/reproduce_rejection_key.py kem-03/lib/libBAG-Loong-128.so
 
 echo
+echo "== kem-03-3 BAG-Loong: public secret-support spaces (Critical) =="
+run_target kem-03 "kem-03-3" python3 kem-03/reproduce_public_supports.py
+run_target kem-03 "kem-03-3" make -C kem-03 reproduce-public-supports
+
+echo
 echo "== kem-04-2 BAG-Piglet: rejection key omits received ciphertext (High) =="
 run_target kem-04 "kem-04-2" python3 kem-04/reproduce_rejection_key.py kem-04/lib/libbag_piglet_128.so
 
@@ -345,6 +350,10 @@ if [ -z "$only" ] || [ "$only" = kem-29 ]; then
 fi
 
 echo
+echo "== kem-29-2 Polar-KEM: specified aligned basis exposes secret isometry (Critical) =="
+run_target kem-29 "kem-29-2" python3 kem-29/reproduce_spec_alignment.py
+
+echo
 echo "== kex-02-1 AFS-KEX: completed-session key recovery after long-term compromise (Critical) =="
 if [ -z "$only" ] || [ "$only" = kex-02 ]; then
     if [ -x kex-02/reproduce_pfs_break ] &&
@@ -450,6 +459,9 @@ run sign-01 "sign-01-1/sign-01-2" CONFIRMED sig-malleable sign-01/lib/libAigis-s
 echo
 echo "== sign-01-3 / sign-01-4: ASan key-length and signer-write witnesses =="
 run_target sign-01 "sign-01-3/sign-01-4" make -C sign-01 exploit-memory
+echo
+echo "== sign-01-5 Aigis-Sig+: challenge signs collapse to one bit (Critical) =="
+run_target sign-01 "sign-01-5" python3 sign-01/reproduce_challenge_entropy.py
 echo "== sign-07-1: SUF-CMA malleability (High) =="
 run sign-07 "sign-07-1" CONFIRMED sig-malleable sign-07/lib/libCS-128.so
 
@@ -488,6 +500,10 @@ echo "== sign-10-2 Facto-DSA: public-key universal signing trapdoor =="
 run_target sign-10 "sign-10-2" make -C sign-10 reproduce-forgery
 
 echo
+echo "== sign-14-1 Lynxer: universal public-key-only forgery (Critical) =="
+run_target sign-14 "sign-14-1" make -C sign-14 exploit-public-forgery
+
+echo
 echo "== sign-11-5 FlexTree: unchecked PORS padding is malleable (Medium) =="
 run sign-11 "sign-11-5" CONFIRMED sig-pors-padding sign-11/lib/libFlextree-160f.so
 
@@ -518,6 +534,14 @@ if [ -z "$only" ] || [ "$only" = sign-15 ]; then
         skipped=$((skipped + 1))
     fi
 fi
+
+echo
+echo "== sign-15-5 MORNING-ATLAS: malformed-hint memory errors =="
+run_target sign-15 "sign-15-5" make -C sign-15 exploit-memory-safety
+
+echo
+echo "== sign-15-7 MORNING-ATLAS: specified finite-support key recovery (Critical) =="
+run_target sign-15 "sign-15-7" make -C sign-15 exploit-spec-key-recovery
 
 echo
 echo "== sign-25-1 SQIsign2D2: verifier verdict depends on stale stack state (Critical) =="

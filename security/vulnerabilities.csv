@@ -49,6 +49,7 @@ kem-02-4;Confirmed;runtime;A one-bit ciphertext change writes outside the Hammin
 kem-02-5;Withdrawn;review;Withdrawn — unseeded caller repeats Amoeba keys
 kem-03-1;Confirmed;review;Secret-dependent pivoting in the Gabidulin decoder
 kem-03-2;Confirmed;runtime;The rejection key does not bind the received ciphertext
+kem-03-3;Confirmed;runtime+static;Public support spaces reduce secret-key recovery to linear algebra
 kem-04-1;Confirmed;review;Secret-dependent pivoting in the Gabidulin decoder
 kem-04-2;Confirmed;runtime;The rejection key does not bind the received ciphertext
 kem-06-1;Confirmed;runtime;A malformed secret key drives the BRA decoder out of bounds
@@ -84,6 +85,7 @@ kem-24-1;Probable;review;Encryption omits the specified rounding constant
 kem-27-1;Confirmed;runtime;NTRE-512's 256-bit secret seed caps offline key-recovery work
 kem-28-1;Confirmed;runtime;Noncanonical ciphertext encoding defeats IND-CCA security
 kem-29-1;Confirmed;runtime;The submission ships a complete public-key-only break
+kem-29-2;Confirmed;static;The specified aligned basis directly exposes the secret isometry
 kem-31-1;Confirmed;runtime;Invalid ciphertexts trigger an assertion during decapsulation
 kem-31-2;Confirmed;runtime;Non-canonical field encodings make ciphertexts malleable without changing the key
 kem-31-3;Confirmed;runtime;Malformed public keys hang or abort encapsulation
@@ -116,6 +118,7 @@ sign-01-1;Confirmed;runtime;Trivial signature malleability violates SUF-CMA
 sign-01-2;Confirmed;runtime;Malformed hint counts cause an attacker-controlled stack write
 sign-01-3;Confirmed;runtime;Signature API ignores declared key-buffer lengths
 sign-01-4;Confirmed;runtime;Honest signing writes one polynomial past the mask vector
+sign-01-5;Confirmed;static;The challenge sampler collapses independent signs to one effective bit
 sign-02-1;Confirmed;static;A 512-bit unsalted message representative caps forgery security at 256 bits
 sign-02-2;Probable;review;A shared bimodal sign leaks an equivalent BiT-128 signing key
 sign-03-1;Confirmed;runtime;Hypertree index collapse causes repeated few-time keys
@@ -142,10 +145,14 @@ sign-11-6;Confirmed;static;The specified PORS tree reuses leaf hash addresses
 sign-11-7;Confirmed;static;The implementation leaves 1 to 4 OTS digest bits unchecked
 sign-11-8;Confirmed;static;Complementary constant-sum rounding breaks interoperability
 sign-12-1;Confirmed;runtime;Publicly reproducible signing keys
+sign-14-1;Confirmed;runtime;A degenerate QuickSilver witness gives universal public-key-only forgeries
 sign-15-1;Confirmed;review;Returned-length error causes an out-of-bounds heap disclosure
 sign-15-2;Confirmed;runtime;Trivial hint-padding malleability violates SUF-CMA
 sign-15-3;Confirmed;static;The ATLAS-192 challenge space is below 192 bits
 sign-15-4;Confirmed;runtime;Repeated masking coefficients expose the signing key
+sign-15-5;Confirmed;runtime;Unchecked hint decoding causes out-of-bounds reads and writes
+sign-15-6;Withdrawn;review;Withdrawn — official NICCS DRNG rotates by the word size
+sign-15-7;Confirmed;runtime;Finite mask support leaks the specified ATLAS-128 signing key
 sign-16-1;Proof gap;review;The stated hash requirement is too weak for the EUF-CMA target
 sign-16-2;Proof gap;review;Polynomial solutions of the relaxed Octarine-512 SIS estimates
 sign-18-1;Confirmed;static;A fixed 512-bit message prehash caps forgery security at 256 bits

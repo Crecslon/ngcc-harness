@@ -11,7 +11,9 @@
 #   make clean           remove all build outputs, libraries, results, harness
 
 REFERENCE_SOURCE ?=
-CANDIDATES := $(sort $(patsubst %/Makefile,%,$(wildcard sign-*/Makefile kem-*/Makefile kex-*/Makefile hash-*/Makefile)))
+# sign-14 has only a standalone, source-fetching forgery witness; there are no
+# candidate sources here for the uniform library build or KAT targets.
+CANDIDATES := $(filter-out sign-14,$(sort $(patsubst %/Makefile,%,$(wildcard sign-*/Makefile kem-*/Makefile kex-*/Makefile hash-*/Makefile))))
 
 .PHONY: all harness tools exploits test test-prep status reproduce design-audit check-vulnerabilities check-reference-data sync-reference-data manifest clean $(CANDIDATES) \
         $(addprefix test-,$(CANDIDATES)) $(addprefix manifest-,$(CANDIDATES)) $(addprefix clean-,$(CANDIDATES))
