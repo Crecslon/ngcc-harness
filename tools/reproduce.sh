@@ -271,6 +271,10 @@ echo "== kem-14-1 DTRU: caller length causes stack overflow (High) =="
 run_target kem-14 "kem-14-1" make -C kem-14 exploit
 
 echo
+echo "== kem-14-2/-3 DTRU: rejection oracle and missing public-key binding (Low) =="
+run_target kem-14 "kem-14-2/kem-14-3" make -C kem-14 exploit-rejection-contract
+
+echo
 echo "== kem-17-4 HEP-QC: public EPC-P column fingerprint =="
 run_target kem-17 "kem-17-4" python3 kem-17/reproduce_epcp_fingerprint.py
 
@@ -555,6 +559,10 @@ run_crash sign-27 "sign-27-1" sign-27/lib/libSQIsignTriangle_lvl1.so sig-zero
 echo
 echo "== sign-27-3/-4 SQIsignTriangle: modular challenge transfer and proof failure =="
 run_target sign-27 "sign-27-3/sign-27-4" make -C sign-27 exploit-modular-challenge
+
+echo
+echo "== sign-27-5 SQIsignTriangle: response-rescaling fresh-message forgery (Critical) =="
+run_target sign-27 "sign-27-5" make -C sign-27 exploit-response-rescaling
 
 echo
 echo "== sign-18-2 Origami: signature constraint-subspace recovery =="

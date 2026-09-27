@@ -97,6 +97,14 @@ undefined rotation comes from the shared official NICCS DRNG file.
 and verifies a fresh-message forgery. Set `ATLAS_FULL=1` and
 `NGCC_SAGE_PYTHON` to a Python with NumPy, SciPy and fpylll to generate three
 million signatures and repeat the full ATLAS recovery; allow about two hours.
+`sign-27-5` fetches Feussner's hash-pinned public reproducer and transforms one
+eligible genuine response into a signature on a fresh message by rescaling its
+response integer and auxiliary basis. It runs three fresh-key trials at each of
+the four submitted levels and checks both source/target rejection controls.
+
+`kem-14-2` and `kem-14-3` use DTRU-Light to expose the invalid-ciphertext return
+code and the rejection KDF's missing public-key binding. The latter gives two
+distinct keys the same rejection seed and includes a different-seed control.
 
 Amoeba-576's `kem-02/recover_amoeba576.py` uses NumPy and SciPy to recover all
 576 secret coefficients through the submitted decapsulation path, then rebuilds

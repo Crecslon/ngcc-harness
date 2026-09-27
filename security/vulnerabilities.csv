@@ -71,6 +71,8 @@ kem-12-2;Confirmed;static;CTL-512 returns only 384 shared-secret bits
 kem-13-1;Confirmed;runtime;DKEM's rejection key does not bind the full ciphertext
 kem-13-2;Confirmed;runtime;Malicious public key defeats DKEM's contributory key derivation
 kem-14-1;Confirmed;runtime;Caller-declared ciphertext length overflows a decapsulation stack buffer
+kem-14-2;Confirmed;runtime;Decapsulation return value exposes the implicit-rejection branch
+kem-14-3;Confirmed;runtime;Rejection key omits the specified public-key binding
 kem-17-1;Confirmed;runtime;Publicly reproducible secret keys
 kem-17-2;Confirmed;static;HEP-QC-7 has at most 256 bits of key-generation support
 kem-17-3;Confirmed;runtime;First encapsulation in each process is publicly reproducible
@@ -171,6 +173,7 @@ sign-27-1;Confirmed;runtime;An all-zero signature aborts the verifier process
 sign-27-2;Lead;review;Triangle prime sizing relies on the former square-root attack cost
 sign-27-3;Confirmed;static;A known signature transfers to a new message in about 2^(lambda/2) work
 sign-27-4;Proof gap;review;Distinct challenges can share the identical response, invalidating special soundness
+sign-27-5;Confirmed;runtime;Response rescaling gives a practical fresh-message forgery
 sign-29-1;Confirmed;runtime;One signature reveals the complete signing witness
 sign-31-1;Confirmed;static;A 512-bit prehash caps forgery security at 256 bits
 sign-31-2;Probable;review;Secret-dependent echelon pivots during signing

@@ -41,6 +41,9 @@ $(eval $(call DTRU_PACK,2048))
 
 include ../api/link_finish.mk
 
-.PHONY: exploit
+.PHONY: exploit exploit-rejection-contract
 exploit: lib/libDTRU-Light.so lib/libDTRU-1024.so
 	python3 reproduce_oversize_decapsulation.py
+
+exploit-rejection-contract: lib/libDTRU-Light.so
+	python3 reproduce_rejection_contract.py
