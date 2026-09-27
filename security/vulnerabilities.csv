@@ -20,6 +20,7 @@ hash-10-4;Confirmed;runtime;C implementations hash storage bits outside partial-
 hash-10-5;Confirmed;review;C input-length conversion and padding arithmetic are unchecked
 hash-11-1;Confirmed;review;Secret state indexes AES T-tables
 hash-12-1;Confirmed;runtime;Cross-profile 512-bit output relation
+hash-13-1;Confirmed;review;Long messages reduce JuziHash-1024 second-preimage security below 1024 bits
 hash-14-1;Confirmed;runtime;Laurus loses its function-domain separation at c=1024
 hash-17-1;Confirmed;runtime;Trivial collisions at every rate boundary
 hash-17-2;Confirmed;runtime;The specified and implemented inverse rounds do not invert the forward round
@@ -128,6 +129,7 @@ sign-04-1;Confirmed;runtime;The 160-bit WOTS implementation authenticates only 1
 sign-04-2;Confirmed;runtime;FORC chain addresses are truncated to eight bits
 sign-04-3;Confirmed;review;Specified and implemented hash instantiations are incompatible
 sign-05-1;Confirmed;runtime;The final Fiat–Shamir challenge omits ã0, allowing public-key-only universal forgery
+sign-05-2;Confirmed;review;Signing indexes lookup tables with the secret key
 sign-06-1;Confirmed;static;The implemented message representative caps forgery security at 256 bits
 sign-06-2;Confirmed;static;The implementation expands the entire key pair from a 256-bit root
 sign-07-1;Confirmed;runtime;Trivial signature malleability violates SUF-CMA

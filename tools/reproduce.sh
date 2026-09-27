@@ -94,11 +94,11 @@ echo "== hash-02-1 AXIS: allocation failure falsely reports success (Low) =="
 run_target hash-02 "hash-02-1" make -C hash-02 exploit
 
 echo
-echo "== hash-02-3 AXIS: invertible state bounds second-preimage security (High) =="
+echo "== hash-02-3 AXIS: invertible state bounds second-preimage security (Critical) =="
 run_target hash-02 "hash-02-3" make -C hash-02 reproduce-inverse
 
 echo
-echo "== hash-05-3 uHash: partial-byte padding collisions (High) =="
+echo "== hash-05-3 uHash: partial-byte padding collisions (Critical) =="
 run_target hash-05 "hash-05-3" make -C hash-05 reproduce
 
 echo
@@ -146,7 +146,7 @@ run hash-17 "hash-17-1" CONFIRMED hash-collide-rate hash-17/lib/libMasterCube-10
 run hash-17 "[control hash-17-1]" NOT-CONFIRMED hash-collide-rate hash-17/lib/libMasterCube-512.so 955
 
 echo
-echo "== hash-18-1 / hash-20-1: no domain separation between digest lengths (High) =="
+echo "== hash-18-1 / hash-20-1: no domain separation between digest lengths (Medium) =="
 run hash-18 "hash-18-1" CONFIRMED hash-prefix hash-18/lib/libMEGASCON-384.so hash-18/lib/libMEGASCON-512.so
 run hash-20 "hash-20-1" CONFIRMED hash-prefix hash-20/lib/libMOZI-384.so     hash-20/lib/libMOZI-512.so
 run hash-04 "[control hash-18-1/hash-20-1]" NOT-CONFIRMED hash-prefix hash-04/lib/libCHAMP-512.so hash-04/lib/libCHAMP-1024.so
@@ -279,11 +279,11 @@ echo "== kem-17-4 HEP-QC: public EPC-P column fingerprint =="
 run_target kem-17 "kem-17-4" python3 kem-17/reproduce_epcp_fingerprint.py
 
 echo
-echo "== kem-27-1 NTRE: scaled seed-ceiling witness (High) =="
+echo "== kem-27-1 NTRE: scaled seed-ceiling witness (Critical) =="
 run_target kem-27 "kem-27-1" make -C kem-27 exploit
 
 echo
-echo "== kem-31-1 QIMEN-PIKE: invalid-ciphertext assertion aborts (Medium) =="
+echo "== kem-31-1 QIMEN-PIKE: invalid-ciphertext assertion aborts (Low) =="
 run_target kem-31 "kem-31-1" make -C kem-31 reproduce-hint
 run_crash kem-31 "kem-31-1" kem-31/lib/libNGCC-1.so kem-zero
 run_crash kem-31 "kem-31-1" kem-31/lib/libNGCC-2.so kem-zero
@@ -294,7 +294,7 @@ echo "== kem-31-2 QIMEN-PIKE: non-canonical ciphertext aliases (Critical) =="
 run_target kem-31 "kem-31-2" python3 kem-31/reproduce_ciphertext_alias.py
 
 echo
-echo "== kem-31-3 QIMEN-PIKE: malformed public-key denial of service (Medium) =="
+echo "== kem-31-3 QIMEN-PIKE: malformed public-key denial of service (Low) =="
 run_target kem-31 "kem-31-3" python3 kem-31/reproduce_malformed_public_key.py --timeout 10
 
 echo
@@ -323,7 +323,7 @@ if [ -z "$only" ] || [ "$only" = kem-36 ]; then
 fi
 
 echo
-echo "== kem-38-2 UVW: stable list-decoding failure oracle (Medium) =="
+echo "== kem-38-2 UVW: stable list-decoding failure oracle (High) =="
 if [ -z "$only" ] || [ "$only" = kem-38 ]; then
     if [ -f kem-38/lib/libUVW-KEM-128.so ]; then
         out=$(python3 security/kem_mutation_oracle.py kem-38/lib/libUVW-KEM-128.so --bits 0,846 2>&1)
@@ -372,7 +372,7 @@ if [ -z "$only" ] || [ "$only" = kex-02 ]; then
 fi
 
 echo
-echo "== kex-05-1 LoomKEX-256: honest exchange aborts at pass 3 (High) =="
+echo "== kex-05-1 LoomKEX-256: honest exchange aborts at pass 3 (Medium) =="
 if [ -z "$only" ] || [ "$only" = kex-05 ]; then
     if [ -x kex-05/reproduce_failure ]; then
         witness=$(mktemp)
@@ -408,7 +408,7 @@ if [ -z "$only" ] || [ "$only" = kex-05 ]; then
 fi
 
 echo
-echo "== kex-08-1 NIIKE: raw shared-invariant distinguisher (High) =="
+echo "== kex-08-1 NIIKE: raw shared-invariant distinguisher (Critical) =="
 run_target kex-08 "kex-08-1" make -C kex-08 exploit PYTHON="${NIIKE_PYTHON:-sage -python}"
 
 echo
@@ -416,11 +416,11 @@ echo "== kex-08-2 NIIKE-lv512: two-key secret cycle (Critical) =="
 run_target kex-08 "kex-08-2" make -C kex-08 exploit-lv512
 
 echo
-echo "== kex-08-3 NIIKE-lv128: crafted peer key forces the shared secret (Low) =="
+echo "== kex-08-3 NIIKE-lv128: crafted peer key forces the shared secret (Medium) =="
 run_target kex-08 "kex-08-3" python3 kex-08/reproduce_malicious_peer_key.py
 
 echo
-echo "== kex-08-4 NIIKE-lv128: malformed peer key aborts derivation (Medium) =="
+echo "== kex-08-4 NIIKE-lv128: malformed peer key aborts derivation (Low) =="
 run_target kex-08 "kex-08-4" python3 kex-08/reproduce_malformed_key_abort.py
 
 echo
@@ -470,7 +470,7 @@ echo "== sign-07-1: SUF-CMA malleability (High) =="
 run sign-07 "sign-07-1" CONFIRMED sig-malleable sign-07/lib/libCS-128.so
 
 echo
-echo "== sign-07-2 CS: verifier challenge-sign blindness enables universal forgery (High) =="
+echo "== sign-07-2 CS: verifier challenge-sign blindness enables universal forgery (Critical) =="
 if [ -z "$only" ] || [ "$only" = sign-07 ]; then
     if [ -x sign-07/forgery_CS-128-scaled-tau3 ] && [ -f sign-07/lib/libCS-128-scaled-tau3.so ]; then
         sign-07/forgery_CS-128-scaled-tau3 sign-07/lib/libCS-128-scaled-tau3.so --threads 4 || fail=$((fail + 1))
@@ -553,7 +553,7 @@ run sign-25 "sign-25-1" CONFIRMED sig-uninit-verdict sign-25/lib/libSQISign2Dsqu
 run sign-25 "[control sign-25-1]" NOT-CONFIRMED sig-uninit-verdict sign-25/lib/libSQISign2Dsquare-Level2-eff_compressed.so
 
 echo
-echo "== sign-27-1 SQIsignTriangle: all-zero signature aborts (Medium) =="
+echo "== sign-27-1 SQIsignTriangle: all-zero signature aborts (Low) =="
 run_crash sign-27 "sign-27-1" sign-27/lib/libSQIsignTriangle_lvl1.so sig-zero
 
 echo
