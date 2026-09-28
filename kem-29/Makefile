@@ -18,3 +18,7 @@ $(eval $(call ngcc_instance,PolarKEM-256,$(REF)/PolarKEM-256))
 $(eval $(call ngcc_instance,PolarKEM-512,$(REF)/PolarKEM-512))
 
 include ../api/link_finish.mk
+
+.PHONY: audit-spec
+audit-spec:
+	python3 reproduce_spec_defects.py

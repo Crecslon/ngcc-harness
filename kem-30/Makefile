@@ -26,3 +26,7 @@ $(eval $(call POLARLAC,POLARLAC-512-Star))
 $(eval $(call POLARLAC,POLARLAC-Light))
 
 include ../api/link_finish.mk
+
+.PHONY: reproduce-timing-leak
+reproduce-timing-leak:
+	sh reproduce_timing_leak.sh

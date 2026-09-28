@@ -172,6 +172,10 @@ echo "== hash-24-1 QSH: invariant-subspace distinguisher =="
 run_target hash-24 "hash-24-1" make -C hash-24 reproduce
 
 echo
+echo "== hash-24-3 QSH: free-start and semi-free-start collisions (Medium) =="
+run_target hash-24 "hash-24-3" make -C hash-24 reproduce-free-start
+
+echo
 echo "== hash-25-1 TaiChi: allocation failure falsely reports success (Low) =="
 run_target hash-25 "hash-25-1" make -C hash-25 exploit
 
@@ -201,6 +205,10 @@ run_target kem-02 "kem-02-3" python3 kem-02/reproduce_dfr_tail.py
 echo
 echo "== kem-02-4 Amoeba: Hamming correction stack write (High) =="
 run_target kem-02 "kem-02-4" python3 kem-02/reproduce_ecc_stack_write.py
+
+echo
+echo "== kem-02-6 Amoeba: pre-FO decoder-oracle key recovery (Critical) =="
+run_target kem-02 "kem-02-6" make -C kem-02 exploit-dfo-key-recovery
 
 echo
 echo "== kem-03-2 BAG-Loong: rejection key omits received ciphertext (High) =="
@@ -234,10 +242,15 @@ for l in kem-18/lib/*.so; do run kem-18 "kem-18-1" CONFIRMED kem-reject-mask "$l
 run kem-22 "[control kem-09-1/kem-18-1]" NOT-CONFIRMED kem-reject-mask kem-22/lib/libMithril-128.so
 
 echo
+echo "== kem-18-2 LoongKEM: reducible-ring quotient attacks (High lead) =="
+run_target kem-18 "kem-18-2" python3 kem-18/reproduce_reducible_ring.py
+
+echo
 echo "== kem-06-1 / kem-06-2 BRA: decoder and field out-of-bounds accesses =="
 if [ -z "$only" ] || [ "$only" = kem-06 ]; then
     run_target kem-06 "kem-06-1" make -C kem-06 exploit
     run_target kem-06 "kem-06-2" make -C kem-06 exploit-field
+    run_target kem-06 "kem-06-1 ciphertext extension" make -C kem-06 exploit-ciphertext-crash
 fi
 
 echo
@@ -358,6 +371,18 @@ echo "== kem-29-2 Polar-KEM: specified aligned basis exposes secret isometry (Cr
 run_target kem-29 "kem-29-2" python3 kem-29/reproduce_spec_alignment.py
 
 echo
+echo "== kem-29-3 / kem-29-4 Polar-KEM: radius failure and ciphertext aliases =="
+run_target kem-29 "kem-29-3/kem-29-4" make -C kem-29 audit-spec
+
+echo
+echo "== kem-30-1 PolarLAC: decrypted-message timing classes (Medium) =="
+run_target kem-30 "kem-30-1" make -C kem-30 reproduce-timing-leak
+
+echo
+echo "== kex-06-2 MAMBA-NIKE: static-key reaction-recovery path (High lead) =="
+run_target kex-06 "kex-06-2" make -C kex-06 exploit-reaction-recovery
+
+echo
 echo "== kex-02-1 AFS-KEX: completed-session key recovery after long-term compromise (Critical) =="
 if [ -z "$only" ] || [ "$only" = kex-02 ]; then
     if [ -x kex-02/reproduce_pfs_break ] &&
@@ -440,6 +465,11 @@ if [ -z "$only" ] || [ "$only" = sign-03 ]; then
         echo "SKIP   sign-03 (build it: make -C sign-03 exploit)"; skipped=$((skipped + 1))
     fi
 fi
+
+echo
+echo "== sign-22-3 Rhyme-SM3: missing doubled-width parity mask (Medium) =="
+run_target sign-22 "sign-22-3 static" make -C sign-22 audit-parity
+run_target sign-22 "sign-22-3 runtime" make -C sign-22 audit-parity-runtime
 
 echo
 echo "== sign-23-1 Shuttle: covariance key recovery and forgery (Critical) =="
@@ -551,6 +581,10 @@ echo
 echo "== sign-25-1 SQIsign2D2: verifier verdict depends on stale stack state (Critical) =="
 run sign-25 "sign-25-1" CONFIRMED sig-uninit-verdict sign-25/lib/libSQISign2Dsquare-Level2-eff_uncompressed.so
 run sign-25 "[control sign-25-1]" NOT-CONFIRMED sig-uninit-verdict sign-25/lib/libSQISign2Dsquare-Level2-eff_compressed.so
+
+echo
+echo "== sign-25-3 SQIsign2D2: compact challenge retargeting (Critical) =="
+run_target sign-25 "sign-25-3" make -C sign-25 exploit-compact-retarget
 
 echo
 echo "== sign-27-1 SQIsignTriangle: all-zero signature aborts (Low) =="

@@ -29,3 +29,7 @@ $(eval $(call MAMBA,MAMBA-NIKE-384))
 $(eval $(call MAMBA,MAMBA-NIKE-512))
 
 include ../api/link_finish.mk
+
+.PHONY: exploit-reaction-recovery
+exploit-reaction-recovery:
+	sh reproduce_reaction_recovery.sh

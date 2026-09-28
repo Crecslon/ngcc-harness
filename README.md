@@ -46,12 +46,13 @@ need GMP or OpenSSL development libraries. The complete reproduction suite
 additionally needs clang for the kem-06 ASan check, NumPy and SciPy for the
 Python witnesses, and SageMath for kex-08-1, sign-15-4, and kem-09-2.
 The FEILIAN `hash-10-2` RTL witness needs Verilator and a C++ compiler. The
-sign-15-4 optimized build needs an AVX2-capable CPU. The sign-10-2 and
-sign-16-2 witnesses fetch separately published, SHA-256-checked artifacts
-over the network. The kem-09-2 estimate needs the pinned lattice-estimator
-checkout documented in its report. The sign-18-5 witness fetches Pébereau's
-pinned attack source unless given an existing local checkout; it loads only
-the Origami library built by this harness and needs Python SM3 support.
+sign-15-4 optimized build needs an AVX2-capable CPU. Several witnesses fetch
+separately published, commit-pinned artifacts over the network: sign-10-2,
+sign-16-2, sign-18-5, sign-25-3, kem-06-1's ciphertext extension, kem-30-1,
+and kex-06-2. The kem-09-2 and kem-18-2 estimates need the pinned
+lattice-estimator checkout documented in their reports. The sign-18-5 witness
+loads only the Origami library built by this harness and needs Python SM3
+support.
 
 If the default Python lacks NumPy or Sage, point the witnesses to an
 appropriate environment, for example:

@@ -52,3 +52,7 @@ $(eval $(call SQI2,SQISign2Dsquare-Level5-eff,p1024))
 $(eval $(call SQI2,SQISign2Dsquare-Level5-sec,p1070))
 
 include ../api/link_finish.mk
+
+.PHONY: exploit-compact-retarget
+exploit-compact-retarget:
+	sh reproduce_compact_retarget.sh

@@ -15,7 +15,7 @@ System x86_1: Intel Core i7-12700 (Alder Lake), one performance core, turbo off,
 
 Each reference library is relinked with link-time wrappers (`-Wl,--wrap`) around `pseudohash`, `pseudoXOF`, `sm3hash` and the DRNG's `get_random_number`. Every call that crosses an object-file boundary is timed with the CPU tick counter and recorded with its input and output length; nested calls are not counted twice. The reported share is the time inside these functions divided by the time of the whole operation, measured in the same process on the same inputs as the benchmark. The wrappers cost a few tens of cycles per call.
 
-No performance figure with any particular hash candidate is given here: several hash submissions are not yet constant-time (e.g. table-based S-boxes), so their current timings are not production figures. The recorded call shapes are kept with the campaign data for a later comparison.
+The summary compares each hash candidate's 32-byte timing with the median measured `pseudoXOF` call having exactly the same input and output widths in the published profiles. Profile TSC ticks are converted to fixed-frequency core cycles using each profile's recorded tick calibration and the campaign's fixed CPU frequency. This is a direct, self-contained relative measurement, not an estimate of substituting that hash into a public-key scheme. Several hash submissions are not yet constant-time (e.g. table-based S-boxes), so their current timings are not production figures; the summary flags known cases.
 
 ## Limitations
 

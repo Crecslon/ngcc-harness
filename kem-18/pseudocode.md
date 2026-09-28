@@ -154,5 +154,24 @@ implementation draws all `3·SEED_BYTES` directly from `drng_algorithm`
 `K̄ = H(salt‖c)` cannot be checked against the spec. Note the implementation
 uses *different* primitives for the two roles both written `H` in Algorithm 24.
 
-**Not verified.** The decryption-failure-rate derivation (§2.2.3) and the
-BKZ/primal/dual security estimates (§5.3) were not re-computed.
+## Reducible-ring security check
+
+The §5.3 estimate says it “temporarily ignore[s]” LoongKEM's algebraic
+structure. That is not conservative for three sets. Over the integers,
+`X^12+1`, `X^20+1`, and `X^24+1` split into factors of degrees `(4,8)`,
+`(4,16)`, and `(8,16)`. Their factor resultants are respectively 81, 625, and
+6561, hence units modulo 8191. Reducing the pure-ring public equation
+`b1=A1*s1+A2*s2+e1` modulo either factor gives a smaller public SLWE instance;
+the two quotient secrets uniquely determine the original secret by CRT.
+
+The weak quotient folds 3, 5, and 3 independent CBD coefficients. Current
+MATZOV BDD estimates are 73.06, 103.34, and 203.74 bits. In the complementary
+quotient every marginal folds two coefficients, but paired coordinates share
+one source coefficient and have correlation magnitude `1/2`. Ignoring those
+correlations gives 128.59, 365.51, and 399.31 bits. Thus the algebra and the
+large projected cost reduction are confirmed, while full recovery remains a
+Lead pending a covariance-aware attack check. See
+`reproduce_reducible_ring.py` and finding `kem-18-2`.
+
+**Not verified.** The decryption-failure-rate derivation (§2.2.3) was not
+re-computed.

@@ -91,3 +91,7 @@ exploit-field: reproduce_field_oob_67 reproduce_field_oob_83 reproduce_field_oob
 	./reproduce_field_oob_67
 	./reproduce_field_oob_83
 	./reproduce_field_oob_127
+
+.PHONY: exploit-ciphertext-crash
+exploit-ciphertext-crash:
+	sh reproduce_ciphertext_crash.sh

@@ -61,3 +61,7 @@ exploit-key-recovery: lib/libAmoeba128_attack.so
 .PHONY: check-unseeded-keygen
 check-unseeded-keygen: all
 	python3 reproduce_unseeded_keygen.py
+
+.PHONY: exploit-dfo-key-recovery
+exploit-dfo-key-recovery:
+	sh reproduce_dfo_key_recovery.sh

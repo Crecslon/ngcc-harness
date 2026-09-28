@@ -35,6 +35,7 @@ hash-21-3;Confirmed;review;Secret state indexes a 256-byte S-box
 hash-22-1;Confirmed;review;"Secret state indexes AES S-box; tail bits branch"
 hash-24-1;Confirmed;runtime;Full-round core permutation has a one-query invariant-subspace distinguisher
 hash-24-2;Confirmed;review;Truncated tree chaining values cap QSH second-preimage security
+hash-24-3;Confirmed;runtime;QSH admits full-mode free-start and low-cost semi-free-start collisions
 hash-25-1;Confirmed;runtime;Allocation failure reports success without writing a digest
 hash-26-1;Confirmed;runtime;An invariant subspace reduces CHIME collision bounds to 64 and 224 bits
 hash-27-1;Confirmed;review;Secret state indexes an eight-bit substitution table
@@ -48,12 +49,13 @@ kem-02-2;Confirmed;review;Secret-derived ECC decoding indexes a syndrome table
 kem-02-3;Confirmed;runtime;The decryption-failure bound omits detected two-error rejections
 kem-02-4;Confirmed;runtime;A one-bit ciphertext change writes outside the Hamming correction buffer
 kem-02-5;Withdrawn;review;Withdrawn — unseeded caller repeats Amoeba keys
+kem-02-6;Confirmed;runtime;Pre-FO decoder failures give a full chosen-ciphertext key recovery
 kem-03-1;Confirmed;review;Secret-dependent pivoting in the Gabidulin decoder
 kem-03-2;Confirmed;runtime;The rejection key does not bind the received ciphertext
 kem-03-3;Confirmed;runtime+static;Public support spaces reduce secret-key recovery to linear algebra
 kem-04-1;Confirmed;review;Secret-dependent pivoting in the Gabidulin decoder
 kem-04-2;Confirmed;runtime;The rejection key does not bind the received ciphertext
-kem-06-1;Confirmed;runtime;A malformed secret key drives the BRA decoder out of bounds
+kem-06-1;Confirmed;runtime;Malformed inputs drive the BRA decoder out of bounds
 kem-06-2;Confirmed;runtime;Reference field multiplication touches one limb past its output
 kem-06-3;Confirmed;review;Secret-derived decoder pivots select memory addresses
 kem-06-4;Confirmed;runtime;Ignored padding bits make ciphertexts malleable without changing the key
@@ -80,6 +82,7 @@ kem-17-3;Confirmed;runtime;First encapsulation in each process is publicly repro
 kem-17-4;Confirmed;runtime;Public column multiplicities break the EPC-P assumption
 kem-17-5;Confirmed;review;Secret permutation and mixing matrix drive memory and control flow
 kem-18-1;Confirmed;runtime;Partial rejection mask leaks the candidate shared secret
+kem-18-2;Lead;static;Reducible rings project LoongKEM into much smaller SLWE instances
 kem-19-1;Lead;review;Lore-512's reducible ring admits smaller quotient attacks
 kem-21-1;Confirmed;static;Viper-384 and -512 restrict the secret to a 256-bit seed
 kem-22-1;Confirmed;runtime;Reversed decryption offset invalidates the failure estimate
@@ -89,6 +92,9 @@ kem-27-1;Confirmed;runtime;NTRE-512's 256-bit secret seed caps offline key-recov
 kem-28-1;Confirmed;runtime;Noncanonical ciphertext encoding defeats IND-CCA security
 kem-29-1;Confirmed;runtime;The submission ships a complete public-key-only break
 kem-29-2;Confirmed;static;The specified aligned basis directly exposes the secret isometry
+kem-29-3;Confirmed;static;Decoding radii contradict the specified error and lattice geometry
+kem-29-4;Confirmed;static;Norm-only validation gives one-query ciphertext aliases
+kem-30-1;Confirmed;runtime;Re-encryption rejection sampling leaks the decrypted-message class
 kem-31-1;Confirmed;runtime;Invalid ciphertexts trigger an assertion during decapsulation
 kem-31-2;Confirmed;runtime;Non-canonical field encodings make ciphertexts malleable without changing the key
 kem-31-3;Confirmed;runtime;Malformed public keys hang or abort encapsulation
@@ -111,6 +117,7 @@ kex-03-1;Confirmed;review;Bits-versus-bytes error reduces the ephemeral secret t
 kex-05-1;Confirmed;runtime;The specified decryption-failure rate causes honest-session aborts
 kex-05-2;Confirmed;runtime;Resettable pass-1 state enables ephemeral-key recovery
 kex-06-1;Confirmed;static;MAMBA-NIKE-384 and -512 use only 256 secret-seed bits
+kex-06-2;Lead;runtime;Static-key reconciliation admits an active reaction-recovery path
 kex-07-1;Confirmed;review;Both party identities are hard-wired to zero
 kex-08-1;Confirmed;runtime;The raw shared j-invariant is distinguishable from a uniform key
 kex-08-2;Confirmed;runtime;NIIKE-lv512 key generation cycles between two hard-coded secret keys
@@ -166,10 +173,12 @@ sign-18-4;Probable;review;Signing indexes field tables and signature state with 
 sign-18-5;Confirmed;runtime;Public variable permutation permits signature forgery
 sign-22-1;Confirmed;static;The implemented message representative caps forgery security at 256 bits
 sign-22-2;Confirmed;static;The implementation expands the complete key pair from a 256-bit root
+sign-22-3;Confirmed;runtime+static;Rhyme-SM3 omits the specified doubled-width parity mask
 sign-23-1;Confirmed;runtime;Reversed transition leaks Shuttle's signing key
 sign-24-1;Confirmed;runtime;Chunked Reed–Solomon encoding reveals the signing witness
 sign-25-1;Confirmed;runtime;Verifier verdict is decided by stale stack contents
 sign-25-2;Lead;review;Isogeny prime sizing relies on the former square-root attack cost
+sign-25-3;Confirmed;runtime;Detached compact challenge enables one-query message-retargeting forgeries
 sign-26-1;Lead;review;Prime sizing assumes a superseded square-root isogeny cost
 sign-27-1;Confirmed;runtime;An all-zero signature aborts the verifier process
 sign-27-2;Lead;review;Triangle prime sizing relies on the former square-root attack cost

@@ -15,10 +15,12 @@ and, in --out (default performance/):
   symmetric-survey.md    which candidates use the ICCS helpers (source analysis,
                          shared by all systems), with this system's measured share
 
-Numbers are taken only from records in RUN_DIR. No estimate of performance
-with any particular hash candidate is published: several hash submissions are
-not yet constant-time (e.g. table-based S-boxes), so their timings are not
-production figures. The hash-cost data stays in RUN_DIR/hashcost/.
+Numbers are taken only from records in RUN_DIR. The summary gives a direct
+32-byte comparison between each hash candidate and an exact-shape `pseudoXOF`
+call already present in the published profiles. It does not estimate the cost
+of substituting that hash into a public-key scheme; several hash submissions
+are not yet constant-time, so their timings are not production figures. The
+hash-cost data stays in RUN_DIR/hashcost/.
 """
 
 from __future__ import annotations
@@ -29,11 +31,12 @@ import sys
 import json
 import os
 import re
+import statistics
 from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CATS = [("kem", "Key encapsulation"), ("sign", "Digital signatures"), ("kex", "Key exchange"),
+CATS = [("sign", "Digital signatures"), ("kem", "Key encapsulation"), ("kex", "Key exchange"),
         ("hash", "Hash functions")]
 ORDER = ["keygen", "enc", "dec", "sign", "verify", "exchange", "init_a", "init_b"] + \
     [f"pass{k}" for k in range(1, 17)] + ["derive_a", "derive_b"]
@@ -45,7 +48,7 @@ def op_order(key: str):
 
 
 OPS = {"kem": ["keygen", "enc", "dec"], "sign": ["keygen", "sign", "verify"], "kex": ["exchange"],
-       "hash": ["hash_32", "hash_65536"]}
+       "hash": ["hash_32", "hash_1024", "hash_65536"]}
 
 
 def load(p: Path):
@@ -115,6 +118,28 @@ class Run:
         self.kat_issues = []
         with (ROOT / "performance/kat_issues.csv").open(encoding="utf-8") as f:
             self.kat_issues = list(csv.DictReader((l for l in f if not l.startswith("#")), delimiter=";"))
+        self.summary_notes = []
+        with (ROOT / "performance/summary_notes.csv").open(encoding="utf-8") as f:
+            self.summary_notes = list(csv.DictReader((l for l in f if not l.startswith("#")), delimiter=";"))
+        for row in self.summary_notes:
+            if None in row or row.get("ID") not in self.names:
+                raise ValueError(f"invalid performance/summary_notes.csv row: {row}")
+            re.compile(row.get("Label", ""))
+        # The 32-byte hash comparison is derived entirely from the published
+        # profiles: use the median per-call cost of pseudoXOF with the same
+        # input and output widths.  Each aggregate profile contributes one
+        # observation, so no single high-iteration operation dominates it.
+        costs = defaultdict(list)
+        core_hz = 1000 * float(self.env.get("cpufreq_max_khz") or 0)
+        for profiles in self.profiles.values():
+            for profile in profiles.values():
+                tick_hz = float(profile.get("meta", {}).get("tick_hz") or 0)
+                to_core_cycles = core_hz / tick_hz if core_hz and tick_hz else 1.0
+                for call in profile.get("calls", []):
+                    if call.get("fn") == "pseudoXOF" and call.get("calls"):
+                        costs[(call.get("in_bits"), call.get("out_bits"))].append(
+                            call["ticks"] / call["calls"] * to_core_cycles)
+        self.pseudoxof_cost = {shape: statistics.median(values) for shape, values in costs.items()}
         self.params = defaultdict(list)
         with (ROOT / "data/parameters.csv").open(encoding="utf-8") as f:
             for row in csv.DictReader(f, delimiter=";"):
@@ -208,6 +233,52 @@ def cell(rec):
     return s + ("" if rec.get("guide_100_measurements_met") else f" (n={rec.get('measurements')})")
 
 
+def hash_cell(run: Run, rec, input_bytes: int):
+    """Cycle count, plus an exact-shape pseudoXOF ratio for the 32-byte row."""
+    rendered = cell(rec)
+    if not rec or rec.get("status") != "complete" or input_bytes != 32:
+        return rendered
+    out_bits = 8 * int(rec.get("sizes", {}).get("digest_bytes", 0))
+    baseline = run.pseudoxof_cost.get((8 * input_bytes, out_bits))
+    cycles = rec.get("mean_cycles")
+    if not baseline or not cycles:
+        return f"{rendered} (ratio –)"
+    return f"{rendered} ({cycles / baseline:.2f}×)"
+
+
+def compact_notes(run: Run, cand: str, label: str, entry: dict) -> str:
+    notes = []
+    verdict = run.survey.get(cand, {}).get("Verdict", "")
+    if verdict == "bypass":
+        notes.append("own symmetric primitives; sym % excludes them")
+    elif verdict == "mixed":
+        notes.append("mixed own/ICCS primitives")
+    elif verdict == "instance-dependent":
+        notes.append("hash backend varies by instance")
+    status = entry.get("kat")
+    if status and status != "PASS":
+        notes.append("KAT/output caveat; see candidate page")
+    for row in run.summary_notes:
+        if row["ID"] == cand and re.search(row["Label"], label):
+            notes.append(row["Note"])
+    return "; ".join(dict.fromkeys(notes)) or "–"
+
+
+def omit_non_iccs_zero_row(run: Run, cand: str, label: str, cat: str) -> bool:
+    """Hide non-ICCS variants that never enter a placeholder hash helper.
+
+    ICCS-only implementations are retained even when the hash share is zero,
+    because some use the separately-accounted ICCS DRNG as their XOF.  The
+    candidate detail pages always retain every measured implementation.
+    """
+    if cat == "hash" or run.survey.get(cand, {}).get("Verdict") == "ICCS-only":
+        return False
+    profiles = run.profiles.get((cand, label), {})
+    shares = [profiles[op].get("hash_share") for op in OPS[cat]
+              if op in profiles and profiles[op].get("hash_share") is not None]
+    return bool(shares) and all(share == 0 for share in shares)
+
+
 def instances_of(run: Run, cand: str):
     labels = sorted({l for (c, l) in run.records if c == cand} |
                     {e["label"] for e in run.build.values() if e["candidate"] == cand})
@@ -220,17 +291,22 @@ def summary(run: Run, out: Path, arch: str):
     env = run.env
     lines = [f"# Performance — {arch}, system {SYSTEM}", "",
              "Independent measurements of the NGCC Round 1 implementations on one "
-             f"{env.get('cpu_model', 'x86-64')} core ({clock_text(env)}). "
-             "Cycles are the mean of all timed calls in five trials, normally each in a "
-             "fresh process. **Symmetric %** is the share of each operation spent in the ICCS "
-             "placeholder hash functions (`pseudohash`, `pseudoXOF`, `sm3hash`); the ICCS DRNG is "
-             "counted separately on the candidate pages. Candidates that implement their own "
-             "hashing show a low share here — see the [symmetric cryptography survey](symmetric-survey.md). "
-             "These are not submitter self-assessments and not NICCS results.", "",
-             f"See [method and limitations]({method_page_path(out).name}). `–` = not measured (no harness build or "
-             "timeout); `n=` marks operations with fewer than 100 timed calls; ⚠ marks instances whose "
-             "submitted KAT vectors are not reproduced by the submitted code (timed, but output not "
-             "validated — see the candidate page).", ""]
+             f"{env.get('cpu_model', 'x86-64')} core ({clock_text(env)}).", "",
+             "- **Cycles** are the mean of all timed calls in five trials, normally with each trial in a fresh process.",
+             "- **Symmetric %** is the measured share of an operation spent specifically in the ICCS placeholder "
+             "functions (`pseudohash`, `pseudoXOF`, `sm3hash`). It excludes the ICCS DRNG and candidates' own "
+             "hash primitives, so a low value does not necessarily mean little symmetric-cryptography work; see "
+             "the [symmetric cryptography survey](symmetric-survey.md).",
+             "- Each instance links to its **performance report** with KAT status, all measured implementations, "
+             "sizes, memory proxies, primitive profiles, and raw-evidence references.",
+             f"- See [method and limitations]({method_page_path(out).name}). These are independent measurements, "
+             "not submitter self-assessments or NICCS results.",
+             "- **Notation:** `–` means not measured, `n=` marks fewer than 100 timed calls, and ⚠ marks an instance "
+             "whose submitted KAT vectors are not reproduced by the submitted code.",
+             "- **Hash rows** give three message sizes; the parenthesized 32-byte value is relative to an "
+             "exact-shape measured `pseudoXOF` call, not an estimate of a production replacement.",
+             "- **Scope:** the table keeps ICCS-facing reference parameter sets. Notes flag important caveats; "
+             "additional measured variants remain on the linked instance reports.", ""]
     for cat, title in CATS:
         rows = []
         for cand in sorted({c for (c, l) in run.records if c.startswith(cat)} |
@@ -238,11 +314,16 @@ def summary(run: Run, out: Path, arch: str):
             for label in instances_of(run, cand):
                 recs = run.records.get((cand, label), {})
                 entry = run.build.get(f"{cand}/{label}", {})
-                if entry.get("variant", "reference") != "reference" and not recs:
+                if entry.get("variant", "reference") != "reference":
+                    continue
+                if omit_non_iccs_zero_row(run, cand, label, cat):
                     continue
                 cells = []
                 for op in OPS[cat]:
-                    cells.append(cell(recs.get(op)))
+                    if cat == "hash":
+                        cells.append(hash_cell(run, recs.get(op), int(op.split("_")[1])))
+                    else:
+                        cells.append(cell(recs.get(op)))
                     if cat in ("kem", "sign", "kex"):
                         p = run.profiles.get((cand, label), {}).get(op)
                         cells.append(pct(p.get("hash_share")) if p and "hash_share" in p else "–")
@@ -250,16 +331,21 @@ def summary(run: Run, out: Path, arch: str):
                 status = entry.get("kat")
                 if status and status != "PASS":
                     variant += f" ⚠ KAT {status}"
-                rows.append(f"| [{cand}]({link(summary_page(out), cand_page(cand))}) | {run.names.get(cand, '')} | "
-                            f"`{label}`{variant} | " + " | ".join(cells) + " |")
+                spec = f"https://github.com/ngcc-dev/ngcc-harness/blob/main/{cand}/{cand}-spec.pdf"
+                algorithm = f"{run.names.get(cand, '')} [PDF]({spec})"
+                notes = compact_notes(run, cand, label, entry)
+                rows.append(f"| [{cand}]({link(summary_page(out), cand_page(cand))}) | {algorithm} | "
+                            f"`{label}`{variant} | " + " | ".join(cells) + f" | {notes} |")
         if not rows:
             continue
         lines += [f"## {title}", ""]
         if cat == "hash":
-            lines += ["| id | algorithm | instance | 32 B (cycles) | 64 KiB (cycles) |", "|---|---|---|---|---|"]
+            lines += ["| id | algorithm | instance performance report | 32 B cycles (vs pseudoXOF) | 1 KiB cycles | 64 KiB cycles | notes |",
+                      "|---|---|---|---|---|---|---|"]
         else:
             hdr = " | ".join(f"{op} | sym %" for op in OPS[cat])
-            lines += [f"| id | algorithm | instance | {hdr} |", "|---|---|---|" + "---|" * (2 * len(OPS[cat]))]
+            lines += [f"| id | algorithm | instance performance report | {hdr} | notes |",
+                      "|---|---|---|" + "---|" * (2 * len(OPS[cat]) + 1)]
         lines += rows + [""]
     emit(summary_page(out), "\n".join(lines) + "\n")
 
@@ -510,10 +596,14 @@ def method_page(run: Run, out: Path, arch: str):
          "time inside these functions divided by the time of the whole operation, measured in the "
          "same process on the same inputs as the benchmark. The wrappers cost a few tens of cycles "
          "per call.", "",
-         "No performance figure with any particular hash candidate is given here: several hash "
-         "submissions are not yet constant-time (e.g. table-based S-boxes), so their current timings "
-         "are not production figures. The recorded call shapes are kept with the campaign data for "
-         "a later comparison.", "",
+         "The summary compares each hash candidate's 32-byte timing with the median measured "
+         "`pseudoXOF` call having exactly the same input and output widths in the published profiles. "
+         "Profile TSC ticks are converted to fixed-frequency core cycles using each profile's recorded "
+         "tick calibration and the campaign's fixed CPU frequency. "
+         "This is a direct, self-contained relative measurement, not an estimate of substituting "
+         "that hash into a public-key scheme. Several hash submissions are not yet constant-time "
+         "(e.g. table-based S-boxes), so their current timings are not production figures; the "
+         "summary flags known cases.", "",
          "## Limitations", "",
          "- Static and peak memory are process-level proxies (ELF image, VmHWM), not isolated "
          "algorithm memory.",

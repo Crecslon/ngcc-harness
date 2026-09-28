@@ -81,6 +81,22 @@ the break is specific: the submission ships `polarkem_recover_message(pk, ct, mu
 and `polarkem_derive_valid_secret(mu, ct, ss)`, which together recover the
 session key from public data alone. `reproduce.sh` runs it.
 
+The September 28 additions are also wired into `tools/reproduce.sh`:
+
+- `hash-24-3` checks explicit full-mode QSH free-start collisions.
+- `kem-02-6` recovers all 576 Amoeba-576 secret coefficients through the
+  pre-FO decoder-failure oracle and checks a fresh honest shared secret.
+- `kem-18-2` verifies the LoongKEM ring factorizations and pinned estimator
+  inputs; it remains a Lead because full covariance-aware recovery is open.
+- `kem-29-3` and `kem-29-4` certify the Polar-KEM radius contradiction and
+  one-query alias probabilities directly from the retained specification PDF.
+- `sign-22-3` provides both an exact Rhyme-SM3 parity-bias calculation and an
+  accepted-signature runtime sample.
+- `kem-06-1`, `kem-30-1`, `kex-06-2`, and `sign-25-3` use commit-pinned public
+  attack repositories for, respectively, ciphertext-reachable BRA crashes,
+  PolarLAC timing classes, the MAMBA raw-reconciliation reaction path, and
+  compact SQIsign2D2 message-retargeting forgeries.
+
 The September 27 findings are available through `tools/reproduce.sh` by
 candidate ID. `kem-03-3` checks the archived BAG-Loong sampler at all four
 levels and recovers the secret PKE matrix from five fresh 128-bit public keys;

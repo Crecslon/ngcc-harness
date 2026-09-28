@@ -24,3 +24,10 @@ reproduce: reproduce_invariant
 
 reproduce_invariant: reproduce_invariant.c
 	$(CC) -O2 -std=c99 -I. $< -o $@
+
+.PHONY: reproduce-free-start
+reproduce-free-start: reproduce_free_start
+	./reproduce_free_start
+
+reproduce_free_start: reproduce_free_start.c
+	$(CC) -O2 -std=c99 -I. $< -o $@

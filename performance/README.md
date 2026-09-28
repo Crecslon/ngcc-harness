@@ -15,7 +15,13 @@ Results are published per test system (`performance/systems.csv`):
 The [symmetric cryptography survey](symmetric-survey.md) records how each
 public-key submission implements its hashing and randomness (from
 `symmetric_survey.csv`), with the measured share of the ICCS placeholder
-functions.
+functions. The compact summary also gives each 32-byte hash measurement
+relative to a published-profile `pseudoXOF` call with the same input and output
+width (with profile TSC ticks converted to the campaign's fixed-frequency core
+cycles); `summary_notes.csv` supplies brief per-instance interpretation notes.
+The aggregate public-key tables omit non-ICCS variants whose measured
+operations never call a placeholder hash helper; their measurements remain on
+the per-candidate pages.
 
 ## What is measured
 
@@ -41,9 +47,11 @@ are the guide's S1–S8 lengths. Static and peak memory are process-level proxie
 (ELF image, VmHWM). The system's `method_<ID>.md` gives the details and
 limitations.
 
-No performance figure is given for any particular hash candidate replacing the
-ICCS placeholders: several hash submissions are not yet constant-time (e.g.
-table-based S-boxes), so their current timings are not production figures.
+The compact summary compares each hash candidate's 32-byte timing with an
+exact-shape `pseudoXOF` call from the published profiles. This does not estimate
+the cost of replacing every public-key helper call with that candidate. Several
+hash submissions are not yet constant-time (e.g. table-based S-boxes), so their
+current timings are not production figures; brief notes flag known cases.
 
 ## Checking the published results
 
@@ -98,10 +106,10 @@ the same scripts select the ARM guide flags, and the hash wrappers use
 | `validate.py` | checks the published datasets and reports (above) and the source catalog |
 | `systems.csv` | registered test systems |
 | `kat_issues.csv` | cause and treatment of every instance whose KATs do not pass |
+| `summary_notes.csv` | brief per-instance caveats shown in the summary table |
 | `symmetric_survey.csv` | ICCS helper usage per public-key candidate |
 | `smoke.py`, `Makefile` | optimized (AVX2) builds of four families and a no-record smoke test |
 | `kem-35.mk` | Scloud+ AVX2 and NEON build rules |
-| `website.patch` | site integration (`tools/sync_performance.py` for ngcc.dev) |
 | `source_catalog.csv`, `import_sources.py`, `import_dove.py`, `catalog.py` | source provenance (below) |
 
 ## Source provenance and builds

@@ -39,3 +39,10 @@ endef
 $(foreach f,SHAKE SM3,$(foreach l,128 256 384 512,$(eval $(call RHY,$(f),$(l)))))
 
 include ../api/link_finish.mk
+
+.PHONY: audit-parity audit-parity-runtime
+audit-parity:
+	python3 reproduce_sm3_parity_bias.py
+
+audit-parity-runtime:
+	sh reproduce_sm3_parity_runtime.sh
