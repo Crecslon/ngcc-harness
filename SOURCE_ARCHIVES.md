@@ -1,10 +1,14 @@
 # Source archive provenance
 
-The candidate reference source files in this repository were copied without
+The candidate source files in this repository were copied without
 modification from the official NICCS Round 1 submission archives identified in
-`downloads.csv`. Source and include files from the relevant reference
-implementation trees are retained. Submitted build systems, binaries, object
-files and bulky test-vector text files are excluded. The static parameter audit
+`downloads.csv`. Software source and include files from all 119 packages,
+including reference, optimized, AVX2, and ARM trees where submitted, are
+retained under their archive-relative paths, along with the package's license
+and notice files. Submitted build systems,
+binaries, object files and bulky test-vector text files are excluded. DOVE's
+source is extracted from the two RARs inside its verified ZIP; no submitted
+RAR or binary is retained. The static parameter audit
 also retains the exact source files that it cites. The canonical submitted
 specification PDF and the extracted pseudocode/parameter review are retained for
 all 119 candidates, including candidates without a reported vulnerability.
@@ -15,10 +19,12 @@ generated vectors without storing the original multi-gigabyte vector corpus.
 
 The following SHA-256 values, and sizes where recorded, identify the complete
 original ZIPs. The 25 previously missing entries were checked by streaming
-their official download URLs on 2026-09-23 UTC. Chinith was independently
-checked from its official URL on 2026-09-25 UTC; all 677 imported C/H files
-match that ZIP byte for byte. The ZIPs are not stored in this repository. They
-are not required for a normal build.
+their official download URLs on 2026-09-23 UTC; the remaining gaps were filled
+from official downloads on 2026-09-24 UTC. Chinith was independently checked
+from its official URL on 2026-09-25 UTC; all 677 imported C/H files match that
+ZIP byte for byte. ZIPs are ignored and are not required for a normal build or
+benchmark. The machine-readable `performance/source_catalog.csv` records
+source-file coverage by package.
 
 | id | bytes | SHA-256 |
 |---|---:|---|
@@ -56,7 +62,7 @@ are not required for a normal build.
 | kem-10 | 12265869 | `c41e372a55e1dd4aa0e30c6b53d9d7b4f9cd1d7ae431763535e1e61097445e2c` |
 | kem-11 | — | `8fc838488ac0849d4c6afd161f8b9742c7a8b9a330bc3b79df70ced7e2d1d5e2` |
 | kem-12 | — | `512caaf5fa04ea5ab51fb5eeee9e81f8c7c7c430b60727130067634bfb674d01` |
-| kem-13 | — | `862f40ba424253bae7fadbc9c2f54a568b77e0f97fba4728c5fd1e4e826dddc7` |
+| kem-13 | 8992809 | `862f40ba424253bae7fadbc9c2f54a568b77e0f97fba4728c5fd1e4e826dddc7` |
 | kem-14 | 20677386 | `ed443d6a9e2e6c50e4956e9b30ce078ae0598a8846962d04b9894cac0816527b` |
 | kem-17 | 789966981 | `3780991127f49b6397b4182d32b35ab7a6359bf825a707e90df0f809beeb3790` |
 | kem-18 | 8583603 | `a6e5070647a40e7de1bf6e5b085dc1d6423c003a409864fdb303d87f881cec0b` |
@@ -65,11 +71,12 @@ are not required for a normal build.
 | kem-23 | — | `ee11788a3e8bf8653d18ade6580c47a331b91e7eac3e31a5a6750a4b4cfb827b` |
 | kem-24 | 16810898 | `fdb6749116bddbb8a86074b9ab6f5f55d37540b92e3964906dede0b09c7faf4b` |
 | kem-27 | 9622416 | `9c0bad4c4846998df1214ba562e1c3b8aece6b69f08234a9bb0d89e3a5a4ea9a` |
-| kem-28 | — | `aaab8e0692fd19dd2edda5384b5e85bba74661d478823b48cab3cccb53675756` |
+| kem-28 | 6170350 | `aaab8e0692fd19dd2edda5384b5e85bba74661d478823b48cab3cccb53675756` |
 | kem-29 | 1081142 | `3ae9d4f1a717fb473e76447014d585cd5d14fe38728f02b1a044cc6a2d03e16d` |
 | kem-31 | 35179832 | `eff17fd345bbb44cbaeb822bece3c0b82b8d00f49278e72a89c83e2551c1752a` |
 | kem-32 | 87169850 | `24a3986a4fbb852a677267a6443756328eae3642af770e767fe38f8291f294db` |
 | kem-33 | 7113093 | `f5eedd8a4bf786cd5a56a21f2c7ad5cf3307939a1bf0aeca5041920067880396` |
+| kem-35 | 12578761 | `050aad7293ec90fafd9070e82877eedc81caf0aaaca932c995619a3f35429876` |
 | kem-36 | — | `03956a13fde3d402513bfcf9942f2b04fd23e98b01a3dc52b48938b9c89fe4d6` |
 | kem-37 | 18591835 | `1e4b96e7a849c95b4a6511c5739be9e0b4adf19b00195c2c0ce14f66be316876` |
 | kem-38 | — | `f9a1b135ea16aca0c974861732e03cd3164f1288f33ff150ff66c98326b75bcb` |
@@ -98,8 +105,8 @@ are not required for a normal build.
 | sign-16 | 13994983 | `7044d22735d39f902df35dd7d8d77c850cd296c81517e8c19134a2f9d006655a` |
 | sign-18 | — | `e34f18832e968681dd0c51ce0d4b29d80e01ad29daa83dfb805718b76fdffa80` |
 | sign-22 | — | `7b509d21c6674bc23751b8743cb7c2a4a07ee295fafe04e2fa95c0613160bdfd` |
-| sign-23 | — | `09253fd33c2215098177991db3375cb94e4e4a73a65b019783edabefa5bd8a62` |
-| sign-24 | — | `443ab14257658d89a60e14ad0d4b7f4df9fcdd06da4f42fcb29bbbfc75a97153` |
+| sign-23 | 9327439 | `09253fd33c2215098177991db3375cb94e4e4a73a65b019783edabefa5bd8a62` |
+| sign-24 | 17804763 | `443ab14257658d89a60e14ad0d4b7f4df9fcdd06da4f42fcb29bbbfc75a97153` |
 | sign-25 | 19195437 | `cf635de5eebbdeb7b2212e84f349da4ca878889e0a4a59b463d0c8cdfdb8eeab` |
 | sign-26 | 15147408 | `98b7e4ffddfe31b5fb0f448345b49228c8d8a7c87078688ba1656b28631448c5` |
 | sign-27 | 25366064 | `f4afa484e450e2adf4b5f9c867fb199d0d0e22d66a3eafbc8c4738744fb62c58` |
@@ -108,3 +115,44 @@ are not required for a normal build.
 | sign-32 | 1326858513 | `bbfa8dad5ee57083578b50b9937e773e6158f72646e825da3d3265cc00cb1294` |
 | sign-33 | 396850232 | `4b7bb0f15388b395b9308ae480f25622105a734f0ab4a6bd16398438c4b9752a` |
 | sign-34 | — | `1eb45f24ad8f7ff25db923479c6500f273aee8b2470d76339030fed8d96b5b31` |
+
+## Additional submission archives verified 2026-09-24 UTC
+
+These 32 official ZIPs were fetched from the URLs in `downloads.csv`, hashed,
+and used only to import source files. The ZIPs themselves are ignored and do
+not belong in the artifact repository.
+
+| id | bytes | SHA-256 |
+|---|---:|---|
+| hash-03 | 10629085 | `d6b40f34b4c4af7ab1929816d8613220ed669aace6bfdd8d2e9496d90ddc5438` |
+| hash-06 | 28396103 | `b9192c8a4046d8af48ea19ddefd538f11dd456766b2daf3597762c76a2cc0d6d` |
+| hash-07 | 148150104 | `088759817e3193e0ca02c3a3669fd05ac70e833b0447f336666268b61846b26c` |
+| hash-08 | 20167520 | `989978bcefbe20124943b2003908226c48e0f05b5ec8db510e7cdb89c2299f1e` |
+| hash-15 | 53685148 | `16c798c93c6fbdc9ac3703113c120fe22df46569a93d7322aaba46effa3273eb` |
+| hash-16 | 47056236 | `e79ca6ef17bcf0485ae2462cfe338e904f05551d7a8859271354d469072b3c2d` |
+| hash-23 | 31713305 | `10335345f6a6cca5e4be688ef42230dff983049483acecbd43f38febb7618609` |
+| hash-28 | 11224132 | `0aa9a5a64a54ddaa82b689d46971973825e48e0577685317d5f9bbab9ba85b02` |
+| hash-29 | 11224353 | `96b67428bbeda82fd797d6f510466313a23f90ea00a5a0a58f4929b8e554a45b` |
+| hash-30 | 16311230 | `47e6297d4d707897c64a75a0b490152b2c67abfb1777d89d225b4bcf58a0063b` |
+| hash-33 | 146828807 | `db6970d54250084ea73cc1a47bd56c868e5e478cdfa3746ff7b69d30c690b0c8` |
+| hash-34 | 27113718 | `1ffeb0bd3f3645ea43decaacb0233c7dd23b9b127ac092efc0c12d6661f84023` |
+| kem-05 | 38667045 | `3a5d97532003786374b68b39779cff4e4938f593fef9596f171652c6ff593917` |
+| kem-15 | 5802560 | `6c560f434b347fbac8334f55b9ba2838cb1cf885d5aa25e95acb66ed6c6de0fe` |
+| kem-16 | 16015701 | `718bb70eee268550fcef2a82e8eb9879c51ecfdbaefd6bfe2157e7639ffc8557` |
+| kem-19 | 10424731 | `e33130fb45a3b1e220f8043739d1396a884c0043cb4336104e67e5404c7cc725` |
+| kem-20 | 23341608 | `ae363dbefd69d64e99987b64105d60bfa376d97c8b58b055665761559c44c78b` |
+| kem-25 | 13284152 | `8105c6241a322661411e870a3087338f48f4f5c477a540387b800c08955cc7fd` |
+| kem-26 | 7408070 | `033994e27bf0dc824078593a98eb51465f979b1bca0932cabb29be6626447638` |
+| kem-30 | 13109792 | `906be26ce8d27de335b691ff8490b2344b46d7519d88c799cba0242324e4882c` |
+| kem-34 | 19766493 | `569d526cf7abe38393f69a4513686fa86a0c3b3033cc225b84cc107b20b17b98` |
+| kem-41 | 37391107 | `69eba070320fc6cb365fb6d43d2b74460487732aeb7e607fac2d6c1b3a64a80e` |
+| kex-01 | 9144467 | `bbadecca0ce9d3f3131129b17c91e0ab89a81e077710e53f7a569a30475a23f2` |
+| kex-04 | 11261599 | `979c22239b4a2fb6732e68029c06659f8a7b582c00ca163e1ec72874b227e117` |
+| sign-13 | 21571838 | `814cd3b977ddc0cc59828861c145580473b1a62a66da852b078edbaf689f5a8d` |
+| sign-14 | 17106428 | `34d863f7df8979c4a5e27fcfe657ed54e81905115c0afc8ef749f50af432f928` |
+| sign-17 | 4746912 | `02322c6792259231ab8eb3cc094be32be02a1b9b6b1d7c86b0029c37b0f04d09` |
+| sign-19 | 23235965 | `ec801791976a10baffa852c479afd12362af3b5fb6420104254fb48814d99918` |
+| sign-20 | 28035220 | `2eb8f3ed205eb7c7e8b3108a997b59643d1aa5579035b8093b4ddbe051a48007` |
+| sign-21 | 11061844 | `499821538d7f79464cc1ee1468254b0e49f750794a591ffe038938c4cfa11914` |
+| sign-28 | 51062301 | `c4ae5b27a188612cd286a786179ce5461e6aca0b8599ba13b8d77b210a940adb` |
+| sign-30 | 67794477 | `4b22f54b07509833b08d32402ffe06d7566e4c87622f9931079e791c80f4765d` |

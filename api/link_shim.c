@@ -99,6 +99,9 @@ int ngcc_random(unsigned char *out, unsigned long long out_len_bits)
     return get_random_number(&drng_algorithm, out, out_len_bits);
 }
 
+/* The complete flag string; ngcc_meta().build_flags holds only its first 127 bytes. */
+const char *ngcc_build_flags(void) { return NGCC_FLAGS; }
+
 static void ngcc_strcpy(char *dst, size_t n, const char *src)
 {
     size_t l = strlen(src);

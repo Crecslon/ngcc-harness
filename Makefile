@@ -7,6 +7,7 @@
 #   make reproduce       tools/reproduce.sh
 #   make check-vulnerabilities  validate stable issue IDs and checker coverage
 #   make check-reference-data   validate all specs and extracted parameters
+#   make check-publishable-files check Git-visible files for bulky package artifacts
 #   make manifest        (re)compute kat.sha256 manifests (needs the Test_Vectors present)
 #   make clean           remove all build outputs, libraries, results, harness
 
@@ -15,7 +16,7 @@ REFERENCE_SOURCE ?=
 # candidate sources here for the uniform library build or KAT targets.
 CANDIDATES := $(filter-out sign-14,$(sort $(patsubst %/Makefile,%,$(wildcard sign-*/Makefile kem-*/Makefile kex-*/Makefile hash-*/Makefile))))
 
-.PHONY: all harness tools exploits test test-prep status reproduce design-audit check-vulnerabilities check-reference-data sync-reference-data manifest clean $(CANDIDATES) \
+.PHONY: all harness tools exploits test test-prep status reproduce design-audit check-vulnerabilities check-reference-data check-publishable-files sync-reference-data manifest clean $(CANDIDATES) \
         $(addprefix test-,$(CANDIDATES)) $(addprefix manifest-,$(CANDIDATES)) $(addprefix clean-,$(CANDIDATES))
 
 all: harness tools $(CANDIDATES) exploits
@@ -82,6 +83,9 @@ check-vulnerabilities:
 
 check-reference-data:
 	python3 tools/sync_reference_data.py --check
+
+check-publishable-files:
+	python3 tools/check_publishable_files.py
 
 sync-reference-data:
 	@test -n "$(REFERENCE_SOURCE)" || { echo "set REFERENCE_SOURCE=/path/to/source-checkout" >&2; exit 2; }

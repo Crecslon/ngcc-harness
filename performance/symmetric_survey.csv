@@ -1,0 +1,88 @@
+# ICCS helper usage per public-key candidate (reference implementation, harness or default build).
+# Evidence: call-graph reachability in built libraries, object constant scans, source reading.
+# Verdict: ICCS-only | mixed | bypass | instance-dependent. See performance/README.md.
+ID;Verdict;Notes
+kem-01;ICCS-only;own fips202.c compiled but unreachable from the API
+kem-02;ICCS-only;
+kem-03;ICCS-only;`loong_hash_tagged_sm3_256` wraps sm3hash
+kem-04;ICCS-only;"`*_using_shake` names parse pseudoXOF output; AES-256-CTR dead; DRNG only with -DBAG_PIGLET_KAT"
+kem-05;mixed;"hash/XOF via ICCS; seeds from NIST AES-256-CTR-DRBG (OpenSSL) only with -DNIST_RAND, otherwise libc rand()"
+kem-06;ICCS-only;"pseudohash for G/H; seed expansion via per-seed ICCS DRNG instances; XKCP Keccak dead"
+kem-07;ICCS-only;"pseudohash for G/H; seed expansion via per-seed ICCS DRNG instances; XKCP Keccak dead"
+kem-08;ICCS-only;optimized AVX2 auxfunc.c adds an SM3 counter-block fast path
+kem-09;ICCS-only;
+kem-10;ICCS-only;own fips202.c compiled but unreachable from the API
+kem-11;ICCS-only;`shake*` names are shims over pseudoXOF
+kem-12;ICCS-only;sha3.c shim has no permutation and is unused
+kem-13;ICCS-only;"default DKE_HASH=0; own SM3/HMAC compiled but unreachable; DKE_HASH=2 would switch to SHAKE"
+kem-14;ICCS-only;
+kem-15;ICCS-only;
+kem-16;ICCS-only;"pseudoXOF only (recomputes prefix per call); lives under _shared/"
+kem-17;ICCS-only;never calls the DRNG: zero-initialised PRNG (known kem-17-1/-3)
+kem-18;ICCS-only;
+kem-19;instance-dependent;"Lore-SM3: ICCS-only; Lore-SHAKE: own FIPS 202 (bypass); AVX2/NEON SIMD SM3 in auxfunc"
+kem-20;mixed;"all SHAKE calls are pseudoXOF shims; matrix A via own AES-128 with -D_AES128_FOR_A_"
+kem-21;ICCS-only;`shake*` names are shims over pseudoXOF
+kem-22;ICCS-only;
+kem-23;ICCS-only;
+kem-24;ICCS-only;
+kem-25;ICCS-only;with -DUSE_ICCS (SHA3 build selectable)
+kem-26;bypass;"own inline Keccak (SHA3-512, SHAKE256) for everything; DRNG for randomness"
+kem-27;ICCS-only;
+kem-28;ICCS-only;
+kem-29;ICCS-only;
+kem-30;ICCS-only;default BIT_USE_SHAKE=0
+kem-31;bypass;"own SM3 + counter XOF (pike_hash.c) for G, KDF and streams; DRNG only"
+kem-32;bypass;"own SHAKE256 for session key/keygen expansion; OpenSSL AES-256-CTR-DRBG seeded by the ICCS DRNG; auxfunc not linked"
+kem-33;ICCS-only;
+kem-34;ICCS-only;
+kem-35;instance-dependent;"SM3 sets: private modified copy of auxfunc (official not linked); AES/SHAKE sets: own AES/Keccak (bypass); benchmark pilot uses SHAKE"
+kem-36;ICCS-only;
+kem-37;ICCS-only;
+kem-38;ICCS-only;
+kem-39;ICCS-only;grep hits for AES/Keccak/OpenSSL are not reachable in the built library
+kem-40;ICCS-only;
+kem-41;ICCS-only;
+kex-01;ICCS-only;"default DKE_HASH=0; own SM3/HMAC compiled but unreachable; DKE_HASH=2 would switch to SHAKE"
+kex-02;ICCS-only;optimized AVX2 auxfunc.c adds an SM3 counter-block fast path
+kex-03;ICCS-only;"PolarLAC/ZEN/BiT components; Keccak only if BIT_USE_SHAKE=1"
+kex-04;mixed;"KEX core via ICCS; embedded ML-DSA uses its own SHAKE"
+kex-05;ICCS-only;grep hits for AES/Keccak/OpenSSL are not reachable in the built library
+kex-06;bypass;"SHAKE128/256 + ChaCha20; DRNG only with -DKAT_BUILD, otherwise /dev/urandom"
+kex-07;ICCS-only;own fips202.c compiled but unreachable
+kex-08;bypass;no hash or KDF at all: raw j-invariant (known kex-08-1)
+kex-09;ICCS-only;
+sign-01;ICCS-only;own fips202.c compiled but unreachable from the API
+sign-02;ICCS-only;own fips202.c compiled but unreachable (BIT_USE_SHAKE=0)
+sign-03;ICCS-only;
+sign-04;ICCS-only;
+sign-05;mixed;"random oracles via ICCS; seed-tree/VOLE PRG via SM4 / Ballet / Vistrutah"
+sign-06;ICCS-only;`shake*` names are shims over pseudoXOF
+sign-07;ICCS-only;
+sign-08;ICCS-only;x4 shake names loop over the ICCS XOF
+sign-09;ICCS-only;
+sign-10;ICCS-only;
+sign-11;ICCS-only;
+sign-12;ICCS-only;
+sign-13;bypass;"own XKCP Keccak + AES-CTR PRGs; no auxfunc.c shipped"
+sign-14;mixed;"with -DXOF_PSEUDO (as the KATs need): oracles via pseudoXOF, PRG via AES/Rijndael/SHACAL-2; source default is own Keccak (bypass)"
+sign-15;ICCS-only;
+sign-16;ICCS-only;
+sign-17;ICCS-only;optimized AVX2 auxfunc.c adds sm3x4 / pseudoXOF_4x
+sign-18;ICCS-only;`shake*` names are shims over pseudoXOF
+sign-19;instance-dependent;"SM3 sets mixed (own SM3 for all tree hashing/PRF, pseudoXOF for digest/indices); SHAKE sets bypass with a SHAKE-based drng.c"
+sign-20;ICCS-only;builds wide hash and counter XOF on sm3hash, not pseudohash/pseudoXOF
+sign-21;bypass;"Keccak oracles + AES/Rijndael/SHACAL-2 PRGs; pseudoXOF only with -DXOF_PSEUDO (undefined)"
+sign-22;instance-dependent;"SM3 sets: counter XOF on sm3hash; SHAKE sets: own FIPS 202 (bypass)"
+sign-23;ICCS-only;"uses the ICCS SM3 DRBG (init/get_random_number) as its XOF; AVX2/AVX-512 SM3 DRBG in optimized"
+sign-24;ICCS-only;
+sign-25;ICCS-only;
+sign-26;ICCS-only;"iccs/xof_iccs.c glue; NIST SHAKE/AES leftovers unused"
+sign-27;ICCS-only;`shake*` names are shims over pseudoXOF
+sign-28;mixed;"hashing via pseudoXOF; PRGs via own AES/Rijndael and a BLAKE2s-round cipher"
+sign-29;ICCS-only;
+sign-30;ICCS-only;with -DUSE_ICCS (SHA3 build selectable)
+sign-31;ICCS-only;
+sign-32;ICCS-only;grep hits for AES/Keccak/OpenSSL are not reachable in the built library
+sign-33;ICCS-only;
+sign-34;ICCS-only;
