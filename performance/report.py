@@ -51,6 +51,11 @@ def op_order(key: str):
 
 BASELINE = "iccs"        # the ICCS helpers timed as hash instances (performance/iccs)
 HASH_SIZES = (32, 128, 512, 1024, 4096, 8192, 16384, 65536)   # the guide's S1-S8
+# bandwidth columns of the summary: (size field, header); sizes are the library's
+# own API constants, so they do not depend on the system
+SIZE_COLS = {"kem": [("pk_bytes", "public key (B)"), ("ct_bytes", "ciphertext (B)")],
+             "sign": [("pk_bytes", "public key (B)"), ("signature_bytes", "signature (B)")],
+             "kex": [("total_msg_bytes", "transferred (B)")]}
 OPS = {"kem": ["keygen", "enc", "dec"], "sign": ["keygen", "sign", "verify"], "kex": ["exchange"],
        "hash": ["hash_32", "hash_1024", "hash_65536"]}
 
@@ -355,6 +360,8 @@ def summary(run: Run, out: Path, arch: str):
              "not submitter self-assessments or NICCS results.",
              "- **Notation:** `–` means not measured, `n=` marks fewer than 100 timed calls, and ⚠ marks an instance "
              "whose submitted KAT vectors are not reproduced by the submitted code.",
+             "- **Sizes** in bytes (public key, ciphertext, signature; for key exchange, the total transferred "
+             "in all protocol messages) are the implementation's own API constants and do not depend on the system.",
              ("- **Hash rows** give three message sizes; each parenthesized value is the candidate's cycles divided "
               "by those of the ICCS `pseudoXOF` with the same output width and message length, timed the same way "
               "([ICCS helpers](#iccs-hash-helpers)). It is a relative speed, not an estimate of a production "
@@ -382,6 +389,8 @@ def summary(run: Run, out: Path, arch: str):
                         p = run.profiles.get((cand, label), {}).get(op)
                         share = pct(p["hash_share"]) if p and "hash_share" in p else None
                         cells.append(pk_cell(recs.get(op), share))
+                sizes = next((r["sizes"] for r in recs.values() if r.get("sizes")), {})
+                cells += [str(sizes[k]) if sizes.get(k) else "–" for k, _ in SIZE_COLS.get(cat, [])]
                 variant = " (AVX2)" if label.endswith("-avx2") else ""
                 status = entry.get("kat")
                 if status and status != "PASS":
@@ -408,9 +417,9 @@ def summary(run: Run, out: Path, arch: str):
             lines += ["| id | algorithm | instance performance report | 32 B cycles (vs pseudoXOF) | 1 KiB cycles | 64 KiB cycles | notes |",
                       "|---|---|---|---|---|---|---|"]
         else:
-            hdr = " | ".join(f"{op} cycles (sym %)" for op in OPS[cat])
+            hdr = " | ".join([f"{op} cycles (sym %)" for op in OPS[cat]] + [h for _, h in SIZE_COLS[cat]])
             lines += [f"| id | algorithm | instance performance report | {hdr} | notes |",
-                      "|---|---|---|" + "---|" * (len(OPS[cat]) + 1)]
+                      "|---|---|---|" + "---|" * (len(OPS[cat]) + len(SIZE_COLS[cat]) + 1)]
         lines += rows + [""]
     emit(summary_page(out), "\n".join(lines) + "\n")
 
