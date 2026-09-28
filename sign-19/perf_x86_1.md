@@ -279,7 +279,7 @@ Share of each operation spent in the ICCS placeholder hash functions and in the 
 
 ## 7. Raw evidence index
 
-All paths are relative to the campaign run directory; commands are recorded in each JSON file.
+Paths are relative to `performance/data/x86_1/` in the [harness](https://github.com/ngcc-dev/ngcc-harness); each JSON file records its commands, environment and trials.
 
 | instance | item | file |
 |---|---|---|
@@ -353,60 +353,70 @@ All paths are relative to the campaign run directory; commands are recorded in e
 | `Phoenix-SHAKE-512s` | hash profile keygen | `profile/sign-19/Phoenix-SHAKE-512s__keygen.json` |
 | `Phoenix-SHAKE-512s` | hash profile sign | `profile/sign-19/Phoenix-SHAKE-512s__sign.json` |
 | `Phoenix-SHAKE-512s` | hash profile verify | `profile/sign-19/Phoenix-SHAKE-512s__verify.json` |
+| `Phoenix-SM3-128f` | KAT log (sha256 `38d839c3e2e37d5c…`) | `kat/sign-19/Phoenix-SM3-128f.log` |
 | `Phoenix-SM3-128f` | timing keygen | `records/sign-19/Phoenix-SM3-128f__keygen.json` |
 | `Phoenix-SM3-128f` | timing sign | `records/sign-19/Phoenix-SM3-128f__sign.json` |
 | `Phoenix-SM3-128f` | timing verify | `records/sign-19/Phoenix-SM3-128f__verify.json` |
 | `Phoenix-SM3-128f` | hash profile keygen | `profile/sign-19/Phoenix-SM3-128f__keygen.json` |
 | `Phoenix-SM3-128f` | hash profile sign | `profile/sign-19/Phoenix-SM3-128f__sign.json` |
 | `Phoenix-SM3-128f` | hash profile verify | `profile/sign-19/Phoenix-SM3-128f__verify.json` |
+| `Phoenix-SM3-128s` | KAT log (sha256 `f166029062654da7…`) | `kat/sign-19/Phoenix-SM3-128s.log` |
 | `Phoenix-SM3-128s` | timing keygen | `records/sign-19/Phoenix-SM3-128s__keygen.json` |
 | `Phoenix-SM3-128s` | timing sign | `records/sign-19/Phoenix-SM3-128s__sign.json` |
 | `Phoenix-SM3-128s` | timing verify | `records/sign-19/Phoenix-SM3-128s__verify.json` |
 | `Phoenix-SM3-128s` | hash profile keygen | `profile/sign-19/Phoenix-SM3-128s__keygen.json` |
 | `Phoenix-SM3-128s` | hash profile sign | `profile/sign-19/Phoenix-SM3-128s__sign.json` |
 | `Phoenix-SM3-128s` | hash profile verify | `profile/sign-19/Phoenix-SM3-128s__verify.json` |
+| `Phoenix-SM3-192f` | KAT log (sha256 `b7186300a7f7c32f…`) | `kat/sign-19/Phoenix-SM3-192f.log` |
 | `Phoenix-SM3-192f` | timing keygen | `records/sign-19/Phoenix-SM3-192f__keygen.json` |
 | `Phoenix-SM3-192f` | timing sign | `records/sign-19/Phoenix-SM3-192f__sign.json` |
 | `Phoenix-SM3-192f` | timing verify | `records/sign-19/Phoenix-SM3-192f__verify.json` |
 | `Phoenix-SM3-192f` | hash profile keygen | `profile/sign-19/Phoenix-SM3-192f__keygen.json` |
 | `Phoenix-SM3-192f` | hash profile sign | `profile/sign-19/Phoenix-SM3-192f__sign.json` |
 | `Phoenix-SM3-192f` | hash profile verify | `profile/sign-19/Phoenix-SM3-192f__verify.json` |
+| `Phoenix-SM3-192s` | KAT log (sha256 `9d9954e8b1f5e881…`) | `kat/sign-19/Phoenix-SM3-192s.log` |
 | `Phoenix-SM3-192s` | timing keygen | `records/sign-19/Phoenix-SM3-192s__keygen.json` |
 | `Phoenix-SM3-192s` | timing sign | `records/sign-19/Phoenix-SM3-192s__sign.json` |
 | `Phoenix-SM3-192s` | timing verify | `records/sign-19/Phoenix-SM3-192s__verify.json` |
 | `Phoenix-SM3-192s` | hash profile keygen | `profile/sign-19/Phoenix-SM3-192s__keygen.json` |
 | `Phoenix-SM3-192s` | hash profile sign | `profile/sign-19/Phoenix-SM3-192s__sign.json` |
 | `Phoenix-SM3-192s` | hash profile verify | `profile/sign-19/Phoenix-SM3-192s__verify.json` |
+| `Phoenix-SM3-256f` | KAT log (sha256 `5fb1e75749eca822…`) | `kat/sign-19/Phoenix-SM3-256f.log` |
 | `Phoenix-SM3-256f` | timing keygen | `records/sign-19/Phoenix-SM3-256f__keygen.json` |
 | `Phoenix-SM3-256f` | timing sign | `records/sign-19/Phoenix-SM3-256f__sign.json` |
 | `Phoenix-SM3-256f` | timing verify | `records/sign-19/Phoenix-SM3-256f__verify.json` |
 | `Phoenix-SM3-256f` | hash profile keygen | `profile/sign-19/Phoenix-SM3-256f__keygen.json` |
 | `Phoenix-SM3-256f` | hash profile sign | `profile/sign-19/Phoenix-SM3-256f__sign.json` |
 | `Phoenix-SM3-256f` | hash profile verify | `profile/sign-19/Phoenix-SM3-256f__verify.json` |
+| `Phoenix-SM3-256s` | KAT log (sha256 `aeab9f70c73d28a6…`) | `kat/sign-19/Phoenix-SM3-256s.log` |
 | `Phoenix-SM3-256s` | timing keygen | `records/sign-19/Phoenix-SM3-256s__keygen.json` |
 | `Phoenix-SM3-256s` | timing sign | `records/sign-19/Phoenix-SM3-256s__sign.json` |
 | `Phoenix-SM3-256s` | timing verify | `records/sign-19/Phoenix-SM3-256s__verify.json` |
 | `Phoenix-SM3-256s` | hash profile keygen | `profile/sign-19/Phoenix-SM3-256s__keygen.json` |
 | `Phoenix-SM3-256s` | hash profile sign | `profile/sign-19/Phoenix-SM3-256s__sign.json` |
 | `Phoenix-SM3-256s` | hash profile verify | `profile/sign-19/Phoenix-SM3-256s__verify.json` |
+| `Phoenix-SM3-384f` | KAT log (sha256 `f1454f14620520df…`) | `kat/sign-19/Phoenix-SM3-384f.log` |
 | `Phoenix-SM3-384f` | timing keygen | `records/sign-19/Phoenix-SM3-384f__keygen.json` |
 | `Phoenix-SM3-384f` | timing sign | `records/sign-19/Phoenix-SM3-384f__sign.json` |
 | `Phoenix-SM3-384f` | timing verify | `records/sign-19/Phoenix-SM3-384f__verify.json` |
 | `Phoenix-SM3-384f` | hash profile keygen | `profile/sign-19/Phoenix-SM3-384f__keygen.json` |
 | `Phoenix-SM3-384f` | hash profile sign | `profile/sign-19/Phoenix-SM3-384f__sign.json` |
 | `Phoenix-SM3-384f` | hash profile verify | `profile/sign-19/Phoenix-SM3-384f__verify.json` |
+| `Phoenix-SM3-384s` | KAT log (sha256 `e95b1f9637acff3e…`) | `kat/sign-19/Phoenix-SM3-384s.log` |
 | `Phoenix-SM3-384s` | timing keygen | `records/sign-19/Phoenix-SM3-384s__keygen.json` |
 | `Phoenix-SM3-384s` | timing sign | `records/sign-19/Phoenix-SM3-384s__sign.json` |
 | `Phoenix-SM3-384s` | timing verify | `records/sign-19/Phoenix-SM3-384s__verify.json` |
 | `Phoenix-SM3-384s` | hash profile keygen | `profile/sign-19/Phoenix-SM3-384s__keygen.json` |
 | `Phoenix-SM3-384s` | hash profile sign | `profile/sign-19/Phoenix-SM3-384s__sign.json` |
 | `Phoenix-SM3-384s` | hash profile verify | `profile/sign-19/Phoenix-SM3-384s__verify.json` |
+| `Phoenix-SM3-512f` | KAT log (sha256 `79d8c88f28eee52e…`) | `kat/sign-19/Phoenix-SM3-512f.log` |
 | `Phoenix-SM3-512f` | timing keygen | `records/sign-19/Phoenix-SM3-512f__keygen.json` |
 | `Phoenix-SM3-512f` | timing sign | `records/sign-19/Phoenix-SM3-512f__sign.json` |
 | `Phoenix-SM3-512f` | timing verify | `records/sign-19/Phoenix-SM3-512f__verify.json` |
 | `Phoenix-SM3-512f` | hash profile keygen | `profile/sign-19/Phoenix-SM3-512f__keygen.json` |
 | `Phoenix-SM3-512f` | hash profile sign | `profile/sign-19/Phoenix-SM3-512f__sign.json` |
 | `Phoenix-SM3-512f` | hash profile verify | `profile/sign-19/Phoenix-SM3-512f__verify.json` |
+| `Phoenix-SM3-512s` | KAT log (sha256 `01bf6b38ffc539b5…`) | `kat/sign-19/Phoenix-SM3-512s.log` |
 | `Phoenix-SM3-512s` | timing keygen | `records/sign-19/Phoenix-SM3-512s__keygen.json` |
 | `Phoenix-SM3-512s` | timing sign | `records/sign-19/Phoenix-SM3-512s__sign.json` |
 | `Phoenix-SM3-512s` | timing verify | `records/sign-19/Phoenix-SM3-512s__verify.json` |

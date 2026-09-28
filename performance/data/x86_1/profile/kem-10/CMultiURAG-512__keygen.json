@@ -1,0 +1,88 @@
+{
+ "schema": 2,
+ "candidate": "kem-10",
+ "label": "CMultiURAG-512",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-10/libCMultiURAG-512.so",
+  "keygen",
+  "0",
+  "13",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-10",
+  "instance": "CMultiURAG-512",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998014",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 13,
+  "ticks": 2182027100
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 26,
+   "ticks": 163061
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 12328,
+   "calls": 871,
+   "ticks": 65948097
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 15136,
+   "calls": 26,
+   "ticks": 2380038
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 384,
+   "calls": 26,
+   "ticks": 164499
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 736,
+   "calls": 13,
+   "ticks": 103353
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 73416,
+   "calls": 13,
+   "ticks": 5574007
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 2024,
+   "calls": 13,
+   "ticks": 195588
+  }
+ ],
+ "share": {
+  "drng": 0.0341556908252881
+ },
+ "hash_share": 0
+}

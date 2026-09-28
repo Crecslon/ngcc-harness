@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-10",
+ "label": "CMultiURAG-128",
+ "instance": "CMultiURAG-128",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 170,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.122223703196411,
+  "timeout_per_process_s": 303.07333422191783
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-10/lib/libCMultiURAG-128.so",
+ "library_sha256": "95ff73d7237ac425c17ef756ecc76baaaaeb21785a8a8f601f08ba0bdbc7a04a",
+ "kat_log": "kat/kem-10/CMultiURAG-128.log",
+ "kat_log_sha256": "b9d9f1686a50cd4118b2449e813824ab71e0567d0123ffab996cf0999a31b0c3",
+ "started_utc": "2026-09-25T18:58:06.061305+00:00",
+ "ended_utc": "2026-09-25T18:58:11.139483+00:00",
+ "load_average_start": [
+  2.146484375,
+  2.1142578125,
+  2.04052734375
+ ],
+ "load_average_end": [
+  2.13427734375,
+  2.1123046875,
+  2.0400390625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-10",
+    "instance": "CMultiURAG-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1773568",
+    "pk_bytes": "3866",
+    "sk_bytes": "3960",
+    "ct_bytes": "7332",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1970176",
+    "measurement_count": "170",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 170,
+     "seconds": 0.989457504,
+     "cycles": 2071458993
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-10/lib/libCMultiURAG-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "170",
+    "3"
+   ],
+   "wall_s": 1.0092370510101318,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-10",
+    "instance": "CMultiURAG-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1753088",
+    "pk_bytes": "3866",
+    "sk_bytes": "3960",
+    "ct_bytes": "7332",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1990656",
+    "measurement_count": "170",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 170,
+     "seconds": 0.989636836,
+     "cycles": 2071448701
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-10/lib/libCMultiURAG-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "170",
+    "3"
+   ],
+   "wall_s": 1.0093178749084473,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-10",
+    "instance": "CMultiURAG-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1679360",
+    "pk_bytes": "3866",
+    "sk_bytes": "3960",
+    "ct_bytes": "7332",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1900544",
+    "measurement_count": "170",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 170,
+     "seconds": 0.989334303,
+     "cycles": 2071066320
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-10/lib/libCMultiURAG-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "170",
+    "3"
+   ],
+   "wall_s": 1.0394978523254395,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-10",
+    "instance": "CMultiURAG-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1626112",
+    "pk_bytes": "3866",
+    "sk_bytes": "3960",
+    "ct_bytes": "7332",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1843200",
+    "measurement_count": "170",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 170,
+     "seconds": 0.990712178,
+     "cycles": 2073563493
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-10/lib/libCMultiURAG-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "170",
+    "3"
+   ],
+   "wall_s": 1.0105457305908203,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-10",
+    "instance": "CMultiURAG-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1691648",
+    "pk_bytes": "3866",
+    "sk_bytes": "3960",
+    "ct_bytes": "7332",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1904640",
+    "measurement_count": "170",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 170,
+     "seconds": 0.989365558,
+     "cycles": 2071050953
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-10/lib/libCMultiURAG-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "170",
+    "3"
+   ],
+   "wall_s": 1.009315013885498,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 170,
+   "seconds": 0.989457504,
+   "cycles": 2071458993
+  },
+  {
+   "measurements": 170,
+   "seconds": 0.989636836,
+   "cycles": 2071448701
+  },
+  {
+   "measurements": 170,
+   "seconds": 0.989334303,
+   "cycles": 2071066320
+  },
+  {
+   "measurements": 170,
+   "seconds": 0.990712178,
+   "cycles": 2073563493
+  },
+  {
+   "measurements": 170,
+   "seconds": 0.989365558,
+   "cycles": 2071050953
+  }
+ ],
+ "measurements": 850,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0058217722105882354,
+ "median_trial_seconds": 0.005820338258823529,
+ "min_trial_seconds": 0.005819613547058824,
+ "max_trial_seconds": 0.005827718694117647,
+ "mean_cycles": 12186574.65882353,
+ "median_trial_cycles": 12184992.358823529,
+ "operations_per_second": 171.7690015733129,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 3866,
+  "sk_bytes": 3960,
+  "ct_bytes": 7332,
+  "ss_bytes": 64,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+ "baseline_rss_bytes": 1773568,
+ "peak_rss_bytes": 1990656,
+ "timing_scope": "loop"
+}

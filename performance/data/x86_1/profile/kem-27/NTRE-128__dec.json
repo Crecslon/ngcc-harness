@@ -1,0 +1,53 @@
+{
+ "schema": 2,
+ "candidate": "kem-27",
+ "label": "NTRE-128",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-27/libNTRE-128.so",
+  "dec",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-27",
+  "instance": "NTRE-128",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996387",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 114941263
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 592,
+   "out_bits": 2776,
+   "calls": 1000,
+   "ticks": 31713561
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 328,
+   "out_bits": 328,
+   "calls": 1000,
+   "ticks": 3046255
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.30241372934974625
+ },
+ "hash_share": 0.30241372934974625
+}

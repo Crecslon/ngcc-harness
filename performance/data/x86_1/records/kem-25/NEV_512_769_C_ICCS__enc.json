@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-25",
+ "label": "NEV_512_769_C_ICCS",
+ "instance": "NEV_512_769_C_ICCS",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "enc",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 20000,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 4.097230227562867,
+  "timeout_per_process_s": 302.45833813653775
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-25/lib/libNEV_512_769_C_ICCS.so",
+ "library_sha256": "a0499ccb80490cd32cd71df30780cacab0eab499c3f6b43c99190dfa5c8a5a6b",
+ "kat_log": "kat/kem-25/NEV_512_769_C_ICCS.log",
+ "kat_log_sha256": "ab4f882f97a2af69661fccb75722188e8668e81ad3ec80021ac09e4a9189f64a",
+ "started_utc": "2026-09-25T17:13:03.770510+00:00",
+ "ended_utc": "2026-09-25T17:13:07.137288+00:00",
+ "load_average_start": [
+  2.0,
+  1.7783203125,
+  1.38330078125
+ ],
+ "load_average_end": [
+  2.0,
+  1.7783203125,
+  1.38330078125
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-25",
+    "instance": "NEV_512_769_C_ICCS",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1564672",
+    "pk_bytes": "615",
+    "sk_bytes": "1246",
+    "ct_bytes": "512",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1691648",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.671062388,
+     "cycles": 1404812303
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-25/lib/libNEV_512_769_C_ICCS.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.6733322143554688,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-25",
+    "instance": "NEV_512_769_C_ICCS",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1757184",
+    "pk_bytes": "615",
+    "sk_bytes": "1246",
+    "ct_bytes": "512",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1822720",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.670653366,
+     "cycles": 1403898463
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-25/lib/libNEV_512_769_C_ICCS.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.6729028224945068,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-25",
+    "instance": "NEV_512_769_C_ICCS",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1724416",
+    "pk_bytes": "615",
+    "sk_bytes": "1246",
+    "ct_bytes": "512",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1851392",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.672393419,
+     "cycles": 1405167006
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-25/lib/libNEV_512_769_C_ICCS.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.6747558116912842,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-25",
+    "instance": "NEV_512_769_C_ICCS",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1740800",
+    "pk_bytes": "615",
+    "sk_bytes": "1246",
+    "ct_bytes": "512",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1806336",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.671174023,
+     "cycles": 1404988538
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-25/lib/libNEV_512_769_C_ICCS.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.6736106872558594,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-25",
+    "instance": "NEV_512_769_C_ICCS",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1757184",
+    "pk_bytes": "615",
+    "sk_bytes": "1246",
+    "ct_bytes": "512",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1822720",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.669627695,
+     "cycles": 1401918862
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-25/lib/libNEV_512_769_C_ICCS.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.6719405651092529,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 20000,
+   "seconds": 0.671062388,
+   "cycles": 1404812303
+  },
+  {
+   "measurements": 20000,
+   "seconds": 0.670653366,
+   "cycles": 1403898463
+  },
+  {
+   "measurements": 20000,
+   "seconds": 0.672393419,
+   "cycles": 1405167006
+  },
+  {
+   "measurements": 20000,
+   "seconds": 0.671174023,
+   "cycles": 1404988538
+  },
+  {
+   "measurements": 20000,
+   "seconds": 0.669627695,
+   "cycles": 1401918862
+  }
+ ],
+ "measurements": 100000,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 3.3549108909999996e-05,
+ "median_trial_seconds": 3.35531194e-05,
+ "min_trial_seconds": 3.348138475e-05,
+ "max_trial_seconds": 3.3619670950000004e-05,
+ "mean_cycles": 70207.85172,
+ "median_trial_cycles": 70240.61515,
+ "operations_per_second": 29807.050991507243,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 615,
+  "sk_bytes": 1246,
+  "ct_bytes": 512,
+  "ss_bytes": 16,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1757184,
+ "peak_rss_bytes": 1851392,
+ "timing_scope": "loop"
+}

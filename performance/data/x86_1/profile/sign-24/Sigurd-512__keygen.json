@@ -1,0 +1,62 @@
+{
+ "schema": 2,
+ "candidate": "sign-24",
+ "label": "Sigurd-512",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-24/libSigurd512_REF.so",
+  "keygen",
+  "0",
+  "4",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-24",
+  "instance": "Sigurd512_REF",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111991607",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 4,
+  "ticks": 2294907215
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1088,
+   "out_bits": 13940256,
+   "calls": 4,
+   "ticks": 925824904
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1088,
+   "out_bits": 15136,
+   "calls": 4,
+   "ticks": 1042703
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 1024,
+   "calls": 8,
+   "ticks": 95070
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.4038802095970577,
+  "drng": 4.142651144177086e-05
+ },
+ "hash_share": 0.4038802095970577,
+ "relabelled_from": "Sigurd512_REF"
+}

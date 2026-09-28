@@ -1,0 +1,111 @@
+{
+ "schema": 2,
+ "candidate": "kex-03",
+ "label": "CreTAKE-K2K-ZEN512",
+ "operation": "exchange",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kex-03/libCreTAKE-K2K-ZEN512.so",
+  "exchange",
+  "0",
+  "228",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kex-03",
+  "instance": "CreTAKE-K2K-ZEN512",
+  "operation": "exchange",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998064",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 228,
+  "ticks": 2185229840
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 1824,
+   "ticks": 11571606
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 19664,
+   "out_bits": 512,
+   "calls": 912,
+   "ticks": 104710873
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 1024,
+   "out_bits": 1024,
+   "calls": 912,
+   "ticks": 35386714
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 109168,
+   "out_bits": 1024,
+   "calls": 456,
+   "ticks": 530145093
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 6144,
+   "calls": 2280,
+   "ticks": 156396084
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 5274,
+   "out_bits": 512,
+   "calls": 456,
+   "ticks": 17211393
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 16896,
+   "out_bits": 512,
+   "calls": 456,
+   "ticks": 42360728
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 10240,
+   "calls": 2748,
+   "ticks": 314667147
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 20688,
+   "out_bits": 512,
+   "calls": 456,
+   "ticks": 51470795
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 64,
+   "out_bits": 1024,
+   "calls": 228,
+   "ticks": 1403846
+  }
+ ],
+ "share": {
+  "drng": 0.0052953724995810966,
+  "pseudohash": 0.07198738417373982,
+  "pseudoXOF": 0.5017521145510259
+ },
+ "hash_share": 0.5737394987247657
+}

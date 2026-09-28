@@ -1,0 +1,16 @@
+library     = lib/libTRINE-512-ShortSig.so
+id          = sign-30
+type        = sig
+algorithm   = TRINE
+instance    = TRINE-512-ShortSig
+variant     = Reference_Implementation
+source_dir  = Implementations/Reference_Implementation/TRINE-512-ShortSig
+compiler    = gcc 14.2.0
+build_flags = -O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE 
+pk_len      = 3188776
+sk_len      = 128
+sn_len      = 23672
+timing  keygen 1101.691 ms  sign 1624918.061 ms  verify 653236.588 ms (avg over 1)
+wrote  performance/runs/blk-campaign-20260925/katcheck/TRINE-512-ShortSig/KAT_SIG_TRINE-512-ShortSig.txt (6425504 bytes)
+compare Test_Vectors/KAT_SIG_TRINE-512-ShortSig.txt (6425505 bytes)
+RESULT sign-30 TRINE-512-ShortSig PASS 

@@ -103,28 +103,32 @@ Share of each operation spent in the ICCS placeholder hash functions and in the 
 
 ## 7. Raw evidence index
 
-All paths are relative to the campaign run directory; commands are recorded in each JSON file.
+Paths are relative to `performance/data/x86_1/` in the [harness](https://github.com/ngcc-dev/ngcc-harness); each JSON file records its commands, environment and trials.
 
 | instance | item | file |
 |---|---|---|
+| `lwrdsa128` | KAT log (sha256 `702480bc43313e49…`) | `kat/sign-15/lwrdsa128.log` |
 | `lwrdsa128` | timing keygen | `records/sign-15/lwrdsa128__keygen.json` |
 | `lwrdsa128` | timing sign | `records/sign-15/lwrdsa128__sign.json` |
 | `lwrdsa128` | timing verify | `records/sign-15/lwrdsa128__verify.json` |
 | `lwrdsa128` | hash profile keygen | `profile/sign-15/lwrdsa128__keygen.json` |
 | `lwrdsa128` | hash profile sign | `profile/sign-15/lwrdsa128__sign.json` |
 | `lwrdsa128` | hash profile verify | `profile/sign-15/lwrdsa128__verify.json` |
+| `lwrdsa192` | KAT log (sha256 `ebe44b51dc5aa3cc…`) | `kat/sign-15/lwrdsa192.log` |
 | `lwrdsa192` | timing keygen | `records/sign-15/lwrdsa192__keygen.json` |
 | `lwrdsa192` | timing sign | `records/sign-15/lwrdsa192__sign.json` |
 | `lwrdsa192` | timing verify | `records/sign-15/lwrdsa192__verify.json` |
 | `lwrdsa192` | hash profile keygen | `profile/sign-15/lwrdsa192__keygen.json` |
 | `lwrdsa192` | hash profile sign | `profile/sign-15/lwrdsa192__sign.json` |
 | `lwrdsa192` | hash profile verify | `profile/sign-15/lwrdsa192__verify.json` |
+| `lwrdsa256` | KAT log (sha256 `426000e406d37405…`) | `kat/sign-15/lwrdsa256.log` |
 | `lwrdsa256` | timing keygen | `records/sign-15/lwrdsa256__keygen.json` |
 | `lwrdsa256` | timing sign | `records/sign-15/lwrdsa256__sign.json` |
 | `lwrdsa256` | timing verify | `records/sign-15/lwrdsa256__verify.json` |
 | `lwrdsa256` | hash profile keygen | `profile/sign-15/lwrdsa256__keygen.json` |
 | `lwrdsa256` | hash profile sign | `profile/sign-15/lwrdsa256__sign.json` |
 | `lwrdsa256` | hash profile verify | `profile/sign-15/lwrdsa256__verify.json` |
+| `lwrdsa512` | KAT log (sha256 `9aef369292d1cd22…`) | `kat/sign-15/lwrdsa512.log` |
 | `lwrdsa512` | timing keygen | `records/sign-15/lwrdsa512__keygen.json` |
 | `lwrdsa512` | timing sign | `records/sign-15/lwrdsa512__sign.json` |
 | `lwrdsa512` | timing verify | `records/sign-15/lwrdsa512__verify.json` |

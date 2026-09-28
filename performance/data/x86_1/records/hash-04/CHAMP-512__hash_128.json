@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-04",
+ "label": "CHAMP-512",
+ "instance": "CHAMP-512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 128,
+ "plan": {
+  "iterations_per_trial": 2000,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.019383969621582,
+  "timeout_per_process_s": 303.01163038177293
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-04/lib/libCHAMP-512.so",
+ "library_sha256": "5a86e8b02bbb6d17226eb8a81dbeb155badae38c3bd7078b4728ffe0aa0e4fcc",
+ "kat_log": "kat/hash-04/CHAMP-512.log",
+ "kat_log_sha256": "532066ce93f9ccfa309aea65e0e2f5119a3b3fa7d5f315ada5b1dbc5b8a9bf70",
+ "started_utc": "2026-09-25T18:03:12.647299+00:00",
+ "ended_utc": "2026-09-25T18:03:13.169334+00:00",
+ "load_average_start": [
+  2.1513671875,
+  2.1171875,
+  2.03466796875
+ ],
+ "load_average_end": [
+  2.1513671875,
+  2.1171875,
+  2.03466796875
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-04",
+    "instance": "CHAMP-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "128",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1630208",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1777664",
+    "measurement_count": "2000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2000,
+     "seconds": 0.102144031,
+     "cycles": 213728950
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-04/lib/libCHAMP-512.so",
+    "hash",
+    "128",
+    "1",
+    "1",
+    "2000",
+    "3"
+   ],
+   "wall_s": 0.10487031936645508,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-04",
+    "instance": "CHAMP-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "128",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1626112",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1769472",
+    "measurement_count": "2000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2000,
+     "seconds": 0.101314871,
+     "cycles": 211971424
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-04/lib/libCHAMP-512.so",
+    "hash",
+    "128",
+    "1",
+    "1",
+    "2000",
+    "3"
+   ],
+   "wall_s": 0.10394954681396484,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-04",
+    "instance": "CHAMP-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "128",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1622016",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1765376",
+    "measurement_count": "2000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2000,
+     "seconds": 0.101987685,
+     "cycles": 213404753
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-04/lib/libCHAMP-512.so",
+    "hash",
+    "128",
+    "1",
+    "1",
+    "2000",
+    "3"
+   ],
+   "wall_s": 0.10461688041687012,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-04",
+    "instance": "CHAMP-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "128",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1712128",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1794048",
+    "measurement_count": "2000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2000,
+     "seconds": 0.101634361,
+     "cycles": 212712509
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-04/lib/libCHAMP-512.so",
+    "hash",
+    "128",
+    "1",
+    "1",
+    "2000",
+    "3"
+   ],
+   "wall_s": 0.10429573059082031,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-04",
+    "instance": "CHAMP-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "128",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1667072",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1814528",
+    "measurement_count": "2000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2000,
+     "seconds": 0.101440856,
+     "cycles": 212296708
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-04/lib/libCHAMP-512.so",
+    "hash",
+    "128",
+    "1",
+    "1",
+    "2000",
+    "3"
+   ],
+   "wall_s": 0.1040804386138916,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 2000,
+   "seconds": 0.102144031,
+   "cycles": 213728950
+  },
+  {
+   "measurements": 2000,
+   "seconds": 0.101314871,
+   "cycles": 211971424
+  },
+  {
+   "measurements": 2000,
+   "seconds": 0.101987685,
+   "cycles": 213404753
+  },
+  {
+   "measurements": 2000,
+   "seconds": 0.101634361,
+   "cycles": 212712509
+  },
+  {
+   "measurements": 2000,
+   "seconds": 0.101440856,
+   "cycles": 212296708
+  }
+ ],
+ "measurements": 10000,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 5.08521804e-05,
+ "median_trial_seconds": 5.08171805e-05,
+ "min_trial_seconds": 5.06574355e-05,
+ "max_trial_seconds": 5.10720155e-05,
+ "mean_cycles": 106411.4344,
+ "median_trial_cycles": 106356.2545,
+ "operations_per_second": 19664.840172713615,
+ "throughput_MB_per_second": 2.5170995421073425,
+ "sizes": {
+  "input_bytes": 128,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 64
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1712128,
+ "peak_rss_bytes": 1814528,
+ "timing_scope": "loop"
+}

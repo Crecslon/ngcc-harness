@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-32",
+ "label": "UVW-128",
+ "instance": "UVW-128",
+ "variant": "reference",
+ "flags": "harness-default",
+ "operation": "sign",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 19,
+  "warmups": 0,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 1066.4650832020056,
+  "timeout_per_process_s": 939.8790499212034
+ },
+ "kat": "CRYPTOFAIL",
+ "kat_not_passed": true,
+ "disturbed_retries": 0,
+ "library": "sign-32/lib/libUVW-128.so",
+ "library_sha256": "78005e7f75bb9d3abde23d760b5f6a42c454c9782360b7ff2a8ced0cd37a2e56",
+ "kat_log": "kat/sign-32/UVW-128.log",
+ "kat_log_sha256": "0d572a73d7da5b16b54138cd17ed1ad99802cc8639b731d25c9a09205dbb0341",
+ "started_utc": "2026-09-26T20:48:25.916942+00:00",
+ "ended_utc": "2026-09-26T21:14:18.934020+00:00",
+ "load_average_start": [
+  2.0,
+  2.0078125,
+  2.0
+ ],
+ "load_average_end": [
+  2.0390625,
+  2.0341796875,
+  2.0029296875
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-32",
+    "instance": "UVW-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "64798720",
+    "pk_bytes": "5897612",
+    "sk_bytes": "40",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1244",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "0",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "482484224",
+    "measurement_count": "19",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 19,
+     "seconds": 276.786783794,
+     "cycles": 575921792317
+    }
+   ],
+   "stderr": "m=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4308 e_hw=4325 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4342 e_hw=4291 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4307 e_hw=4326 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4302 e_hw=4331 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4307 e_hw=4326 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4330 e_hw=4303 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4323 e_hw=4310 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4324 e_hw=4309 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4301 e_hw=4332 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4296 e_hw=4337 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4305 e_hw=4328 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4326 e_hw=4307 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4346 e_hw=4287 sum=8633 w=8633 d_zeros=0 p_dups=0",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-32/lib/libUVW-128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "19",
+    "0"
+   ],
+   "wall_s": 311.5435121059418,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-32",
+    "instance": "UVW-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "64806912",
+    "pk_bytes": "5897612",
+    "sk_bytes": "40",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1244",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "0",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "482492416",
+    "measurement_count": "19",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 19,
+     "seconds": 275.987389699,
+     "cycles": 575749205920
+    }
+   ],
+   "stderr": "m=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4308 e_hw=4325 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4342 e_hw=4291 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4307 e_hw=4326 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4302 e_hw=4331 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4307 e_hw=4326 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4330 e_hw=4303 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4323 e_hw=4310 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4324 e_hw=4309 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4301 e_hw=4332 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4296 e_hw=4337 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4305 e_hw=4328 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4326 e_hw=4307 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4346 e_hw=4287 sum=8633 w=8633 d_zeros=0 p_dups=0",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-32/lib/libUVW-128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "19",
+    "0"
+   ],
+   "wall_s": 310.6964807510376,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-32",
+    "instance": "UVW-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "64790528",
+    "pk_bytes": "5897612",
+    "sk_bytes": "40",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1244",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "0",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "482476032",
+    "measurement_count": "19",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 19,
+     "seconds": 275.1688065,
+     "cycles": 575303513903
+    }
+   ],
+   "stderr": "m=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4308 e_hw=4325 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4342 e_hw=4291 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4307 e_hw=4326 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4302 e_hw=4331 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4307 e_hw=4326 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4330 e_hw=4303 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4323 e_hw=4310 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4324 e_hw=4309 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4301 e_hw=4332 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4296 e_hw=4337 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4305 e_hw=4328 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4326 e_hw=4307 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4346 e_hw=4287 sum=8633 w=8633 d_zeros=0 p_dups=0",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-32/lib/libUVW-128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "19",
+    "0"
+   ],
+   "wall_s": 309.6240599155426,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-32",
+    "instance": "UVW-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "64712704",
+    "pk_bytes": "5897612",
+    "sk_bytes": "40",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1244",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "0",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "482463744",
+    "measurement_count": "19",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 19,
+     "seconds": 275.295150351,
+     "cycles": 575566074070
+    }
+   ],
+   "stderr": "m=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4308 e_hw=4325 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4342 e_hw=4291 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4307 e_hw=4326 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4302 e_hw=4331 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4307 e_hw=4326 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4330 e_hw=4303 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4323 e_hw=4310 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4324 e_hw=4309 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4301 e_hw=4332 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4296 e_hw=4337 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4305 e_hw=4328 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4326 e_hw=4307 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4346 e_hw=4287 sum=8633 w=8633 d_zeros=0 p_dups=0",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-32/lib/libUVW-128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "19",
+    "0"
+   ],
+   "wall_s": 310.00956082344055,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-32",
+    "instance": "UVW-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "64622592",
+    "pk_bytes": "5897612",
+    "sk_bytes": "40",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1244",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "0",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "482369536",
+    "measurement_count": "19",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 19,
+     "seconds": 275.218460804,
+     "cycles": 575402225103
+    }
+   ],
+   "stderr": "m=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4308 e_hw=4325 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4342 e_hw=4291 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4307 e_hw=4326 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4302 e_hw=4331 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4307 e_hw=4326 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4330 e_hw=4303 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4323 e_hw=4310 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4324 e_hw=4309 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4301 e_hw=4332 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4317 e_hw=4316 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4296 e_hw=4337 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4305 e_hw=4328 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4326 e_hw=4307 sum=8633 w=8633 d_zeros=0 p_dups=0\nDBG_SIGN: e1e1e2_hw=8633 fe_hw=8633 diff=0\nDBG_SIGN: e1e1e2_hw=8633 f_hw=4346 e_hw=4287 sum=8633 w=8633 d_zeros=0 p_dups=0",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-32/lib/libUVW-128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "19",
+    "0"
+   ],
+   "wall_s": 311.14315271377563,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 19,
+   "seconds": 276.786783794,
+   "cycles": 575921792317
+  },
+  {
+   "measurements": 19,
+   "seconds": 275.987389699,
+   "cycles": 575749205920
+  },
+  {
+   "measurements": 19,
+   "seconds": 275.1688065,
+   "cycles": 575303513903
+  },
+  {
+   "measurements": 19,
+   "seconds": 275.295150351,
+   "cycles": 575566074070
+  },
+  {
+   "measurements": 19,
+   "seconds": 275.218460804,
+   "cycles": 575402225103
+  }
+ ],
+ "measurements": 95,
+ "guide_100_measurements_met": false,
+ "mean_seconds": 14.510069380505263,
+ "median_trial_seconds": 14.489218439526317,
+ "min_trial_seconds": 14.482568763157895,
+ "max_trial_seconds": 14.567725462842104,
+ "mean_cycles": 30294134855.926315,
+ "median_trial_cycles": 30292951266.842106,
+ "operations_per_second": 0.06891765806051428,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 5897612,
+  "sk_bytes": 40,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 1244,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 64806912,
+ "peak_rss_bytes": 482492416,
+ "timing_scope": "loop"
+}

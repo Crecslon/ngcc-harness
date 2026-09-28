@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-28",
+ "label": "XRH-1-1024",
+ "instance": "XRH-1-1024",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 65536,
+ "plan": {
+  "iterations_per_trial": 301,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.061369097793579,
+  "timeout_per_process_s": 303.0368214586762
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-28/lib/libXRH-1-1024.so",
+ "library_sha256": "2de6b045c735b53ad482715fcfff7ba5c1cc9c33a8fa087457e345e322450d13",
+ "kat_log": "kat/hash-28/XRH-1-1024.log",
+ "kat_log_sha256": "eb98a2b772bb8550e65c044353a70d5175816bd440ca491d837cd3c103b56d3a",
+ "started_utc": "2026-09-25T18:39:17.590432+00:00",
+ "ended_utc": "2026-09-25T18:39:22.626651+00:00",
+ "load_average_start": [
+  2.02294921875,
+  2.0283203125,
+  2.0
+ ],
+ "load_average_end": [
+  2.02099609375,
+  2.02783203125,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-28",
+    "instance": "XRH-1-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1593344",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1720320",
+    "measurement_count": "301",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 301,
+     "seconds": 0.995914187,
+     "cycles": 2084899959
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-28/lib/libXRH-1-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "301",
+    "3"
+   ],
+   "wall_s": 1.007749319076538,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-28",
+    "instance": "XRH-1-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1798144",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1863680",
+    "measurement_count": "301",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 301,
+     "seconds": 0.995624475,
+     "cycles": 2084123527
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-28/lib/libXRH-1-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "301",
+    "3"
+   ],
+   "wall_s": 1.0076756477355957,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-28",
+    "instance": "XRH-1-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1736704",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1867776",
+    "measurement_count": "301",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 301,
+     "seconds": 0.994168419,
+     "cycles": 2081320835
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-28/lib/libXRH-1-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "301",
+    "3"
+   ],
+   "wall_s": 1.0066602230072021,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-28",
+    "instance": "XRH-1-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1675264",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1802240",
+    "measurement_count": "301",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 301,
+     "seconds": 0.995655631,
+     "cycles": 2084159127
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-28/lib/libXRH-1-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "301",
+    "3"
+   ],
+   "wall_s": 1.007575273513794,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-28",
+    "instance": "XRH-1-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1675264",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1802240",
+    "measurement_count": "301",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 301,
+     "seconds": 0.994429194,
+     "cycles": 2081891638
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-28/lib/libXRH-1-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "301",
+    "3"
+   ],
+   "wall_s": 1.0063304901123047,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 301,
+   "seconds": 0.995914187,
+   "cycles": 2084899959
+  },
+  {
+   "measurements": 301,
+   "seconds": 0.995624475,
+   "cycles": 2084123527
+  },
+  {
+   "measurements": 301,
+   "seconds": 0.994168419,
+   "cycles": 2081320835
+  },
+  {
+   "measurements": 301,
+   "seconds": 0.995655631,
+   "cycles": 2084159127
+  },
+  {
+   "measurements": 301,
+   "seconds": 0.994429194,
+   "cycles": 2081891638
+  }
+ ],
+ "measurements": 1505,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0033061740239202653,
+ "median_trial_seconds": 0.0033077225083056475,
+ "min_trial_seconds": 0.0033028851129568103,
+ "max_trial_seconds": 0.0033086850066445183,
+ "mean_cycles": 6921192.748172757,
+ "median_trial_cycles": 6923998.428571428,
+ "operations_per_second": 302.4644174096617,
+ "throughput_MB_per_second": 19.82230805935959,
+ "sizes": {
+  "input_bytes": 65536,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 128
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1798144,
+ "peak_rss_bytes": 1867776,
+ "timing_scope": "loop"
+}

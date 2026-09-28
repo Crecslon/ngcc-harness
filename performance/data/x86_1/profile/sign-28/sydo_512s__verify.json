@@ -1,0 +1,81 @@
+{
+ "schema": 2,
+ "candidate": "sign-28",
+ "label": "sydo_512s",
+ "operation": "verify",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-28/libsydo_512s.so",
+  "verify",
+  "0",
+  "3",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-28",
+  "instance": "sydo_512s",
+  "operation": "verify",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111991654",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 13268195609
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 5224,
+   "out_bits": 512,
+   "calls": 3,
+   "ticks": 100645
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 2488,
+   "out_bits": 1024,
+   "calls": 3,
+   "ticks": 110744
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 275288,
+   "out_bits": 3136,
+   "calls": 3,
+   "ticks": 28819643
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 47112,
+   "out_bits": 1024,
+   "calls": 3,
+   "ticks": 1517409
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 2097160,
+   "out_bits": 1024,
+   "calls": 138,
+   "ticks": 3111320622
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 176088,
+   "out_bits": 2624,
+   "calls": 3,
+   "ticks": 15639611
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.2379757404132796
+ },
+ "hash_share": 0.2379757404132796
+}

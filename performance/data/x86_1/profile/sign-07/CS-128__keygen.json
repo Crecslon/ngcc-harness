@@ -1,0 +1,75 @@
+{
+ "schema": 2,
+ "candidate": "sign-07",
+ "label": "CS-128",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-07/libCS-128.so",
+  "keygen",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-07",
+  "instance": "CS_128",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996954",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 550512154
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 4096,
+   "calls": 9000,
+   "ticks": 240463608
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 1536,
+   "calls": 6000,
+   "ticks": 71904558
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 7808,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 22612498
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 272,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 3103526
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 4710129
+  }
+ ],
+ "share": {
+  "drng": 0.5759696542503583,
+  "pseudoXOF": 0.04671290872172097
+ },
+ "hash_share": 0.04671290872172097
+}

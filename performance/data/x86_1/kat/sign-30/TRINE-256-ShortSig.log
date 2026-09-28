@@ -1,0 +1,16 @@
+library     = lib/libTRINE-256-ShortSig.so
+id          = sign-30
+type        = sig
+algorithm   = TRINE
+instance    = TRINE-256-ShortSig
+variant     = Reference_Implementation
+source_dir  = Implementations/Reference_Implementation/TRINE-256-ShortSig
+compiler    = gcc 14.2.0
+build_flags = -std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-poin
+pk_len      = 384064
+sk_len      = 64
+sn_len      = 5968
+timing  keygen 61.625 ms  sign 86565.189 ms  verify 33083.120 ms (avg over 3)
+wrote  kat/KAT_SIG_TRINE-256-ShortSig.txt (2341671 bytes)
+compare Test_Vectors/KAT_SIG_TRINE-256-ShortSig.txt (7806134 bytes)
+RESULT sign-30 TRINE-256-ShortSig PASS (first 3 records only)

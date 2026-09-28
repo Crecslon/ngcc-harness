@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-09",
+ "label": "dove_classic_512",
+ "instance": "dove_classic_512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "sign",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 20,
+  "warmups": 1,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 146.12102005583495,
+  "timeout_per_process_s": 387.67261203350097
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-09/lib/libdove_classic_512.so",
+ "library_sha256": "ca0dd422d3787601f4a4186934f09859c00ef28fceeced54fef8166905cae839",
+ "kat_log": "kat/sign-09/dove_classic_512.log",
+ "kat_log_sha256": "648b6d6e96f5ee20119471d6ff476101451aed403a79447890ccc8c1de63360b",
+ "started_utc": "2026-09-25T23:41:09.101914+00:00",
+ "ended_utc": "2026-09-25T23:43:32.670238+00:00",
+ "load_average_start": [
+  2.03271484375,
+  2.037109375,
+  2.0
+ ],
+ "load_average_end": [
+  2.0,
+  2.01904296875,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-09",
+    "instance": "dove_classic_512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "44933120",
+    "pk_bytes": "22833052",
+    "sk_bytes": "20181508",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "648",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "1",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "49369088",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 5.109254087,
+     "cycles": 10598027091
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-09/lib/libdove_classic_512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "1"
+   ],
+   "wall_s": 28.751964807510376,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-09",
+    "instance": "dove_classic_512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "44969984",
+    "pk_bytes": "22833052",
+    "sk_bytes": "20181508",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "648",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "1",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "49475584",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 5.106201432,
+     "cycles": 10597308890
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-09/lib/libdove_classic_512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "1"
+   ],
+   "wall_s": 28.728621006011963,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-09",
+    "instance": "dove_classic_512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "45056000",
+    "pk_bytes": "22833052",
+    "sk_bytes": "20181508",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "648",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "1",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "49426432",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 5.106260824,
+     "cycles": 10596890273
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-09/lib/libdove_classic_512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "1"
+   ],
+   "wall_s": 28.74397850036621,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-09",
+    "instance": "dove_classic_512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "45051904",
+    "pk_bytes": "22833052",
+    "sk_bytes": "20181508",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "648",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "1",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "49426432",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 5.106183107,
+     "cycles": 10597269489
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-09/lib/libdove_classic_512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "1"
+   ],
+   "wall_s": 28.603837966918945,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-09",
+    "instance": "dove_classic_512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "44974080",
+    "pk_bytes": "22833052",
+    "sk_bytes": "20181508",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "648",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "1",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "49504256",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 5.105377977,
+     "cycles": 10597780012
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-09/lib/libdove_classic_512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "1"
+   ],
+   "wall_s": 28.73960566520691,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 20,
+   "seconds": 5.109254087,
+   "cycles": 10598027091
+  },
+  {
+   "measurements": 20,
+   "seconds": 5.106201432,
+   "cycles": 10597308890
+  },
+  {
+   "measurements": 20,
+   "seconds": 5.106260824,
+   "cycles": 10596890273
+  },
+  {
+   "measurements": 20,
+   "seconds": 5.106183107,
+   "cycles": 10597269489
+  },
+  {
+   "measurements": 20,
+   "seconds": 5.105377977,
+   "cycles": 10597780012
+  }
+ ],
+ "measurements": 100,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.25533277427,
+ "median_trial_seconds": 0.25531007159999997,
+ "min_trial_seconds": 0.25526889885,
+ "max_trial_seconds": 0.25546270435,
+ "mean_cycles": 529872757.55,
+ "median_trial_cycles": 529865444.5,
+ "operations_per_second": 3.9164576614146545,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 22833052,
+  "sk_bytes": 20181508,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 648,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 45056000,
+ "peak_rss_bytes": 49504256,
+ "timing_scope": "loop"
+}

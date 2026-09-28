@@ -1,0 +1,384 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-24",
+ "label": "Sigurd-128",
+ "instance": "Sigurd128_REF",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "sign",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 56,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.560132338967895,
+  "timeout_per_process_s": 303.3360794033807
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-24/lib/libSigurd-128.so",
+ "library_sha256": "a13056e8f64afda5c7df8ade62f8f5979200e5d3c79f5b94914ec59db75eb4b2",
+ "kat_log": "kat/sign-24/Sigurd-128.log",
+ "kat_log_sha256": "4f7d471565795e18bc73f03792e3b705c3a944e0e7bcb568a05be53e19fb7d87",
+ "started_utc": "2026-09-25T19:24:06.601117+00:00",
+ "ended_utc": "2026-09-25T19:24:12.029463+00:00",
+ "load_average_start": [
+  2.0,
+  2.017578125,
+  2.0
+ ],
+ "load_average_end": [
+  2.0,
+  2.01708984375,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-24",
+    "instance": "Sigurd128_REF",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "2576384",
+    "pk_bytes": "112",
+    "sk_bytes": "80",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "62868",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3092480",
+    "measurement_count": "56",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 56,
+     "seconds": 1.007727352,
+     "cycles": 2092384221
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-24/lib/libSigurd128_REF.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "56",
+    "3"
+   ],
+   "wall_s": 1.0831055641174316,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-24",
+    "instance": "Sigurd128_REF",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "2744320",
+    "pk_bytes": "112",
+    "sk_bytes": "80",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "62868",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3325952",
+    "measurement_count": "56",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 56,
+     "seconds": 1.010524527,
+     "cycles": 2098624761
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-24/lib/libSigurd128_REF.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "56",
+    "3"
+   ],
+   "wall_s": 1.0860493183135986,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-24",
+    "instance": "Sigurd128_REF",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "2699264",
+    "pk_bytes": "112",
+    "sk_bytes": "80",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "62868",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3280896",
+    "measurement_count": "56",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 56,
+     "seconds": 1.010771912,
+     "cycles": 2098212578
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-24/lib/libSigurd128_REF.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "56",
+    "3"
+   ],
+   "wall_s": 1.0862596035003662,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-24",
+    "instance": "Sigurd128_REF",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "2748416",
+    "pk_bytes": "112",
+    "sk_bytes": "80",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "62868",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3330048",
+    "measurement_count": "56",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 56,
+     "seconds": 1.01039478,
+     "cycles": 2098233546
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-24/lib/libSigurd128_REF.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "56",
+    "3"
+   ],
+   "wall_s": 1.085864543914795,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-24",
+    "instance": "Sigurd128_REF",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "2756608",
+    "pk_bytes": "112",
+    "sk_bytes": "80",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "62868",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3272704",
+    "measurement_count": "56",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 56,
+     "seconds": 1.011072989,
+     "cycles": 2098978988
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-24/lib/libSigurd128_REF.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "56",
+    "3"
+   ],
+   "wall_s": 1.08669114112854,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 56,
+   "seconds": 1.007727352,
+   "cycles": 2092384221
+  },
+  {
+   "measurements": 56,
+   "seconds": 1.010524527,
+   "cycles": 2098624761
+  },
+  {
+   "measurements": 56,
+   "seconds": 1.010771912,
+   "cycles": 2098212578
+  },
+  {
+   "measurements": 56,
+   "seconds": 1.01039478,
+   "cycles": 2098233546
+  },
+  {
+   "measurements": 56,
+   "seconds": 1.011072989,
+   "cycles": 2098978988
+  }
+ ],
+ "measurements": 280,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.018037469857142857,
+ "median_trial_seconds": 0.018045080839285715,
+ "min_trial_seconds": 0.017995131285714287,
+ "max_trial_seconds": 0.01805487480357143,
+ "mean_cycles": 37451550.33571429,
+ "median_trial_cycles": 37468456.178571425,
+ "operations_per_second": 55.44014808728836,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 112,
+  "sk_bytes": 80,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 62868,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+ "baseline_rss_bytes": 2756608,
+ "peak_rss_bytes": 3330048,
+ "timing_scope": "loop",
+ "relabelled_from": "Sigurd128_REF"
+}

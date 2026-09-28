@@ -1,0 +1,89 @@
+{
+ "schema": 2,
+ "candidate": "sign-03",
+ "label": "CEDRUSC-512s",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-03/libCEDRUSC-512s.so",
+  "sign",
+  "0",
+  "3",
+  "0"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-03",
+  "instance": "CEDRUSC-512s",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998041",
+  "warmups": "0",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 263909064619
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 3,
+   "ticks": 22587
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1792,
+   "out_bits": 512,
+   "calls": 2169444,
+   "ticks": 24365487217
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 23296,
+   "out_bits": 512,
+   "calls": 3,
+   "ticks": 378849
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 52480,
+   "out_bits": 512,
+   "calls": 6912,
+   "ticks": 1936548731
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 2080,
+   "out_bits": 712,
+   "calls": 148242,
+   "ticks": 3086579190
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1280,
+   "out_bits": 512,
+   "calls": 27585016,
+   "ticks": 232568378532
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1536,
+   "out_bits": 512,
+   "calls": 3,
+   "ticks": 37399
+  }
+ ],
+ "share": {
+  "drng": 8.558629857071556e-08,
+  "pseudoXOF": 0.9926048212712301
+ },
+ "hash_share": 0.9926048212712301
+}

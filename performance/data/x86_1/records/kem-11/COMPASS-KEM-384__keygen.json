@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-11",
+ "label": "COMPASS-KEM-384",
+ "instance": "COMPASS-KEM-384",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 534,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.0413388006555175,
+  "timeout_per_process_s": 303.0248032803933
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-11/lib/libCOMPASS-KEM-384.so",
+ "library_sha256": "78880ee5b1ed0abc4c2603e248101da86f8629317666126b5615ff1d2b0c78a4",
+ "kat_log": "kat/kem-11/COMPASS-KEM-384.log",
+ "kat_log_sha256": "abd315e709b6f9a0d6bda4d8a341cbda0b8b583561fd8fbe0cfea6c9f7816025",
+ "started_utc": "2026-09-25T18:29:09.766507+00:00",
+ "ended_utc": "2026-09-25T18:29:14.660917+00:00",
+ "load_average_start": [
+  2.015625,
+  2.033203125,
+  2.0
+ ],
+ "load_average_end": [
+  2.01416015625,
+  2.0322265625,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-11",
+    "instance": "COMPASS-KEM-384",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1646592",
+    "pk_bytes": "2144",
+    "sk_bytes": "4704",
+    "ct_bytes": "2432",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1810432",
+    "measurement_count": "534",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 534,
+     "seconds": 0.970805881,
+     "cycles": 2032369737
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-11/lib/libCOMPASS-KEM-384.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "534",
+    "3"
+   ],
+   "wall_s": 0.9784529209136963,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-11",
+    "instance": "COMPASS-KEM-384",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1753088",
+    "pk_bytes": "2144",
+    "sk_bytes": "4704",
+    "ct_bytes": "2432",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1855488",
+    "measurement_count": "534",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 534,
+     "seconds": 0.970202877,
+     "cycles": 2030974408
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-11/lib/libCOMPASS-KEM-384.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "534",
+    "3"
+   ],
+   "wall_s": 0.9778189659118652,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-11",
+    "instance": "COMPASS-KEM-384",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1617920",
+    "pk_bytes": "2144",
+    "sk_bytes": "4704",
+    "ct_bytes": "2432",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1777664",
+    "measurement_count": "534",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 534,
+     "seconds": 0.97382798,
+     "cycles": 2038800354
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-11/lib/libCOMPASS-KEM-384.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "534",
+    "3"
+   ],
+   "wall_s": 0.9813635349273682,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-11",
+    "instance": "COMPASS-KEM-384",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1740800",
+    "pk_bytes": "2144",
+    "sk_bytes": "4704",
+    "ct_bytes": "2432",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1839104",
+    "measurement_count": "534",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 534,
+     "seconds": 0.969817262,
+     "cycles": 2030106223
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-11/lib/libCOMPASS-KEM-384.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "534",
+    "3"
+   ],
+   "wall_s": 0.9774839878082275,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-11",
+    "instance": "COMPASS-KEM-384",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1744896",
+    "pk_bytes": "2144",
+    "sk_bytes": "4704",
+    "ct_bytes": "2432",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1843200",
+    "measurement_count": "534",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 534,
+     "seconds": 0.97144156,
+     "cycles": 2033747544
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-11/lib/libCOMPASS-KEM-384.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "534",
+    "3"
+   ],
+   "wall_s": 0.9790639877319336,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 534,
+   "seconds": 0.970805881,
+   "cycles": 2032369737
+  },
+  {
+   "measurements": 534,
+   "seconds": 0.970202877,
+   "cycles": 2030974408
+  },
+  {
+   "measurements": 534,
+   "seconds": 0.97382798,
+   "cycles": 2038800354
+  },
+  {
+   "measurements": 534,
+   "seconds": 0.969817262,
+   "cycles": 2030106223
+  },
+  {
+   "measurements": 534,
+   "seconds": 0.97144156,
+   "cycles": 2033747544
+  }
+ ],
+ "measurements": 2670,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0018187623820224718,
+ "median_trial_seconds": 0.0018179885411985018,
+ "min_trial_seconds": 0.0018161371947565542,
+ "max_trial_seconds": 0.0018236479026217229,
+ "mean_cycles": 3807489.9872659175,
+ "median_trial_cycles": 3805935.837078652,
+ "operations_per_second": 549.8244354977232,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 2144,
+  "sk_bytes": 4704,
+  "ct_bytes": 2432,
+  "ss_bytes": 32,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1753088,
+ "peak_rss_bytes": 1855488,
+ "timing_scope": "loop"
+}

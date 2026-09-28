@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-11",
+ "label": "Flextree-160f",
+ "instance": "Flextree-160f",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "sign",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 20,
+  "warmups": 1,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 32.966424866516114,
+  "timeout_per_process_s": 319.77985491990967
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-11/lib/libFlextree-160f.so",
+ "library_sha256": "abcba2179e546832c4a148675e5fcb6e8e783c9434e15cf62ddc63963805a09b",
+ "kat_log": "kat/sign-11/Flextree-160f.log",
+ "kat_log_sha256": "74f0d60b6353c8f5c86d170a905c5b524a631978278015c7370ed33a7e4102cb",
+ "started_utc": "2026-09-25T20:38:40.813081+00:00",
+ "ended_utc": "2026-09-25T20:39:09.340600+00:00",
+ "load_average_start": [
+  2.0185546875,
+  2.048828125,
+  2.001953125
+ ],
+ "load_average_end": [
+  2.09033203125,
+  2.06005859375,
+  2.00537109375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-11",
+    "instance": "Flextree-160f",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1851392",
+    "pk_bytes": "40",
+    "sk_bytes": "80",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "18672",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "1",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "5152768",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 5.541556981,
+     "cycles": 11316288208
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-11/lib/libFlextree-160f.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "1"
+   ],
+   "wall_s": 5.8354668617248535,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-11",
+    "instance": "Flextree-160f",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1867776",
+    "pk_bytes": "40",
+    "sk_bytes": "80",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "18672",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "1",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "5169152",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 5.377288778,
+     "cycles": 11254539874
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-11/lib/libFlextree-160f.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "1"
+   ],
+   "wall_s": 5.673096418380737,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-11",
+    "instance": "Flextree-160f",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1675264",
+    "pk_bytes": "40",
+    "sk_bytes": "80",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "18672",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "1",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "5038080",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 5.373025683,
+     "cycles": 11247978631
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-11/lib/libFlextree-160f.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "1"
+   ],
+   "wall_s": 5.666955471038818,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-11",
+    "instance": "Flextree-160f",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1773568",
+    "pk_bytes": "40",
+    "sk_bytes": "80",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "18672",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "1",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "5140480",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 5.385869865,
+     "cycles": 11275019269
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-11/lib/libFlextree-160f.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "1"
+   ],
+   "wall_s": 5.678538799285889,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-11",
+    "instance": "Flextree-160f",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1855488",
+    "pk_bytes": "40",
+    "sk_bytes": "80",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "18672",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "1",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "5156864",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 5.380137331,
+     "cycles": 11263309105
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-11/lib/libFlextree-160f.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "1"
+   ],
+   "wall_s": 5.673173427581787,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 20,
+   "seconds": 5.541556981,
+   "cycles": 11316288208
+  },
+  {
+   "measurements": 20,
+   "seconds": 5.377288778,
+   "cycles": 11254539874
+  },
+  {
+   "measurements": 20,
+   "seconds": 5.373025683,
+   "cycles": 11247978631
+  },
+  {
+   "measurements": 20,
+   "seconds": 5.385869865,
+   "cycles": 11275019269
+  },
+  {
+   "measurements": 20,
+   "seconds": 5.380137331,
+   "cycles": 11263309105
+  }
+ ],
+ "measurements": 100,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.27057878638,
+ "median_trial_seconds": 0.26900686655,
+ "min_trial_seconds": 0.26865128415,
+ "max_trial_seconds": 0.27707784905,
+ "mean_cycles": 563571350.87,
+ "median_trial_cycles": 563165455.25,
+ "operations_per_second": 3.695781230224025,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 40,
+  "sk_bytes": 80,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 18672,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+ "baseline_rss_bytes": 1867776,
+ "peak_rss_bytes": 5169152,
+ "timing_scope": "loop"
+}

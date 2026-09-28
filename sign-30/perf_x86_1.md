@@ -125,7 +125,7 @@ Share of each operation spent in the ICCS placeholder hash functions and in the 
 
 ## 7. Raw evidence index
 
-All paths are relative to the campaign run directory; commands are recorded in each JSON file.
+Paths are relative to `performance/data/x86_1/` in the [harness](https://github.com/ngcc-dev/ngcc-harness); each JSON file records its commands, environment and trials.
 
 | instance | item | file |
 |---|---|---|
@@ -143,6 +143,7 @@ All paths are relative to the campaign run directory; commands are recorded in e
 | `TRINE-128-ShortSig` | hash profile keygen | `profile/sign-30/TRINE-128-ShortSig__keygen.json` |
 | `TRINE-128-ShortSig` | hash profile sign | `profile/sign-30/TRINE-128-ShortSig__sign.json` |
 | `TRINE-128-ShortSig` | hash profile verify | `profile/sign-30/TRINE-128-ShortSig__verify.json` |
+| `TRINE-256-Balanced` | KAT log (sha256 `8a9d645ae0473cbe…`) | `kat/sign-30/TRINE-256-Balanced.log` |
 | `TRINE-256-Balanced` | timing keygen | `records/sign-30/TRINE-256-Balanced__keygen.json` |
 | `TRINE-256-Balanced` | timing sign | `records/sign-30/TRINE-256-Balanced__sign.json` |
 | `TRINE-256-Balanced` | timing verify | `records/sign-30/TRINE-256-Balanced__verify.json` |
@@ -156,12 +157,14 @@ All paths are relative to the campaign run directory; commands are recorded in e
 | `TRINE-256-ShortSig` | hash profile keygen | `profile/sign-30/TRINE-256-ShortSig__keygen.json` |
 | `TRINE-256-ShortSig` | hash profile sign | `profile/sign-30/TRINE-256-ShortSig__sign.json` |
 | `TRINE-256-ShortSig` | hash profile verify | `profile/sign-30/TRINE-256-ShortSig__verify.json` |
+| `TRINE-512-Balanced` | KAT log (sha256 `bfa4cfcf64503204…`) | `kat/sign-30/TRINE-512-Balanced.log` |
 | `TRINE-512-Balanced` | timing keygen | `records/sign-30/TRINE-512-Balanced__keygen.json` |
 | `TRINE-512-Balanced` | timing sign | `records/sign-30/TRINE-512-Balanced__sign.json` |
 | `TRINE-512-Balanced` | timing verify | `records/sign-30/TRINE-512-Balanced__verify.json` |
 | `TRINE-512-Balanced` | hash profile keygen | `profile/sign-30/TRINE-512-Balanced__keygen.json` |
 | `TRINE-512-Balanced` | hash profile sign | `profile/sign-30/TRINE-512-Balanced__sign.json` |
 | `TRINE-512-Balanced` | hash profile verify | `profile/sign-30/TRINE-512-Balanced__verify.json` |
+| `TRINE-512-ShortSig` | KAT log (sha256 `3db85609c95c76ac…`) | `kat/sign-30/TRINE-512-ShortSig.log` |
 | `TRINE-512-ShortSig` | timing keygen | `records/sign-30/TRINE-512-ShortSig__keygen.json` |
 | `TRINE-512-ShortSig` | timing sign | `records/sign-30/TRINE-512-ShortSig__sign.json` |
 | `TRINE-512-ShortSig` | timing verify | `records/sign-30/TRINE-512-ShortSig__verify.json` |

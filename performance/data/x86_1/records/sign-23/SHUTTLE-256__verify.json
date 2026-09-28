@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-23",
+ "label": "SHUTTLE-256",
+ "instance": "SHUTTLE-256",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "verify",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 1348,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.079872742141723,
+  "timeout_per_process_s": 303.04792364528504
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-23/lib/libSHUTTLE-256.so",
+ "library_sha256": "4adbb42686a0b4992c29a0c87136ac8135b2bc525a8d3e0258aad7ef31632613",
+ "kat_log": "kat/sign-23/SHUTTLE-256.log",
+ "kat_log_sha256": "e23c9ac1263bb8a4a6b0b0a9a2271e5dbd40358612ed5a1f43adc762d6514955",
+ "started_utc": "2026-09-25T18:46:50.935854+00:00",
+ "ended_utc": "2026-09-25T18:46:55.881948+00:00",
+ "load_average_start": [
+  2.037109375,
+  2.02685546875,
+  2.00244140625
+ ],
+ "load_average_end": [
+  2.03369140625,
+  2.0263671875,
+  2.001953125
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-23",
+    "instance": "SHUTTLE-256",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1921024",
+    "pk_bytes": "1952",
+    "sk_bytes": "3680",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "2417",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2072576",
+    "measurement_count": "1348",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1348,
+     "seconds": 0.974383807,
+     "cycles": 2039593492
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-23/lib/libSHUTTLE-256.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "1348",
+    "3"
+   ],
+   "wall_s": 0.9889593124389648,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-23",
+    "instance": "SHUTTLE-256",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1826816",
+    "pk_bytes": "1952",
+    "sk_bytes": "3680",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "2417",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1978368",
+    "measurement_count": "1348",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1348,
+     "seconds": 0.974449568,
+     "cycles": 2039974477
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-23/lib/libSHUTTLE-256.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "1348",
+    "3"
+   ],
+   "wall_s": 0.9889719486236572,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-23",
+    "instance": "SHUTTLE-256",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1896448",
+    "pk_bytes": "1952",
+    "sk_bytes": "3680",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "2417",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2052096",
+    "measurement_count": "1348",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1348,
+     "seconds": 0.974452805,
+     "cycles": 2039773905
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-23/lib/libSHUTTLE-256.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "1348",
+    "3"
+   ],
+   "wall_s": 0.9889991283416748,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-23",
+    "instance": "SHUTTLE-256",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1908736",
+    "pk_bytes": "1952",
+    "sk_bytes": "3680",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "2417",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2064384",
+    "measurement_count": "1348",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1348,
+     "seconds": 0.974790901,
+     "cycles": 2040658825
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-23/lib/libSHUTTLE-256.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "1348",
+    "3"
+   ],
+   "wall_s": 0.9894099235534668,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-23",
+    "instance": "SHUTTLE-256",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1945600",
+    "pk_bytes": "1952",
+    "sk_bytes": "3680",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "2417",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2035712",
+    "measurement_count": "1348",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1348,
+     "seconds": 0.975003496,
+     "cycles": 2040924372
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-23/lib/libSHUTTLE-256.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "1348",
+    "3"
+   ],
+   "wall_s": 0.9895246028900146,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 1348,
+   "seconds": 0.974383807,
+   "cycles": 2039593492
+  },
+  {
+   "measurements": 1348,
+   "seconds": 0.974449568,
+   "cycles": 2039974477
+  },
+  {
+   "measurements": 1348,
+   "seconds": 0.974452805,
+   "cycles": 2039773905
+  },
+  {
+   "measurements": 1348,
+   "seconds": 0.974790901,
+   "cycles": 2040658825
+  },
+  {
+   "measurements": 1348,
+   "seconds": 0.975003496,
+   "cycles": 2040924372
+  }
+ ],
+ "measurements": 6740,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0007230089876854599,
+ "median_trial_seconds": 0.0007228878375370919,
+ "min_trial_seconds": 0.0007228366520771514,
+ "max_trial_seconds": 0.0007232963620178042,
+ "mean_cycles": 1513490.3666172107,
+ "median_trial_cycles": 1513334.1817507418,
+ "operations_per_second": 1383.1086708911607,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 1952,
+  "sk_bytes": 3680,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 2417,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+ "baseline_rss_bytes": 1945600,
+ "peak_rss_bytes": 2072576,
+ "timing_scope": "loop"
+}

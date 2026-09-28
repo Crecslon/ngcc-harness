@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-11",
+ "label": "Garnet_768",
+ "instance": "Garnet_768",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 512,
+ "plan": {
+  "iterations_per_trial": 7401,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.012484843983154,
+  "timeout_per_process_s": 303.0074909063899
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-11/lib/libGarnet_768.so",
+ "library_sha256": "7fd3f761a631895bd0deb2bd845036f5e8253ab4febdb5f6c438017c6507e8a7",
+ "kat_log": "kat/hash-11/Garnet_768.log",
+ "kat_log_sha256": "e0175efed77b1aea7faaedcfc6d79102e0d2f5e94734d1833ea1f549376bea53",
+ "started_utc": "2026-09-25T17:36:42.091221+00:00",
+ "ended_utc": "2026-09-25T17:36:42.747473+00:00",
+ "load_average_start": [
+  2.02685546875,
+  2.041015625,
+  1.9443359375
+ ],
+ "load_average_end": [
+  2.02685546875,
+  2.041015625,
+  1.9443359375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-11",
+    "instance": "Garnet_768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "512",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1716224",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1847296",
+    "measurement_count": "7401",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7401,
+     "seconds": 0.129170301,
+     "cycles": 270338310
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-11/lib/libGarnet_768.so",
+    "hash",
+    "512",
+    "1",
+    "1",
+    "7401",
+    "3"
+   ],
+   "wall_s": 0.13126182556152344,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-11",
+    "instance": "Garnet_768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "512",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1576960",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1703936",
+    "measurement_count": "7401",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7401,
+     "seconds": 0.129130181,
+     "cycles": 270088840
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-11/lib/libGarnet_768.so",
+    "hash",
+    "512",
+    "1",
+    "1",
+    "7401",
+    "3"
+   ],
+   "wall_s": 0.1312417984008789,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-11",
+    "instance": "Garnet_768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "512",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1667072",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1798144",
+    "measurement_count": "7401",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7401,
+     "seconds": 0.129161452,
+     "cycles": 270277890
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-11/lib/libGarnet_768.so",
+    "hash",
+    "512",
+    "1",
+    "1",
+    "7401",
+    "3"
+   ],
+   "wall_s": 0.1312410831451416,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-11",
+    "instance": "Garnet_768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "512",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1646592",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1773568",
+    "measurement_count": "7401",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7401,
+     "seconds": 0.129062909,
+     "cycles": 270135337
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-11/lib/libGarnet_768.so",
+    "hash",
+    "512",
+    "1",
+    "1",
+    "7401",
+    "3"
+   ],
+   "wall_s": 0.13113641738891602,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-11",
+    "instance": "Garnet_768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "512",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1576960",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1703936",
+    "measurement_count": "7401",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7401,
+     "seconds": 0.129066775,
+     "cycles": 270136775
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-11/lib/libGarnet_768.so",
+    "hash",
+    "512",
+    "1",
+    "1",
+    "7401",
+    "3"
+   ],
+   "wall_s": 0.1311476230621338,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 7401,
+   "seconds": 0.129170301,
+   "cycles": 270338310
+  },
+  {
+   "measurements": 7401,
+   "seconds": 0.129130181,
+   "cycles": 270088840
+  },
+  {
+   "measurements": 7401,
+   "seconds": 0.129161452,
+   "cycles": 270277890
+  },
+  {
+   "measurements": 7401,
+   "seconds": 0.129062909,
+   "cycles": 270135337
+  },
+  {
+   "measurements": 7401,
+   "seconds": 0.129066775,
+   "cycles": 270136775
+  }
+ ],
+ "measurements": 37005,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 1.7446064531820024e-05,
+ "median_trial_seconds": 1.744766666666667e-05,
+ "min_trial_seconds": 1.7438577084177816e-05,
+ "max_trial_seconds": 1.745308755573571e-05,
+ "mean_cycles": 36507.9624915552,
+ "median_trial_cycles": 36500.03715714093,
+ "operations_per_second": 57319.51742905064,
+ "throughput_MB_per_second": 29.34759292367393,
+ "sizes": {
+  "input_bytes": 512,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 96
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1716224,
+ "peak_rss_bytes": 1847296,
+ "timing_scope": "loop"
+}

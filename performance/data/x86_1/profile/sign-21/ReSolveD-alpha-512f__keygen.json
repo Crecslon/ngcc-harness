@@ -1,0 +1,54 @@
+{
+ "schema": 2,
+ "candidate": "sign-21",
+ "label": "ReSolveD-alpha-512f",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-21/libReSolveD-alpha-512f.so",
+  "keygen",
+  "0",
+  "16",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-21",
+  "instance": "ReSolveD-alpha-512f",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996137",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 16,
+  "ticks": 2175126864
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 32,
+   "ticks": 262754
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 8654440,
+   "calls": 16,
+   "ticks": 1569344371
+  }
+ ],
+ "share": {
+  "drng": 0.0001207993907614209,
+  "pseudoXOF": 0.7214955582471257
+ },
+ "hash_share": 0.7214955582471257
+}

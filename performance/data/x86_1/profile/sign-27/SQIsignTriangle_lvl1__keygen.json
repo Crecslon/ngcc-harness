@@ -1,0 +1,67 @@
+{
+ "schema": 2,
+ "candidate": "sign-27",
+ "label": "SQIsignTriangle_lvl1",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-27/libSQIsignTriangle_lvl1.so",
+  "keygen",
+  "0",
+  "16",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-27",
+  "instance": "SQIsignTriangle_lvl1",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998043",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 16,
+  "ticks": 1787821779
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 32,
+   "calls": 16,
+   "ticks": 84141
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 520,
+   "calls": 351,
+   "ticks": 2641568
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 24,
+   "calls": 4983,
+   "ticks": 22512897
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 8,
+   "calls": 22883,
+   "ticks": 103194996
+  }
+ ],
+ "share": {
+  "drng": 0.07183803414221636
+ },
+ "hash_share": 0
+}

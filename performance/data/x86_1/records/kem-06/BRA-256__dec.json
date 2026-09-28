@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-06",
+ "label": "BRA-256",
+ "instance": "BRA-256",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "dec",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 21,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 6.151344198341064,
+  "timeout_per_process_s": 303.69080651900464
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-06/lib/libBRA-256.so",
+ "library_sha256": "346d3e7a245402b0df644441f3b12c0176c9d66e841d6b67784ddcd95467ea50",
+ "kat_log": "kat/kem-06/BRA-256.log",
+ "kat_log_sha256": "ae1bdf0662bc64c2d4c11daede25567a5f6d90d1ddfc31c4e52a68f94c82b6b0",
+ "started_utc": "2026-09-25T19:34:10.632861+00:00",
+ "ended_utc": "2026-09-25T19:34:16.778518+00:00",
+ "load_average_start": [
+  2.01708984375,
+  2.029296875,
+  2.0
+ ],
+ "load_average_end": [
+  2.015625,
+  2.02880859375,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-06",
+    "instance": "BRA-256",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1802240",
+    "pk_bytes": "1735",
+    "sk_bytes": "1841",
+    "ct_bytes": "3406",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1937408",
+    "measurement_count": "21",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 21,
+     "seconds": 1.02480709,
+     "cycles": 2145361792
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-06/lib/libBRA-256.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "21",
+    "3"
+   ],
+   "wall_s": 1.2288057804107666,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-06",
+    "instance": "BRA-256",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1912832",
+    "pk_bytes": "1735",
+    "sk_bytes": "1841",
+    "ct_bytes": "3406",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1986560",
+    "measurement_count": "21",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 21,
+     "seconds": 1.024725983,
+     "cycles": 2145417287
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-06/lib/libBRA-256.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "21",
+    "3"
+   ],
+   "wall_s": 1.2290046215057373,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-06",
+    "instance": "BRA-256",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1736704",
+    "pk_bytes": "1735",
+    "sk_bytes": "1841",
+    "ct_bytes": "3406",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1871872",
+    "measurement_count": "21",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 21,
+     "seconds": 1.025280581,
+     "cycles": 2146179879
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-06/lib/libBRA-256.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "21",
+    "3"
+   ],
+   "wall_s": 1.229231834411621,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-06",
+    "instance": "BRA-256",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1830912",
+    "pk_bytes": "1735",
+    "sk_bytes": "1841",
+    "ct_bytes": "3406",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1970176",
+    "measurement_count": "21",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 21,
+     "seconds": 1.025209613,
+     "cycles": 2146165657
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-06/lib/libBRA-256.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "21",
+    "3"
+   ],
+   "wall_s": 1.2292802333831787,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-06",
+    "instance": "BRA-256",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1888256",
+    "pk_bytes": "1735",
+    "sk_bytes": "1841",
+    "ct_bytes": "3406",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2027520",
+    "measurement_count": "21",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 21,
+     "seconds": 1.024880418,
+     "cycles": 2145614361
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-06/lib/libBRA-256.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "21",
+    "3"
+   ],
+   "wall_s": 1.229095220565796,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 21,
+   "seconds": 1.02480709,
+   "cycles": 2145361792
+  },
+  {
+   "measurements": 21,
+   "seconds": 1.024725983,
+   "cycles": 2145417287
+  },
+  {
+   "measurements": 21,
+   "seconds": 1.025280581,
+   "cycles": 2146179879
+  },
+  {
+   "measurements": 21,
+   "seconds": 1.025209613,
+   "cycles": 2146165657
+  },
+  {
+   "measurements": 21,
+   "seconds": 1.024880418,
+   "cycles": 2145614361
+  }
+ ],
+ "measurements": 105,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.04880860652380952,
+ "median_trial_seconds": 0.04880382942857143,
+ "min_trial_seconds": 0.04879647538095238,
+ "max_trial_seconds": 0.04882288480952381,
+ "mean_cycles": 102178466.43809524,
+ "median_trial_cycles": 102172112.42857143,
+ "operations_per_second": 20.48818991609986,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 1735,
+  "sk_bytes": 1841,
+  "ct_bytes": 3406,
+  "ss_bytes": 64,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+ "baseline_rss_bytes": 1912832,
+ "peak_rss_bytes": 2027520,
+ "timing_scope": "loop"
+}

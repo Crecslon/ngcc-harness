@@ -114,34 +114,39 @@ Share of each operation spent in the ICCS placeholder hash functions and in the 
 
 ## 7. Raw evidence index
 
-All paths are relative to the campaign run directory; commands are recorded in each JSON file.
+Paths are relative to `performance/data/x86_1/` in the [harness](https://github.com/ngcc-dev/ngcc-harness); each JSON file records its commands, environment and trials.
 
 | instance | item | file |
 |---|---|---|
+| `qube-128` | KAT log (sha256 `d42d6cf140962d85…`) | `kat/kem-33/qube-128.log` |
 | `qube-128` | timing dec | `records/kem-33/qube-128__dec.json` |
 | `qube-128` | timing enc | `records/kem-33/qube-128__enc.json` |
 | `qube-128` | timing keygen | `records/kem-33/qube-128__keygen.json` |
 | `qube-128` | hash profile dec | `profile/kem-33/qube-128__dec.json` |
 | `qube-128` | hash profile enc | `profile/kem-33/qube-128__enc.json` |
 | `qube-128` | hash profile keygen | `profile/kem-33/qube-128__keygen.json` |
+| `qube-192` | KAT log (sha256 `e582d4539fa49366…`) | `kat/kem-33/qube-192.log` |
 | `qube-192` | timing dec | `records/kem-33/qube-192__dec.json` |
 | `qube-192` | timing enc | `records/kem-33/qube-192__enc.json` |
 | `qube-192` | timing keygen | `records/kem-33/qube-192__keygen.json` |
 | `qube-192` | hash profile dec | `profile/kem-33/qube-192__dec.json` |
 | `qube-192` | hash profile enc | `profile/kem-33/qube-192__enc.json` |
 | `qube-192` | hash profile keygen | `profile/kem-33/qube-192__keygen.json` |
+| `qube-256` | KAT log (sha256 `5ae74b28d91e7bcc…`) | `kat/kem-33/qube-256.log` |
 | `qube-256` | timing dec | `records/kem-33/qube-256__dec.json` |
 | `qube-256` | timing enc | `records/kem-33/qube-256__enc.json` |
 | `qube-256` | timing keygen | `records/kem-33/qube-256__keygen.json` |
 | `qube-256` | hash profile dec | `profile/kem-33/qube-256__dec.json` |
 | `qube-256` | hash profile enc | `profile/kem-33/qube-256__enc.json` |
 | `qube-256` | hash profile keygen | `profile/kem-33/qube-256__keygen.json` |
+| `qube-384` | KAT log (sha256 `575ed37bd6a07bfb…`) | `kat/kem-33/qube-384.log` |
 | `qube-384` | timing dec | `records/kem-33/qube-384__dec.json` |
 | `qube-384` | timing enc | `records/kem-33/qube-384__enc.json` |
 | `qube-384` | timing keygen | `records/kem-33/qube-384__keygen.json` |
 | `qube-384` | hash profile dec | `profile/kem-33/qube-384__dec.json` |
 | `qube-384` | hash profile enc | `profile/kem-33/qube-384__enc.json` |
 | `qube-384` | hash profile keygen | `profile/kem-33/qube-384__keygen.json` |
+| `qube-512` | KAT log (sha256 `735bd1cc5ccd2967…`) | `kat/kem-33/qube-512.log` |
 | `qube-512` | timing dec | `records/kem-33/qube-512__dec.json` |
 | `qube-512` | timing enc | `records/kem-33/qube-512__enc.json` |
 | `qube-512` | timing keygen | `records/kem-33/qube-512__keygen.json` |

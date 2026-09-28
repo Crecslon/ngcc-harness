@@ -1,0 +1,76 @@
+{
+ "schema": 2,
+ "candidate": "kem-08",
+ "label": "BW_KEM_C128",
+ "operation": "enc",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-08/libBW_KEM_C128.so",
+  "enc",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-08",
+  "instance": "BW_KEM_C128",
+  "operation": "enc",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997061",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 292401366
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 1000,
+   "ticks": 4668257
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 144,
+   "out_bits": 4032,
+   "calls": 4000,
+   "ticks": 95147421
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 3072,
+   "calls": 4000,
+   "ticks": 71329071
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 264,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 1489039
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 2560,
+   "calls": 1000,
+   "ticks": 14876058
+  }
+ ],
+ "share": {
+  "drng": 0.015965236632991653,
+  "pseudoXOF": 0.6202178617729166,
+  "sm3hash": 0.0050924488499140596
+ },
+ "hash_share": 0.6253103106228307
+}

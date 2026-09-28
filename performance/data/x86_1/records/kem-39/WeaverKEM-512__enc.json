@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-39",
+ "label": "WeaverKEM-512",
+ "instance": "WeaverKEM-512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "enc",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 645,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.049496664216919,
+  "timeout_per_process_s": 303.02969799853014
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-39/lib/libWeaverKEM-512.so",
+ "library_sha256": "3a0e9cbe5896ff4702a11f0d5bf9e7dbb08078d55ff3572791a18826de26a8ec",
+ "kat_log": "kat/kem-39/WeaverKEM-512.log",
+ "kat_log_sha256": "4571a836057380ecdda6b9d5fb6018635d2250d34961780a4eb9e942abc43c48",
+ "started_utc": "2026-09-25T18:32:55.919053+00:00",
+ "ended_utc": "2026-09-25T18:33:00.896959+00:00",
+ "load_average_start": [
+  2.0,
+  2.00927734375,
+  2.0
+ ],
+ "load_average_end": [
+  2.0,
+  2.0087890625,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-39",
+    "instance": "WeaverKEM-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1789952",
+    "pk_bytes": "2880",
+    "sk_bytes": "6400",
+    "ct_bytes": "3392",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1859584",
+    "measurement_count": "645",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 645,
+     "seconds": 0.982658219,
+     "cycles": 2054710345
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-39/lib/libWeaverKEM-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "645",
+    "3"
+   ],
+   "wall_s": 0.992326021194458,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-39",
+    "instance": "WeaverKEM-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1630208",
+    "pk_bytes": "2880",
+    "sk_bytes": "6400",
+    "ct_bytes": "3392",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1761280",
+    "measurement_count": "645",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 645,
+     "seconds": 0.980924108,
+     "cycles": 2053245318
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-39/lib/libWeaverKEM-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "645",
+    "3"
+   ],
+   "wall_s": 1.014596939086914,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-39",
+    "instance": "WeaverKEM-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1818624",
+    "pk_bytes": "2880",
+    "sk_bytes": "6400",
+    "ct_bytes": "3392",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1888256",
+    "measurement_count": "645",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 645,
+     "seconds": 0.980838684,
+     "cycles": 2053210687
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-39/lib/libWeaverKEM-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "645",
+    "3"
+   ],
+   "wall_s": 0.9907073974609375,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-39",
+    "instance": "WeaverKEM-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1794048",
+    "pk_bytes": "2880",
+    "sk_bytes": "6400",
+    "ct_bytes": "3392",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1863680",
+    "measurement_count": "645",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 645,
+     "seconds": 0.980056337,
+     "cycles": 2051367357
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-39/lib/libWeaverKEM-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "645",
+    "3"
+   ],
+   "wall_s": 0.9898824691772461,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-39",
+    "instance": "WeaverKEM-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1765376",
+    "pk_bytes": "2880",
+    "sk_bytes": "6400",
+    "ct_bytes": "3392",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1900544",
+    "measurement_count": "645",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 645,
+     "seconds": 0.98026819,
+     "cycles": 2052002254
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-39/lib/libWeaverKEM-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "645",
+    "3"
+   ],
+   "wall_s": 0.9901022911071777,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 645,
+   "seconds": 0.982658219,
+   "cycles": 2054710345
+  },
+  {
+   "measurements": 645,
+   "seconds": 0.980924108,
+   "cycles": 2053245318
+  },
+  {
+   "measurements": 645,
+   "seconds": 0.980838684,
+   "cycles": 2053210687
+  },
+  {
+   "measurements": 645,
+   "seconds": 0.980056337,
+   "cycles": 2051367357
+  },
+  {
+   "measurements": 645,
+   "seconds": 0.98026819,
+   "cycles": 2052002254
+  }
+ ],
+ "measurements": 3225,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0015208513296124033,
+ "median_trial_seconds": 0.001520680130232558,
+ "min_trial_seconds": 0.0015194671891472868,
+ "max_trial_seconds": 0.0015235011147286823,
+ "mean_cycles": 3182801.848372093,
+ "median_trial_cycles": 3183272.3829457364,
+ "operations_per_second": 657.5264659530233,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 2880,
+  "sk_bytes": 6400,
+  "ct_bytes": 3392,
+  "ss_bytes": 64,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1818624,
+ "peak_rss_bytes": 1900544,
+ "timing_scope": "loop"
+}

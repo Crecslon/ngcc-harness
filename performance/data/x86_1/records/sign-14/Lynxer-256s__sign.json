@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-14",
+ "label": "Lynxer-256s",
+ "instance": "Lynxer-256s",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "sign",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 20,
+  "warmups": 0,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 567.713399080423,
+  "timeout_per_process_s": 640.6280394482537
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-14/lib/libLynxer-256s.so",
+ "library_sha256": "77f7371b684ade58d0bd63220b74db1c4a55f5d9d1979a302ac3f324aea22a0f",
+ "kat_log": "kat/sign-14/Lynxer-256s.log",
+ "kat_log_sha256": "d654147d984c36cbf4465e7681b1a4c3b757b17a89c31eb7563802529a70f185",
+ "started_utc": "2026-09-26T06:19:12.280480+00:00",
+ "ended_utc": "2026-09-26T06:27:50.179853+00:00",
+ "load_average_start": [
+  2.04296875,
+  2.03955078125,
+  2.00048828125
+ ],
+ "load_average_end": [
+  2.072265625,
+  2.0390625,
+  2.00390625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-14",
+    "instance": "Lynxer-256s",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2195456",
+    "pk_bytes": "64",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12191",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "0",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "11563008",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 103.591712312,
+     "cycles": 215890731386
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-14/lib/libLynxer-256s.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "0"
+   ],
+   "wall_s": 103.68024039268494,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-14",
+    "instance": "Lynxer-256s",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2195456",
+    "pk_bytes": "64",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12191",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "0",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "11505664",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 103.38254119,
+     "cycles": 215437623469
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-14/lib/libLynxer-256s.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "0"
+   ],
+   "wall_s": 103.47076368331909,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-14",
+    "instance": "Lynxer-256s",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2138112",
+    "pk_bytes": "64",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12191",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "0",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "11476992",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 103.703044843,
+     "cycles": 215815584965
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-14/lib/libLynxer-256s.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "0"
+   ],
+   "wall_s": 103.7915370464325,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-14",
+    "instance": "Lynxer-256s",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2125824",
+    "pk_bytes": "64",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12191",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "0",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "11558912",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 103.488675947,
+     "cycles": 215937844448
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-14/lib/libLynxer-256s.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "0"
+   ],
+   "wall_s": 103.57701635360718,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-14",
+    "instance": "Lynxer-256s",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2101248",
+    "pk_bytes": "64",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12191",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "0",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "11505664",
+    "measurement_count": "20",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 20,
+     "seconds": 103.291096779,
+     "cycles": 215250509686
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-14/lib/libLynxer-256s.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "20",
+    "0"
+   ],
+   "wall_s": 103.37950158119202,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 20,
+   "seconds": 103.591712312,
+   "cycles": 215890731386
+  },
+  {
+   "measurements": 20,
+   "seconds": 103.38254119,
+   "cycles": 215437623469
+  },
+  {
+   "measurements": 20,
+   "seconds": 103.703044843,
+   "cycles": 215815584965
+  },
+  {
+   "measurements": 20,
+   "seconds": 103.488675947,
+   "cycles": 215937844448
+  },
+  {
+   "measurements": 20,
+   "seconds": 103.291096779,
+   "cycles": 215250509686
+  }
+ ],
+ "measurements": 100,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 5.174570710709999,
+ "median_trial_seconds": 5.17443379735,
+ "min_trial_seconds": 5.16455483895,
+ "max_trial_seconds": 5.18515224215,
+ "mean_cycles": 10783322939.54,
+ "median_trial_cycles": 10790779248.25,
+ "operations_per_second": 0.19325274615153354,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 64,
+  "sk_bytes": 64,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 12191,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 2195456,
+ "peak_rss_bytes": 11563008,
+ "timing_scope": "loop"
+}

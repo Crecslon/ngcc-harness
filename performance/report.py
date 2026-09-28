@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import sys
 import json
 import os
 import re
@@ -130,6 +131,43 @@ def load_systems() -> dict:
         return {r["ID"]: r for r in csv.DictReader((l for l in f if not l.startswith("#")), delimiter=";")}
 
 
+CHECK = False            # --check: compare with the files on disk instead of writing
+DIFFERENT: list[str] = []
+
+
+def emit(path: Path, text: str) -> None:
+    if CHECK:
+        if not path.is_file() or path.read_text(encoding="utf-8") != text:
+            DIFFERENT.append(path.relative_to(ROOT).as_posix() if path.is_relative_to(ROOT) else str(path))
+        return
+    path.write_text(text, encoding="utf-8")
+
+
+def evidence_dir(run) -> str:
+    return run.dir.relative_to(ROOT).as_posix() if run.dir.is_relative_to(ROOT) else str(run.dir)
+
+
+def record_host_state(run) -> tuple[int, dict]:
+    """(complete timing records, {deviation: count}) from each record's stored environment."""
+    import collections
+    n, issues = 0, collections.Counter()
+    for recs in run.records.values():
+        for r in recs.values():
+            if r.get("status") != "complete":
+                continue
+            n += 1
+            e = r.get("environment") or {}
+            if e.get("intel_pstate_no_turbo") == "0" or e.get("cpufreq_boost") == "1":
+                issues["turbo enabled"] += 1
+            if e.get("cpufreq_governor") not in (None, "performance"):
+                issues[f"governor {e.get('cpufreq_governor')}"] += 1
+            if e.get("smt_control") not in (None, "off", "forceoff", "notsupported", "notimplemented"):
+                issues[f"SMT {e.get('smt_control')}"] += 1
+            if not r.get("mean_cycles"):
+                issues["no hardware cycle count"] += 1
+    return n, dict(issues)
+
+
 def cand_page(cand: str) -> Path:
     return ROOT / cand / f"perf_{SYSTEM}.md"
 
@@ -223,7 +261,7 @@ def summary(run: Run, out: Path, arch: str):
             hdr = " | ".join(f"{op} | sym %" for op in OPS[cat])
             lines += [f"| id | algorithm | instance | {hdr} |", "|---|---|---|" + "---|" * (2 * len(OPS[cat]))]
         lines += rows + [""]
-    summary_page(out).write_text("\n".join(lines) + "\n", encoding="utf-8")
+    emit(summary_page(out), "\n".join(lines) + "\n")
 
 
 def candidate_page(run: Run, cand: str, out: Path, arch: str):
@@ -361,7 +399,9 @@ def candidate_page(run: Run, cand: str, out: Path, arch: str):
         L.append("")
     # (7)
     L += ["## 7. Raw evidence index", "",
-          "All paths are relative to the campaign run directory; commands are recorded in each JSON file.", "",
+          f"Paths are relative to `{evidence_dir(run)}/` in the "
+          "[harness](https://github.com/ngcc-dev/ngcc-harness); each JSON file records its commands, "
+          "environment and trials.", "",
           "| instance | item | file |", "|---|---|---|"]
     for l in labels:
         e = run.build.get(f"{cand}/{l}", {})
@@ -373,7 +413,7 @@ def candidate_page(run: Run, cand: str, out: Path, arch: str):
             L.append(f"| `{l}` | hash profile {key} | `{p['_path']}` |")
     L += ["", "Scripts: `performance/campaign.py`, `performance/ngcc_perf.c`, `performance/hashprof/` "
           "in the [harness](https://github.com/ngcc-dev/ngcc-harness).", ""]
-    cand_page(cand).write_text("\n".join(L) + "\n", encoding="utf-8")
+    emit(cand_page(cand), "\n".join(L) + "\n")
 
 
 def survey_page(run: Run, out: Path):
@@ -406,7 +446,29 @@ def survey_page(run: Run, out: Path):
         ref = f"[{cand}]({link(out / 'symmetric-survey.md', cand_page(cand))})" if cand_page(cand).is_file() else cand
         L.append(f"| {ref} | {run.names.get(cand, '')} | {r['Verdict']} | {r['Notes']} | "
                  f"{pct(best[0]) + ' (' + best[1] + ')' if best else '–'} |")
-    (out / "symmetric-survey.md").write_text("\n".join(L) + "\n", encoding="utf-8")
+    emit(out / "symmetric-survey.md", "\n".join(L) + "\n")
+
+
+def host_state_text(run) -> str:
+    n, issues = record_host_state(run)
+    if not issues:
+        return (f"All {n} timing records were taken in this state (turbo off, `performance` governor, "
+                "SMT off, hardware cycle counter available), as stored in each record.")
+    return (f"Of {n} timing records, some deviate from the fixed host state: "
+            + "; ".join(f"{k} ({v})" for k, v in sorted(issues.items())) + ".")
+
+
+def secondary_core_text(run) -> str:
+    main = run.env.get("cpu_number")
+    other = sorted({(c, l) for (c, l), recs in run.records.items() for r in recs.values()
+                    if r.get("status") == "complete" and (r.get("environment") or {}).get("cpu_number") != main})
+    cores = ", ".join(str(c) for c in run.cpus)
+    if not other:
+        return f"- All timing ran on CPU {main}."
+    names = ", ".join(f"{c} {l}" for c, l in other)
+    return (f"- Timing ran on performance core(s) {cores}. The slowest instances ({names}) were timed on a "
+            f"second performance core in parallel with the main run on CPU {main}, as was the hash "
+            "profiling; each record states its CPU. Cycle counts are comparable across these identical cores.")
 
 
 def method_page(run: Run, out: Path, arch: str):
@@ -417,15 +479,18 @@ def method_page(run: Run, out: Path, arch: str):
     L = [f"# Performance method and limitations — system {SYSTEM}", "",
          f"System {SYSTEM}: {SYSTEM_DESC}. [Summary]({summary_page(out).name}).", "",
          "## Measurement", "",
-         f"- One {env.get('cpu_model')} core (CPU {env.get('cpu_number')}), SMT off, turbo off, "
-         f"governor `{env.get('cpufreq_governor')}`. Cycles come from the hardware counter "
-         "(`perf_event_open`, user mode); time from `CLOCK_MONOTONIC_RAW`.",
+         f"- One {env.get('cpu_model')} core (CPU {env.get('cpu_number')}; {clock_text(env)}). "
+         "Cycles come from the hardware counter (`perf_event_open`, user mode); time from "
+         "`CLOCK_MONOTONIC_RAW`. " + host_state_text(run),
          f"- Reference builds use the guide's flags `{cfg.get('reference')}` plus "
          f"`{c.get('harness_additions')}` for shared libraries and pre-C99 declarations; an instance "
          "that fails to build or to pass its KATs that way is rebuilt with the harness defaults, and "
          "its page says so. Optimized builds use the guide's performance flags.",
-         "- Only libraries that pass the submitted KATs are timed. The DRNG is seeded with bytes "
-         "00..2f; signatures use a 64-byte message; hash inputs are the guide's S1–S8 lengths.",
+         "- Every library is checked against the submitted KAT vectors before timing. Instances "
+         "whose vectors are not reproduced by the submitted code are still timed and are marked ⚠, "
+         "with the identified cause on their candidate page (`performance/kat_issues.csv`); an "
+         "instance without a reference source of its own is not timed. The DRNG is seeded with "
+         "bytes 00..2f; signatures use a 64-byte message; hash inputs are the guide's S1–S8 lengths.",
          f"- Each operation is calibrated with one call, then measured in {pl.get('trials', 5)} trials. "
          f"Trials normally run in separate processes (fresh address-space layout); if setup takes "
          f"more than {pl.get('separate_process_setup_s', 60):.0f} s, the trials share one process. "
@@ -458,25 +523,21 @@ def method_page(run: Run, out: Path, arch: str):
          "- The complete functional test vectors are referenced by digest, not embedded.",
          "- Very slow operations have fewer than 100 timed calls; their pages say how many. "
          "Operations too slow for more than one call use their calibration call as the measurement.",
-         f"- Timing ran on performance core(s) {', '.join(str(c) for c in run.cpus)}: the three slowest "
-         "instances (TRINE-512-Balanced, TRINE-512-ShortSig, UVW-512) and the hash profiling ran on a second "
-         "performance core in parallel with the main run; each record states its CPU. Cycle counts are "
-         "comparable across these identical cores.",
+         secondary_core_text(run),
          "- A single key-exchange step is timed around each call, so its wall time includes the "
          "counter start/stop system calls (a floor of roughly a microsecond); its user-mode cycle "
          "count does not. The `exchange` figure has no such overhead.", ""]
-    problems = c.get("host_problems")
-    if problems:
-        L += ["**Host warnings during this campaign:** " + "; ".join(problems), ""]
-    method_page_path(out).write_text("\n".join(L) + "\n", encoding="utf-8")
+    emit(method_page_path(out), "\n".join(L) + "\n")
 
 
 def main():
-    global SYSTEM, SYSTEM_DESC
+    global SYSTEM, SYSTEM_DESC, CHECK
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("run_dir", type=Path)
     ap.add_argument("--system", help="system ID from performance/systems.csv (default: from the run)")
     ap.add_argument("--out", type=Path, default=OUT, help="directory for the shared pages")
+    ap.add_argument("--check", action="store_true",
+                    help="regenerate in memory and compare with the committed pages; exit 1 on any difference")
     a = ap.parse_args()
     run = Run(a.run_dir.resolve())
     systems = load_systems()
@@ -486,6 +547,7 @@ def main():
     if system not in systems:
         ap.error(f"unknown system {system!r} (host {host!r}); add it to performance/systems.csv or pass --system")
     SYSTEM, SYSTEM_DESC = system, systems[system]["Description"]
+    CHECK = a.check
     arch = {"x86_64": "x86-64", "aarch64": "AArch64"}.get(systems[system]["Arch"], systems[system]["Arch"])
     out = a.out.resolve()
     out.mkdir(parents=True, exist_ok=True)
@@ -495,9 +557,15 @@ def main():
     summary(run, out, arch)
     survey_page(run, out)
     method_page(run, out, arch)
+    if CHECK:
+        for path in DIFFERENT:
+            print(f"differs from regenerated output: {path}")
+        print(f"report check: system {SYSTEM}: {len(cands) + 3} pages, {len(DIFFERENT)} differ")
+        return 1 if DIFFERENT else 0
     print(f"report: system {SYSTEM}: {len(cands)} candidate reports (<id>/perf_{SYSTEM}.md), "
           f"{summary_page(out).name}, {method_page_path(out).name}, symmetric-survey.md in {out}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

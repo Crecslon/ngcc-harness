@@ -1,0 +1,124 @@
+{
+ "schema": 2,
+ "candidate": "sign-20",
+ "label": "QingLuan-512",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-20/libQingLuan-512.so",
+  "sign",
+  "0",
+  "4",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-20",
+  "instance": "QingLuan-512",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111994526",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 4,
+  "ticks": 2485045617
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 4,
+   "ticks": 27114
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 1552,
+   "out_bits": 256,
+   "calls": 16,
+   "ticks": 91314
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 2576,
+   "out_bits": 256,
+   "calls": 16,
+   "ticks": 134393
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 1056,
+   "out_bits": 256,
+   "calls": 288738,
+   "ticks": 1210131838
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 3502960,
+   "out_bits": 256,
+   "calls": 16,
+   "ticks": 152778295
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 1042448,
+   "out_bits": 256,
+   "calls": 32,
+   "ticks": 90280730
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 2064,
+   "out_bits": 256,
+   "calls": 16,
+   "ticks": 113024
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 3088,
+   "out_bits": 256,
+   "calls": 16,
+   "ticks": 156265
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 1024,
+   "calls": 4,
+   "ticks": 36920
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 2424,
+   "out_bits": 256,
+   "calls": 16,
+   "ticks": 113954
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 3928,
+   "out_bits": 256,
+   "calls": 16288,
+   "ticks": 181430477
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 1568,
+   "out_bits": 256,
+   "calls": 48864,
+   "ticks": 272142491
+  }
+ ],
+ "share": {
+  "drng": 2.5767736238702615e-05,
+  "sm3hash": 0.7675403493407984
+ },
+ "hash_share": 0.7675403493407984
+}

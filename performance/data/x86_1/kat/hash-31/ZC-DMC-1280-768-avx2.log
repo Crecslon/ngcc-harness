@@ -1,0 +1,18 @@
+library     = lib/libZC-DMC-1280-768-avx2.so
+id          = hash-31
+type        = hash
+algorithm   = ZC-DMC
+instance    = ZC-DMC-1280_OPT-768
+variant     = Optimized_Implementation
+source_dir  = ZC-DMC/Implementations/Implementations/Optimized_Implementation/ZC-DMC-1280-768
+compiler    = gcc 14.2.0
+build_flags = -O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC 
+digest_bits = 768
+digest_len  = 96
+timing  KAT_2_12 0.145 s
+wrote  kat/KAT_2_12_ZC-DMC-1280-768.txt (3067030 bytes)
+manifest dad1c9ffb0d0d314257d771bce5055d04c1373fd089eceb4883d38ca7086e2f1 strict KAT_2_12_ZC-DMC-1280-768.txt
+timing  KAT_2_23 0.035 s
+wrote  kat/KAT_2_23_ZC-DMC-1280-768.txt (1007 bytes)
+manifest 68359b627877370cdb1188195db2320c6b92f30227c2657b73e52c02400ecb4e strict KAT_2_23_ZC-DMC-1280-768.txt
+RESULT hash-31 ZC-DMC-1280_OPT-768 PASS 

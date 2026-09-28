@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-10",
+ "label": "Facto-DSA-128",
+ "instance": "Facto-DSA-128",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 271,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.078714694261475,
+  "timeout_per_process_s": 303.04722881655687
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-10/lib/libFacto-DSA-128.so",
+ "library_sha256": "868ab1c94bf98e459fa1d175c78852463dc2b6a6cd990bdc61b3f8b04494142c",
+ "kat_log": "kat/sign-10/Facto-DSA-128.log",
+ "kat_log_sha256": "8885ba74036818dd9b4aea3ec66d7b1984d8e4d797291d5c3c1ef4386afc2e5e",
+ "started_utc": "2026-09-25T18:46:11.369532+00:00",
+ "ended_utc": "2026-09-25T18:46:16.209036+00:00",
+ "load_average_start": [
+  2.0751953125,
+  2.0322265625,
+  2.00634765625
+ ],
+ "load_average_end": [
+  2.06884765625,
+  2.03125,
+  2.005859375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-10",
+    "instance": "Facto-DSA-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1773568",
+    "pk_bytes": "40040",
+    "sk_bytes": "3094",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "40",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1929216",
+    "measurement_count": "271",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 271,
+     "seconds": 0.957575904,
+     "cycles": 1991538152
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-10/lib/libFacto-DSA-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "271",
+    "3"
+   ],
+   "wall_s": 0.970587968826294,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-10",
+    "instance": "Facto-DSA-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1675264",
+    "pk_bytes": "40040",
+    "sk_bytes": "3094",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "40",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1892352",
+    "measurement_count": "271",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 271,
+     "seconds": 0.955156783,
+     "cycles": 1988752601
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-10/lib/libFacto-DSA-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "271",
+    "3"
+   ],
+   "wall_s": 0.9680273532867432,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-10",
+    "instance": "Facto-DSA-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1794048",
+    "pk_bytes": "40040",
+    "sk_bytes": "3094",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "40",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1949696",
+    "measurement_count": "271",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 271,
+     "seconds": 0.959216673,
+     "cycles": 1994811809
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-10/lib/libFacto-DSA-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "271",
+    "3"
+   ],
+   "wall_s": 0.9721596240997314,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-10",
+    "instance": "Facto-DSA-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1806336",
+    "pk_bytes": "40040",
+    "sk_bytes": "3094",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "40",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1961984",
+    "measurement_count": "271",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 271,
+     "seconds": 0.95205744,
+     "cycles": 1984606804
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-10/lib/libFacto-DSA-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "271",
+    "3"
+   ],
+   "wall_s": 0.9649617671966553,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-10",
+    "instance": "Facto-DSA-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1785856",
+    "pk_bytes": "40040",
+    "sk_bytes": "3094",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "40",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1941504",
+    "measurement_count": "271",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 271,
+     "seconds": 0.950713221,
+     "cycles": 1983270897
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-10/lib/libFacto-DSA-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "271",
+    "3"
+   ],
+   "wall_s": 0.9635381698608398,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 271,
+   "seconds": 0.957575904,
+   "cycles": 1991538152
+  },
+  {
+   "measurements": 271,
+   "seconds": 0.955156783,
+   "cycles": 1988752601
+  },
+  {
+   "measurements": 271,
+   "seconds": 0.959216673,
+   "cycles": 1994811809
+  },
+  {
+   "measurements": 271,
+   "seconds": 0.95205744,
+   "cycles": 1984606804
+  },
+  {
+   "measurements": 271,
+   "seconds": 0.950713221,
+   "cycles": 1983270897
+  }
+ ],
+ "measurements": 1355,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.003523778613284133,
+ "median_trial_seconds": 0.0035245637749077487,
+ "min_trial_seconds": 0.0035081668671586718,
+ "max_trial_seconds": 0.003539544918819188,
+ "mean_cycles": 7337992.814022141,
+ "median_trial_cycles": 7338570.483394834,
+ "operations_per_second": 283.78627313025436,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 40040,
+  "sk_bytes": 3094,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 40,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1806336,
+ "peak_rss_bytes": 1961984,
+ "timing_scope": "loop"
+}

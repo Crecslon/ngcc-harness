@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-22",
+ "label": "Rhyme-SHAKE-512",
+ "instance": "Rhyme-SHAKE-512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "sign",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 208,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 61.19416131753235,
+  "timeout_per_process_s": 336.7164967905194
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-22/lib/libRhyme-SHAKE-512.so",
+ "library_sha256": "d1de79260ba864cd8585aa9b7799efda020907e3e347ba334f3dc301adb066b0",
+ "kat_log": "kat/sign-22/Rhyme-SHAKE-512.log",
+ "kat_log_sha256": "a8fb3bfafed8377f4b98cda566625457211f7f915aa54dfb89338fb61df7e5a9",
+ "started_utc": "2026-09-25T21:36:42.177664+00:00",
+ "ended_utc": "2026-09-25T21:37:43.101109+00:00",
+ "load_average_start": [
+  2.09765625,
+  2.06396484375,
+  2.009765625
+ ],
+ "load_average_end": [
+  2.0869140625,
+  2.06494140625,
+  2.009765625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-22",
+    "instance": "Rhyme-SHAKE-512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "4091904",
+    "pk_bytes": "3872",
+    "sk_bytes": "44864",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "20612",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "4509696",
+    "measurement_count": "208",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 208,
+     "seconds": 0.981421169,
+     "cycles": 2054734488
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-22/lib/libRhyme-SHAKE-512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "208",
+    "3"
+   ],
+   "wall_s": 12.182121753692627,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-22",
+    "instance": "Rhyme-SHAKE-512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "3993600",
+    "pk_bytes": "3872",
+    "sk_bytes": "44864",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "20612",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "4472832",
+    "measurement_count": "208",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 208,
+     "seconds": 0.976327351,
+     "cycles": 2044336236
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-22/lib/libRhyme-SHAKE-512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "208",
+    "3"
+   ],
+   "wall_s": 12.177141189575195,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-22",
+    "instance": "Rhyme-SHAKE-512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "4063232",
+    "pk_bytes": "3872",
+    "sk_bytes": "44864",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "20612",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "4481024",
+    "measurement_count": "208",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 208,
+     "seconds": 0.981976248,
+     "cycles": 2056119964
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-22/lib/libRhyme-SHAKE-512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "208",
+    "3"
+   ],
+   "wall_s": 12.185723543167114,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-22",
+    "instance": "Rhyme-SHAKE-512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "4087808",
+    "pk_bytes": "3872",
+    "sk_bytes": "44864",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "20612",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "4505600",
+    "measurement_count": "208",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 208,
+     "seconds": 0.974625458,
+     "cycles": 2040802718
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-22/lib/libRhyme-SHAKE-512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "208",
+    "3"
+   ],
+   "wall_s": 12.178203105926514,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-22",
+    "instance": "Rhyme-SHAKE-512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "4067328",
+    "pk_bytes": "3872",
+    "sk_bytes": "44864",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "20612",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "4485120",
+    "measurement_count": "208",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 208,
+     "seconds": 0.992646279,
+     "cycles": 2078243317
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-22/lib/libRhyme-SHAKE-512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "208",
+    "3"
+   ],
+   "wall_s": 12.199942827224731,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 208,
+   "seconds": 0.981421169,
+   "cycles": 2054734488
+  },
+  {
+   "measurements": 208,
+   "seconds": 0.976327351,
+   "cycles": 2044336236
+  },
+  {
+   "measurements": 208,
+   "seconds": 0.981976248,
+   "cycles": 2056119964
+  },
+  {
+   "measurements": 208,
+   "seconds": 0.974625458,
+   "cycles": 2040802718
+  },
+  {
+   "measurements": 208,
+   "seconds": 0.992646279,
+   "cycles": 2078243317
+  }
+ ],
+ "measurements": 1040,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.004718265870192308,
+ "median_trial_seconds": 0.004718371004807692,
+ "min_trial_seconds": 0.004685699317307692,
+ "max_trial_seconds": 0.004772337879807693,
+ "mean_cycles": 9879073.772115385,
+ "median_trial_cycles": 9878531.192307692,
+ "operations_per_second": 211.94227445246568,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 3872,
+  "sk_bytes": 44864,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 20612,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+ "baseline_rss_bytes": 4091904,
+ "peak_rss_bytes": 4509696,
+ "timing_scope": "loop"
+}

@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-22",
+ "label": "Pavelor-1024",
+ "instance": "Pavelor-1024",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 65536,
+ "plan": {
+  "iterations_per_trial": 56,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.357831660582885,
+  "timeout_per_process_s": 303.21469899634974
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-22/lib/libPavelor-1024.so",
+ "library_sha256": "55e090e92cb3f6da13f009f1af363418a440db30d46e9d935280d07da861591a",
+ "kat_log": "kat/hash-22/Pavelor-1024.log",
+ "kat_log_sha256": "46333481da8603e0138ca55421091ffbbb85d990b785e4c4da1ab9fdb1b32c9e",
+ "started_utc": "2026-09-25T19:18:12.884647+00:00",
+ "ended_utc": "2026-09-25T19:18:18.220660+00:00",
+ "load_average_start": [
+  2.1298828125,
+  2.06689453125,
+  2.02001953125
+ ],
+ "load_average_end": [
+  2.119140625,
+  2.0654296875,
+  2.01953125
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-22",
+    "instance": "Pavelor-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1593344",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1720320",
+    "measurement_count": "56",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 56,
+     "seconds": 1.010799522,
+     "cycles": 2115860810
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-22/lib/libPavelor-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "56",
+    "3"
+   ],
+   "wall_s": 1.0672593116760254,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-22",
+    "instance": "Pavelor-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1695744",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1822720",
+    "measurement_count": "56",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 56,
+     "seconds": 1.010637322,
+     "cycles": 2115793060
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-22/lib/libPavelor-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "56",
+    "3"
+   ],
+   "wall_s": 1.0670762062072754,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-22",
+    "instance": "Pavelor-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1597440",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1724416",
+    "measurement_count": "56",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 56,
+     "seconds": 1.010802145,
+     "cycles": 2115952505
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-22/lib/libPavelor-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "56",
+    "3"
+   ],
+   "wall_s": 1.0672509670257568,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-22",
+    "instance": "Pavelor-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1802240",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1867776",
+    "measurement_count": "56",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 56,
+     "seconds": 1.010462332,
+     "cycles": 2115553112
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-22/lib/libPavelor-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "56",
+    "3"
+   ],
+   "wall_s": 1.0667974948883057,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-22",
+    "instance": "Pavelor-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1667072",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1794048",
+    "measurement_count": "56",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 56,
+     "seconds": 1.011084203,
+     "cycles": 2116532555
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-22/lib/libPavelor-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "56",
+    "3"
+   ],
+   "wall_s": 1.0673940181732178,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 56,
+   "seconds": 1.010799522,
+   "cycles": 2115860810
+  },
+  {
+   "measurements": 56,
+   "seconds": 1.010637322,
+   "cycles": 2115793060
+  },
+  {
+   "measurements": 56,
+   "seconds": 1.010802145,
+   "cycles": 2115952505
+  },
+  {
+   "measurements": 56,
+   "seconds": 1.010462332,
+   "cycles": 2115553112
+  },
+  {
+   "measurements": 56,
+   "seconds": 1.011084203,
+   "cycles": 2116532555
+  }
+ ],
+ "measurements": 280,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.018049234014285716,
+ "median_trial_seconds": 0.018049991464285712,
+ "min_trial_seconds": 0.018043970214285714,
+ "max_trial_seconds": 0.01805507505357143,
+ "mean_cycles": 37784614.43571428,
+ "median_trial_cycles": 37783228.75,
+ "operations_per_second": 55.404013223415134,
+ "throughput_MB_per_second": 3.630957410609734,
+ "sizes": {
+  "input_bytes": 65536,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 128
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1802240,
+ "peak_rss_bytes": 1867776,
+ "timing_scope": "loop"
+}

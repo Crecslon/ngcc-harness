@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-10",
+ "label": "Facto-DSA-512",
+ "instance": "Facto-DSA-512",
+ "variant": "reference",
+ "flags": "harness-default",
+ "operation": "sign",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 180,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 11.150526753703002,
+  "timeout_per_process_s": 306.6903160522218
+ },
+ "kat": "NOKAT",
+ "kat_not_passed": true,
+ "disturbed_retries": 0,
+ "library": "sign-10/lib/libFacto-DSA-512.so",
+ "library_sha256": "0cb72d2f70c401ddc7e108d218fdc15d4d9fdd398cb70da635efa94bc06b8bc6",
+ "kat_log": "kat/sign-10/Facto-DSA-512.log",
+ "kat_log_sha256": "46d8a75c2710998ca0d7e7d7aedbae95583b7190c0d4347eef6b51fe963c084a",
+ "started_utc": "2026-09-25T19:46:29.171622+00:00",
+ "ended_utc": "2026-09-25T19:47:28.472611+00:00",
+ "load_average_start": [
+  2.0,
+  2.0,
+  2.0
+ ],
+ "load_average_end": [
+  2.0,
+  2.0,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-10",
+    "instance": "Facto-DSA-512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "7491584",
+    "pk_bytes": "5674240",
+    "sk_bytes": "61922",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "128",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "13656064",
+    "measurement_count": "180",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 180,
+     "seconds": 10.69134052,
+     "cycles": 22383429888
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-10/lib/libFacto-DSA-512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "180",
+    "3"
+   ],
+   "wall_s": 11.831865549087524,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-10",
+    "instance": "Facto-DSA-512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "7651328",
+    "pk_bytes": "5674240",
+    "sk_bytes": "61922",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "128",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "13774848",
+    "measurement_count": "180",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 180,
+     "seconds": 10.827888767,
+     "cycles": 22385514445
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-10/lib/libFacto-DSA-512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "180",
+    "3"
+   ],
+   "wall_s": 11.968761920928955,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-10",
+    "instance": "Facto-DSA-512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "7643136",
+    "pk_bytes": "5674240",
+    "sk_bytes": "61922",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "128",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "13844480",
+    "measurement_count": "180",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 180,
+     "seconds": 10.69949214,
+     "cycles": 22399911444
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-10/lib/libFacto-DSA-512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "180",
+    "3"
+   ],
+   "wall_s": 11.841530084609985,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-10",
+    "instance": "Facto-DSA-512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "7659520",
+    "pk_bytes": "5674240",
+    "sk_bytes": "61922",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "128",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "13721600",
+    "measurement_count": "180",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 180,
+     "seconds": 10.676660459,
+     "cycles": 22352018990
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-10/lib/libFacto-DSA-512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "180",
+    "3"
+   ],
+   "wall_s": 11.818933010101318,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-10",
+    "instance": "Facto-DSA-512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "7667712",
+    "pk_bytes": "5674240",
+    "sk_bytes": "61922",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "128",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "13864960",
+    "measurement_count": "180",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 180,
+     "seconds": 10.697665665,
+     "cycles": 22392932708
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-10/lib/libFacto-DSA-512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "180",
+    "3"
+   ],
+   "wall_s": 11.83958649635315,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 180,
+   "seconds": 10.69134052,
+   "cycles": 22383429888
+  },
+  {
+   "measurements": 180,
+   "seconds": 10.827888767,
+   "cycles": 22385514445
+  },
+  {
+   "measurements": 180,
+   "seconds": 10.69949214,
+   "cycles": 22399911444
+  },
+  {
+   "measurements": 180,
+   "seconds": 10.676660459,
+   "cycles": 22352018990
+  },
+  {
+   "measurements": 180,
+   "seconds": 10.697665665,
+   "cycles": 22392932708
+  }
+ ],
+ "measurements": 900,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.05954783061222222,
+ "median_trial_seconds": 0.05943147591666667,
+ "min_trial_seconds": 0.05931478032777778,
+ "max_trial_seconds": 0.060154937594444444,
+ "mean_cycles": 124348674.97222222,
+ "median_trial_cycles": 124363969.1388889,
+ "operations_per_second": 16.793223022884558,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 5674240,
+  "sk_bytes": 61922,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 128,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 7667712,
+ "peak_rss_bytes": 13864960,
+ "timing_scope": "loop"
+}

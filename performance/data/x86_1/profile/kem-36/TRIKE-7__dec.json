@@ -1,0 +1,68 @@
+{
+ "schema": 2,
+ "candidate": "kem-36",
+ "label": "TRIKE-7",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-36/libTRIKE-7.so",
+  "dec",
+  "0",
+  "4",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-36",
+  "instance": "TRIKE-7",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111995464",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 4,
+  "ticks": 2417867885
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 32,
+   "calls": 2636,
+   "ticks": 12053666
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 210432,
+   "out_bits": 512,
+   "calls": 4,
+   "ticks": 4527699
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 140416,
+   "out_bits": 512,
+   "calls": 4,
+   "ticks": 3015184
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 69696,
+   "calls": 12,
+   "ticks": 4881529
+  }
+ ],
+ "share": {
+  "drng": 0.007004185425127147,
+  "pseudohash": 0.0031196423290100485
+ },
+ "hash_share": 0.0031196423290100485
+}

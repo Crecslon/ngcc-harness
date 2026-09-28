@@ -1,0 +1,75 @@
+{
+ "schema": 2,
+ "candidate": "sign-04",
+ "label": "CEDRUSALPHA-512s",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-04/libCEDRUSALPHA-512s.so",
+  "keygen",
+  "0",
+  "3",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-04",
+  "instance": "CEDRUSALPHA-512s",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111991885",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 23431695274
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 768,
+   "out_bits": 512,
+   "calls": 77568,
+   "ticks": 444851832
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1792,
+   "out_bits": 512,
+   "calls": 765,
+   "ticks": 8612047
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 52480,
+   "out_bits": 512,
+   "calls": 768,
+   "ticks": 215522665
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 1536,
+   "calls": 3,
+   "ticks": 42246
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1280,
+   "out_bits": 512,
+   "calls": 2674944,
+   "ticks": 22583439372
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.9923492792175853,
+  "drng": 1.8029425317286583e-06
+ },
+ "hash_share": 0.9923492792175853
+}

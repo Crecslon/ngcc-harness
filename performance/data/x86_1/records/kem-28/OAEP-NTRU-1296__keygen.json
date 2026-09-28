@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-28",
+ "label": "OAEP-NTRU-1296",
+ "instance": "OAEP-NTRU-1296",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 3999,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.014690527217407,
+  "timeout_per_process_s": 303.0088143163305
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-28/lib/libOAEP-NTRU-1296.so",
+ "library_sha256": "9d04753c8f9fc34763a2d3a861fe4c4d33c371973e247a1d3990d25aab7e9e5a",
+ "kat_log": "kat/kem-28/OAEP-NTRU-1296.log",
+ "kat_log_sha256": "cd9f7c70eb0e9a177aa06f49b65d19da296a73f807f8b2f34455fbdde2e0b3fe",
+ "started_utc": "2026-09-25T17:48:47.818296+00:00",
+ "ended_utc": "2026-09-25T17:48:52.548936+00:00",
+ "load_average_start": [
+  2.03076171875,
+  2.04345703125,
+  2.0048828125
+ ],
+ "load_average_end": [
+  2.02783203125,
+  2.04248046875,
+  2.00439453125
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-28",
+    "instance": "OAEP-NTRU-1296",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1572864",
+    "pk_bytes": "2430",
+    "sk_bytes": "4924",
+    "ct_bytes": "2494",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1716224",
+    "measurement_count": "3999",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3999,
+     "seconds": 0.943350571,
+     "cycles": 1974959851
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-28/lib/libOAEP-NTRU-1296.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3999",
+    "3"
+   ],
+   "wall_s": 0.9462568759918213,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-28",
+    "instance": "OAEP-NTRU-1296",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1556480",
+    "pk_bytes": "2430",
+    "sk_bytes": "4924",
+    "ct_bytes": "2494",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1703936",
+    "measurement_count": "3999",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3999,
+     "seconds": 0.942816437,
+     "cycles": 1973529503
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-28/lib/libOAEP-NTRU-1296.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3999",
+    "3"
+   ],
+   "wall_s": 0.9456212520599365,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-28",
+    "instance": "OAEP-NTRU-1296",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1572864",
+    "pk_bytes": "2430",
+    "sk_bytes": "4924",
+    "ct_bytes": "2494",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1716224",
+    "measurement_count": "3999",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3999,
+     "seconds": 0.943582166,
+     "cycles": 1975492966
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-28/lib/libOAEP-NTRU-1296.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3999",
+    "3"
+   ],
+   "wall_s": 0.9464223384857178,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-28",
+    "instance": "OAEP-NTRU-1296",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1626112",
+    "pk_bytes": "2430",
+    "sk_bytes": "4924",
+    "ct_bytes": "2494",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1773568",
+    "measurement_count": "3999",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3999,
+     "seconds": 0.943184804,
+     "cycles": 1974371791
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-28/lib/libOAEP-NTRU-1296.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3999",
+    "3"
+   ],
+   "wall_s": 0.9460420608520508,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-28",
+    "instance": "OAEP-NTRU-1296",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1761280",
+    "pk_bytes": "2430",
+    "sk_bytes": "4924",
+    "ct_bytes": "2494",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1843200",
+    "measurement_count": "3999",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3999,
+     "seconds": 0.943387634,
+     "cycles": 1975068471
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-28/lib/libOAEP-NTRU-1296.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3999",
+    "3"
+   ],
+   "wall_s": 0.9460704326629639,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 3999,
+   "seconds": 0.943350571,
+   "cycles": 1974959851
+  },
+  {
+   "measurements": 3999,
+   "seconds": 0.942816437,
+   "cycles": 1973529503
+  },
+  {
+   "measurements": 3999,
+   "seconds": 0.943582166,
+   "cycles": 1975492966
+  },
+  {
+   "measurements": 3999,
+   "seconds": 0.943184804,
+   "cycles": 1974371791
+  },
+  {
+   "measurements": 3999,
+   "seconds": 0.943387634,
+   "cycles": 1975068471
+  }
+ ],
+ "measurements": 19995,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.00023587504936234058,
+ "median_trial_seconds": 0.00023589661690422606,
+ "min_trial_seconds": 0.00023576305001250312,
+ "max_trial_seconds": 0.00023595453013253314,
+ "mean_cycles": 493794.5777444361,
+ "median_trial_cycles": 493863.4286071518,
+ "operations_per_second": 4239.5327640773285,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 2430,
+  "sk_bytes": 4924,
+  "ct_bytes": 2494,
+  "ss_bytes": 32,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1761280,
+ "peak_rss_bytes": 1843200,
+ "timing_scope": "loop"
+}

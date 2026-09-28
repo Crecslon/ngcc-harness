@@ -1,0 +1,17 @@
+library     = lib/libBRQC-128.so
+id          = kem-07
+type        = kem
+algorithm   = BRQC
+instance    = BRQC-128
+variant     = Reference_Implementation
+source_dir  = Implementations/Reference_Implementation/BRQC-128
+compiler    = gcc 14.2.0
+build_flags = -std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-poin
+pk_len      = 1954
+sk_len      = 2066
+ct_len      = 3844
+ss_len      = 64
+timing  keygen 0.898 ms  enc 1.975 ms  dec 23.957 ms (avg over 10)
+wrote  kat/KAT_KEM_BRQC-128.txt (160950 bytes)
+manifest 7c638f44ca14951114b3b02acfe8c86d9bcfa31cf4bab95e044343273f23baf8 strict KAT_KEM_BRQC-128.txt
+RESULT kem-07 BRQC-128 PASS 

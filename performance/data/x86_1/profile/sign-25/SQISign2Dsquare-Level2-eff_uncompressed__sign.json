@@ -1,0 +1,82 @@
+{
+ "schema": 2,
+ "candidate": "sign-25",
+ "label": "SQISign2Dsquare-Level2-eff_uncompressed",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-25/libSQISign2Dsquare-Level2-eff_uncompressed.so",
+  "sign",
+  "0",
+  "13",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-25",
+  "instance": "SQISign2Dsquare-Level2-eff_uncompressed",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111995578",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 13,
+  "ticks": 2214970627
+ },
+ "calls": [
+  {
+   "fn": "pseudohash",
+   "in_bits": 512,
+   "out_bits": 512,
+   "calls": 4080,
+   "ticks": 52587523
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 160,
+   "calls": 685,
+   "ticks": 3214234
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 1800,
+   "out_bits": 512,
+   "calls": 16,
+   "ticks": 331376
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 80,
+   "calls": 3967,
+   "ticks": 18428133
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 8,
+   "calls": 693,
+   "ticks": 3231464
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 72,
+   "calls": 4,
+   "ticks": 18839
+  }
+ ],
+ "share": {
+  "pseudohash": 0.02389146761357933,
+  "drng": 0.01123837476513859
+ },
+ "hash_share": 0.02389146761357933
+}

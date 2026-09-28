@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-35",
+ "label": "Wish1024",
+ "instance": "Wish1024",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 128,
+ "plan": {
+  "iterations_per_trial": 1272,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.023888145401611,
+  "timeout_per_process_s": 303.014332887241
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-35/lib/libWish1024.so",
+ "library_sha256": "0480172f1bb13d4de047340a98218534d2a551fcb8ee00d954eed80f895585b7",
+ "kat_log": "kat/hash-35/Wish1024.log",
+ "kat_log_sha256": "63ed769bd79a42ee48205400097329f15b03625552964f064d7bc633ab046aa7",
+ "started_utc": "2026-09-25T18:11:54.614968+00:00",
+ "ended_utc": "2026-09-25T18:11:59.482798+00:00",
+ "load_average_start": [
+  2.0302734375,
+  2.04736328125,
+  2.0185546875
+ ],
+ "load_average_end": [
+  2.02783203125,
+  2.04638671875,
+  2.01806640625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-35",
+    "instance": "Wish1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "128",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1695744",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1822720",
+    "measurement_count": "1272",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1272,
+     "seconds": 0.96597143,
+     "cycles": 2022092484
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-35/lib/libWish1024.so",
+    "hash",
+    "128",
+    "1",
+    "1",
+    "1272",
+    "3"
+   ],
+   "wall_s": 0.9703705310821533,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-35",
+    "instance": "Wish1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "128",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1626112",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1753088",
+    "measurement_count": "1272",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1272,
+     "seconds": 0.967880591,
+     "cycles": 2026373575
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-35/lib/libWish1024.so",
+    "hash",
+    "128",
+    "1",
+    "1",
+    "1272",
+    "3"
+   ],
+   "wall_s": 0.9722533226013184,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-35",
+    "instance": "Wish1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "128",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1634304",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1765376",
+    "measurement_count": "1272",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1272,
+     "seconds": 0.966134873,
+     "cycles": 2022408133
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-35/lib/libWish1024.so",
+    "hash",
+    "128",
+    "1",
+    "1",
+    "1272",
+    "3"
+   ],
+   "wall_s": 0.9706275463104248,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-35",
+    "instance": "Wish1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "128",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1638400",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1769472",
+    "measurement_count": "1272",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1272,
+     "seconds": 0.965520472,
+     "cycles": 2021363217
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-35/lib/libWish1024.so",
+    "hash",
+    "128",
+    "1",
+    "1",
+    "1272",
+    "3"
+   ],
+   "wall_s": 0.9700753688812256,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-35",
+    "instance": "Wish1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "128",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1527808",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1654784",
+    "measurement_count": "1272",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1272,
+     "seconds": 0.979816718,
+     "cycles": 2051382793
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-35/lib/libWish1024.so",
+    "hash",
+    "128",
+    "1",
+    "1",
+    "1272",
+    "3"
+   ],
+   "wall_s": 0.9842612743377686,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 1272,
+   "seconds": 0.96597143,
+   "cycles": 2022092484
+  },
+  {
+   "measurements": 1272,
+   "seconds": 0.967880591,
+   "cycles": 2026373575
+  },
+  {
+   "measurements": 1272,
+   "seconds": 0.966134873,
+   "cycles": 2022408133
+  },
+  {
+   "measurements": 1272,
+   "seconds": 0.965520472,
+   "cycles": 2021363217
+  },
+  {
+   "measurements": 1272,
+   "seconds": 0.979816718,
+   "cycles": 2051382793
+  }
+ ],
+ "measurements": 6360,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0007618434094339622,
+ "median_trial_seconds": 0.0007595399944968554,
+ "min_trial_seconds": 0.0007590569748427673,
+ "max_trial_seconds": 0.0007702961619496856,
+ "mean_cycles": 1594908.8367924527,
+ "median_trial_cycles": 1589943.5007861636,
+ "operations_per_second": 1312.6056977285982,
+ "throughput_MB_per_second": 0.16801352930926058,
+ "sizes": {
+  "input_bytes": 128,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 128
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1695744,
+ "peak_rss_bytes": 1822720,
+ "timing_scope": "loop"
+}

@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-27",
+ "label": "SQIsignTriangle_lvl2",
+ "instance": "SQIsignTriangle_lvl2",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "verify",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 64,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 6.623367689203492,
+  "timeout_per_process_s": 303.9740206135221
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-27/lib/libSQIsignTriangle_lvl2.so",
+ "library_sha256": "1823bfe84535b9c19b3817836d83cce5e21feee2d555a02f83ff3c05992bc4b6",
+ "kat_log": "kat/sign-27/SQIsignTriangle_lvl2.log",
+ "kat_log_sha256": "a6394a9518e2a6d232c65fe698b945afd05af287525593cb694264d8889ca920",
+ "started_utc": "2026-09-25T19:37:07.542865+00:00",
+ "ended_utc": "2026-09-25T19:37:14.083863+00:00",
+ "load_average_start": [
+  2.0,
+  2.01220703125,
+  2.0
+ ],
+ "load_average_end": [
+  2.0,
+  2.01171875,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-27",
+    "instance": "SQIsignTriangle_lvl2",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -funroll-loops",
+    "baseline_rss_bytes": "3084288",
+    "pk_bytes": "81",
+    "sk_bytes": "437",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "255",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3153920",
+    "measurement_count": "64",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 64,
+     "seconds": 1.00229227,
+     "cycles": 2098423242
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-27/lib/libSQIsignTriangle_lvl2.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "64",
+    "3"
+   ],
+   "wall_s": 1.3080291748046875,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-27",
+    "instance": "SQIsignTriangle_lvl2",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -funroll-loops",
+    "baseline_rss_bytes": "3084288",
+    "pk_bytes": "81",
+    "sk_bytes": "437",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "255",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3153920",
+    "measurement_count": "64",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 64,
+     "seconds": 1.002888754,
+     "cycles": 2099322147
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-27/lib/libSQIsignTriangle_lvl2.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "64",
+    "3"
+   ],
+   "wall_s": 1.3086700439453125,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-27",
+    "instance": "SQIsignTriangle_lvl2",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -funroll-loops",
+    "baseline_rss_bytes": "3035136",
+    "pk_bytes": "81",
+    "sk_bytes": "437",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "255",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3104768",
+    "measurement_count": "64",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 64,
+     "seconds": 1.002142986,
+     "cycles": 2098162479
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-27/lib/libSQIsignTriangle_lvl2.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "64",
+    "3"
+   ],
+   "wall_s": 1.3079512119293213,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-27",
+    "instance": "SQIsignTriangle_lvl2",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -funroll-loops",
+    "baseline_rss_bytes": "2940928",
+    "pk_bytes": "81",
+    "sk_bytes": "437",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "255",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3076096",
+    "measurement_count": "64",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 64,
+     "seconds": 1.001939605,
+     "cycles": 2097801957
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-27/lib/libSQIsignTriangle_lvl2.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "64",
+    "3"
+   ],
+   "wall_s": 1.3076562881469727,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-27",
+    "instance": "SQIsignTriangle_lvl2",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -funroll-loops",
+    "baseline_rss_bytes": "2940928",
+    "pk_bytes": "81",
+    "sk_bytes": "437",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "255",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3076096",
+    "measurement_count": "64",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 64,
+     "seconds": 1.002475759,
+     "cycles": 2098533356
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-27/lib/libSQIsignTriangle_lvl2.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "64",
+    "3"
+   ],
+   "wall_s": 1.3084349632263184,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 64,
+   "seconds": 1.00229227,
+   "cycles": 2098423242
+  },
+  {
+   "measurements": 64,
+   "seconds": 1.002888754,
+   "cycles": 2099322147
+  },
+  {
+   "measurements": 64,
+   "seconds": 1.002142986,
+   "cycles": 2098162479
+  },
+  {
+   "measurements": 64,
+   "seconds": 1.001939605,
+   "cycles": 2097801957
+  },
+  {
+   "measurements": 64,
+   "seconds": 1.002475759,
+   "cycles": 2098533356
+  }
+ ],
+ "measurements": 320,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.01566168554375,
+ "median_trial_seconds": 0.01566081671875,
+ "min_trial_seconds": 0.015655306328125,
+ "max_trial_seconds": 0.01567013678125,
+ "mean_cycles": 32788259.940625,
+ "median_trial_cycles": 32787863.15625,
+ "operations_per_second": 63.85008798743651,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 81,
+  "sk_bytes": 437,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 255,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -funroll-loops",
+ "baseline_rss_bytes": 3084288,
+ "peak_rss_bytes": 3153920,
+ "timing_scope": "loop"
+}

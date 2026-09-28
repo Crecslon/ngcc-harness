@@ -1,0 +1,69 @@
+{
+ "schema": 2,
+ "candidate": "kem-13",
+ "label": "DKEM-256",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-13/libDKEM-256.so",
+  "keygen",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-13",
+  "instance": "DKEM-256",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996517",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 610886856
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 6161890
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 296,
+   "out_bits": 256,
+   "calls": 32000,
+   "ticks": 46831352
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 2997343
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 304,
+   "out_bits": 256,
+   "calls": 256645,
+   "ticks": 374939614
+  }
+ ],
+ "share": {
+  "drng": 0.01008679420661819,
+  "sm3hash": 0.6904240316475233,
+  "pseudoXOF": 0.004906543610425954
+ },
+ "hash_share": 0.6953305752579493
+}

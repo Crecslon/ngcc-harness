@@ -1,0 +1,16 @@
+library     = lib/libBiT-128-avx2.so
+id          = sign-02
+type        = sig
+algorithm   = BiT
+instance    = BiT-128
+variant     = Optimized_Implementation
+source_dir  = Implementations/Optimized_Implementation/BiT-128-avx2
+compiler    = gcc 14.2.0
+build_flags = -O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC 
+pk_len      = 1048
+sk_len      = 1864
+sn_len      = 1504
+timing  keygen 0.186 ms  sign 0.908 ms  verify 0.168 ms (avg over 10)
+wrote  kat/KAT_SIG_BiT-128.txt (92534 bytes)
+manifest 294c774baf60b96309b21b3b8dccf95a04887e449a705efcbd73c0212c9fc318 strict KAT_SIG_BiT-128.txt
+RESULT sign-02 BiT-128 PASS 

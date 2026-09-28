@@ -92,10 +92,11 @@ Share of each operation spent in the ICCS placeholder hash functions and in the 
 
 ## 7. Raw evidence index
 
-All paths are relative to the campaign run directory; commands are recorded in each JSON file.
+Paths are relative to `performance/data/x86_1/` in the [harness](https://github.com/ngcc-dev/ngcc-harness); each JSON file records its commands, environment and trials.
 
 | instance | item | file |
 |---|---|---|
+| `Tins128` | KAT log (sha256 `5b3e2d11ab37b331…`) | `kat/sign-29/Tins128.log` |
 | `Tins128` | timing keygen | `records/sign-29/Tins128__keygen.json` |
 | `Tins128` | timing sign | `records/sign-29/Tins128__sign.json` |
 | `Tins128` | timing verify | `records/sign-29/Tins128__verify.json` |

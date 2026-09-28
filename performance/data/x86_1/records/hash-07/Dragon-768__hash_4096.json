@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-07",
+ "label": "Dragon-768",
+ "instance": "Dragon-768",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 4096,
+ "plan": {
+  "iterations_per_trial": 17488,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.010018859005737,
+  "timeout_per_process_s": 303.00601131540344
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 1,
+ "library": "hash-07/lib/libDragon-768.so",
+ "library_sha256": "1f5613e6527a57dd6ff9262d27385d5d2d9097c4e3aaff107e1197737a2a6645",
+ "kat_log": "kat/hash-07/Dragon-768.log",
+ "kat_log_sha256": "3fcaae89e84744273bb45f3c978139411a7af49fd7a13882dc18874a162f65d7",
+ "started_utc": "2026-09-25T17:17:21.514846+00:00",
+ "ended_utc": "2026-09-25T17:17:26.638982+00:00",
+ "load_average_start": [
+  2.0419921875,
+  1.953125,
+  1.560546875
+ ],
+ "load_average_end": [
+  2.19921875,
+  1.9873046875,
+  1.57373046875
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-07",
+    "instance": "Dragon-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "4096",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1597440",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1724416",
+    "measurement_count": "17488",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 17488,
+     "seconds": 0.826834248,
+     "cycles": 1727544139
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-07/lib/libDragon-768.so",
+    "hash",
+    "4096",
+    "1",
+    "1",
+    "17488",
+    "3"
+   ],
+   "wall_s": 0.8291118144989014,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-07",
+    "instance": "Dragon-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "4096",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1683456",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1814528",
+    "measurement_count": "17488",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 17488,
+     "seconds": 0.840096284,
+     "cycles": 1755472581
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-07/lib/libDragon-768.so",
+    "hash",
+    "4096",
+    "1",
+    "1",
+    "17488",
+    "3"
+   ],
+   "wall_s": 0.8423244953155518,
+   "disturbed_retries": 1
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-07",
+    "instance": "Dragon-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "4096",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1544192",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1671168",
+    "measurement_count": "17488",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 17488,
+     "seconds": 0.827700817,
+     "cycles": 1730007727
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-07/lib/libDragon-768.so",
+    "hash",
+    "4096",
+    "1",
+    "1",
+    "17488",
+    "3"
+   ],
+   "wall_s": 0.8298282623291016,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-07",
+    "instance": "Dragon-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "4096",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1708032",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1773568",
+    "measurement_count": "17488",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 17488,
+     "seconds": 0.821069944,
+     "cycles": 1715412602
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-07/lib/libDragon-768.so",
+    "hash",
+    "4096",
+    "1",
+    "1",
+    "17488",
+    "3"
+   ],
+   "wall_s": 0.8230605125427246,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-07",
+    "instance": "Dragon-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "4096",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1675264",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1806336",
+    "measurement_count": "17488",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 17488,
+     "seconds": 0.838367833,
+     "cycles": 1751173619
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-07/lib/libDragon-768.so",
+    "hash",
+    "4096",
+    "1",
+    "1",
+    "17488",
+    "3"
+   ],
+   "wall_s": 0.8405566215515137,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 17488,
+   "seconds": 0.826834248,
+   "cycles": 1727544139
+  },
+  {
+   "measurements": 17488,
+   "seconds": 0.840096284,
+   "cycles": 1755472581
+  },
+  {
+   "measurements": 17488,
+   "seconds": 0.827700817,
+   "cycles": 1730007727
+  },
+  {
+   "measurements": 17488,
+   "seconds": 0.821069944,
+   "cycles": 1715412602
+  },
+  {
+   "measurements": 17488,
+   "seconds": 0.838367833,
+   "cycles": 1751173619
+  }
+ ],
+ "measurements": 87440,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 4.7507652401646836e-05,
+ "median_trial_seconds": 4.732964415599268e-05,
+ "min_trial_seconds": 4.695047712717292e-05,
+ "max_trial_seconds": 4.8038442589204025e-05,
+ "mean_cycles": 99263.61697163769,
+ "median_trial_cycles": 98925.41897301006,
+ "operations_per_second": 21049.240479105116,
+ "throughput_MB_per_second": 86.21768900241456,
+ "sizes": {
+  "input_bytes": 4096,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 96
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1708032,
+ "peak_rss_bytes": 1814528,
+ "timing_scope": "loop"
+}

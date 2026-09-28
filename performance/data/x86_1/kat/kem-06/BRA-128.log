@@ -1,0 +1,17 @@
+library     = lib/libBRA-128.so
+id          = kem-06
+type        = kem
+algorithm   = BRA
+instance    = BRA-128
+variant     = Reference_Implementation
+source_dir  = Implementations/Reference_Implementation/BRA-128
+compiler    = gcc 14.2.0
+build_flags = -std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-poin
+pk_len      = 1078
+sk_len      = 1176
+ct_len      = 2092
+ss_len      = 64
+timing  keygen 0.639 ms  enc 1.431 ms  dec 13.159 ms (avg over 10)
+wrote  kat/KAT_KEM_BRA-128.txt (90590 bytes)
+manifest 2a67e649367c7a6f3f6812f3ce139e22ac2c022ad6e3b38560a358b685b67423 strict KAT_KEM_BRA-128.txt
+RESULT kem-06 BRA-128 PASS 

@@ -1,0 +1,119 @@
+{
+ "schema": 2,
+ "candidate": "kem-33",
+ "label": "qube-192",
+ "operation": "enc",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-33/libqube-192.so",
+  "enc",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-33",
+  "instance": "qube_192",
+  "operation": "enc",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997956",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 1483468748
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 192,
+   "calls": 2000,
+   "ticks": 9419033
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 32768,
+   "calls": 1000,
+   "ticks": 194059265
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 65536,
+   "calls": 1000,
+   "ticks": 390145590
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 8192,
+   "calls": 1000,
+   "ticks": 48704014
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 1024,
+   "calls": 1000,
+   "ticks": 6185421
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 1629879
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 3159006
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 4096,
+   "calls": 1000,
+   "ticks": 24329271
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 50920,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 138687417
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 584,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 13016692
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 2048,
+   "calls": 1000,
+   "ticks": 12226715
+  }
+ ],
+ "share": {
+  "drng": 0.006349330252287863,
+  "pseudoXOF": 0.4586811565241009,
+  "sm3hash": 0.09348860040831813,
+  "pseudohash": 0.008774496946800527
+ },
+ "hash_share": 0.5609442538792195
+}

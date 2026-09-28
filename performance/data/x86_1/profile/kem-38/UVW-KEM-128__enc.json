@@ -1,0 +1,75 @@
+{
+ "schema": 2,
+ "candidate": "kem-38",
+ "label": "UVW-KEM-128",
+ "operation": "enc",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-38/libUVW-KEM-128.so",
+  "enc",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-38",
+  "instance": "UVW_KEM_128",
+  "operation": "enc",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996076",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 963967828
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 20648,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 56347468
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 256,
+   "calls": 2000,
+   "ticks": 3176705
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 16384,
+   "calls": 2000,
+   "ticks": 195276784
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 14280,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 79197569
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 4813088
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.1439070246647277,
+  "drng": 0.20756903517738562
+ },
+ "hash_share": 0.1439070246647277
+}

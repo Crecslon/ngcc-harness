@@ -1,0 +1,61 @@
+{
+ "schema": 2,
+ "candidate": "kem-05",
+ "label": "BIKE_v2_256",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-05/libBIKE_v2_256.so",
+  "dec",
+  "0",
+  "5",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-05",
+  "instance": "BIKE_v2_256",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997386",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 5,
+  "ticks": 2298205572
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 81952,
+   "out_bits": 256,
+   "calls": 5,
+   "ticks": 1089598
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 8768,
+   "calls": 5,
+   "ticks": 263117
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 41488,
+   "out_bits": 256,
+   "calls": 5,
+   "ticks": 556626
+  }
+ ],
+ "share": {
+  "sm3hash": 0.0007163084190799273,
+  "pseudoXOF": 0.00011448801761063697
+ },
+ "hash_share": 0.0008307964366905642
+}

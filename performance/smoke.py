@@ -9,7 +9,26 @@ from pathlib import Path
 import re
 import subprocess
 
-from run import ROOT, parse_native
+
+
+ROOT = Path(__file__).resolve().parent.parent
+
+
+def parse_native(output: str) -> tuple[dict, list[dict], str]:
+    """META, TRIAL and STATUS lines of performance/ngcc_perf output."""
+    metadata: dict[str, str] = {}
+    trials: list[dict] = []
+    status = "missing"
+    for line in output.splitlines():
+        parts = line.split("\t")
+        if parts[0] == "META" and len(parts) == 3:
+            metadata[parts[1]] = parts[2]
+        elif parts[0] == "TRIAL" and len(parts) == 5:
+            trials.append({"number": int(parts[1]), "measurements": int(parts[2]),
+                           "elapsed_seconds": float(parts[3]), "cpu_cycles": int(parts[4])})
+        elif parts[0] == "STATUS" and len(parts) == 2:
+            status = parts[1]
+    return metadata, trials, status
 
 
 OPERATIONS = {

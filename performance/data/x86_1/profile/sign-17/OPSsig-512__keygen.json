@@ -1,0 +1,76 @@
+{
+ "schema": 2,
+ "candidate": "sign-17",
+ "label": "OPSsig-512",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-17/libOPSsig-512.so",
+  "keygen",
+  "0",
+  "274",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-17",
+  "instance": "OPSsig-512",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998002",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 274,
+  "ticks": 2087014490
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 274,
+   "ticks": 1722620
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1072,
+   "out_bits": 4376,
+   "calls": 3040,
+   "ticks": 230965738
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 560,
+   "out_bits": 32800,
+   "calls": 4388,
+   "ticks": 1608314780
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 53760,
+   "out_bits": 1024,
+   "calls": 274,
+   "ticks": 87542950
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 1024,
+   "calls": 274,
+   "ticks": 2477920
+  }
+ ],
+ "share": {
+  "drng": 0.0020127028442433097,
+  "pseudoXOF": 0.881297435553502,
+  "pseudohash": 0.04194649841650117
+ },
+ "hash_share": 0.9232439339700033
+}

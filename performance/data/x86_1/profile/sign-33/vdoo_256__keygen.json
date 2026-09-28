@@ -1,0 +1,60 @@
+{
+ "schema": 2,
+ "candidate": "sign-33",
+ "label": "vdoo_256",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-33/libvdoo_256.so",
+  "keygen",
+  "0",
+  "3",
+  "0"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-33",
+  "instance": "VDOO-256",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996514",
+  "warmups": "0",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 114824843120
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 34314000,
+   "calls": 3,
+   "ticks": 598615834
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 8,
+   "calls": 298271,
+   "ticks": 1355561036
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 3,
+   "ticks": 20646
+  }
+ ],
+ "share": {
+  "drng": 0.01701894348732292
+ },
+ "hash_share": 0
+}

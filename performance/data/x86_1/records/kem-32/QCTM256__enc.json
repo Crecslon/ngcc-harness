@@ -1,0 +1,182 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-32",
+ "label": "QCTM256",
+ "instance": "QCTM256",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "enc",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 42,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": false,
+  "estimated_s": 69.06034161457032,
+  "timeout_per_process_s": 507.18102484371093
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-32/lib/libQCTM256.so",
+ "library_sha256": "704ad6118293ef84e4cb2b5db963ce15ae64fb660e2dda343898fcccad8145b9",
+ "kat_log": "kat/kem-32/QCTM256.log",
+ "kat_log_sha256": "ac7d307c4f89faa6e87f9f45f39a3367e71db5ad1e29e4e3276a792bd5e99f5a",
+ "started_utc": "2026-09-25T21:51:47.330813+00:00",
+ "ended_utc": "2026-09-25T21:52:56.637336+00:00",
+ "load_average_start": [
+  2.01220703125,
+  2.021484375,
+  2.0
+ ],
+ "load_average_end": [
+  2.06005859375,
+  2.02978515625,
+  2.00341796875
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-32",
+    "instance": "QCTM256",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -fcommon",
+    "baseline_rss_bytes": "12120064",
+    "pk_bytes": "595662",
+    "sk_bytes": "641942",
+    "ct_bytes": "1153",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "484093952",
+    "measurement_count": "210",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 42,
+     "seconds": 1.116433402,
+     "cycles": 2334594583
+    },
+    {
+     "measurements": 42,
+     "seconds": 1.094296465,
+     "cycles": 2288022709
+    },
+    {
+     "measurements": 42,
+     "seconds": 1.021953619,
+     "cycles": 2136977027
+    },
+    {
+     "measurements": 42,
+     "seconds": 1.06468852,
+     "cycles": 2226113136
+    },
+    {
+     "measurements": 42,
+     "seconds": 1.035080564,
+     "cycles": 2164508061
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-32/lib/libQCTM256.so",
+    "enc",
+    "0",
+    "5",
+    "1",
+    "42",
+    "3"
+   ],
+   "wall_s": 69.30646634101868,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 42,
+   "seconds": 1.116433402,
+   "cycles": 2334594583
+  },
+  {
+   "measurements": 42,
+   "seconds": 1.094296465,
+   "cycles": 2288022709
+  },
+  {
+   "measurements": 42,
+   "seconds": 1.021953619,
+   "cycles": 2136977027
+  },
+  {
+   "measurements": 42,
+   "seconds": 1.06468852,
+   "cycles": 2226113136
+  },
+  {
+   "measurements": 42,
+   "seconds": 1.035080564,
+   "cycles": 2164508061
+  }
+ ],
+ "measurements": 210,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.025392631285714284,
+ "median_trial_seconds": 0.025349726666666666,
+ "min_trial_seconds": 0.024332229023809524,
+ "max_trial_seconds": 0.026581747666666666,
+ "mean_cycles": 53096264.36190476,
+ "median_trial_cycles": 53002693.71428572,
+ "operations_per_second": 39.38150358456915,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 595662,
+  "sk_bytes": 641942,
+  "ct_bytes": 1153,
+  "ss_bytes": 32,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -fcommon",
+ "baseline_rss_bytes": 12120064,
+ "peak_rss_bytes": 484093952,
+ "timing_scope": "loop"
+}

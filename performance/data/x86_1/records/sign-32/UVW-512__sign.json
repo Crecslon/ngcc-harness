@@ -1,0 +1,150 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-32",
+ "label": "UVW-512",
+ "instance": "UVW-512",
+ "variant": "reference",
+ "flags": "harness-default",
+ "operation": "sign",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 1,
+  "warmups": 0,
+  "trials": 1,
+  "separate_processes": false,
+  "estimated_s": 6501.382371902466,
+  "timeout_per_process_s": 19804.1471157074
+ },
+ "kat": "CRYPTOFAIL",
+ "kat_not_passed": true,
+ "disturbed_retries": 0,
+ "library": "sign-32/lib/libUVW-512.so",
+ "library_sha256": "cdd504506c9a32dbc4886d6dd93083f81677732eb389233fc317aaba3de66244",
+ "kat_log": "kat/sign-32/UVW-512.log",
+ "kat_log_sha256": "05a5474b7e03d402def1a1cf8e06dd8f116dc34704f6332b21caf2db01fee30e",
+ "started_utc": "2026-09-26T02:22:51.837691+00:00",
+ "ended_utc": "2026-09-26T02:22:51.837757+00:00",
+ "load_average_start": [
+  2.0390625,
+  2.01806640625,
+  2.00146484375
+ ],
+ "load_average_end": [
+  2.0390625,
+  2.01806640625,
+  2.00146484375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 4,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-32",
+    "instance": "UVW-512",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "607207424",
+    "pk_bytes": "95160012",
+    "sk_bytes": "72",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "4956",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "0",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1185472512",
+    "measurement_count": "1",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 1,
+     "seconds": 926.273859829,
+     "cycles": 1935270718037
+    }
+   ],
+   "stderr": "DBG_SIGN: e1e1e2_hw=34710 fe_hw=34710 diff=0\nDBG_SIGN: e1e1e2_hw=34710 f_hw=17397 e_hw=17313 sum=34710 w=34710 d_zeros=0 p_dups=0",
+   "command": [
+    "taskset",
+    "-c",
+    "4",
+    "performance/ngcc_perf",
+    "sign-32/lib/libUVW-512.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "1",
+    "0"
+   ],
+   "wall_s": 6501.382371902466,
+   "t1_s": 926.273859829,
+   "setup_s": 5575.108512073466,
+   "reused_calibration": true,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 1,
+   "seconds": 926.273859829,
+   "cycles": 1935270718037
+  }
+ ],
+ "measurements": 1,
+ "guide_100_measurements_met": false,
+ "mean_seconds": 926.273859829,
+ "median_trial_seconds": 926.273859829,
+ "min_trial_seconds": 926.273859829,
+ "max_trial_seconds": 926.273859829,
+ "mean_cycles": 1935270718037.0,
+ "median_trial_cycles": 1935270718037.0,
+ "operations_per_second": 0.0010795943223363884,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 95160012,
+  "sk_bytes": 72,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 4956,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 607207424,
+ "peak_rss_bytes": 1185472512,
+ "timing_scope": "loop"
+}

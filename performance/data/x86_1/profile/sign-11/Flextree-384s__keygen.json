@@ -1,0 +1,68 @@
+{
+ "schema": 2,
+ "candidate": "sign-11",
+ "label": "Flextree-384s",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-11/libFlextree-384s.so",
+  "keygen",
+  "0",
+  "3",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-11",
+  "instance": "Flextree-384s",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998045",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 9950337339
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1408,
+   "out_bits": 384,
+   "calls": 765,
+   "ticks": 6509442
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 36736,
+   "out_bits": 384,
+   "calls": 768,
+   "ticks": 150772816
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 1152,
+   "calls": 3,
+   "ticks": 36311
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1024,
+   "out_bits": 384,
+   "calls": 1155072,
+   "ticks": 9732975814
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.9939620874194364,
+  "drng": 3.64922301253851e-06
+ },
+ "hash_share": 0.9939620874194364
+}

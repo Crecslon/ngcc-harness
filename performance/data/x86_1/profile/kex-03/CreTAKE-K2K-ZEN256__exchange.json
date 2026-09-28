@@ -1,0 +1,126 @@
+{
+ "schema": 2,
+ "candidate": "kex-03",
+ "label": "CreTAKE-K2K-ZEN256",
+ "operation": "exchange",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kex-03/libCreTAKE-K2K-ZEN256.so",
+  "exchange",
+  "0",
+  "573",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kex-03",
+  "instance": "CreTAKE-K2K-ZEN256",
+  "operation": "exchange",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998137",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 573,
+  "ticks": 2045749260
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 2292,
+   "ticks": 14432477
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 54584,
+   "out_bits": 512,
+   "calls": 1146,
+   "ticks": 336061679
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 3072,
+   "calls": 4623,
+   "ticks": 157968899
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 8448,
+   "out_bits": 256,
+   "calls": 1146,
+   "ticks": 26786062
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 10344,
+   "out_bits": 256,
+   "calls": 1146,
+   "ticks": 33939753
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 512,
+   "out_bits": 768,
+   "calls": 2292,
+   "ticks": 49605674
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 64,
+   "out_bits": 768,
+   "calls": 573,
+   "ticks": 2649024
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 4096,
+   "calls": 2292,
+   "ticks": 106438315
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 9832,
+   "out_bits": 256,
+   "calls": 2292,
+   "ticks": 64123862
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 2048,
+   "calls": 5730,
+   "ticks": 130527055
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 2292,
+   "ticks": 11110488
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 2669,
+   "out_bits": 512,
+   "calls": 1146,
+   "ticks": 27599903
+  }
+ ],
+ "share": {
+  "drng": 0.012485872779931984,
+  "pseudoXOF": 0.3752095821361803,
+  "sm3hash": 0.04443844892310996,
+  "pseudohash": 0.03773951114615092
+ },
+ "hash_share": 0.45738754220544114
+}

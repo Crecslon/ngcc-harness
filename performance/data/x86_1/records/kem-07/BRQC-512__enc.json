@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-07",
+ "label": "BRQC-512",
+ "instance": "BRQC-512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "enc",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 38,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.6548601864715575,
+  "timeout_per_process_s": 303.3929161118829
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-07/lib/libBRQC-512.so",
+ "library_sha256": "87fe3262d7aeb33cf7e090e68bfeab92756e6b59942d98020d0941d6c92eb03c",
+ "kat_log": "kat/kem-07/BRQC-512.log",
+ "kat_log_sha256": "55c93e9132eca88693ede43a9e3390bcddaf6b56ce088f5e8c1427ac9a974de2",
+ "started_utc": "2026-09-25T19:27:14.836727+00:00",
+ "ended_utc": "2026-09-25T19:27:20.472428+00:00",
+ "load_average_start": [
+  2.00390625,
+  2.01513671875,
+  2.0
+ ],
+ "load_average_end": [
+  2.083984375,
+  2.03173828125,
+  2.00537109375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-07",
+    "instance": "BRQC-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1900544",
+    "pk_bytes": "6562",
+    "sk_bytes": "6712",
+    "ct_bytes": "13060",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2035712",
+    "measurement_count": "38",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 38,
+     "seconds": 1.006906002,
+     "cycles": 2108365646
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-07/lib/libBRQC-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "38",
+    "3"
+   ],
+   "wall_s": 1.1279306411743164,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-07",
+    "instance": "BRQC-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "2027520",
+    "pk_bytes": "6562",
+    "sk_bytes": "6712",
+    "ct_bytes": "13060",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2101248",
+    "measurement_count": "38",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 38,
+     "seconds": 1.0050734,
+     "cycles": 2104788469
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-07/lib/libBRQC-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "38",
+    "3"
+   ],
+   "wall_s": 1.125295639038086,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-07",
+    "instance": "BRQC-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1982464",
+    "pk_bytes": "6562",
+    "sk_bytes": "6712",
+    "ct_bytes": "13060",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2117632",
+    "measurement_count": "38",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 38,
+     "seconds": 1.006426588,
+     "cycles": 2107337127
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-07/lib/libBRQC-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "38",
+    "3"
+   ],
+   "wall_s": 1.1276953220367432,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-07",
+    "instance": "BRQC-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "2027520",
+    "pk_bytes": "6562",
+    "sk_bytes": "6712",
+    "ct_bytes": "13060",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2101248",
+    "measurement_count": "38",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 38,
+     "seconds": 1.007350615,
+     "cycles": 2109493923
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-07/lib/libBRQC-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "38",
+    "3"
+   ],
+   "wall_s": 1.1276767253875732,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-07",
+    "instance": "BRQC-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "2048000",
+    "pk_bytes": "6562",
+    "sk_bytes": "6712",
+    "ct_bytes": "13060",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2121728",
+    "measurement_count": "38",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 38,
+     "seconds": 1.005825846,
+     "cycles": 2106124269
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-07/lib/libBRQC-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "38",
+    "3"
+   ],
+   "wall_s": 1.1268649101257324,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 38,
+   "seconds": 1.006906002,
+   "cycles": 2108365646
+  },
+  {
+   "measurements": 38,
+   "seconds": 1.0050734,
+   "cycles": 2104788469
+  },
+  {
+   "measurements": 38,
+   "seconds": 1.006426588,
+   "cycles": 2107337127
+  },
+  {
+   "measurements": 38,
+   "seconds": 1.007350615,
+   "cycles": 2109493923
+  },
+  {
+   "measurements": 38,
+   "seconds": 1.005825846,
+   "cycles": 2106124269
+  }
+ ],
+ "measurements": 190,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0264820129,
+ "median_trial_seconds": 0.02648491021052632,
+ "min_trial_seconds": 0.0264493,
+ "max_trial_seconds": 0.026509226710526315,
+ "mean_cycles": 55453207.54736842,
+ "median_trial_cycles": 55456240.184210524,
+ "operations_per_second": 37.76147998175773,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 6562,
+  "sk_bytes": 6712,
+  "ct_bytes": 13060,
+  "ss_bytes": 64,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+ "baseline_rss_bytes": 2048000,
+ "peak_rss_bytes": 2121728,
+ "timing_scope": "loop"
+}

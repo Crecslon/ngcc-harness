@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-31",
+ "label": "ZC-DMC-1280-1024-avx2",
+ "instance": "ZC-DMC-1280_OPT-1024",
+ "variant": "optimized-avx2",
+ "flags": "guide-performance",
+ "operation": "hash",
+ "input_bytes": 4096,
+ "plan": {
+  "iterations_per_trial": 20000,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 4.5412598851745605,
+  "timeout_per_process_s": 302.7247559311047
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-31/lib/libZC-DMC-1280-1024-avx2.so",
+ "library_sha256": "080496b52125b5dd4aa74047e40df010b8c857e7425a3e82fc3621592d70f2b0",
+ "kat_log": "kat/hash-31/ZC-DMC-1280-1024-avx2.log",
+ "kat_log_sha256": "b6680339215abb313358d19d0acf6a67ca28ef1ac10850388f78f88798efbc2f",
+ "started_utc": "2026-09-25T17:14:26.970286+00:00",
+ "ended_utc": "2026-09-25T17:14:30.839946+00:00",
+ "load_average_start": [
+  2.080078125,
+  1.86279296875,
+  1.44873046875
+ ],
+ "load_average_end": [
+  2.0732421875,
+  1.865234375,
+  1.4521484375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-31",
+    "instance": "ZC-DMC-1280_OPT-1024",
+    "variant": "Optimized_Implementation",
+    "operation": "hash",
+    "input_bytes": "4096",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1708032",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1835008",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.771450837,
+     "cycles": 1614763502
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-31/lib/libZC-DMC-1280-1024-avx2.so",
+    "hash",
+    "4096",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.7736928462982178,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-31",
+    "instance": "ZC-DMC-1280_OPT-1024",
+    "variant": "Optimized_Implementation",
+    "operation": "hash",
+    "input_bytes": "4096",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1724416",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1789952",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.77129457,
+     "cycles": 1614702674
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-31/lib/libZC-DMC-1280-1024-avx2.so",
+    "hash",
+    "4096",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.7734541893005371,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-31",
+    "instance": "ZC-DMC-1280_OPT-1024",
+    "variant": "Optimized_Implementation",
+    "operation": "hash",
+    "input_bytes": "4096",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1728512",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1794048",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.77137685,
+     "cycles": 1614822949
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-31/lib/libZC-DMC-1280-1024-avx2.so",
+    "hash",
+    "4096",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.773557186126709,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-31",
+    "instance": "ZC-DMC-1280_OPT-1024",
+    "variant": "Optimized_Implementation",
+    "operation": "hash",
+    "input_bytes": "4096",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1536000",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1662976",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.774006761,
+     "cycles": 1620266532
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-31/lib/libZC-DMC-1280-1024-avx2.so",
+    "hash",
+    "4096",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.7759974002838135,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-31",
+    "instance": "ZC-DMC-1280_OPT-1024",
+    "variant": "Optimized_Implementation",
+    "operation": "hash",
+    "input_bytes": "4096",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1740800",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1806336",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.7705781,
+     "cycles": 1613148928
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-31/lib/libZC-DMC-1280-1024-avx2.so",
+    "hash",
+    "4096",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.7727134227752686,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 20000,
+   "seconds": 0.771450837,
+   "cycles": 1614763502
+  },
+  {
+   "measurements": 20000,
+   "seconds": 0.77129457,
+   "cycles": 1614702674
+  },
+  {
+   "measurements": 20000,
+   "seconds": 0.77137685,
+   "cycles": 1614822949
+  },
+  {
+   "measurements": 20000,
+   "seconds": 0.774006761,
+   "cycles": 1620266532
+  },
+  {
+   "measurements": 20000,
+   "seconds": 0.7705781,
+   "cycles": 1613148928
+  }
+ ],
+ "measurements": 100000,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 3.858707118e-05,
+ "median_trial_seconds": 3.85688425e-05,
+ "min_trial_seconds": 3.8528905000000003e-05,
+ "max_trial_seconds": 3.870033805e-05,
+ "mean_cycles": 80777.04585,
+ "median_trial_cycles": 80738.1751,
+ "operations_per_second": 25915.415952022508,
+ "throughput_MB_per_second": 106.14954373948419,
+ "sizes": {
+  "input_bytes": 4096,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 128
+ },
+ "kex": {},
+ "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+ "baseline_rss_bytes": 1740800,
+ "peak_rss_bytes": 1835008,
+ "timing_scope": "loop"
+}

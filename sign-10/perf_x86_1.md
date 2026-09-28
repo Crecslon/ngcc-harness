@@ -92,7 +92,7 @@ Share of each operation spent in the ICCS placeholder hash functions and in the 
 
 ## 7. Raw evidence index
 
-All paths are relative to the campaign run directory; commands are recorded in each JSON file.
+Paths are relative to `performance/data/x86_1/` in the [harness](https://github.com/ngcc-dev/ngcc-harness); each JSON file records its commands, environment and trials.
 
 | instance | item | file |
 |---|---|---|
@@ -110,6 +110,7 @@ All paths are relative to the campaign run directory; commands are recorded in e
 | `Facto-DSA-256` | hash profile keygen | `profile/sign-10/Facto-DSA-256__keygen.json` |
 | `Facto-DSA-256` | hash profile sign | `profile/sign-10/Facto-DSA-256__sign.json` |
 | `Facto-DSA-256` | hash profile verify | `profile/sign-10/Facto-DSA-256__verify.json` |
+| `Facto-DSA-512` | KAT log (sha256 `46d8a75c2710998c…`) | `kat/sign-10/Facto-DSA-512.log` |
 | `Facto-DSA-512` | timing keygen | `records/sign-10/Facto-DSA-512__keygen.json` |
 | `Facto-DSA-512` | timing sign | `records/sign-10/Facto-DSA-512__sign.json` |
 | `Facto-DSA-512` | timing verify | `records/sign-10/Facto-DSA-512__verify.json` |

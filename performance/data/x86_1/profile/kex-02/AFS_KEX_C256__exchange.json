@@ -1,0 +1,104 @@
+{
+ "schema": 2,
+ "candidate": "kex-02",
+ "label": "AFS_KEX_C256",
+ "operation": "exchange",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kex-02/libAFS_KEX_C256.so",
+  "exchange",
+  "0",
+  "307",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kex-02",
+  "instance": "AFS_KEX_C256",
+  "operation": "exchange",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998085",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 307,
+  "ticks": 2013199743
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 614,
+   "ticks": 3843867
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 11776,
+   "out_bits": 256,
+   "calls": 614,
+   "ticks": 20365697
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 520,
+   "out_bits": 512,
+   "calls": 1228,
+   "ticks": 15969638
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 512,
+   "out_bits": 768,
+   "calls": 614,
+   "ticks": 5339070
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 272,
+   "out_bits": 5376,
+   "calls": 420,
+   "ticks": 13214310
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 264,
+   "out_bits": 512,
+   "calls": 614,
+   "ticks": 6324579
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 1536,
+   "calls": 25788,
+   "ticks": 232688116
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 272,
+   "out_bits": 4032,
+   "calls": 49120,
+   "ticks": 1173924309
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 1228,
+   "ticks": 5839790
+  }
+ ],
+ "share": {
+  "drng": 0.004810082573113064,
+  "pseudoXOF": 0.7180268659511745,
+  "pseudohash": 0.011074021381891265
+ },
+ "hash_share": 0.7291008873330658
+}

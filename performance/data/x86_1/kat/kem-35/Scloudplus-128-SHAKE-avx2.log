@@ -1,0 +1,17 @@
+library     = lib/libScloudplus-128-SHAKE-avx2.so
+id          = kem-35
+type        = kem
+algorithm   = Scloud+
+instance    = Scloudplus-128-SHAKE-packed10-AVX2
+variant     = Optimized_Implementation
+source_dir  = Implementations and Test_Vectors/Implementations/Optimized_Implementation/Scloudplus-128/kem
+compiler    = gcc 14.2.0
+build_flags = -O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC 
+pk_len      = 6096
+sk_len      = 7440
+ct_len      = 6160
+ss_len      = 16
+timing  keygen 0.826 ms  enc 0.852 ms  dec 0.829 ms (avg over 10)
+wrote  kat/KAT_KEM_Scloudplus-128-SHAKE-packed10.txt (396630 bytes)
+manifest 9ad29278eb73c3eabc444d793ac2f79a8dfa793dcab4715a9eb64020c2333a72 strict KAT_KEM_Scloudplus-128-SHAKE-packed10.txt
+RESULT kem-35 Scloudplus-128-SHAKE-packed10-AVX2 PASS 

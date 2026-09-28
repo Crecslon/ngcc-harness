@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-21",
+ "label": "Neulaser-1024",
+ "instance": "Neulaser-1024",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 8192,
+ "plan": {
+  "iterations_per_trial": 2028,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.016649797616577,
+  "timeout_per_process_s": 303.00998987856997
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-21/lib/libNeulaser-1024.so",
+ "library_sha256": "1cb883934dda165ecd32bfa92cb0ef9042f5195e92d2d51e2b09156bbb3d70e2",
+ "kat_log": "kat/hash-21/Neulaser-1024.log",
+ "kat_log_sha256": "c4cfa9c6a3c8ec59a26b502b2c13dd2d75bbc77d81d41da1036e14123e9870ab",
+ "started_utc": "2026-09-25T17:55:53.826815+00:00",
+ "ended_utc": "2026-09-25T17:55:58.700754+00:00",
+ "load_average_start": [
+  2.0498046875,
+  2.0458984375,
+  2.00439453125
+ ],
+ "load_average_end": [
+  2.04541015625,
+  2.044921875,
+  2.00390625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-21",
+    "instance": "Neulaser-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1605632",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1732608",
+    "measurement_count": "2028",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2028,
+     "seconds": 0.971616653,
+     "cycles": 2031702758
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-21/lib/libNeulaser-1024.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "2028",
+    "3"
+   ],
+   "wall_s": 0.9751267433166504,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-21",
+    "instance": "Neulaser-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1552384",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1679360",
+    "measurement_count": "2028",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2028,
+     "seconds": 0.971495587,
+     "cycles": 2033649150
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-21/lib/libNeulaser-1024.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "2028",
+    "3"
+   ],
+   "wall_s": 0.9750311374664307,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-21",
+    "instance": "Neulaser-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1683456",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1814528",
+    "measurement_count": "2028",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2028,
+     "seconds": 0.970798386,
+     "cycles": 2032391787
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-21/lib/libNeulaser-1024.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "2028",
+    "3"
+   ],
+   "wall_s": 0.9743151664733887,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-21",
+    "instance": "Neulaser-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1720320",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1785856",
+    "measurement_count": "2028",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2028,
+     "seconds": 0.970757436,
+     "cycles": 2032024461
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-21/lib/libNeulaser-1024.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "2028",
+    "3"
+   ],
+   "wall_s": 0.9743423461914062,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-21",
+    "instance": "Neulaser-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1642496",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1773568",
+    "measurement_count": "2028",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2028,
+     "seconds": 0.97130274,
+     "cycles": 2033500626
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-21/lib/libNeulaser-1024.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "2028",
+    "3"
+   ],
+   "wall_s": 0.9748883247375488,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 2028,
+   "seconds": 0.971616653,
+   "cycles": 2031702758
+  },
+  {
+   "measurements": 2028,
+   "seconds": 0.971495587,
+   "cycles": 2033649150
+  },
+  {
+   "measurements": 2028,
+   "seconds": 0.970798386,
+   "cycles": 2032391787
+  },
+  {
+   "measurements": 2028,
+   "seconds": 0.970757436,
+   "cycles": 2032024461
+  },
+  {
+   "measurements": 2028,
+   "seconds": 0.97130274,
+   "cycles": 2033500626
+  }
+ ],
+ "measurements": 10140,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.00047889258402366864,
+ "median_trial_seconds": 0.00047894612426035505,
+ "min_trial_seconds": 0.00047867723668639054,
+ "max_trial_seconds": 0.0004791009137080868,
+ "mean_cycles": 1002294.7516765286,
+ "median_trial_cycles": 1002165.575443787,
+ "operations_per_second": 2088.1509410690232,
+ "throughput_MB_per_second": 17.106132509237437,
+ "sizes": {
+  "input_bytes": 8192,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 128
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1720320,
+ "peak_rss_bytes": 1814528,
+ "timing_scope": "loop"
+}

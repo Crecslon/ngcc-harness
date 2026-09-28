@@ -1,0 +1,118 @@
+{
+ "schema": 2,
+ "candidate": "kex-01",
+ "label": "ADKEX-256",
+ "operation": "exchange",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kex-01/libADKEX-256.so",
+  "exchange",
+  "0",
+  "513",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kex-01",
+  "instance": "ADKEX-256",
+  "operation": "exchange",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998008",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 513,
+  "ticks": 2147140695
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 512,
+   "out_bits": 256,
+   "calls": 1026,
+   "ticks": 2936948
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 50816,
+   "out_bits": 256,
+   "calls": 1026,
+   "ticks": 139729867
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 513,
+   "ticks": 3286866
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 256,
+   "out_bits": 256,
+   "calls": 2052,
+   "ticks": 3045743
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 296,
+   "out_bits": 256,
+   "calls": 106704,
+   "ticks": 155817883
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 512,
+   "calls": 1026,
+   "ticks": 3181063
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 768,
+   "calls": 513,
+   "ticks": 4023259
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 512,
+   "out_bits": 512,
+   "calls": 2052,
+   "ticks": 12007213
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 768,
+   "out_bits": 256,
+   "calls": 1026,
+   "ticks": 2949140
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 304,
+   "out_bits": 256,
+   "calls": 789978,
+   "ticks": 1153934131
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 513,
+   "ticks": 2484309
+  }
+ ],
+ "share": {
+  "sm3hash": 0.6792352803876227,
+  "drng": 0.0045616172348687195,
+  "pseudoXOF": 0.007073721827064528
+ },
+ "hash_share": 0.6863090022146873
+}

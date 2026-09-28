@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-28",
+ "label": "sydo_512s",
+ "instance": "sydo_512s",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 3306,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.018061002730104,
+  "timeout_per_process_s": 303.01083660163806
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-28/lib/libsydo_512s.so",
+ "library_sha256": "bbb468835e7d3cacea8fb3df2a7cfbfdaae7816bcabfde268738fefc910fb750",
+ "kat_log": "kat/sign-28/sydo_512s.log",
+ "kat_log_sha256": "31c1983d7fa39ac0d4becb2e04d2e3242c056025a0492aeffc9b94d2e98b4f4a",
+ "started_utc": "2026-09-25T17:59:50.496723+00:00",
+ "ended_utc": "2026-09-25T17:59:55.023952+00:00",
+ "load_average_start": [
+  2.26025390625,
+  2.09814453125,
+  2.01953125
+ ],
+ "load_average_end": [
+  2.26025390625,
+  2.09814453125,
+  2.01953125
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-28",
+    "instance": "sydo_512s",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1708032",
+    "pk_bytes": "246",
+    "sk_bytes": "534",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "56672",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1835008",
+    "measurement_count": "3306",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3306,
+     "seconds": 0.900814688,
+     "cycles": 1883128423
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-28/lib/libsydo_512s.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3306",
+    "3"
+   ],
+   "wall_s": 0.9040331840515137,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-28",
+    "instance": "sydo_512s",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1896448",
+    "pk_bytes": "246",
+    "sk_bytes": "534",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "56672",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1961984",
+    "measurement_count": "3306",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3306,
+     "seconds": 0.901222543,
+     "cycles": 1883306832
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-28/lib/libsydo_512s.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3306",
+    "3"
+   ],
+   "wall_s": 0.904292106628418,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-28",
+    "instance": "sydo_512s",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1769472",
+    "pk_bytes": "246",
+    "sk_bytes": "534",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "56672",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1896448",
+    "measurement_count": "3306",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3306,
+     "seconds": 0.900955594,
+     "cycles": 1883302911
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-28/lib/libsydo_512s.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3306",
+    "3"
+   ],
+   "wall_s": 0.9040637016296387,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-28",
+    "instance": "sydo_512s",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1855488",
+    "pk_bytes": "246",
+    "sk_bytes": "534",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "56672",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1921024",
+    "measurement_count": "3306",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3306,
+     "seconds": 0.904326078,
+     "cycles": 1887994528
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-28/lib/libsydo_512s.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3306",
+    "3"
+   ],
+   "wall_s": 0.907503604888916,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-28",
+    "instance": "sydo_512s",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1769472",
+    "pk_bytes": "246",
+    "sk_bytes": "534",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "56672",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1896448",
+    "measurement_count": "3306",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3306,
+     "seconds": 0.903883865,
+     "cycles": 1889105652
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-28/lib/libsydo_512s.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3306",
+    "3"
+   ],
+   "wall_s": 0.9070806503295898,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 3306,
+   "seconds": 0.900814688,
+   "cycles": 1883128423
+  },
+  {
+   "measurements": 3306,
+   "seconds": 0.901222543,
+   "cycles": 1883306832
+  },
+  {
+   "measurements": 3306,
+   "seconds": 0.900955594,
+   "cycles": 1883302911
+  },
+  {
+   "measurements": 3306,
+   "seconds": 0.904326078,
+   "cycles": 1887994528
+  },
+  {
+   "measurements": 3306,
+   "seconds": 0.903883865,
+   "cycles": 1889105652
+  }
+ ],
+ "measurements": 16530,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.00027291002831215976,
+ "median_trial_seconds": 0.00027260210012099216,
+ "min_trial_seconds": 0.0002724787320024198,
+ "max_trial_seconds": 0.00027354085843920146,
+ "mean_cycles": 570286.6513006655,
+ "median_trial_cycles": 569663.2885662431,
+ "operations_per_second": 3664.2112647329354,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 246,
+  "sk_bytes": 534,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 56672,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1896448,
+ "peak_rss_bytes": 1961984,
+ "timing_scope": "loop"
+}

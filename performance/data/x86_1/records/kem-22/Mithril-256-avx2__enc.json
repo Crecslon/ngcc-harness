@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-22",
+ "label": "Mithril-256-avx2",
+ "instance": "Mithril-256-avx2",
+ "variant": "optimized-avx2",
+ "flags": "guide-performance",
+ "operation": "enc",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 7437,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.0140809501953125,
+  "timeout_per_process_s": 303.0084485701172
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 1,
+ "library": "kem-22/lib/libMithril-256-avx2.so",
+ "library_sha256": "f3fa6849842e7167b0419b9c2cb12b83c7e34effb416cefdf6b4bd682756e479",
+ "kat_log": "kat/kem-22/Mithril-256-avx2.log",
+ "kat_log_sha256": "7522a8f004213a5cb71b5e1501888b0e1885f83ef9bb9272bd142dfd69954afb",
+ "started_utc": "2026-09-25T17:46:22.322660+00:00",
+ "ended_utc": "2026-09-25T17:46:28.192663+00:00",
+ "load_average_start": [
+  2.00146484375,
+  2.0224609375,
+  2.0
+ ],
+ "load_average_end": [
+  2.0009765625,
+  2.02197265625,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-22",
+    "instance": "Mithril-256-avx2",
+    "variant": "Optimized_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1818624",
+    "pk_bytes": "1648",
+    "sk_bytes": "2000",
+    "ct_bytes": "1680",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1884160",
+    "measurement_count": "7437",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7437,
+     "seconds": 0.957223786,
+     "cycles": 2003561186
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-22/lib/libMithril-256-avx2.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "7437",
+    "3"
+   ],
+   "wall_s": 0.9599058628082275,
+   "disturbed_retries": 1
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-22",
+    "instance": "Mithril-256-avx2",
+    "variant": "Optimized_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1683456",
+    "pk_bytes": "1648",
+    "sk_bytes": "2000",
+    "ct_bytes": "1680",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1810432",
+    "measurement_count": "7437",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7437,
+     "seconds": 0.957263017,
+     "cycles": 2003902405
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-22/lib/libMithril-256-avx2.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "7437",
+    "3"
+   ],
+   "wall_s": 0.9600639343261719,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-22",
+    "instance": "Mithril-256-avx2",
+    "variant": "Optimized_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1720320",
+    "pk_bytes": "1648",
+    "sk_bytes": "2000",
+    "ct_bytes": "1680",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1851392",
+    "measurement_count": "7437",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7437,
+     "seconds": 0.957536705,
+     "cycles": 2004263311
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-22/lib/libMithril-256-avx2.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "7437",
+    "3"
+   ],
+   "wall_s": 0.9603333473205566,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-22",
+    "instance": "Mithril-256-avx2",
+    "variant": "Optimized_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1761280",
+    "pk_bytes": "1648",
+    "sk_bytes": "2000",
+    "ct_bytes": "1680",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1892352",
+    "measurement_count": "7437",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7437,
+     "seconds": 0.95269652,
+     "cycles": 1994276447
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-22/lib/libMithril-256-avx2.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "7437",
+    "3"
+   ],
+   "wall_s": 0.9555535316467285,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-22",
+    "instance": "Mithril-256-avx2",
+    "variant": "Optimized_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1691648",
+    "pk_bytes": "1648",
+    "sk_bytes": "2000",
+    "ct_bytes": "1680",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1818624",
+    "measurement_count": "7437",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7437,
+     "seconds": 0.953647863,
+     "cycles": 1996157293
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-22/lib/libMithril-256-avx2.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "7437",
+    "3"
+   ],
+   "wall_s": 0.9565048217773438,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 7437,
+   "seconds": 0.957223786,
+   "cycles": 2003561186
+  },
+  {
+   "measurements": 7437,
+   "seconds": 0.957263017,
+   "cycles": 2003902405
+  },
+  {
+   "measurements": 7437,
+   "seconds": 0.957536705,
+   "cycles": 2004263311
+  },
+  {
+   "measurements": 7437,
+   "seconds": 0.95269652,
+   "cycles": 1994276447
+  },
+  {
+   "measurements": 7437,
+   "seconds": 0.953647863,
+   "cycles": 1996157293
+  }
+ ],
+ "measurements": 37185,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.00012850256530859218,
+ "median_trial_seconds": 0.00012871101062256286,
+ "min_trial_seconds": 0.00012810226166464972,
+ "max_trial_seconds": 0.00012875308659405675,
+ "mean_cycles": 268983.7472636816,
+ "median_trial_cycles": 269404.4891757429,
+ "operations_per_second": 7781.945812510065,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 1648,
+  "sk_bytes": 2000,
+  "ct_bytes": 1680,
+  "ss_bytes": 32,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+ "baseline_rss_bytes": 1818624,
+ "peak_rss_bytes": 1892352,
+ "timing_scope": "loop"
+}

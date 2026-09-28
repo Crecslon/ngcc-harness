@@ -1,0 +1,81 @@
+{
+ "schema": 2,
+ "candidate": "kem-06",
+ "label": "BRA-256",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-06/libBRA-256.so",
+  "keygen",
+  "0",
+  "469",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-06",
+  "instance": "BRA-256",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997926",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 469,
+  "ticks": 2063195814
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 938,
+   "ticks": 5671444
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 880,
+   "calls": 469,
+   "ticks": 4251214
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 784,
+   "calls": 938,
+   "ticks": 8460257
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 80,
+   "calls": 1066,
+   "ticks": 4920059
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 14168,
+   "calls": 938,
+   "ticks": 80192156
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 352,
+   "calls": 469,
+   "ticks": 2920421
+  }
+ ],
+ "share": {
+  "drng": 0.05157801808141901
+ },
+ "hash_share": 0
+}

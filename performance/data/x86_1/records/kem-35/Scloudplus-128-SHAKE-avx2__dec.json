@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-35",
+ "label": "Scloudplus-128-SHAKE-avx2",
+ "instance": "Scloudplus-128-SHAKE-packed10-AVX2",
+ "variant": "optimized-avx2",
+ "flags": "guide-performance",
+ "operation": "dec",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 1261,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.035694421138306,
+  "timeout_per_process_s": 303.021416652683
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-35/lib/libScloudplus-128-SHAKE-avx2.so",
+ "library_sha256": "62496e4ed0801c550f0169023ec9dc008550ba3397b3f39bf8cefdfd123bbc00",
+ "kat_log": "kat/kem-35/Scloudplus-128-SHAKE-avx2.log",
+ "kat_log_sha256": "2a192259d13d6f4361da791b994cdc4414df8c34557fbe9f9d012863e73eee26",
+ "started_utc": "2026-09-25T18:24:29.573643+00:00",
+ "ended_utc": "2026-09-25T18:24:34.558803+00:00",
+ "load_average_start": [
+  2.0029296875,
+  2.0302734375,
+  2.0
+ ],
+ "load_average_end": [
+  2.00244140625,
+  2.029296875,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-35",
+    "instance": "Scloudplus-128-SHAKE-packed10-AVX2",
+    "variant": "Optimized_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1863680",
+    "pk_bytes": "6096",
+    "sk_bytes": "7440",
+    "ct_bytes": "6160",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1929216",
+    "measurement_count": "1261",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1261,
+     "seconds": 0.989890566,
+     "cycles": 2069804230
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-35/lib/libScloudplus-128-SHAKE-avx2.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "1261",
+    "3"
+   ],
+   "wall_s": 0.99700927734375,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-35",
+    "instance": "Scloudplus-128-SHAKE-packed10-AVX2",
+    "variant": "Optimized_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1691648",
+    "pk_bytes": "6096",
+    "sk_bytes": "7440",
+    "ct_bytes": "6160",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1818624",
+    "measurement_count": "1261",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1261,
+     "seconds": 0.989850789,
+     "cycles": 2070070945
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-35/lib/libScloudplus-128-SHAKE-avx2.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "1261",
+    "3"
+   ],
+   "wall_s": 0.9971609115600586,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-35",
+    "instance": "Scloudplus-128-SHAKE-packed10-AVX2",
+    "variant": "Optimized_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1843200",
+    "pk_bytes": "6096",
+    "sk_bytes": "7440",
+    "ct_bytes": "6160",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1908736",
+    "measurement_count": "1261",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1261,
+     "seconds": 0.989985382,
+     "cycles": 2070349776
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-35/lib/libScloudplus-128-SHAKE-avx2.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "1261",
+    "3"
+   ],
+   "wall_s": 0.9971139430999756,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-35",
+    "instance": "Scloudplus-128-SHAKE-packed10-AVX2",
+    "variant": "Optimized_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1769472",
+    "pk_bytes": "6096",
+    "sk_bytes": "7440",
+    "ct_bytes": "6160",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1896448",
+    "measurement_count": "1261",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1261,
+     "seconds": 0.989743686,
+     "cycles": 2069643424
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-35/lib/libScloudplus-128-SHAKE-avx2.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "1261",
+    "3"
+   ],
+   "wall_s": 0.9967029094696045,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-35",
+    "instance": "Scloudplus-128-SHAKE-packed10-AVX2",
+    "variant": "Optimized_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+    "baseline_rss_bytes": "1683456",
+    "pk_bytes": "6096",
+    "sk_bytes": "7440",
+    "ct_bytes": "6160",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1810432",
+    "measurement_count": "1261",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1261,
+     "seconds": 0.989898084,
+     "cycles": 2069993286
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-35/lib/libScloudplus-128-SHAKE-avx2.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "1261",
+    "3"
+   ],
+   "wall_s": 0.9969241619110107,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 1261,
+   "seconds": 0.989890566,
+   "cycles": 2069804230
+  },
+  {
+   "measurements": 1261,
+   "seconds": 0.989850789,
+   "cycles": 2070070945
+  },
+  {
+   "measurements": 1261,
+   "seconds": 0.989985382,
+   "cycles": 2070349776
+  },
+  {
+   "measurements": 1261,
+   "seconds": 0.989743686,
+   "cycles": 2069643424
+  },
+  {
+   "measurements": 1261,
+   "seconds": 0.989898084,
+   "cycles": 2069993286
+  }
+ ],
+ "measurements": 6305,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0007849910399682791,
+ "median_trial_seconds": 0.0007850044139571769,
+ "min_trial_seconds": 0.0007848879349722442,
+ "max_trial_seconds": 0.000785079605075337,
+ "mean_cycles": 1641532.380808882,
+ "median_trial_cycles": 1641548.9976209358,
+ "operations_per_second": 1273.8998906795282,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 6096,
+  "sk_bytes": 7440,
+  "ct_bytes": 6160,
+  "ss_bytes": 16,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC ",
+ "baseline_rss_bytes": 1863680,
+ "peak_rss_bytes": 1929216,
+ "timing_scope": "loop"
+}

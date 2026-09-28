@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-19",
+ "label": "Phoenix-SHAKE-256s",
+ "instance": "Phoenix-SHAKE-256s",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "verify",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 62,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 18.88762452316467,
+  "timeout_per_process_s": 311.3325747138988
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-19/lib/libPhoenix-SHAKE-256s.so",
+ "library_sha256": "76266e247175f2e33a42665a6ac573ec2f8cc882f273bda8a14ca7b633e8e4eb",
+ "kat_log": "kat/sign-19/Phoenix-SHAKE-256s.log",
+ "kat_log_sha256": "abaf9597cf1bbbdb5cdae589c6eecc0de9234e698e49f14cc6306ad2e8fc2291",
+ "started_utc": "2026-09-25T20:10:24.827446+00:00",
+ "ended_utc": "2026-09-25T20:10:43.553903+00:00",
+ "load_average_start": [
+  2.0,
+  2.02099609375,
+  2.0
+ ],
+ "load_average_end": [
+  2.0,
+  2.01904296875,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-19",
+    "instance": "Phoenix-SHAKE-256s",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1785856",
+    "pk_bytes": "64",
+    "sk_bytes": "128",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "24618",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1855488",
+    "measurement_count": "62",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 62,
+     "seconds": 0.99707993,
+     "cycles": 2087506376
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-19/lib/libPhoenix-SHAKE-256s.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "62",
+    "3"
+   ],
+   "wall_s": 3.750993013381958,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-19",
+    "instance": "Phoenix-SHAKE-256s",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1691648",
+    "pk_bytes": "64",
+    "sk_bytes": "128",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "24618",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1826816",
+    "measurement_count": "62",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 62,
+     "seconds": 0.997955493,
+     "cycles": 2089178002
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-19/lib/libPhoenix-SHAKE-256s.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "62",
+    "3"
+   ],
+   "wall_s": 3.7410664558410645,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-19",
+    "instance": "Phoenix-SHAKE-256s",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1597440",
+    "pk_bytes": "64",
+    "sk_bytes": "128",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "24618",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1724416",
+    "measurement_count": "62",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 62,
+     "seconds": 0.99168965,
+     "cycles": 2076045062
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-19/lib/libPhoenix-SHAKE-256s.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "62",
+    "3"
+   ],
+   "wall_s": 3.7425334453582764,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-19",
+    "instance": "Phoenix-SHAKE-256s",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1773568",
+    "pk_bytes": "64",
+    "sk_bytes": "128",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "24618",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1843200",
+    "measurement_count": "62",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 62,
+     "seconds": 0.994311471,
+     "cycles": 2079253314
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-19/lib/libPhoenix-SHAKE-256s.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "62",
+    "3"
+   ],
+   "wall_s": 3.745727777481079,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-19",
+    "instance": "Phoenix-SHAKE-256s",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1753088",
+    "pk_bytes": "64",
+    "sk_bytes": "128",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "24618",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1822720",
+    "measurement_count": "62",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 62,
+     "seconds": 0.992005535,
+     "cycles": 2076725212
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-19/lib/libPhoenix-SHAKE-256s.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "62",
+    "3"
+   ],
+   "wall_s": 3.74588680267334,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 62,
+   "seconds": 0.99707993,
+   "cycles": 2087506376
+  },
+  {
+   "measurements": 62,
+   "seconds": 0.997955493,
+   "cycles": 2089178002
+  },
+  {
+   "measurements": 62,
+   "seconds": 0.99168965,
+   "cycles": 2076045062
+  },
+  {
+   "measurements": 62,
+   "seconds": 0.994311471,
+   "cycles": 2079253314
+  },
+  {
+   "measurements": 62,
+   "seconds": 0.992005535,
+   "cycles": 2076725212
+  }
+ ],
+ "measurements": 310,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.016042071222580643,
+ "median_trial_seconds": 0.01603728179032258,
+ "min_trial_seconds": 0.01599499435483871,
+ "max_trial_seconds": 0.016096056338709676,
+ "mean_cycles": 33576477.30967742,
+ "median_trial_cycles": 33536343.774193548,
+ "operations_per_second": 62.336090279440405,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 64,
+  "sk_bytes": 128,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 24618,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+ "baseline_rss_bytes": 1785856,
+ "peak_rss_bytes": 1855488,
+ "timing_scope": "loop"
+}

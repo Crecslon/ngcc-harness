@@ -1,0 +1,90 @@
+{
+ "schema": 2,
+ "candidate": "kem-19",
+ "label": "Lore-SM3-L3",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-19/libLore-SM3-L3.so",
+  "keygen",
+  "0",
+  "874",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-19",
+  "instance": "Lore-SM3-L3",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996310",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 874,
+  "ticks": 2098485328
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 272,
+   "out_bits": 11584,
+   "calls": 874,
+   "ticks": 59695280
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 280,
+   "out_bits": 9408,
+   "calls": 7866,
+   "ticks": 434037789
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 874,
+   "ticks": 5563927
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 15632,
+   "out_bits": 256,
+   "calls": 874,
+   "ticks": 37183992
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 280,
+   "out_bits": 6720,
+   "calls": 7866,
+   "ticks": 317228033
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 512,
+   "calls": 874,
+   "ticks": 2722775
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 280,
+   "out_bits": 8064,
+   "calls": 7866,
+   "ticks": 375823573
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.566840965780629,
+  "drng": 0.0026514014302414985,
+  "sm3hash": 0.017719443402274767
+ },
+ "hash_share": 0.5845604091829038
+}

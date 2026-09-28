@@ -1,0 +1,76 @@
+{
+ "schema": 2,
+ "candidate": "kem-39",
+ "label": "WeaverKEM-256",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-39/libWeaverKEM-256.so",
+  "keygen",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-39",
+  "instance": "WeaverKEM-256",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997230",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 855795220
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 3584,
+   "calls": 4000,
+   "ticks": 83633762
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 6198923
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 272,
+   "out_bits": 5376,
+   "calls": 16000,
+   "ticks": 498097411
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 3056788
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 10496,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 65138589
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.6833269774514515,
+  "drng": 0.007243465323398277,
+  "pseudohash": 0.07611469131599029
+ },
+ "hash_share": 0.7594416687674418
+}

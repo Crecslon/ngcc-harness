@@ -1,0 +1,17 @@
+library     = lib/libBRA-512.so
+id          = kem-06
+type        = kem
+algorithm   = BRA
+instance    = BRA-512
+variant     = Reference_Implementation
+source_dir  = Implementations/Reference_Implementation/BRA-512
+compiler    = gcc 14.2.0
+build_flags = -std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-poin
+pk_len      = 3573
+sk_len      = 3717
+ct_len      = 7082
+ss_len      = 64
+timing  keygen 2.464 ms  enc 5.371 ms  dec 66.215 ms (avg over 10)
+wrote  kat/KAT_KEM_BRA-512.txt (291110 bytes)
+manifest e1e9f496d73d935370931edddb863c3220cc2c93a19ba82a1e09c0524bea7289 strict KAT_KEM_BRA-512.txt
+RESULT kem-06 BRA-512 PASS 

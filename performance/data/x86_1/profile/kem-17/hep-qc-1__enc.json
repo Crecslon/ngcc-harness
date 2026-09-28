@@ -1,0 +1,90 @@
+{
+ "schema": 2,
+ "candidate": "kem-17",
+ "label": "hep-qc-1",
+ "operation": "enc",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-17/libhep-qc-1.so",
+  "enc",
+  "0",
+  "135",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-17",
+  "instance": "hep-qc-1",
+  "operation": "enc",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111995888",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 135,
+  "ticks": 2095623459
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1664,
+   "out_bits": 208,
+   "calls": 810,
+   "ticks": 4612505
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 512,
+   "out_bits": 512,
+   "calls": 135,
+   "ticks": 1764815
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1664,
+   "out_bits": 17672,
+   "calls": 135,
+   "ticks": 52751776
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 208,
+   "calls": 270,
+   "ticks": 445045
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 2287112,
+   "out_bits": 256,
+   "calls": 135,
+   "ticks": 821456747
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1664,
+   "out_bits": 2400,
+   "calls": 405,
+   "ticks": 22582025
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1664,
+   "out_bits": 128,
+   "calls": 270,
+   "ticks": 1568098
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.039109816531214925,
+  "pseudohash": 0.0008421431781652908,
+  "sm3hash": 0.39198680634735156
+ },
+ "hash_share": 0.43193876605673176
+}

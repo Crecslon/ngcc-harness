@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-09",
+ "label": "Eijen-1024",
+ "instance": "Eijen-1024",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 16384,
+ "plan": {
+  "iterations_per_trial": 7124,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.011358795934448,
+  "timeout_per_process_s": 303.0068152775607
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-09/lib/libEijen-1024.so",
+ "library_sha256": "22b7b7a85e018a7b8ba8961a9ee3608f38e2aae5924af2cde30a2c34c311202f",
+ "kat_log": "kat/hash-09/Eijen-1024.log",
+ "kat_log_sha256": "067f1a47fc002d1560486e70b211882d11e252effda3cb23bafbf9b6df7035f8",
+ "started_utc": "2026-09-25T17:26:55.937389+00:00",
+ "ended_utc": "2026-09-25T17:27:00.756479+00:00",
+ "load_average_start": [
+  2.05126953125,
+  2.033203125,
+  1.81494140625
+ ],
+ "load_average_end": [
+  2.046875,
+  2.0322265625,
+  1.81640625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-09",
+    "instance": "Eijen-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1638400",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1765376",
+    "measurement_count": "7124",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7124,
+     "seconds": 0.949251402,
+     "cycles": 1985011911
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-09/lib/libEijen-1024.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "7124",
+    "3"
+   ],
+   "wall_s": 0.9517958164215088,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-09",
+    "instance": "Eijen-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1556480",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1683456",
+    "measurement_count": "7124",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7124,
+     "seconds": 0.967843633,
+     "cycles": 2023165245
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-09/lib/libEijen-1024.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "7124",
+    "3"
+   ],
+   "wall_s": 0.9703586101531982,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-09",
+    "instance": "Eijen-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1744896",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1810432",
+    "measurement_count": "7124",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7124,
+     "seconds": 0.966837035,
+     "cycles": 2021416366
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-09/lib/libEijen-1024.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "7124",
+    "3"
+   ],
+   "wall_s": 0.969465970993042,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-09",
+    "instance": "Eijen-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1716224",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1781760",
+    "measurement_count": "7124",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7124,
+     "seconds": 0.950792289,
+     "cycles": 1985055378
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-09/lib/libEijen-1024.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "7124",
+    "3"
+   ],
+   "wall_s": 0.9534552097320557,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-09",
+    "instance": "Eijen-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1744896",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1810432",
+    "measurement_count": "7124",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7124,
+     "seconds": 0.971199238,
+     "cycles": 2030718828
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-09/lib/libEijen-1024.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "7124",
+    "3"
+   ],
+   "wall_s": 0.9737708568572998,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 7124,
+   "seconds": 0.949251402,
+   "cycles": 1985011911
+  },
+  {
+   "measurements": 7124,
+   "seconds": 0.967843633,
+   "cycles": 2023165245
+  },
+  {
+   "measurements": 7124,
+   "seconds": 0.966837035,
+   "cycles": 2021416366
+  },
+  {
+   "measurements": 7124,
+   "seconds": 0.950792289,
+   "cycles": 1985055378
+  },
+  {
+   "measurements": 7124,
+   "seconds": 0.971199238,
+   "cycles": 2030718828
+  }
+ ],
+ "measurements": 35620,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.00013492205494104436,
+ "median_trial_seconds": 0.00013571547375070185,
+ "min_trial_seconds": 0.0001332469682762493,
+ "max_trial_seconds": 0.00013632779870859066,
+ "mean_cycles": 282014.8154969118,
+ "median_trial_cycles": 283747.3843346435,
+ "operations_per_second": 7411.68669893859,
+ "throughput_MB_per_second": 121.43307487540986,
+ "sizes": {
+  "input_bytes": 16384,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 128
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1744896,
+ "peak_rss_bytes": 1810432,
+ "timing_scope": "loop"
+}

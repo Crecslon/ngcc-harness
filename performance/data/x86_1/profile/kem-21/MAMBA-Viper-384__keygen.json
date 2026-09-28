@@ -1,0 +1,82 @@
+{
+ "schema": 2,
+ "candidate": "kem-21",
+ "label": "MAMBA-Viper-384",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-21/libMAMBA-Viper-384.so",
+  "keygen",
+  "0",
+  "865",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-21",
+  "instance": "MAMBA-Viper-384",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998076",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 865,
+  "ticks": 2048539482
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 400,
+   "out_bits": 3328,
+   "calls": 42385,
+   "ticks": 825066370
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 20080,
+   "out_bits": 256,
+   "calls": 865,
+   "ticks": 47847001
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 368,
+   "out_bits": 14336,
+   "calls": 865,
+   "ticks": 72896744
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 384,
+   "calls": 865,
+   "ticks": 5396783
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 400,
+   "out_bits": 512,
+   "calls": 6055,
+   "ticks": 18738847
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 1730,
+   "ticks": 7901799
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.47084714279380435,
+  "drng": 0.006491738195358834
+ },
+ "hash_share": 0.47084714279380435
+}

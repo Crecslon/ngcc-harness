@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-22",
+ "label": "Mithril-512",
+ "instance": "Mithril-512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "enc",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 638,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.05021264685669,
+  "timeout_per_process_s": 303.030127588114
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-22/lib/libMithril-512.so",
+ "library_sha256": "f7cd5674505d2ced62c38d6dd5efc5f82c4ce21db8c65555b2bc361f1c315f21",
+ "kat_log": "kat/kem-22/Mithril-512.log",
+ "kat_log_sha256": "9ba8ea80c538090a7ae2f5cde89d1290f8d7a1217910edbe94cdb9d905899c27",
+ "started_utc": "2026-09-25T18:33:41.455786+00:00",
+ "ended_utc": "2026-09-25T18:33:46.329410+00:00",
+ "load_average_start": [
+  2.04296875,
+  2.02197265625,
+  2.001953125
+ ],
+ "load_average_end": [
+  2.0390625,
+  2.021484375,
+  2.00146484375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-22",
+    "instance": "Mithril-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1654784",
+    "pk_bytes": "3056",
+    "sk_bytes": "3728",
+    "ct_bytes": "3504",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1785856",
+    "measurement_count": "638",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 638,
+     "seconds": 0.965864378,
+     "cycles": 2016239071
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-22/lib/libMithril-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "638",
+    "3"
+   ],
+   "wall_s": 0.9751477241516113,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-22",
+    "instance": "Mithril-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1753088",
+    "pk_bytes": "3056",
+    "sk_bytes": "3728",
+    "ct_bytes": "3504",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1884160",
+    "measurement_count": "638",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 638,
+     "seconds": 0.964286802,
+     "cycles": 2013513400
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-22/lib/libMithril-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "638",
+    "3"
+   ],
+   "wall_s": 0.973658561706543,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-22",
+    "instance": "Mithril-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1662976",
+    "pk_bytes": "3056",
+    "sk_bytes": "3728",
+    "ct_bytes": "3504",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1794048",
+    "measurement_count": "638",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 638,
+     "seconds": 0.964965088,
+     "cycles": 2014103596
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-22/lib/libMithril-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "638",
+    "3"
+   ],
+   "wall_s": 0.9743199348449707,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-22",
+    "instance": "Mithril-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1695744",
+    "pk_bytes": "3056",
+    "sk_bytes": "3728",
+    "ct_bytes": "3504",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1830912",
+    "measurement_count": "638",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 638,
+     "seconds": 0.963985962,
+     "cycles": 2010935809
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-22/lib/libMithril-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "638",
+    "3"
+   ],
+   "wall_s": 0.9734127521514893,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-22",
+    "instance": "Mithril-512",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1683456",
+    "pk_bytes": "3056",
+    "sk_bytes": "3728",
+    "ct_bytes": "3504",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1814528",
+    "measurement_count": "638",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 638,
+     "seconds": 0.967498992,
+     "cycles": 2019316520
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-22/lib/libMithril-512.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "638",
+    "3"
+   ],
+   "wall_s": 0.9768593311309814,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 638,
+   "seconds": 0.965864378,
+   "cycles": 2016239071
+  },
+  {
+   "measurements": 638,
+   "seconds": 0.964286802,
+   "cycles": 2013513400
+  },
+  {
+   "measurements": 638,
+   "seconds": 0.964965088,
+   "cycles": 2014103596
+  },
+  {
+   "measurements": 638,
+   "seconds": 0.963985962,
+   "cycles": 2010935809
+  },
+  {
+   "measurements": 638,
+   "seconds": 0.967498992,
+   "cycles": 2019316520
+  }
+ ],
+ "measurements": 3190,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0015130411354231975,
+ "median_trial_seconds": 0.0015124844639498433,
+ "min_trial_seconds": 0.0015109497836990596,
+ "max_trial_seconds": 0.0015164561003134795,
+ "mean_cycles": 3158027.7103448277,
+ "median_trial_cycles": 3156902.1880877744,
+ "operations_per_second": 660.9205636172609,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 3056,
+  "sk_bytes": 3728,
+  "ct_bytes": 3504,
+  "ss_bytes": 64,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1753088,
+ "peak_rss_bytes": 1884160,
+ "timing_scope": "loop"
+}

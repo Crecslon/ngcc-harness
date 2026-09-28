@@ -235,7 +235,7 @@ Share of each operation spent in the ICCS placeholder hash functions and in the 
 
 ## 7. Raw evidence index
 
-All paths are relative to the campaign run directory; commands are recorded in each JSON file.
+Paths are relative to `performance/data/x86_1/` in the [harness](https://github.com/ngcc-dev/ngcc-harness); each JSON file records its commands, environment and trials.
 
 | instance | item | file |
 |---|---|---|
@@ -274,6 +274,7 @@ All paths are relative to the campaign run directory; commands are recorded in e
 | `SQISign2Dsquare-Level2-eff_compressed` | hash profile keygen | `profile/sign-25/SQISign2Dsquare-Level2-eff_compressed__keygen.json` |
 | `SQISign2Dsquare-Level2-eff_compressed` | hash profile sign | `profile/sign-25/SQISign2Dsquare-Level2-eff_compressed__sign.json` |
 | `SQISign2Dsquare-Level2-eff_compressed` | hash profile verify | `profile/sign-25/SQISign2Dsquare-Level2-eff_compressed__verify.json` |
+| `SQISign2Dsquare-Level2-eff_uncompressed` | KAT log (sha256 `1d4adeb5167123af…`) | `kat/sign-25/SQISign2Dsquare-Level2-eff_uncompressed.log` |
 | `SQISign2Dsquare-Level2-eff_uncompressed` | timing keygen | `records/sign-25/SQISign2Dsquare-Level2-eff_uncompressed__keygen.json` |
 | `SQISign2Dsquare-Level2-eff_uncompressed` | timing sign | `records/sign-25/SQISign2Dsquare-Level2-eff_uncompressed__sign.json` |
 | `SQISign2Dsquare-Level2-eff_uncompressed` | timing verify | `records/sign-25/SQISign2Dsquare-Level2-eff_uncompressed__verify.json` |

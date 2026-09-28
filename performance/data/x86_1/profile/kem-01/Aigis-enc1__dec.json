@@ -1,0 +1,83 @@
+{
+ "schema": 2,
+ "candidate": "kem-01",
+ "label": "Aigis-enc1",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-01/libAigis-enc1.so",
+  "dec",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-01",
+  "instance": "Aigis-enc1",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996440",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 376103124
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 256,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 1461098
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 5120,
+   "calls": 1000,
+   "ticks": 29965045
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 7296,
+   "out_bits": 128,
+   "calls": 1000,
+   "ticks": 20760066
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 768,
+   "calls": 11000,
+   "ticks": 83424976
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 6144,
+   "calls": 2000,
+   "ticks": 71003863
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 4584220
+  }
+ ],
+ "share": {
+  "sm3hash": 0.003884833458602168,
+  "pseudoXOF": 0.32365850276744845,
+  "drng": 0.23400283162763624
+ },
+ "hash_share": 0.32754333622605064
+}

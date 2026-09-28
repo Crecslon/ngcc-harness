@@ -1,0 +1,17 @@
+library     = lib/libBRQC-512.so
+id          = kem-07
+type        = kem
+algorithm   = BRQC
+instance    = BRQC-512
+variant     = Reference_Implementation
+source_dir  = Implementations/Reference_Implementation/BRQC-512
+compiler    = gcc 14.2.0
+build_flags = -std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-poin
+pk_len      = 6562
+sk_len      = 6712
+ct_len      = 13060
+ss_len      = 64
+timing  keygen 6.900 ms  enc 13.917 ms  dec 266.181 ms (avg over 10)
+wrote  kat/KAT_KEM_BRQC-512.txt (530360 bytes)
+manifest a02d9113757147ee78f3f790763465f25dfd74747ad7a767014faa6231769e0f strict KAT_KEM_BRQC-512.txt
+RESULT kem-07 BRQC-512 PASS 

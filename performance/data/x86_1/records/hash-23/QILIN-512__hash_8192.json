@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-23",
+ "label": "QILIN-512",
+ "instance": "QILIN-512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 8192,
+ "plan": {
+  "iterations_per_trial": 5045,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.013053723010254,
+  "timeout_per_process_s": 303.00783223380614
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-23/lib/libQILIN-512.so",
+ "library_sha256": "5dfd01ce066c9c69d49be38888ae718525e2887fe57ce174e9bf812a12636694",
+ "kat_log": "kat/hash-23/QILIN-512.log",
+ "kat_log_sha256": "faeff764a4502502f16106763082ea656f88cb7d1b673a07ee3bcbdd80b08941",
+ "started_utc": "2026-09-25T17:40:40.711904+00:00",
+ "ended_utc": "2026-09-25T17:40:45.559264+00:00",
+ "load_average_start": [
+  2.00048828125,
+  2.02587890625,
+  1.978515625
+ ],
+ "load_average_end": [
+  2.0,
+  2.025390625,
+  1.97900390625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-23",
+    "instance": "QILIN-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1699840",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1826816",
+    "measurement_count": "5045",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 5045,
+     "seconds": 0.966853052,
+     "cycles": 2023536955
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-23/lib/libQILIN-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "5045",
+    "3"
+   ],
+   "wall_s": 0.9697482585906982,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-23",
+    "instance": "QILIN-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1634304",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1765376",
+    "measurement_count": "5045",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 5045,
+     "seconds": 0.966102612,
+     "cycles": 2022405645
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-23/lib/libQILIN-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "5045",
+    "3"
+   ],
+   "wall_s": 0.9689369201660156,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-23",
+    "instance": "QILIN-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1699840",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1826816",
+    "measurement_count": "5045",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 5045,
+     "seconds": 0.96841427,
+     "cycles": 2027003912
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-23/lib/libQILIN-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "5045",
+    "3"
+   ],
+   "wall_s": 0.9711606502532959,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-23",
+    "instance": "QILIN-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1679360",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1810432",
+    "measurement_count": "5045",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 5045,
+     "seconds": 0.964272635,
+     "cycles": 2018417596
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-23/lib/libQILIN-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "5045",
+    "3"
+   ],
+   "wall_s": 0.9670157432556152,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-23",
+    "instance": "QILIN-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1720320",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1785856",
+    "measurement_count": "5045",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 5045,
+     "seconds": 0.967539126,
+     "cycles": 2025121613
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-23/lib/libQILIN-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "5045",
+    "3"
+   ],
+   "wall_s": 0.9702601432800293,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 5045,
+   "seconds": 0.966853052,
+   "cycles": 2023536955
+  },
+  {
+   "measurements": 5045,
+   "seconds": 0.966102612,
+   "cycles": 2022405645
+  },
+  {
+   "measurements": 5045,
+   "seconds": 0.96841427,
+   "cycles": 2027003912
+  },
+  {
+   "measurements": 5045,
+   "seconds": 0.964272635,
+   "cycles": 2018417596
+  },
+  {
+   "measurements": 5045,
+   "seconds": 0.967539126,
+   "cycles": 2025121613
+  }
+ ],
+ "measurements": 25225,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.00019160284222001983,
+ "median_trial_seconds": 0.0001916457982160555,
+ "min_trial_seconds": 0.00019113431813676907,
+ "max_trial_seconds": 0.00019195525668979187,
+ "mean_cycles": 401049.9790287413,
+ "median_trial_cycles": 401097.5133795837,
+ "operations_per_second": 5219.129259323241,
+ "throughput_MB_per_second": 42.75510689237599,
+ "sizes": {
+  "input_bytes": 8192,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 64
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1720320,
+ "peak_rss_bytes": 1826816,
+ "timing_scope": "loop"
+}

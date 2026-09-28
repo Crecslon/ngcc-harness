@@ -1,0 +1,161 @@
+{
+ "schema": 2,
+ "candidate": "sign-24",
+ "label": "Sigurd-512",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-24/libSigurd512_REF.so",
+  "sign",
+  "0",
+  "3",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-24",
+  "instance": "Sigurd512_REF",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111990975",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 8985760956
+ },
+ "calls": [
+  {
+   "fn": "pseudohash",
+   "in_bits": 3072,
+   "out_bits": 1024,
+   "calls": 3,
+   "ticks": 195528
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1088,
+   "out_bits": 13940256,
+   "calls": 3,
+   "ticks": 692855941
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 12696,
+   "out_bits": 1024,
+   "calls": 3,
+   "ticks": 306255
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 2048,
+   "out_bits": 1024,
+   "calls": 59568,
+   "ticks": 2597701384
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 34816,
+   "out_bits": 1024,
+   "calls": 3,
+   "ticks": 659190
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1160,
+   "out_bits": 512,
+   "calls": 3,
+   "ticks": 27995
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 1024,
+   "out_bits": 1024,
+   "calls": 59472,
+   "ticks": 2269498238
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1088,
+   "out_bits": 15136,
+   "calls": 3,
+   "ticks": 758950
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 636416,
+   "out_bits": 1024,
+   "calls": 3,
+   "ticks": 10478263
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 634368,
+   "calls": 3,
+   "ticks": 11062610
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1160,
+   "out_bits": 78848,
+   "calls": 3,
+   "ticks": 4129865
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1112,
+   "out_bits": 512,
+   "calls": 3,
+   "ticks": 26654
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1136,
+   "out_bits": 484368,
+   "calls": 3,
+   "ticks": 23899827
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1112,
+   "out_bits": 4096,
+   "calls": 3,
+   "ticks": 208950
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 5120,
+   "out_bits": 1024,
+   "calls": 3,
+   "ticks": 185282
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 150016,
+   "calls": 3,
+   "ticks": 2781275
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 512,
+   "out_bits": 1024,
+   "calls": 3,
+   "ticks": 147825
+  }
+ ],
+ "share": {
+  "pseudohash": 0.5429892903774681,
+  "pseudoXOF": 0.08033912603895448,
+  "drng": 0.001540646926597365
+ },
+ "hash_share": 0.6233284164164226,
+ "relabelled_from": "Sigurd512_REF"
+}

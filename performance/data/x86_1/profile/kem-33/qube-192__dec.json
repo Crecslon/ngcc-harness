@@ -1,0 +1,118 @@
+{
+ "schema": 2,
+ "candidate": "kem-33",
+ "label": "qube-192",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-33/libqube-192.so",
+  "dec",
+  "0",
+  "700",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-33",
+  "instance": "qube_192",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997975",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 700,
+  "ticks": 1995097072
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 32768,
+   "calls": 700,
+   "ticks": 135869663
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 65536,
+   "calls": 700,
+   "ticks": 273137425
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 8192,
+   "calls": 700,
+   "ticks": 33972079
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 1024,
+   "calls": 1400,
+   "ticks": 8663520
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 51288,
+   "out_bits": 256,
+   "calls": 700,
+   "ticks": 97586449
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 256,
+   "calls": 1400,
+   "ticks": 2302006
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 512,
+   "calls": 1400,
+   "ticks": 4422634
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 4096,
+   "calls": 1400,
+   "ticks": 34000716
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 50920,
+   "out_bits": 256,
+   "calls": 1400,
+   "ticks": 194206217
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 584,
+   "out_bits": 512,
+   "calls": 700,
+   "ticks": 9111616
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 200,
+   "out_bits": 2048,
+   "calls": 1400,
+   "ticks": 17075805
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.2553479001847786,
+  "sm3hash": 0.1462548715524354,
+  "pseudohash": 0.004567003845515142
+ },
+ "hash_share": 0.40616977558272915
+}

@@ -1,0 +1,62 @@
+{
+ "schema": 2,
+ "candidate": "sign-34",
+ "label": "yuanyang-512",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-34/libyuanyang-512.so",
+  "sign",
+  "0",
+  "176",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-34",
+  "instance": "yuanyang-512",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997227",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 176,
+  "ticks": 1585165844
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 8704,
+   "out_bits": 256,
+   "calls": 176,
+   "ticks": 4645551
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 464,
+   "out_bits": 8832,
+   "calls": 253,
+   "ticks": 25779680
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 8192,
+   "calls": 11952,
+   "ticks": 605144507
+  }
+ ],
+ "share": {
+  "sm3hash": 0.0029306403601767235,
+  "pseudoXOF": 0.01626308067233374,
+  "drng": 0.3817546973337384
+ },
+ "hash_share": 0.019193721032510463
+}

@@ -1,0 +1,67 @@
+{
+ "schema": 2,
+ "candidate": "sign-29",
+ "label": "Tins256",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-29/libTins256.so",
+  "keygen",
+  "0",
+  "213",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-29",
+  "instance": "Tins256",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998115",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 213,
+  "ticks": 2078370464
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 140976,
+   "calls": 213,
+   "ticks": 175007403
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 266,
+   "calls": 426,
+   "ticks": 2588685
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 141504,
+   "calls": 213,
+   "ticks": 175798082
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 426,
+   "ticks": 1972310
+  }
+ ],
+ "share": {
+  "drng": 0.17098322274849265
+ },
+ "hash_share": 0
+}

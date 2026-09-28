@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-20",
+ "label": "MAMBA-Frost-128",
+ "instance": "MAMBA-Frost-128",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 55,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.368964468178101,
+  "timeout_per_process_s": 303.22137868090687
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-20/lib/libMAMBA-Frost-128.so",
+ "library_sha256": "c4d54e6a7e9e06b4b3b082440c8095d1cd6b29d5d46dedce76abd18281bcb399",
+ "kat_log": "kat/kem-20/MAMBA-Frost-128.log",
+ "kat_log_sha256": "8090bcff3acb2f59c5dd7918dbb8db1c7c44256e5b8261c78fc742905c907e2f",
+ "started_utc": "2026-09-25T19:18:35.244852+00:00",
+ "ended_utc": "2026-09-25T19:18:40.592109+00:00",
+ "load_average_start": [
+  2.15869140625,
+  2.07666015625,
+  2.0234375
+ ],
+ "load_average_end": [
+  2.1455078125,
+  2.0751953125,
+  2.02294921875
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-20",
+    "instance": "MAMBA-Frost-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1708032",
+    "pk_bytes": "5152",
+    "sk_bytes": "6736",
+    "ct_bytes": "5192",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2392064",
+    "measurement_count": "55",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 55,
+     "seconds": 1.017052433,
+     "cycles": 2126523069
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-20/lib/libMAMBA-Frost-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "55",
+    "3"
+   ],
+   "wall_s": 1.0751900672912598,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-20",
+    "instance": "MAMBA-Frost-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1667072",
+    "pk_bytes": "5152",
+    "sk_bytes": "6736",
+    "ct_bytes": "5192",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2351104",
+    "measurement_count": "55",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 55,
+     "seconds": 1.005211223,
+     "cycles": 2104449913
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-20/lib/libMAMBA-Frost-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "55",
+    "3"
+   ],
+   "wall_s": 1.0627360343933105,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-20",
+    "instance": "MAMBA-Frost-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1662976",
+    "pk_bytes": "5152",
+    "sk_bytes": "6736",
+    "ct_bytes": "5192",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2351104",
+    "measurement_count": "55",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 55,
+     "seconds": 1.01373653,
+     "cycles": 2122037232
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-20/lib/libMAMBA-Frost-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "55",
+    "3"
+   ],
+   "wall_s": 1.0718274116516113,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-20",
+    "instance": "MAMBA-Frost-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1675264",
+    "pk_bytes": "5152",
+    "sk_bytes": "6736",
+    "ct_bytes": "5192",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2363392",
+    "measurement_count": "55",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 55,
+     "seconds": 1.016844343,
+     "cycles": 2128559210
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-20/lib/libMAMBA-Frost-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "55",
+    "3"
+   ],
+   "wall_s": 1.0752036571502686,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-20",
+    "instance": "MAMBA-Frost-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1585152",
+    "pk_bytes": "5152",
+    "sk_bytes": "6736",
+    "ct_bytes": "5192",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2265088",
+    "measurement_count": "55",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 55,
+     "seconds": 1.00473797,
+     "cycles": 2103426268
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-20/lib/libMAMBA-Frost-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "55",
+    "3"
+   ],
+   "wall_s": 1.062065601348877,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 55,
+   "seconds": 1.017052433,
+   "cycles": 2126523069
+  },
+  {
+   "measurements": 55,
+   "seconds": 1.005211223,
+   "cycles": 2104449913
+  },
+  {
+   "measurements": 55,
+   "seconds": 1.01373653,
+   "cycles": 2122037232
+  },
+  {
+   "measurements": 55,
+   "seconds": 1.016844343,
+   "cycles": 2128559210
+  },
+  {
+   "measurements": 55,
+   "seconds": 1.00473797,
+   "cycles": 2103426268
+  }
+ ],
+ "measurements": 275,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.01839120908727273,
+ "median_trial_seconds": 0.018431573272727274,
+ "min_trial_seconds": 0.01826796309090909,
+ "max_trial_seconds": 0.018491862418181817,
+ "mean_cycles": 38490893.42545454,
+ "median_trial_cycles": 38582495.127272725,
+ "operations_per_second": 54.373804096003134,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 5152,
+  "sk_bytes": 6736,
+  "ct_bytes": 5192,
+  "ss_bytes": 16,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1708032,
+ "peak_rss_bytes": 2392064,
+ "timing_scope": "loop"
+}

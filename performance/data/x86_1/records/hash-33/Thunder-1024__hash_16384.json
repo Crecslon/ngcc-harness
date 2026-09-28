@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-33",
+ "label": "Thunder-1024",
+ "instance": "Thunder-1024",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 16384,
+ "plan": {
+  "iterations_per_trial": 1958,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.0186605121459955,
+  "timeout_per_process_s": 303.0111963072876
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-33/lib/libThunder-1024.so",
+ "library_sha256": "cdf4f3ca8720e68af8e1cd292d0479ed8d107a812540a7c43f307670117cb23c",
+ "kat_log": "kat/hash-33/Thunder-1024.log",
+ "kat_log_sha256": "4566b268acd93efced33ff541c77528bc9507c0999ad44d05e3219db91816ec8",
+ "started_utc": "2026-09-25T18:01:44.055615+00:00",
+ "ended_utc": "2026-09-25T18:01:49.040620+00:00",
+ "load_average_start": [
+  2.09521484375,
+  2.08935546875,
+  2.0205078125
+ ],
+ "load_average_end": [
+  2.248046875,
+  2.12109375,
+  2.03125
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-33",
+    "instance": "Thunder-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1544192",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1671168",
+    "measurement_count": "1958",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1958,
+     "seconds": 0.994267761,
+     "cycles": 2081607907
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-33/lib/libThunder-1024.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "1958",
+    "3"
+   ],
+   "wall_s": 0.9979264736175537,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-33",
+    "instance": "Thunder-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1638400",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1765376",
+    "measurement_count": "1958",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1958,
+     "seconds": 0.993095636,
+     "cycles": 2078746729
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-33/lib/libThunder-1024.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "1958",
+    "3"
+   ],
+   "wall_s": 0.9967780113220215,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-33",
+    "instance": "Thunder-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1728512",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1794048",
+    "measurement_count": "1958",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1958,
+     "seconds": 0.995573454,
+     "cycles": 2084333125
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-33/lib/libThunder-1024.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "1958",
+    "3"
+   ],
+   "wall_s": 0.9992349147796631,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-33",
+    "instance": "Thunder-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1728512",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1794048",
+    "measurement_count": "1958",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1958,
+     "seconds": 0.994519974,
+     "cycles": 2081905966
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-33/lib/libThunder-1024.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "1958",
+    "3"
+   ],
+   "wall_s": 0.9981415271759033,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-33",
+    "instance": "Thunder-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1740800",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1806336",
+    "measurement_count": "1958",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1958,
+     "seconds": 0.98894104,
+     "cycles": 2070090204
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-33/lib/libThunder-1024.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "1958",
+    "3"
+   ],
+   "wall_s": 0.9926917552947998,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 1958,
+   "seconds": 0.994267761,
+   "cycles": 2081607907
+  },
+  {
+   "measurements": 1958,
+   "seconds": 0.993095636,
+   "cycles": 2078746729
+  },
+  {
+   "measurements": 1958,
+   "seconds": 0.995573454,
+   "cycles": 2084333125
+  },
+  {
+   "measurements": 1958,
+   "seconds": 0.994519974,
+   "cycles": 2081905966
+  },
+  {
+   "measurements": 1958,
+   "seconds": 0.98894104,
+   "cycles": 2070090204
+  }
+ ],
+ "measurements": 9790,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0005072929382022472,
+ "median_trial_seconds": 0.0005077976307456589,
+ "min_trial_seconds": 0.000505077139938713,
+ "max_trial_seconds": 0.0005084644811031664,
+ "mean_cycles": 1061969.758018386,
+ "median_trial_cycles": 1063129.6767109295,
+ "operations_per_second": 1971.2476257678964,
+ "throughput_MB_per_second": 32.296921100581216,
+ "sizes": {
+  "input_bytes": 16384,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 128
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1740800,
+ "peak_rss_bytes": 1806336,
+ "timing_scope": "loop"
+}

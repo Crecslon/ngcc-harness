@@ -1,0 +1,401 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kex-06",
+ "label": "MAMBA-NIKE-192",
+ "instance": "MAMBA-NIKE-192",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "init_b",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 336,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.0946130587585445,
+  "timeout_per_process_s": 303.05676783525513
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kex-06/lib/libMAMBA-NIKE-192.so",
+ "library_sha256": "8efbbef6382be6d348f153f6fca8cb33c91e5492de1304f5e46e6b389efdcbe2",
+ "kat_log": "kat/kex-06/MAMBA-NIKE-192.log",
+ "kat_log_sha256": "c0ca4648299977a13544a3fdf8f3943d57a8e33c834a1fc04564325aebe8602c",
+ "started_utc": "2026-09-25T18:51:36.430366+00:00",
+ "ended_utc": "2026-09-25T18:51:41.570055+00:00",
+ "load_average_start": [
+  2.154296875,
+  2.0966796875,
+  2.02685546875
+ ],
+ "load_average_end": [
+  2.1416015625,
+  2.0947265625,
+  2.0263671875
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kex-06",
+    "instance": "MAMBA-NIKE-192",
+    "variant": "Reference_Implementation",
+    "operation": "init_b",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2002944",
+    "pk_bytes": "1312",
+    "sk_bytes": "3360",
+    "ct_bytes": "0",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "kex_passes": "1",
+    "kex_passes_run": "1",
+    "sta_bytes": "32",
+    "stb_bytes": "0",
+    "msg1_bytes": "1568",
+    "total_msg_bytes": "1568",
+    "ss_actual_bytes": "32",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "per_call_step",
+    "warmups": "3",
+    "peak_rss_bytes": "2134016",
+    "measurement_count": "336",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 336,
+     "seconds": 0.208977541,
+     "cycles": 436306773
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kex-06/lib/libMAMBA-NIKE-192.so",
+    "init_b",
+    "0",
+    "1",
+    "1",
+    "336",
+    "3"
+   ],
+   "wall_s": 1.0295929908752441,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kex-06",
+    "instance": "MAMBA-NIKE-192",
+    "variant": "Reference_Implementation",
+    "operation": "init_b",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2088960",
+    "pk_bytes": "1312",
+    "sk_bytes": "3360",
+    "ct_bytes": "0",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "kex_passes": "1",
+    "kex_passes_run": "1",
+    "sta_bytes": "32",
+    "stb_bytes": "0",
+    "msg1_bytes": "1568",
+    "total_msg_bytes": "1568",
+    "ss_actual_bytes": "32",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "per_call_step",
+    "warmups": "3",
+    "peak_rss_bytes": "2158592",
+    "measurement_count": "336",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 336,
+     "seconds": 0.208201094,
+     "cycles": 434787816
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kex-06/lib/libMAMBA-NIKE-192.so",
+    "init_b",
+    "0",
+    "1",
+    "1",
+    "336",
+    "3"
+   ],
+   "wall_s": 1.0278151035308838,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kex-06",
+    "instance": "MAMBA-NIKE-192",
+    "variant": "Reference_Implementation",
+    "operation": "init_b",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1904640",
+    "pk_bytes": "1312",
+    "sk_bytes": "3360",
+    "ct_bytes": "0",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "kex_passes": "1",
+    "kex_passes_run": "1",
+    "sta_bytes": "32",
+    "stb_bytes": "0",
+    "msg1_bytes": "1568",
+    "total_msg_bytes": "1568",
+    "ss_actual_bytes": "32",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "per_call_step",
+    "warmups": "3",
+    "peak_rss_bytes": "2035712",
+    "measurement_count": "336",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 336,
+     "seconds": 0.207494823,
+     "cycles": 433151457
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kex-06/lib/libMAMBA-NIKE-192.so",
+    "init_b",
+    "0",
+    "1",
+    "1",
+    "336",
+    "3"
+   ],
+   "wall_s": 1.0270726680755615,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kex-06",
+    "instance": "MAMBA-NIKE-192",
+    "variant": "Reference_Implementation",
+    "operation": "init_b",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2052096",
+    "pk_bytes": "1312",
+    "sk_bytes": "3360",
+    "ct_bytes": "0",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "kex_passes": "1",
+    "kex_passes_run": "1",
+    "sta_bytes": "32",
+    "stb_bytes": "0",
+    "msg1_bytes": "1568",
+    "total_msg_bytes": "1568",
+    "ss_actual_bytes": "32",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "per_call_step",
+    "warmups": "3",
+    "peak_rss_bytes": "2187264",
+    "measurement_count": "336",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 336,
+     "seconds": 0.209065721,
+     "cycles": 436102182
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kex-06/lib/libMAMBA-NIKE-192.so",
+    "init_b",
+    "0",
+    "1",
+    "1",
+    "336",
+    "3"
+   ],
+   "wall_s": 1.0272815227508545,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kex-06",
+    "instance": "MAMBA-NIKE-192",
+    "variant": "Reference_Implementation",
+    "operation": "init_b",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2084864",
+    "pk_bytes": "1312",
+    "sk_bytes": "3360",
+    "ct_bytes": "0",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "kex_passes": "1",
+    "kex_passes_run": "1",
+    "sta_bytes": "32",
+    "stb_bytes": "0",
+    "msg1_bytes": "1568",
+    "total_msg_bytes": "1568",
+    "ss_actual_bytes": "32",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "per_call_step",
+    "warmups": "3",
+    "peak_rss_bytes": "2154496",
+    "measurement_count": "336",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 336,
+     "seconds": 0.208295604,
+     "cycles": 434963512
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kex-06/lib/libMAMBA-NIKE-192.so",
+    "init_b",
+    "0",
+    "1",
+    "1",
+    "336",
+    "3"
+   ],
+   "wall_s": 1.0277199745178223,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 336,
+   "seconds": 0.208977541,
+   "cycles": 436306773
+  },
+  {
+   "measurements": 336,
+   "seconds": 0.208201094,
+   "cycles": 434787816
+  },
+  {
+   "measurements": 336,
+   "seconds": 0.207494823,
+   "cycles": 433151457
+  },
+  {
+   "measurements": 336,
+   "seconds": 0.209065721,
+   "cycles": 436102182
+  },
+  {
+   "measurements": 336,
+   "seconds": 0.208295604,
+   "cycles": 434963512
+  }
+ ],
+ "measurements": 1680,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.000620258799404762,
+ "median_trial_seconds": 0.0006199273928571428,
+ "min_trial_seconds": 0.0006175441160714285,
+ "max_trial_seconds": 0.0006222194077380953,
+ "mean_cycles": 1294828.4166666667,
+ "median_trial_cycles": 1294534.261904762,
+ "operations_per_second": 1612.2302512429662,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 1312,
+  "sk_bytes": 3360,
+  "ct_bytes": 0,
+  "ss_bytes": 32,
+  "signature_bytes": 0,
+  "digest_bytes": 0,
+  "sta_bytes": 32,
+  "stb_bytes": 0,
+  "msg1_bytes": 1568,
+  "total_msg_bytes": 1568,
+  "ss_actual_bytes": 32
+ },
+ "kex": {
+  "kex_passes": 1,
+  "kex_passes_run": 1
+ },
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 2088960,
+ "peak_rss_bytes": 2187264,
+ "timing_scope": "per_call_step"
+}

@@ -1,0 +1,76 @@
+{
+ "schema": 2,
+ "candidate": "kem-41",
+ "label": "ZEN_128",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-41/libZEN_128.so",
+  "keygen",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-41",
+  "instance": "ZEN_128",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998136",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 226242200
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 1000,
+   "ticks": 4760975
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 6175854
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 4920,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 13920045
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 2560,
+   "calls": 1000,
+   "ticks": 28859466
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 1024,
+   "calls": 2046,
+   "ticks": 23658675
+  }
+ ],
+ "share": {
+  "drng": 0.04834124226161167,
+  "sm3hash": 0.06152718193157598,
+  "pseudoXOF": 0.23213238290646043
+ },
+ "hash_share": 0.2936595648380364
+}

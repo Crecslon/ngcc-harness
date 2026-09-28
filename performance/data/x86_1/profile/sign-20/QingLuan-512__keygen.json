@@ -1,0 +1,54 @@
+{
+ "schema": 2,
+ "candidate": "sign-20",
+ "label": "QingLuan-512",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-20/libQingLuan-512.so",
+  "keygen",
+  "0",
+  "234",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-20",
+  "instance": "QingLuan-512",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997876",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 234,
+  "ticks": 2084561489
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 1056,
+   "out_bits": 256,
+   "calls": 436586,
+   "ticks": 1825874565
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 1024,
+   "calls": 234,
+   "ticks": 2159392
+  }
+ ],
+ "share": {
+  "sm3hash": 0.8759034332328107,
+  "drng": 0.0010358974831852514
+ },
+ "hash_share": 0.8759034332328107
+}

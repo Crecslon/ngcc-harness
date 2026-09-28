@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-17",
+ "label": "MasterCube-1024",
+ "instance": "MasterCube-1024",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 65536,
+ "plan": {
+  "iterations_per_trial": 233,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.089966421704102,
+  "timeout_per_process_s": 303.05397985302244
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 1,
+ "library": "hash-17/lib/libMasterCube-1024.so",
+ "library_sha256": "b265001e406805d7bdf3c7f305ab12b2be43deaecd0eaf6fcbde5a72e624e5db",
+ "kat_log": "kat/hash-17/MasterCube-1024.log",
+ "kat_log_sha256": "5b26023884de899ef55d0d54acf286cbc1f9f87cc181847bce918067290ca82c",
+ "started_utc": "2026-09-25T18:49:43.553980+00:00",
+ "ended_utc": "2026-09-25T18:49:49.749263+00:00",
+ "load_average_start": [
+  2.14501953125,
+  2.06689453125,
+  2.0146484375
+ ],
+ "load_average_end": [
+  2.13330078125,
+  2.0654296875,
+  2.01416015625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-17",
+    "instance": "MasterCube-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1798144",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1863680",
+    "measurement_count": "233",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 233,
+     "seconds": 0.995334686,
+     "cycles": 2079134496
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-17/lib/libMasterCube-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "233",
+    "3"
+   ],
+   "wall_s": 1.010390043258667,
+   "disturbed_retries": 1
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-17",
+    "instance": "MasterCube-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1802240",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1867776",
+    "measurement_count": "233",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 233,
+     "seconds": 0.993567586,
+     "cycles": 2077503200
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-17/lib/libMasterCube-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "233",
+    "3"
+   ],
+   "wall_s": 1.0084857940673828,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-17",
+    "instance": "MasterCube-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1699840",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1830912",
+    "measurement_count": "233",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 233,
+     "seconds": 0.994058831,
+     "cycles": 2077985313
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-17/lib/libMasterCube-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "233",
+    "3"
+   ],
+   "wall_s": 1.0089137554168701,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-17",
+    "instance": "MasterCube-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1744896",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1875968",
+    "measurement_count": "233",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 233,
+     "seconds": 0.997541812,
+     "cycles": 2085231528
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-17/lib/libMasterCube-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "233",
+    "3"
+   ],
+   "wall_s": 1.0124545097351074,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-17",
+    "instance": "MasterCube-1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1695744",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1822720",
+    "measurement_count": "233",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 233,
+     "seconds": 0.995752371,
+     "cycles": 2081773273
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-17/lib/libMasterCube-1024.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "233",
+    "3"
+   ],
+   "wall_s": 1.010695457458496,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 233,
+   "seconds": 0.995334686,
+   "cycles": 2079134496
+  },
+  {
+   "measurements": 233,
+   "seconds": 0.993567586,
+   "cycles": 2077503200
+  },
+  {
+   "measurements": 233,
+   "seconds": 0.994058831,
+   "cycles": 2077985313
+  },
+  {
+   "measurements": 233,
+   "seconds": 0.997541812,
+   "cycles": 2085231528
+  },
+  {
+   "measurements": 233,
+   "seconds": 0.995752371,
+   "cycles": 2081773273
+  }
+ ],
+ "measurements": 1165,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.004271463764806867,
+ "median_trial_seconds": 0.0042718226866952785,
+ "min_trial_seconds": 0.004264238566523605,
+ "max_trial_seconds": 0.004281295330472103,
+ "mean_cycles": 8928435.888412017,
+ "median_trial_cycles": 8923324.017167382,
+ "operations_per_second": 234.1117834684979,
+ "throughput_MB_per_second": 15.342749841391477,
+ "sizes": {
+  "input_bytes": 65536,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 128
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1802240,
+ "peak_rss_bytes": 1875968,
+ "timing_scope": "loop"
+}

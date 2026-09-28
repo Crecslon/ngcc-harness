@@ -1,0 +1,111 @@
+{
+ "schema": 2,
+ "candidate": "sign-02",
+ "label": "BiT-256",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-02/libBiT-256.so",
+  "sign",
+  "0",
+  "971",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-02",
+  "instance": "BiT-256",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997154",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 971,
+  "ticks": 2653754723
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 304,
+   "out_bits": 1088,
+   "calls": 9451,
+   "ticks": 71207569
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 1024,
+   "out_bits": 512,
+   "calls": 971,
+   "ticks": 15274023
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1024,
+   "out_bits": 256,
+   "calls": 971,
+   "ticks": 4161562
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 272,
+   "out_bits": 13312,
+   "calls": 3225,
+   "ticks": 249397209
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 8192,
+   "out_bits": 512,
+   "calls": 1833,
+   "ticks": 99792157
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 272,
+   "out_bits": 4096,
+   "calls": 1833,
+   "ticks": 43870820
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 272,
+   "out_bits": 12288,
+   "calls": 5499,
+   "ticks": 393693046
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 320,
+   "out_bits": 5376,
+   "calls": 26217,
+   "ticks": 819235894
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 544,
+   "out_bits": 256,
+   "calls": 7481,
+   "ticks": 22004497
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 1942,
+   "ticks": 9426281
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.604264811326348,
+  "pseudohash": 0.04335976456404408,
+  "drng": 0.0035520543471115663
+ },
+ "hash_share": 0.6476245758903921
+}

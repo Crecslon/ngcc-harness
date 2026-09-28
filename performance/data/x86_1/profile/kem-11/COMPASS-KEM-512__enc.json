@@ -1,0 +1,77 @@
+{
+ "schema": 2,
+ "candidate": "kem-11",
+ "label": "COMPASS-KEM-512",
+ "operation": "enc",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-11/libCOMPASS-KEM-512.so",
+  "enc",
+  "0",
+  "306",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-11",
+  "instance": "COMPASS-KEM-512",
+  "operation": "enc",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997972",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 306,
+  "ticks": 2112831812
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 22784,
+   "out_bits": 256,
+   "calls": 306,
+   "ticks": 18847396
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 512,
+   "out_bits": 512,
+   "calls": 306,
+   "ticks": 3950527
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 272,
+   "out_bits": 65536,
+   "calls": 4896,
+   "ticks": 1852344654
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 4096,
+   "calls": 1224,
+   "ticks": 29276997
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 306,
+   "ticks": 1443976
+  }
+ ],
+ "share": {
+  "sm3hash": 0.008920443119492371,
+  "pseudohash": 0.0018697782651523234,
+  "pseudoXOF": 0.890568591552426,
+  "drng": 0.0006834315877860325
+ },
+ "hash_share": 0.9013588129370707
+}

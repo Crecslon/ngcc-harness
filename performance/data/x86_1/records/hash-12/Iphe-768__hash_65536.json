@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-12",
+ "label": "Iphe-768",
+ "instance": "Iphe-768",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 65536,
+ "plan": {
+  "iterations_per_trial": 319,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.068609944209594,
+  "timeout_per_process_s": 303.04116596652574
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-12/lib/libIphe-768.so",
+ "library_sha256": "141539b2e15f418c486b4630774862c9c570e07e7c4e56bd58fc47ca99c53392",
+ "kat_log": "kat/hash-12/Iphe-768.log",
+ "kat_log_sha256": "bc720d53190324b6316775b1461fd0164954552044bffd6dee6fe67a7598dd6e",
+ "started_utc": "2026-09-25T18:42:26.261854+00:00",
+ "ended_utc": "2026-09-25T18:42:31.310897+00:00",
+ "load_average_start": [
+  1.98486328125,
+  2.0078125,
+  2.0
+ ],
+ "load_average_end": [
+  1.986328125,
+  2.00732421875,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-12",
+    "instance": "Iphe-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1691648",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1822720",
+    "measurement_count": "319",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 319,
+     "seconds": 0.997100589,
+     "cycles": 2065979597
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-12/lib/libIphe-768.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "319",
+    "3"
+   ],
+   "wall_s": 1.0086538791656494,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-12",
+    "instance": "Iphe-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1777664",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1843200",
+    "measurement_count": "319",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 319,
+     "seconds": 0.99648414,
+     "cycles": 2064461338
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-12/lib/libIphe-768.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "319",
+    "3"
+   ],
+   "wall_s": 1.0083401203155518,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-12",
+    "instance": "Iphe-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1589248",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1716224",
+    "measurement_count": "319",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 319,
+     "seconds": 0.999367255,
+     "cycles": 2071296794
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-12/lib/libIphe-768.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "319",
+    "3"
+   ],
+   "wall_s": 1.0111746788024902,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-12",
+    "instance": "Iphe-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1794048",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1859584",
+    "measurement_count": "319",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 319,
+     "seconds": 0.999449734,
+     "cycles": 2070710399
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-12/lib/libIphe-768.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "319",
+    "3"
+   ],
+   "wall_s": 1.01118803024292,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-12",
+    "instance": "Iphe-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1667072",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1794048",
+    "measurement_count": "319",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 319,
+     "seconds": 0.997679851,
+     "cycles": 2067744903
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-12/lib/libIphe-768.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "319",
+    "3"
+   ],
+   "wall_s": 1.0094513893127441,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 319,
+   "seconds": 0.997100589,
+   "cycles": 2065979597
+  },
+  {
+   "measurements": 319,
+   "seconds": 0.99648414,
+   "cycles": 2064461338
+  },
+  {
+   "measurements": 319,
+   "seconds": 0.999367255,
+   "cycles": 2071296794
+  },
+  {
+   "measurements": 319,
+   "seconds": 0.999449734,
+   "cycles": 2070710399
+  },
+  {
+   "measurements": 319,
+   "seconds": 0.997679851,
+   "cycles": 2067744903
+  }
+ ],
+ "measurements": 1595,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0031285777862068965,
+ "median_trial_seconds": 0.0031275230438871475,
+ "min_trial_seconds": 0.0031237747335423195,
+ "max_trial_seconds": 0.0031330712664576804,
+ "mean_cycles": 6482879.643260188,
+ "median_trial_cycles": 6481958.943573668,
+ "operations_per_second": 319.63405366129797,
+ "throughput_MB_per_second": 20.947537340746823,
+ "sizes": {
+  "input_bytes": 65536,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 96
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1794048,
+ "peak_rss_bytes": 1859584,
+ "timing_scope": "loop"
+}

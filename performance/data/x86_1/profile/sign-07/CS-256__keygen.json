@@ -1,0 +1,82 @@
+{
+ "schema": 2,
+ "candidate": "sign-07",
+ "label": "CS-256",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-07/libCS-256.so",
+  "keygen",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-07",
+  "instance": "CS_256",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996987",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 903057418
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 6173640
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 14080,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 76906156
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 1536,
+   "calls": 6000,
+   "ticks": 71693360
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 528,
+   "out_bits": 1024,
+   "calls": 1000,
+   "ticks": 11628210
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 8448,
+   "calls": 9000,
+   "ticks": 465422001
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 49,
+   "ticks": 229162
+  }
+ ],
+ "share": {
+  "drng": 0.6018644575266642,
+  "pseudoXOF": 0.0980384682472095
+ },
+ "hash_share": 0.0980384682472095
+}

@@ -1,0 +1,75 @@
+{
+ "schema": 2,
+ "candidate": "sign-02",
+ "label": "BiT-256",
+ "operation": "verify",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-02/libBiT-256.so",
+  "verify",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-02",
+  "instance": "BiT-256",
+  "operation": "verify",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998029",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 1291727104
+ },
+ "calls": [
+  {
+   "fn": "pseudohash",
+   "in_bits": 1024,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 15666371
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 8192,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 54290166
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 320,
+   "out_bits": 5376,
+   "calls": 27000,
+   "ticks": 841955844
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 17152,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 100222109
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 544,
+   "out_bits": 256,
+   "calls": 4000,
+   "ticks": 11659732
+  }
+ ],
+ "share": {
+  "pseudohash": 0.1317450454302769,
+  "pseudoXOF": 0.6608327512496014
+ },
+ "hash_share": 0.7925777966798783
+}

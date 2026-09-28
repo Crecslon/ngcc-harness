@@ -1,0 +1,96 @@
+{
+ "schema": 2,
+ "candidate": "kem-24",
+ "label": "scabbard128",
+ "operation": "enc",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-24/libscabbard128.so",
+  "enc",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-24",
+  "instance": "scabbard128",
+  "operation": "enc",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996990",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 795846321
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 6080,
+   "out_bits": 128,
+   "calls": 1000,
+   "ticks": 18255250
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 1000,
+   "ticks": 4673580
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 1553624
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 128,
+   "calls": 1000,
+   "ticks": 1566498
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 144,
+   "out_bits": 896,
+   "calls": 81000,
+   "ticks": 497850468
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 128,
+   "out_bits": 128,
+   "calls": 1000,
+   "ticks": 1565191
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 5888,
+   "out_bits": 128,
+   "calls": 1000,
+   "ticks": 16689624
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 256,
+   "calls": 9000,
+   "ticks": 14063847
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.6930289019957661,
+  "drng": 0.005872465420368514
+ },
+ "hash_share": 0.6930289019957661
+}

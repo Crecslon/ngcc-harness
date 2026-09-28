@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-03",
+ "label": "CEDRUSC-256f",
+ "instance": "CEDRUSC-256f",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "verify",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 99,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 8.372210374487306,
+  "timeout_per_process_s": 305.02332622469237
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-03/lib/libCEDRUSC-256f.so",
+ "library_sha256": "665efda57d31e8764774dd2d1fca1845a4170c71be03923871cc3b1f267fb56b",
+ "kat_log": "kat/sign-03/CEDRUSC-256f.log",
+ "kat_log_sha256": "9edafcfc864d55241c87e7b8c002e742d44e7ca8a7c62ce3ab00c89de8680fa5",
+ "started_utc": "2026-09-25T19:41:22.480705+00:00",
+ "ended_utc": "2026-09-25T19:41:30.922204+00:00",
+ "load_average_start": [
+  2.00537109375,
+  2.0234375,
+  2.0
+ ],
+ "load_average_end": [
+  2.00439453125,
+  2.0224609375,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-03",
+    "instance": "CEDRUSC-256f",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1740800",
+    "pk_bytes": "64",
+    "sk_bytes": "128",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "43548",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1871872",
+    "measurement_count": "99",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 99,
+     "seconds": 1.007863177,
+     "cycles": 2109911162
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-03/lib/libCEDRUSC-256f.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "99",
+    "3"
+   ],
+   "wall_s": 1.799234390258789,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-03",
+    "instance": "CEDRUSC-256f",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1675264",
+    "pk_bytes": "64",
+    "sk_bytes": "128",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "43548",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1802240",
+    "measurement_count": "99",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 99,
+     "seconds": 1.007403342,
+     "cycles": 2108965143
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-03/lib/libCEDRUSC-256f.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "99",
+    "3"
+   ],
+   "wall_s": 1.6606779098510742,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-03",
+    "instance": "CEDRUSC-256f",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1699840",
+    "pk_bytes": "64",
+    "sk_bytes": "128",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "43548",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1830912",
+    "measurement_count": "99",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 99,
+     "seconds": 1.007468941,
+     "cycles": 2109043696
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-03/lib/libCEDRUSC-256f.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "99",
+    "3"
+   ],
+   "wall_s": 1.6607637405395508,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-03",
+    "instance": "CEDRUSC-256f",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1675264",
+    "pk_bytes": "64",
+    "sk_bytes": "128",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "43548",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1802240",
+    "measurement_count": "99",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 99,
+     "seconds": 1.006667648,
+     "cycles": 2107601160
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-03/lib/libCEDRUSC-256f.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "99",
+    "3"
+   ],
+   "wall_s": 1.659456491470337,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-03",
+    "instance": "CEDRUSC-256f",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1740800",
+    "pk_bytes": "64",
+    "sk_bytes": "128",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "43548",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1871872",
+    "measurement_count": "99",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 99,
+     "seconds": 1.007870858,
+     "cycles": 2110198214
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-03/lib/libCEDRUSC-256f.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "99",
+    "3"
+   ],
+   "wall_s": 1.6611254215240479,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 99,
+   "seconds": 1.007863177,
+   "cycles": 2109911162
+  },
+  {
+   "measurements": 99,
+   "seconds": 1.007403342,
+   "cycles": 2108965143
+  },
+  {
+   "measurements": 99,
+   "seconds": 1.007468941,
+   "cycles": 2109043696
+  },
+  {
+   "measurements": 99,
+   "seconds": 1.006667648,
+   "cycles": 2107601160
+  },
+  {
+   "measurements": 99,
+   "seconds": 1.007870858,
+   "cycles": 2110198214
+  }
+ ],
+ "measurements": 495,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.010176311042424242,
+ "median_trial_seconds": 0.010176453949494948,
+ "min_trial_seconds": 0.010168360080808082,
+ "max_trial_seconds": 0.010180513717171717,
+ "mean_cycles": 21304483.585858587,
+ "median_trial_cycles": 21303471.676767677,
+ "operations_per_second": 98.26743658198717,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 64,
+  "sk_bytes": 128,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 43548,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1740800,
+ "peak_rss_bytes": 1871872,
+ "timing_scope": "loop"
+}

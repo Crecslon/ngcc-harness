@@ -1,0 +1,97 @@
+{
+ "schema": 2,
+ "candidate": "sign-05",
+ "label": "vistrutith_d3_512f",
+ "operation": "verify",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-05/libvistrutith_d3_512f.so",
+  "verify",
+  "0",
+  "3",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-05",
+  "instance": "vistrutith_d3_512f",
+  "operation": "verify",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996579",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 15934590828
+ },
+ "calls": [
+  {
+   "fn": "pseudohash",
+   "in_bits": 262152,
+   "out_bits": 1024,
+   "calls": 168,
+   "ticks": 241616044
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 131080,
+   "out_bits": 1024,
+   "calls": 24,
+   "ticks": 17568635
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 65544,
+   "out_bits": 1024,
+   "calls": 3,
+   "ticks": 1143487
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 280408,
+   "out_bits": 1600,
+   "calls": 3,
+   "ticks": 15680571
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 535544,
+   "out_bits": 2624,
+   "calls": 3,
+   "ticks": 47687796
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 1544,
+   "out_bits": 1024,
+   "calls": 3,
+   "ticks": 134597
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 264,
+   "out_bits": 256,
+   "calls": 3,
+   "ticks": 5234
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 2664,
+   "out_bits": 512,
+   "calls": 3,
+   "ticks": 73938
+  }
+ ],
+ "share": {
+  "pseudohash": 0.016350385385622154,
+  "pseudoXOF": 0.0039767803066929185,
+  "sm3hash": 3.2846780042841777e-07
+ },
+ "hash_share": 0.020327494160115502
+}

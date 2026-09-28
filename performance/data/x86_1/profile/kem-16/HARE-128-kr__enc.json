@@ -1,0 +1,89 @@
+{
+ "schema": 2,
+ "candidate": "kem-16",
+ "label": "HARE-128-kr",
+ "operation": "enc",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-16/libHARE-128-kr.so",
+  "enc",
+  "0",
+  "162",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-16",
+  "instance": "HARE-128-kr",
+  "operation": "enc",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997961",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 162,
+  "ticks": 2110464253
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 324,
+   "ticks": 1521287
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 7168,
+   "calls": 162,
+   "ticks": 6818066
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 2528,
+   "calls": 162,
+   "ticks": 2450156
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 20904,
+   "calls": 162,
+   "ticks": 19718064
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 9696,
+   "calls": 162,
+   "ticks": 9167808
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 392,
+   "out_bits": 256,
+   "calls": 162,
+   "ticks": 257785
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 21040,
+   "out_bits": 128,
+   "calls": 162,
+   "ticks": 9346562
+  }
+ ],
+ "share": {
+  "drng": 0.0007208304987101812,
+  "pseudoXOF": 0.02262935320136882
+ },
+ "hash_share": 0.02262935320136882
+}

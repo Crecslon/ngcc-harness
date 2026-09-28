@@ -1,0 +1,74 @@
+{
+ "schema": 2,
+ "candidate": "sign-23",
+ "label": "SHUTTLE-128",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-23/libSHUTTLE-128.so",
+  "keygen",
+  "0",
+  "609",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-23",
+  "instance": "SHUTTLE-128",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997594",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 609,
+  "ticks": 5329064903
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 609,
+   "ticks": 2799367
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 3136,
+   "calls": 147498,
+   "ticks": 3282355067
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 6144,
+   "calls": 25840,
+   "ticks": 994082129
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 609,
+   "ticks": 2786920
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 640,
+   "calls": 1615,
+   "ticks": 12233260
+  }
+ ],
+ "share": {
+  "drng": 0.8058180602346475
+ },
+ "hash_share": 0
+}

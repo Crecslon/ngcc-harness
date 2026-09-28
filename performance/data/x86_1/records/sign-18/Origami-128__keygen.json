@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-18",
+ "label": "Origami-128",
+ "instance": "Origami-128",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 801,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.032692707996216,
+  "timeout_per_process_s": 303.0196156247977
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-18/lib/libOrigami-128.so",
+ "library_sha256": "2ea69c6f07c2c4126ae86d1f1a3ef8d1015c744e0f40e34fffabd3cd8cf79371",
+ "kat_log": "kat/sign-18/Origami-128.log",
+ "kat_log_sha256": "5d4395c0a8cd394d0eb8cf51cf838f0c5d2e6a66c8c48027471d0963b7945e5d",
+ "started_utc": "2026-09-25T18:22:11.119078+00:00",
+ "ended_utc": "2026-09-25T18:22:15.981317+00:00",
+ "load_average_start": [
+  2.0576171875,
+  2.0576171875,
+  2.00830078125
+ ],
+ "load_average_end": [
+  2.052734375,
+  2.056640625,
+  2.0078125
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-18",
+    "instance": "Origami-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1740800",
+    "pk_bytes": "2996",
+    "sk_bytes": "16",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "116",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1826816",
+    "measurement_count": "801",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 801,
+     "seconds": 0.966631269,
+     "cycles": 2023432490
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-18/lib/libOrigami-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "801",
+    "3"
+   ],
+   "wall_s": 0.9723598957061768,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-18",
+    "instance": "Origami-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1769472",
+    "pk_bytes": "2996",
+    "sk_bytes": "16",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "116",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1855488",
+    "measurement_count": "801",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 801,
+     "seconds": 0.965933351,
+     "cycles": 2022164922
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-18/lib/libOrigami-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "801",
+    "3"
+   ],
+   "wall_s": 0.9717199802398682,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-18",
+    "instance": "Origami-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1728512",
+    "pk_bytes": "2996",
+    "sk_bytes": "16",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "116",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1875968",
+    "measurement_count": "801",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 801,
+     "seconds": 0.966551378,
+     "cycles": 2023195341
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-18/lib/libOrigami-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "801",
+    "3"
+   ],
+   "wall_s": 0.9724202156066895,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-18",
+    "instance": "Origami-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1662976",
+    "pk_bytes": "2996",
+    "sk_bytes": "16",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "116",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1814528",
+    "measurement_count": "801",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 801,
+     "seconds": 0.966584209,
+     "cycles": 2023543599
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-18/lib/libOrigami-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "801",
+    "3"
+   ],
+   "wall_s": 0.972423791885376,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-18",
+    "instance": "Origami-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1662976",
+    "pk_bytes": "2996",
+    "sk_bytes": "16",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "116",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1814528",
+    "measurement_count": "801",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 801,
+     "seconds": 0.967145631,
+     "cycles": 2024176927
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-18/lib/libOrigami-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "801",
+    "3"
+   ],
+   "wall_s": 0.9730780124664307,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 801,
+   "seconds": 0.966631269,
+   "cycles": 2023432490
+  },
+  {
+   "measurements": 801,
+   "seconds": 0.965933351,
+   "cycles": 2022164922
+  },
+  {
+   "measurements": 801,
+   "seconds": 0.966551378,
+   "cycles": 2023195341
+  },
+  {
+   "measurements": 801,
+   "seconds": 0.966584209,
+   "cycles": 2023543599
+  },
+  {
+   "measurements": 801,
+   "seconds": 0.967145631,
+   "cycles": 2024176927
+  }
+ ],
+ "measurements": 4005,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0012067030806491884,
+ "median_trial_seconds": 0.001206721858926342,
+ "min_trial_seconds": 0.0012059093021223471,
+ "max_trial_seconds": 0.0012074227602996254,
+ "mean_cycles": 2525970.856179775,
+ "median_trial_cycles": 2526132.9463171037,
+ "operations_per_second": 828.7042736826484,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 2996,
+  "sk_bytes": 16,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 116,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1769472,
+ "peak_rss_bytes": 1875968,
+ "timing_scope": "loop"
+}

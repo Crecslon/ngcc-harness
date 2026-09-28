@@ -1,0 +1,68 @@
+{
+ "schema": 2,
+ "candidate": "sign-03",
+ "label": "CEDRUSC-384s",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-03/libCEDRUSC-384s.so",
+  "keygen",
+  "0",
+  "3",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-03",
+  "instance": "CEDRUSC-384s",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997983",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 9951462488
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1408,
+   "out_bits": 384,
+   "calls": 765,
+   "ticks": 6505789
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 36736,
+   "out_bits": 384,
+   "calls": 768,
+   "ticks": 150783945
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 1152,
+   "calls": 3,
+   "ticks": 37999
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1024,
+   "out_bits": 384,
+   "calls": 1155072,
+   "ticks": 9733959674
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.993949323521783,
+  "drng": 3.818433727285934e-06
+ },
+ "hash_share": 0.993949323521783
+}

@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-40",
+ "label": "yuanyang-512",
+ "instance": "YuanYang-KEM",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 3381,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.015722640818481,
+  "timeout_per_process_s": 303.0094335844911
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-40/lib/libyuanyang-512.so",
+ "library_sha256": "382ea07069cb0cf8ac82832c55f296253ea715cb450e1853263e9ce3e49c37fa",
+ "kat_log": "kat/kem-40/yuanyang-512.log",
+ "kat_log_sha256": "57521d656ee2765d450c2ab98b6056c203353df079ff3061bb5c49644f334242",
+ "started_utc": "2026-09-25T17:52:55.075081+00:00",
+ "ended_utc": "2026-09-25T17:52:59.173731+00:00",
+ "load_average_start": [
+  2.08740234375,
+  2.04150390625,
+  2.005859375
+ ],
+ "load_average_end": [
+  2.08740234375,
+  2.04150390625,
+  2.005859375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-40",
+    "instance": "YuanYang-KEM",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2060288",
+    "pk_bytes": "736",
+    "sk_bytes": "1536",
+    "ct_bytes": "656",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2322432",
+    "measurement_count": "3381",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3381,
+     "seconds": 0.816568297,
+     "cycles": 1709146519
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-40/lib/libyuanyang-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3381",
+    "3"
+   ],
+   "wall_s": 0.819549560546875,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-40",
+    "instance": "YuanYang-KEM",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1961984",
+    "pk_bytes": "736",
+    "sk_bytes": "1536",
+    "ct_bytes": "656",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2285568",
+    "measurement_count": "3381",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3381,
+     "seconds": 0.816611249,
+     "cycles": 1709530671
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-40/lib/libyuanyang-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3381",
+    "3"
+   ],
+   "wall_s": 0.8196280002593994,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-40",
+    "instance": "YuanYang-KEM",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1994752",
+    "pk_bytes": "736",
+    "sk_bytes": "1536",
+    "ct_bytes": "656",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2318336",
+    "measurement_count": "3381",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3381,
+     "seconds": 0.816117766,
+     "cycles": 1708122013
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-40/lib/libyuanyang-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3381",
+    "3"
+   ],
+   "wall_s": 0.819138765335083,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-40",
+    "instance": "YuanYang-KEM",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2088960",
+    "pk_bytes": "736",
+    "sk_bytes": "1536",
+    "ct_bytes": "656",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2351104",
+    "measurement_count": "3381",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3381,
+     "seconds": 0.817904448,
+     "cycles": 1712160260
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-40/lib/libyuanyang-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3381",
+    "3"
+   ],
+   "wall_s": 0.821000337600708,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-40",
+    "instance": "YuanYang-KEM",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2076672",
+    "pk_bytes": "736",
+    "sk_bytes": "1536",
+    "ct_bytes": "656",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2338816",
+    "measurement_count": "3381",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3381,
+     "seconds": 0.816033337,
+     "cycles": 1708547087
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-40/lib/libyuanyang-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3381",
+    "3"
+   ],
+   "wall_s": 0.8190994262695312,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 3381,
+   "seconds": 0.816568297,
+   "cycles": 1709146519
+  },
+  {
+   "measurements": 3381,
+   "seconds": 0.816611249,
+   "cycles": 1709530671
+  },
+  {
+   "measurements": 3381,
+   "seconds": 0.816117766,
+   "cycles": 1708122013
+  },
+  {
+   "measurements": 3381,
+   "seconds": 0.817904448,
+   "cycles": 1712160260
+  },
+  {
+   "measurements": 3381,
+   "seconds": 0.816033337,
+   "cycles": 1708547087
+  }
+ ],
+ "measurements": 16905,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0002415400826382727,
+ "median_trial_seconds": 0.00024151679887607217,
+ "min_trial_seconds": 0.00024135857349896482,
+ "max_trial_seconds": 0.00024191199290150842,
+ "mean_cycles": 505620.0266193434,
+ "median_trial_cycles": 505515.08991422656,
+ "operations_per_second": 4140.099602009274,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 736,
+  "sk_bytes": 1536,
+  "ct_bytes": 656,
+  "ss_bytes": 16,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 2088960,
+ "peak_rss_bytes": 2351104,
+ "timing_scope": "loop"
+}

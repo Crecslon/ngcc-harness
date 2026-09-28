@@ -1,0 +1,124 @@
+{
+ "schema": 2,
+ "candidate": "sign-07",
+ "label": "CS-512",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-07/libCS-512.so",
+  "sign",
+  "0",
+  "25",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-07",
+  "instance": "CS_512",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996890",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 25,
+  "ticks": 1352924847
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 528,
+   "out_bits": 36864,
+   "calls": 59,
+   "ticks": 24196098
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 528,
+   "out_bits": 135168,
+   "calls": 295,
+   "ticks": 443571685
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 16896,
+   "out_bits": 1024,
+   "calls": 59,
+   "ticks": 11059081
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1536,
+   "out_bits": 1024,
+   "calls": 25,
+   "ticks": 579138
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 2560,
+   "out_bits": 1024,
+   "calls": 25,
+   "ticks": 849655
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 64,
+   "calls": 1170,
+   "ticks": 5444807
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 528,
+   "out_bits": 90112,
+   "calls": 354,
+   "ticks": 355957126
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 120,
+   "calls": 59,
+   "ticks": 275235
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 9,
+   "calls": 7922,
+   "ticks": 36121827
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 1024,
+   "calls": 25,
+   "ticks": 229627
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 8,
+   "calls": 812,
+   "ticks": 3749127
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 8448,
+   "calls": 750,
+   "ticks": 38775327
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.6180777778264871,
+  "drng": 0.06252819599520594
+ },
+ "hash_share": 0.6180777778264871
+}

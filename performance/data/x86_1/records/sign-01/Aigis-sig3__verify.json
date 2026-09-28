@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-01",
+ "label": "Aigis-sig3",
+ "instance": "Aigis-sig3",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "verify",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 336,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.122366005579224,
+  "timeout_per_process_s": 303.07341960334753
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 1,
+ "library": "sign-01/lib/libAigis-sig3.so",
+ "library_sha256": "70ff11077c606d99ef22510ae0bdce08e7b507c8a95d3ca47c50d4742d1ad9ef",
+ "kat_log": "kat/sign-01/Aigis-sig3.log",
+ "kat_log_sha256": "e166474a95effefaba59c0d4acfa07d7faa26795851f67907e826424a07e5e58",
+ "started_utc": "2026-09-25T18:58:20.590303+00:00",
+ "ended_utc": "2026-09-25T18:58:26.870983+00:00",
+ "load_average_start": [
+  2.11279296875,
+  2.1083984375,
+  2.0390625
+ ],
+ "load_average_end": [
+  2.103515625,
+  2.1064453125,
+  2.03857421875
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-01",
+    "instance": "Aigis-sig3",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1990656",
+    "pk_bytes": "4672",
+    "sk_bytes": "8800",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "9134",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2121728",
+    "measurement_count": "336",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 336,
+     "seconds": 0.997884119,
+     "cycles": 2088674482
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-01/lib/libAigis-sig3.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "336",
+    "3"
+   ],
+   "wall_s": 1.016695261001587,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-01",
+    "instance": "Aigis-sig3",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2031616",
+    "pk_bytes": "4672",
+    "sk_bytes": "8800",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "9134",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2166784",
+    "measurement_count": "336",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 336,
+     "seconds": 0.99828325,
+     "cycles": 2089926274
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-01/lib/libAigis-sig3.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "336",
+    "3"
+   ],
+   "wall_s": 1.0526800155639648,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-01",
+    "instance": "Aigis-sig3",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2101248",
+    "pk_bytes": "4672",
+    "sk_bytes": "8800",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "9134",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2170880",
+    "measurement_count": "336",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 336,
+     "seconds": 0.998181938,
+     "cycles": 2089736064
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-01/lib/libAigis-sig3.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "336",
+    "3"
+   ],
+   "wall_s": 1.0167813301086426,
+   "disturbed_retries": 1
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-01",
+    "instance": "Aigis-sig3",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1990656",
+    "pk_bytes": "4672",
+    "sk_bytes": "8800",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "9134",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2121728",
+    "measurement_count": "336",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 336,
+     "seconds": 0.998179886,
+     "cycles": 2089484784
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-01/lib/libAigis-sig3.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "336",
+    "3"
+   ],
+   "wall_s": 1.0168108940124512,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-01",
+    "instance": "Aigis-sig3",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2080768",
+    "pk_bytes": "4672",
+    "sk_bytes": "8800",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "9134",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2215936",
+    "measurement_count": "336",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 336,
+     "seconds": 0.997602203,
+     "cycles": 2088505331
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-01/lib/libAigis-sig3.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "336",
+    "3"
+   ],
+   "wall_s": 1.0162394046783447,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 336,
+   "seconds": 0.997884119,
+   "cycles": 2088674482
+  },
+  {
+   "measurements": 336,
+   "seconds": 0.99828325,
+   "cycles": 2089926274
+  },
+  {
+   "measurements": 336,
+   "seconds": 0.998181938,
+   "cycles": 2089736064
+  },
+  {
+   "measurements": 336,
+   "seconds": 0.998179886,
+   "cycles": 2089484784
+  },
+  {
+   "measurements": 336,
+   "seconds": 0.997602203,
+   "cycles": 2088505331
+  }
+ ],
+ "measurements": 1680,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.002970316307142857,
+ "median_trial_seconds": 0.0029707734702380953,
+ "min_trial_seconds": 0.002969054175595238,
+ "max_trial_seconds": 0.002971081101190476,
+ "mean_cycles": 6218051.74702381,
+ "median_trial_cycles": 6218704.714285715,
+ "operations_per_second": 336.6644816901331,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 4672,
+  "sk_bytes": 8800,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 9134,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 2101248,
+ "peak_rss_bytes": 2215936,
+ "timing_scope": "loop"
+}

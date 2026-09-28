@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-06",
+ "label": "COMPASS-SIG-384",
+ "instance": "COMPASS-SIG-384",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 517,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.040945051939697,
+  "timeout_per_process_s": 303.0245670311638
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-06/lib/libCOMPASS-SIG-384.so",
+ "library_sha256": "9116db66d15eb74c6aac50e253443120b1a2d7dbcbf9cf8eebb75dfeb96d4ad8",
+ "kat_log": "kat/sign-06/COMPASS-SIG-384.log",
+ "kat_log_sha256": "67fe953b09a0e02b06420d4a11292fea93b8c46e02b42f80fb3d961912de0810",
+ "started_utc": "2026-09-25T18:28:50.018830+00:00",
+ "ended_utc": "2026-09-25T18:28:54.901703+00:00",
+ "load_average_start": [
+  2.02294921875,
+  2.037109375,
+  2.0
+ ],
+ "load_average_end": [
+  2.02099609375,
+  2.0361328125,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-06",
+    "instance": "COMPASS-SIG-384",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1642496",
+    "pk_bytes": "5792",
+    "sk_bytes": "3136",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "7344",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "35835904",
+    "measurement_count": "517",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 517,
+     "seconds": 0.967869422,
+     "cycles": 1998672418
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-06/lib/libCOMPASS-SIG-384.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "517",
+    "3"
+   ],
+   "wall_s": 0.9776647090911865,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-06",
+    "instance": "COMPASS-SIG-384",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1748992",
+    "pk_bytes": "5792",
+    "sk_bytes": "3136",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "7344",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "35880960",
+    "measurement_count": "517",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 517,
+     "seconds": 0.966597167,
+     "cycles": 1997893554
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-06/lib/libCOMPASS-SIG-384.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "517",
+    "3"
+   ],
+   "wall_s": 0.9761257171630859,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-06",
+    "instance": "COMPASS-SIG-384",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1777664",
+    "pk_bytes": "5792",
+    "sk_bytes": "3136",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "7344",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "35909632",
+    "measurement_count": "517",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 517,
+     "seconds": 0.965774804,
+     "cycles": 1996872276
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-06/lib/libCOMPASS-SIG-384.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "517",
+    "3"
+   ],
+   "wall_s": 0.9754509925842285,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-06",
+    "instance": "COMPASS-SIG-384",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1572864",
+    "pk_bytes": "5792",
+    "sk_bytes": "3136",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "7344",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "35766272",
+    "measurement_count": "517",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 517,
+     "seconds": 0.967176512,
+     "cycles": 1999151905
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-06/lib/libCOMPASS-SIG-384.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "517",
+    "3"
+   ],
+   "wall_s": 0.9769008159637451,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-06",
+    "instance": "COMPASS-SIG-384",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1748992",
+    "pk_bytes": "5792",
+    "sk_bytes": "3136",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "7344",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "35880960",
+    "measurement_count": "517",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 517,
+     "seconds": 0.966928489,
+     "cycles": 1999188452
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-06/lib/libCOMPASS-SIG-384.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "517",
+    "3"
+   ],
+   "wall_s": 0.9764397144317627,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 517,
+   "seconds": 0.967869422,
+   "cycles": 1998672418
+  },
+  {
+   "measurements": 517,
+   "seconds": 0.966597167,
+   "cycles": 1997893554
+  },
+  {
+   "measurements": 517,
+   "seconds": 0.965774804,
+   "cycles": 1996872276
+  },
+  {
+   "measurements": 517,
+   "seconds": 0.967176512,
+   "cycles": 1999151905
+  },
+  {
+   "measurements": 517,
+   "seconds": 0.966928489,
+   "cycles": 1999188452
+  }
+ ],
+ "measurements": 2585,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0018701533439071565,
+ "median_trial_seconds": 0.0018702678704061895,
+ "min_trial_seconds": 0.0018680363713733075,
+ "max_trial_seconds": 0.0018720878568665377,
+ "mean_cycles": 3865291.5299806576,
+ "median_trial_cycles": 3865904.096711799,
+ "operations_per_second": 534.7155104996806,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 5792,
+  "sk_bytes": 3136,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 7344,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1777664,
+ "peak_rss_bytes": 35909632,
+ "timing_scope": "loop"
+}

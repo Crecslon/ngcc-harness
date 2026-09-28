@@ -1,0 +1,60 @@
+{
+ "schema": 2,
+ "candidate": "kem-36",
+ "label": "TRIKE-2",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-36/libTRIKE-2.so",
+  "keygen",
+  "0",
+  "21",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-36",
+  "instance": "TRIKE-2",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997830",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 21,
+  "ticks": 2150664275
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 32,
+   "calls": 2205,
+   "ticks": 10103497
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 15584,
+   "calls": 63,
+   "ticks": 5872136
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 63,
+   "ticks": 297150
+  }
+ ],
+ "share": {
+  "drng": 0.007566398525869408
+ },
+ "hash_share": 0
+}

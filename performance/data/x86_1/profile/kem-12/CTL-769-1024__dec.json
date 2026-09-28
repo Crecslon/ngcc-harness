@@ -1,0 +1,68 @@
+{
+ "schema": 2,
+ "candidate": "kem-12",
+ "label": "CTL-769-1024",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-12/libCTL-769-1024.so",
+  "dec",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-12",
+  "instance": "CTL-769-1024",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997026",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 717353360
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 384,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 1548181
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 384,
+   "out_bits": 1024,
+   "calls": 1000,
+   "ticks": 6119562
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 1024,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 4419645
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 8768,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 24828607
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.04530033845523495,
+  "sm3hash": 0.006161043143368005
+ },
+ "hash_share": 0.05146138159860295
+}

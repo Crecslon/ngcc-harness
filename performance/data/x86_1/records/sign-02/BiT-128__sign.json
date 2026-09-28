@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-02",
+ "label": "BiT-128",
+ "instance": "BiT-128",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "sign",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 825,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.035815453851319,
+  "timeout_per_process_s": 303.0214892723108
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-02/lib/libBiT-128.so",
+ "library_sha256": "b9489cdb21a227d8d8441ac5f48206061e9232464571ee753275428b7d15de0c",
+ "kat_log": "kat/sign-02/BiT-128.log",
+ "kat_log_sha256": "981ff634de76dcf0b0bfbea83d532d58ea9f8afec28c9fd7c6673f1638b935fb",
+ "started_utc": "2026-09-25T18:24:50.253989+00:00",
+ "ended_utc": "2026-09-25T18:24:54.705735+00:00",
+ "load_average_start": [
+  1.9208984375,
+  2.01123046875,
+  1.99462890625
+ ],
+ "load_average_end": [
+  1.92724609375,
+  2.0107421875,
+  1.9951171875
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-02",
+    "instance": "BiT-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1605632",
+    "pk_bytes": "1048",
+    "sk_bytes": "1864",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1504",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1761280",
+    "measurement_count": "825",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 825,
+     "seconds": 0.885547096,
+     "cycles": 1853895497
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-02/lib/libBiT-128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "825",
+    "3"
+   ],
+   "wall_s": 0.8899645805358887,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-02",
+    "instance": "BiT-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1785856",
+    "pk_bytes": "1048",
+    "sk_bytes": "1864",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1504",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1880064",
+    "measurement_count": "825",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 825,
+     "seconds": 0.88559971,
+     "cycles": 1853922222
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-02/lib/libBiT-128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "825",
+    "3"
+   ],
+   "wall_s": 0.8901193141937256,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-02",
+    "instance": "BiT-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1691648",
+    "pk_bytes": "1048",
+    "sk_bytes": "1864",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1504",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1847296",
+    "measurement_count": "825",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 825,
+     "seconds": 0.88576629,
+     "cycles": 1854314506
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-02/lib/libBiT-128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "825",
+    "3"
+   ],
+   "wall_s": 0.8901989459991455,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-02",
+    "instance": "BiT-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1789952",
+    "pk_bytes": "1048",
+    "sk_bytes": "1864",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1504",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1884160",
+    "measurement_count": "825",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 825,
+     "seconds": 0.885590009,
+     "cycles": 1853650878
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-02/lib/libBiT-128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "825",
+    "3"
+   ],
+   "wall_s": 0.8900372982025146,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-02",
+    "instance": "BiT-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1794048",
+    "pk_bytes": "1048",
+    "sk_bytes": "1864",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1504",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1888256",
+    "measurement_count": "825",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 825,
+     "seconds": 0.886637773,
+     "cycles": 1853747953
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-02/lib/libBiT-128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "825",
+    "3"
+   ],
+   "wall_s": 0.8912005424499512,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 825,
+   "seconds": 0.885547096,
+   "cycles": 1853895497
+  },
+  {
+   "measurements": 825,
+   "seconds": 0.88559971,
+   "cycles": 1853922222
+  },
+  {
+   "measurements": 825,
+   "seconds": 0.88576629,
+   "cycles": 1854314506
+  },
+  {
+   "measurements": 825,
+   "seconds": 0.885590009,
+   "cycles": 1853650878
+  },
+  {
+   "measurements": 825,
+   "seconds": 0.886637773,
+   "cycles": 1853747953
+  }
+ ],
+ "measurements": 4125,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.001073731121939394,
+ "median_trial_seconds": 0.001073454193939394,
+ "min_trial_seconds": 0.0010733904193939395,
+ "max_trial_seconds": 0.0010747124521212122,
+ "mean_cycles": 2247159.0438787877,
+ "median_trial_cycles": 2247146.056969697,
+ "operations_per_second": 931.3318572658867,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 1048,
+  "sk_bytes": 1864,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 1504,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1794048,
+ "peak_rss_bytes": 1888256,
+ "timing_scope": "loop"
+}

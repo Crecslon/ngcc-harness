@@ -1,0 +1,13 @@
+First-record KAT check for sign-33 VDOO-512 (ten records exceed the 900 s limit).
+The run in vdoo_512.log generated one record with --count 1; its MISMATCH line only
+reflects that kat.sha256 covers all ten records. Record 0 was compared directly:
+
+official archive      orig.zip sha256 4b7bb0f15388b395b9308ae480f25622105a734f0ab4a6bd16398438c4b9752a (as in SOURCE_ARCHIVES.md)
+official file         Test_Vectors/KAT_SIG_VDOO-512.txt
+compared byte range   0 .. 81408662 (record 0; the official file continues with "Count = 1")
+sha256 of that range  c547ba4bcf68155de48b79eb89a182eb57de7b69e5524b384a9f0900c8468390
+sha256 of generated   c547ba4bcf68155de48b79eb89a182eb57de7b69e5524b384a9f0900c8468390
+RESULT sign-33 VDOO-512 PASS (first 1 records, byte-identical)
+
+Reproduce: IDS=sign-33 ./download.sh
+  unzip -p orig/sign-33/orig.zip Test_Vectors/KAT_SIG_VDOO-512.txt | head -c 81408662 | sha256sum

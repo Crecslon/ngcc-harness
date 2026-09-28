@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-09",
+ "label": "Cheetah512",
+ "instance": "Cheetah512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "dec",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 511,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.068559637575073,
+  "timeout_per_process_s": 303.04113578254504
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 1,
+ "library": "kem-09/lib/libCheetah512.so",
+ "library_sha256": "c87bde57b00051644badde5ef6e0f3850e1ef6693b2038b1926507ea4017e33c",
+ "kat_log": "kat/kem-09/Cheetah512.log",
+ "kat_log_sha256": "272ca8b8f7831b9b6f029e436166d5b553cf45a81adb77290613e9db1758997f",
+ "started_utc": "2026-09-25T18:42:19.960116+00:00",
+ "ended_utc": "2026-09-25T18:42:26.261344+00:00",
+ "load_average_start": [
+  1.9833984375,
+  2.00830078125,
+  2.0
+ ],
+ "load_average_end": [
+  1.98486328125,
+  2.0078125,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-09",
+    "instance": "Cheetah512",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1728512",
+    "pk_bytes": "3600",
+    "sk_bytes": "7872",
+    "ct_bytes": "4032",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1863680",
+    "measurement_count": "511",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 511,
+     "seconds": 0.998035991,
+     "cycles": 2089393482
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-09/lib/libCheetah512.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "511",
+    "3"
+   ],
+   "wall_s": 1.011592149734497,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-09",
+    "instance": "Cheetah512",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1724416",
+    "pk_bytes": "3600",
+    "sk_bytes": "7872",
+    "ct_bytes": "4032",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1859584",
+    "measurement_count": "511",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 511,
+     "seconds": 0.99905575,
+     "cycles": 2091175061
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-09/lib/libCheetah512.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "511",
+    "3"
+   ],
+   "wall_s": 1.0337202548980713,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-09",
+    "instance": "Cheetah512",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1814528",
+    "pk_bytes": "3600",
+    "sk_bytes": "7872",
+    "ct_bytes": "4032",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1953792",
+    "measurement_count": "511",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 511,
+     "seconds": 0.999971044,
+     "cycles": 2093336984
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-09/lib/libCheetah512.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "511",
+    "3"
+   ],
+   "wall_s": 1.013800859451294,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-09",
+    "instance": "Cheetah512",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1732608",
+    "pk_bytes": "3600",
+    "sk_bytes": "7872",
+    "ct_bytes": "4032",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1867776",
+    "measurement_count": "511",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 511,
+     "seconds": 1.000350221,
+     "cycles": 2094276536
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-09/lib/libCheetah512.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "511",
+    "3"
+   ],
+   "wall_s": 1.0138790607452393,
+   "disturbed_retries": 1
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-09",
+    "instance": "Cheetah512",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1818624",
+    "pk_bytes": "3600",
+    "sk_bytes": "7872",
+    "ct_bytes": "4032",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1957888",
+    "measurement_count": "511",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 511,
+     "seconds": 0.998965039,
+     "cycles": 2091030659
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-09/lib/libCheetah512.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "511",
+    "3"
+   ],
+   "wall_s": 1.0354208946228027,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 511,
+   "seconds": 0.998035991,
+   "cycles": 2089393482
+  },
+  {
+   "measurements": 511,
+   "seconds": 0.99905575,
+   "cycles": 2091175061
+  },
+  {
+   "measurements": 511,
+   "seconds": 0.999971044,
+   "cycles": 2093336984
+  },
+  {
+   "measurements": 511,
+   "seconds": 1.000350221,
+   "cycles": 2094276536
+  },
+  {
+   "measurements": 511,
+   "seconds": 0.998965039,
+   "cycles": 2091030659
+  }
+ ],
+ "measurements": 2555,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0019555295675146773,
+ "median_trial_seconds": 0.001955099315068493,
+ "min_trial_seconds": 0.001953103700587084,
+ "max_trial_seconds": 0.0019576325264187865,
+ "mean_cycles": 4093625.3315068493,
+ "median_trial_cycles": 4092319.1017612526,
+ "operations_per_second": 511.3704321387074,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 3600,
+  "sk_bytes": 7872,
+  "ct_bytes": 4032,
+  "ss_bytes": 64,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1818624,
+ "peak_rss_bytes": 1957888,
+ "timing_scope": "loop"
+}

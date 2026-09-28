@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-06",
+ "label": "Cuishen-768",
+ "instance": "Cuishen-768",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 16384,
+ "plan": {
+  "iterations_per_trial": 3835,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.013260682032471,
+  "timeout_per_process_s": 303.0079564092195
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 1,
+ "library": "hash-06/lib/libCuishen-768.so",
+ "library_sha256": "7cf3d69fcd3e3d2b1586b0f1b7115135c6c20d28a6b8fe1c76a5209af39d75e4",
+ "kat_log": "kat/hash-06/Cuishen-768.log",
+ "kat_log_sha256": "2187fd4449445d1beb004212c077d1023d8e925479673a16f889eb76963f513a",
+ "started_utc": "2026-09-25T17:41:44.414267+00:00",
+ "ended_utc": "2026-09-25T17:41:48.970438+00:00",
+ "load_average_start": [
+  2.0615234375,
+  2.03515625,
+  1.990234375
+ ],
+ "load_average_end": [
+  2.0615234375,
+  2.03515625,
+  1.990234375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-06",
+    "instance": "Cuishen-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1720320",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1789952",
+    "measurement_count": "3835",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3835,
+     "seconds": 0.720285716,
+     "cycles": 1507870492
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-06/lib/libCuishen-768.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "3835",
+    "3"
+   ],
+   "wall_s": 0.7229511737823486,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-06",
+    "instance": "Cuishen-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1613824",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1744896",
+    "measurement_count": "3835",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3835,
+     "seconds": 0.721075673,
+     "cycles": 1509464181
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-06/lib/libCuishen-768.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "3835",
+    "3"
+   ],
+   "wall_s": 0.7237002849578857,
+   "disturbed_retries": 1
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-06",
+    "instance": "Cuishen-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1642496",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1769472",
+    "measurement_count": "3835",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3835,
+     "seconds": 0.773131213,
+     "cycles": 1618620416
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-06/lib/libCuishen-768.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "3835",
+    "3"
+   ],
+   "wall_s": 0.7758028507232666,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-06",
+    "instance": "Cuishen-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1544192",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1675264",
+    "measurement_count": "3835",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3835,
+     "seconds": 0.74770446,
+     "cycles": 1562813462
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-06/lib/libCuishen-768.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "3835",
+    "3"
+   ],
+   "wall_s": 0.7505331039428711,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-06",
+    "instance": "Cuishen-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1712128",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1839104",
+    "measurement_count": "3835",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3835,
+     "seconds": 0.721189608,
+     "cycles": 1509538400
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-06/lib/libCuishen-768.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "3835",
+    "3"
+   ],
+   "wall_s": 0.7239933013916016,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 3835,
+   "seconds": 0.720285716,
+   "cycles": 1507870492
+  },
+  {
+   "measurements": 3835,
+   "seconds": 0.721075673,
+   "cycles": 1509464181
+  },
+  {
+   "measurements": 3835,
+   "seconds": 0.773131213,
+   "cycles": 1618620416
+  },
+  {
+   "measurements": 3835,
+   "seconds": 0.74770446,
+   "cycles": 1562813462
+  },
+  {
+   "measurements": 3835,
+   "seconds": 0.721189608,
+   "cycles": 1509538400
+  }
+ ],
+ "measurements": 19175,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.00019209317705345502,
+ "median_trial_seconds": 0.00018805465658409387,
+ "min_trial_seconds": 0.00018781896114732725,
+ "max_trial_seconds": 0.0002015987517601043,
+ "mean_cycles": 401997.7549413299,
+ "median_trial_cycles": 393621.4863102999,
+ "operations_per_second": 5205.806970029568,
+ "throughput_MB_per_second": 85.29194139696445,
+ "sizes": {
+  "input_bytes": 16384,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 96
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1720320,
+ "peak_rss_bytes": 1839104,
+ "timing_scope": "loop"
+}

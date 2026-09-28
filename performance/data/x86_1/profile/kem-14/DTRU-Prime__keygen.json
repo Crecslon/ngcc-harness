@@ -1,0 +1,53 @@
+{
+ "schema": 2,
+ "candidate": "kem-14",
+ "label": "DTRU-Prime",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-14/libDTRU-Prime.so",
+  "keygen",
+  "0",
+  "19",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-14",
+  "instance": "DTRU-Prime",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996977",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 19,
+  "ticks": 2174671375
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 6528,
+   "calls": 19,
+   "ticks": 791110
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 19,
+   "ticks": 90623
+  }
+ ],
+ "share": {
+  "drng": 0.0004054557438592302
+ },
+ "hash_share": 0
+}

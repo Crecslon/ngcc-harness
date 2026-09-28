@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-03",
+ "label": "CHash_512",
+ "instance": "CHash_512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 65536,
+ "plan": {
+  "iterations_per_trial": 31,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.559285641503907,
+  "timeout_per_process_s": 303.3355713849023
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-03/lib/libCHash_512.so",
+ "library_sha256": "9aee55ed2a7a7ac7d66afe8055f256bc84cb4b52742ed8842f2939b3eb411706",
+ "kat_log": "kat/hash-03/CHash_512.log",
+ "kat_log_sha256": "0b6ad2a61e56cc4a3bc5ea205d699323fbbad10946cbe191f337d683dba2cdba",
+ "started_utc": "2026-09-25T19:24:01.068601+00:00",
+ "ended_utc": "2026-09-25T19:24:06.600303+00:00",
+ "load_average_start": [
+  2.0,
+  2.01806640625,
+  2.0
+ ],
+ "load_average_end": [
+  2.0,
+  2.017578125,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-03",
+    "instance": "CHash_512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1761280",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1953792",
+    "measurement_count": "31",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 31,
+     "seconds": 1.006363915,
+     "cycles": 2107286282
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-03/lib/libCHash_512.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "31",
+    "3"
+   ],
+   "wall_s": 1.1063799858093262,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-03",
+    "instance": "CHash_512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1703936",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1900544",
+    "measurement_count": "31",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 31,
+     "seconds": 1.006568299,
+     "cycles": 2108195304
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-03/lib/libCHash_512.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "31",
+    "3"
+   ],
+   "wall_s": 1.106687068939209,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-03",
+    "instance": "CHash_512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1777664",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1908736",
+    "measurement_count": "31",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 31,
+     "seconds": 1.005165759,
+     "cycles": 2104843689
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-03/lib/libCHash_512.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "31",
+    "3"
+   ],
+   "wall_s": 1.1051545143127441,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-03",
+    "instance": "CHash_512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1781760",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1912832",
+    "measurement_count": "31",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 31,
+     "seconds": 1.00605125,
+     "cycles": 2106648399
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-03/lib/libCHash_512.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "31",
+    "3"
+   ],
+   "wall_s": 1.1060404777526855,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-03",
+    "instance": "CHash_512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1593344",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1785856",
+    "measurement_count": "31",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 31,
+     "seconds": 1.007119718,
+     "cycles": 2109153064
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-03/lib/libCHash_512.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "31",
+    "3"
+   ],
+   "wall_s": 1.1070661544799805,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 31,
+   "seconds": 1.006363915,
+   "cycles": 2107286282
+  },
+  {
+   "measurements": 31,
+   "seconds": 1.006568299,
+   "cycles": 2108195304
+  },
+  {
+   "measurements": 31,
+   "seconds": 1.005165759,
+   "cycles": 2104843689
+  },
+  {
+   "measurements": 31,
+   "seconds": 1.00605125,
+   "cycles": 2106648399
+  },
+  {
+   "measurements": 31,
+   "seconds": 1.007119718,
+   "cycles": 2109153064
+  }
+ ],
+ "measurements": 155,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.03245979961935484,
+ "median_trial_seconds": 0.032463352096774194,
+ "min_trial_seconds": 0.03242470190322581,
+ "max_trial_seconds": 0.032487732838709676,
+ "mean_cycles": 67975011.21290323,
+ "median_trial_cycles": 67976976.83870968,
+ "operations_per_second": 30.80733743666516,
+ "throughput_MB_per_second": 2.018989666249288,
+ "sizes": {
+  "input_bytes": 65536,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 64
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1781760,
+ "peak_rss_bytes": 1953792,
+ "timing_scope": "loop"
+}

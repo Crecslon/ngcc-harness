@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-26",
+ "label": "HQC-128",
+ "instance": "HQC-128",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 59,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.32006105717041,
+  "timeout_per_process_s": 303.19203663430227
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-26/lib/libHQC-128.so",
+ "library_sha256": "c1ea6adcdaa4dbe82de980e32b39fc167c0c5d50a3985edcfc6f4db024f00497",
+ "kat_log": "kat/kem-26/HQC-128.log",
+ "kat_log_sha256": "0ae3f10578153ac03ba789d29e5eb5e3483b3beccc8cf3eebe56954c2217b39c",
+ "started_utc": "2026-09-25T19:17:01.274567+00:00",
+ "ended_utc": "2026-09-25T19:17:06.717896+00:00",
+ "load_average_start": [
+  2.12353515625,
+  2.0498046875,
+  2.01513671875
+ ],
+ "load_average_end": [
+  2.11328125,
+  2.048828125,
+  2.0146484375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-26",
+    "instance": "HQC-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1740800",
+    "pk_bytes": "3713",
+    "sk_bytes": "3777",
+    "ct_bytes": "5185",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1949696",
+    "measurement_count": "59",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 59,
+     "seconds": 1.033676269,
+     "cycles": 2158550337
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-26/lib/libHQC-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "59",
+    "3"
+   ],
+   "wall_s": 1.0880632400512695,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-26",
+    "instance": "HQC-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1703936",
+    "pk_bytes": "3713",
+    "sk_bytes": "3777",
+    "ct_bytes": "5185",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1978368",
+    "measurement_count": "59",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 59,
+     "seconds": 1.033759472,
+     "cycles": 2158890776
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-26/lib/libHQC-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "59",
+    "3"
+   ],
+   "wall_s": 1.0892109870910645,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-26",
+    "instance": "HQC-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1757184",
+    "pk_bytes": "3713",
+    "sk_bytes": "3777",
+    "ct_bytes": "5185",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1966080",
+    "measurement_count": "59",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 59,
+     "seconds": 1.032777955,
+     "cycles": 2157250701
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-26/lib/libHQC-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "59",
+    "3"
+   ],
+   "wall_s": 1.0872511863708496,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-26",
+    "instance": "HQC-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1761280",
+    "pk_bytes": "3713",
+    "sk_bytes": "3777",
+    "ct_bytes": "5185",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1970176",
+    "measurement_count": "59",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 59,
+     "seconds": 1.034644015,
+     "cycles": 2160816510
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-26/lib/libHQC-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "59",
+    "3"
+   ],
+   "wall_s": 1.089102029800415,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-26",
+    "instance": "HQC-128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1576960",
+    "pk_bytes": "3713",
+    "sk_bytes": "3777",
+    "ct_bytes": "5185",
+    "ss_bytes": "32",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1847296",
+    "measurement_count": "59",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 59,
+     "seconds": 1.034937809,
+     "cycles": 2161523781
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-26/lib/libHQC-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "59",
+    "3"
+   ],
+   "wall_s": 1.0894381999969482,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 59,
+   "seconds": 1.033676269,
+   "cycles": 2158550337
+  },
+  {
+   "measurements": 59,
+   "seconds": 1.033759472,
+   "cycles": 2158890776
+  },
+  {
+   "measurements": 59,
+   "seconds": 1.032777955,
+   "cycles": 2157250701
+  },
+  {
+   "measurements": 59,
+   "seconds": 1.034644015,
+   "cycles": 2160816510
+  },
+  {
+   "measurements": 59,
+   "seconds": 1.034937809,
+   "cycles": 2161523781
+  }
+ ],
+ "measurements": 295,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.017524730576271186,
+ "median_trial_seconds": 0.01752134698305085,
+ "min_trial_seconds": 0.017504711101694916,
+ "max_trial_seconds": 0.01754131879661017,
+ "mean_cycles": 36600108.83050848,
+ "median_trial_cycles": 36591369.084745765,
+ "operations_per_second": 57.062218197751854,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 3713,
+  "sk_bytes": 3777,
+  "ct_bytes": 5185,
+  "ss_bytes": 32,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1761280,
+ "peak_rss_bytes": 1978368,
+ "timing_scope": "loop"
+}

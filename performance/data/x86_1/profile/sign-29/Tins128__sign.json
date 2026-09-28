@@ -1,0 +1,125 @@
+{
+ "schema": 2,
+ "candidate": "sign-29",
+ "label": "Tins128",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-29/libTins128.so",
+  "sign",
+  "0",
+  "3",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-29",
+  "instance": "Tins128",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111992703",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 3951042016
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 3,
+   "ticks": 14817
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 424,
+   "out_bits": 256,
+   "calls": 147456,
+   "ticks": 218140375
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 38640,
+   "calls": 3,
+   "ticks": 700725
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 150,
+   "calls": 10051,
+   "ticks": 46909322
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 128,
+   "out_bits": 128,
+   "calls": 294906,
+   "ticks": 459735624
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 38364,
+   "calls": 3,
+   "ticks": 691508
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 3832,
+   "out_bits": 256,
+   "calls": 3,
+   "ticks": 38791
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 288,
+   "calls": 147456,
+   "ticks": 910500363
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 138,
+   "calls": 6,
+   "ticks": 28701
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 12582920,
+   "out_bits": 256,
+   "calls": 3,
+   "ticks": 103159226
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 3,
+   "ticks": 16736
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 8060,
+   "out_bits": 256,
+   "calls": 3,
+   "ticks": 68276
+  }
+ ],
+ "share": {
+  "drng": 0.24268589605400948,
+  "sm3hash": 0.08134731716302761,
+  "pseudoXOF": 0.11635807013397248
+ },
+ "hash_share": 0.1977053872970001
+}

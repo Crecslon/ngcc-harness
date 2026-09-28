@@ -1,0 +1,61 @@
+{
+ "schema": 2,
+ "candidate": "sign-31",
+ "label": "TSUOV_512",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-31/libTSUOV_512.so",
+  "keygen",
+  "0",
+  "3",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-31",
+  "instance": "TSUOV_512",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997480",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 2777836522
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 6,
+   "ticks": 42059
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 528,
+   "out_bits": 252288,
+   "calls": 654,
+   "ticks": 1841748410
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 528,
+   "out_bits": 29320,
+   "calls": 657,
+   "ticks": 215693531
+  }
+ ],
+ "share": {
+  "drng": 1.514091980103932e-05,
+  "pseudoXOF": 0.740663435268924
+ },
+ "hash_share": 0.740663435268924
+}

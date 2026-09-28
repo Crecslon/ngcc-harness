@@ -1,0 +1,68 @@
+{
+ "schema": 2,
+ "candidate": "kem-02",
+ "label": "Amoeba384",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-02/libAmoeba384.so",
+  "keygen",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-02",
+  "instance": "Amoeba384",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997937",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 933873298
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 1536,
+   "calls": 30511,
+   "ticks": 523523527
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 2000,
+   "ticks": 12577440
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 512,
+   "calls": 2000,
+   "ticks": 11883937
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 528,
+   "out_bits": 2592,
+   "calls": 4000,
+   "ticks": 126263781
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.7085235721130984,
+  "drng": 0.013468036859963844
+ },
+ "hash_share": 0.7085235721130984
+}

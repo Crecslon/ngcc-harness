@@ -1,0 +1,97 @@
+{
+ "schema": 2,
+ "candidate": "sign-05",
+ "label": "sm4th_d3_128s_loose",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-05/libsm4th_d3_128s_loose.so",
+  "sign",
+  "0",
+  "6",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-05",
+  "instance": "sm4th_d3_128s_loose",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996658",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 6,
+  "ticks": 2178845484
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 22728,
+   "out_bits": 704,
+   "calls": 6,
+   "ticks": 1108542
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 776,
+   "out_bits": 256,
+   "calls": 47818,
+   "ticks": 135229439
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 648,
+   "out_bits": 256,
+   "calls": 6,
+   "ticks": 17266
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 168,
+   "out_bits": 256,
+   "calls": 6,
+   "ticks": 9268
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 21096,
+   "out_bits": 448,
+   "calls": 6,
+   "ticks": 689280
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 2824,
+   "out_bits": 256,
+   "calls": 6,
+   "ticks": 50630
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 524296,
+   "out_bits": 256,
+   "calls": 66,
+   "ticks": 93280252
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 6,
+   "ticks": 30318
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.0008251259729990105,
+  "sm3hash": 0.10491191627795117,
+  "drng": 1.3914708602622508e-05
+ },
+ "hash_share": 0.10573704225095018
+}

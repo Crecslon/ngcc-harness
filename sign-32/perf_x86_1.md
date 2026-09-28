@@ -92,22 +92,25 @@ Share of each operation spent in the ICCS placeholder hash functions and in the 
 
 ## 7. Raw evidence index
 
-All paths are relative to the campaign run directory; commands are recorded in each JSON file.
+Paths are relative to `performance/data/x86_1/` in the [harness](https://github.com/ngcc-dev/ngcc-harness); each JSON file records its commands, environment and trials.
 
 | instance | item | file |
 |---|---|---|
+| `UVW-128` | KAT log (sha256 `0d572a73d7da5b16…`) | `kat/sign-32/UVW-128.log` |
 | `UVW-128` | timing keygen | `records/sign-32/UVW-128__keygen.json` |
 | `UVW-128` | timing sign | `records/sign-32/UVW-128__sign.json` |
 | `UVW-128` | timing verify | `records/sign-32/UVW-128__verify.json` |
 | `UVW-128` | hash profile keygen | `profile/sign-32/UVW-128__keygen.json` |
 | `UVW-128` | hash profile sign | `profile/sign-32/UVW-128__sign.json` |
 | `UVW-128` | hash profile verify | `profile/sign-32/UVW-128__verify.json` |
+| `UVW-256` | KAT log (sha256 `c40a519459c2e435…`) | `kat/sign-32/UVW-256.log` |
 | `UVW-256` | timing keygen | `records/sign-32/UVW-256__keygen.json` |
 | `UVW-256` | timing sign | `records/sign-32/UVW-256__sign.json` |
 | `UVW-256` | timing verify | `records/sign-32/UVW-256__verify.json` |
 | `UVW-256` | hash profile keygen | `profile/sign-32/UVW-256__keygen.json` |
 | `UVW-256` | hash profile sign | `profile/sign-32/UVW-256__sign.json` |
 | `UVW-256` | hash profile verify | `profile/sign-32/UVW-256__verify.json` |
+| `UVW-512` | KAT log (sha256 `05a5474b7e03d402…`) | `kat/sign-32/UVW-512.log` |
 | `UVW-512` | timing keygen | `records/sign-32/UVW-512__keygen.json` |
 | `UVW-512` | timing sign | `records/sign-32/UVW-512__sign.json` |
 | `UVW-512` | timing verify | `records/sign-32/UVW-512__verify.json` |

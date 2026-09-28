@@ -1,0 +1,68 @@
+{
+ "schema": 2,
+ "candidate": "sign-11",
+ "label": "Flextree-256f",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-11/libFlextree-256f.so",
+  "keygen",
+  "0",
+  "45",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-11",
+  "instance": "Flextree-256f",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998052",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 45,
+  "ticks": 2137553198
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 16896,
+   "out_bits": 256,
+   "calls": 720,
+   "ticks": 33273953
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 768,
+   "calls": 45,
+   "ticks": 349667
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 1024,
+   "out_bits": 256,
+   "calls": 675,
+   "ticks": 2834256
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 768,
+   "out_bits": 256,
+   "calls": 731520,
+   "ticks": 2060076944
+  }
+ ],
+ "share": {
+  "sm3hash": 0.9806470103112728,
+  "drng": 0.00016358282934299164
+ },
+ "hash_share": 0.9806470103112728
+}

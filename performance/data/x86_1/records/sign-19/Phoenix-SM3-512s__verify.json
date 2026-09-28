@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-19",
+ "label": "Phoenix-SM3-512s",
+ "instance": "Phoenix-SM3-512s",
+ "variant": "reference",
+ "flags": "harness-default",
+ "operation": "verify",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 49,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 77.44807561604676,
+  "timeout_per_process_s": 346.46884536962807
+ },
+ "kat": "MISMATCH",
+ "kat_not_passed": true,
+ "disturbed_retries": 0,
+ "library": "sign-19/lib/libPhoenix-SM3-512s.so",
+ "library_sha256": "45ded8fddf0e221eba7053e3882ec50bb12075c0355a71dd7b287fa796c00027",
+ "kat_log": "kat/sign-19/Phoenix-SM3-512s.log",
+ "kat_log_sha256": "01bf6b38ffc539b516cbbbccb75cfe31060d7ae40e77201e637c02ecf0e52f8e",
+ "started_utc": "2026-09-25T22:08:11.319332+00:00",
+ "ended_utc": "2026-09-25T22:09:28.976579+00:00",
+ "load_average_start": [
+  2.083984375,
+  2.048828125,
+  2.0068359375
+ ],
+ "load_average_end": [
+  2.02001953125,
+  2.033203125,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-19",
+    "instance": "Phoenix-SM3-512s",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1884160",
+    "pk_bytes": "128",
+    "sk_bytes": "256",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "98476",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1953792",
+    "measurement_count": "49",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 49,
+     "seconds": 1.014950325,
+     "cycles": 2124944905
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-19/lib/libPhoenix-SM3-512s.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "49",
+    "3"
+   ],
+   "wall_s": 15.599983930587769,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-19",
+    "instance": "Phoenix-SM3-512s",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1851392",
+    "pk_bytes": "128",
+    "sk_bytes": "256",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "98476",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1925120",
+    "measurement_count": "49",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 49,
+     "seconds": 1.009325458,
+     "cycles": 2112852481
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-19/lib/libPhoenix-SM3-512s.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "49",
+    "3"
+   ],
+   "wall_s": 15.436136722564697,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-19",
+    "instance": "Phoenix-SM3-512s",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1753088",
+    "pk_bytes": "128",
+    "sk_bytes": "256",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "98476",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1888256",
+    "measurement_count": "49",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 49,
+     "seconds": 1.008956115,
+     "cycles": 2112145173
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-19/lib/libPhoenix-SM3-512s.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "49",
+    "3"
+   ],
+   "wall_s": 15.579164266586304,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-19",
+    "instance": "Phoenix-SM3-512s",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1687552",
+    "pk_bytes": "128",
+    "sk_bytes": "256",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "98476",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1822720",
+    "measurement_count": "49",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 49,
+     "seconds": 1.009224407,
+     "cycles": 2112812553
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-19/lib/libPhoenix-SM3-512s.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "49",
+    "3"
+   ],
+   "wall_s": 15.43650770187378,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-19",
+    "instance": "Phoenix-SM3-512s",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "1830912",
+    "pk_bytes": "128",
+    "sk_bytes": "256",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "98476",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1970176",
+    "measurement_count": "49",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 49,
+     "seconds": 1.011919564,
+     "cycles": 2118497964
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-19/lib/libPhoenix-SM3-512s.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "49",
+    "3"
+   ],
+   "wall_s": 15.6051344871521,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 49,
+   "seconds": 1.014950325,
+   "cycles": 2124944905
+  },
+  {
+   "measurements": 49,
+   "seconds": 1.009325458,
+   "cycles": 2112852481
+  },
+  {
+   "measurements": 49,
+   "seconds": 1.008956115,
+   "cycles": 2112145173
+  },
+  {
+   "measurements": 49,
+   "seconds": 1.009224407,
+   "cycles": 2112812553
+  },
+  {
+   "measurements": 49,
+   "seconds": 1.011919564,
+   "cycles": 2118497964
+  }
+ ],
+ "measurements": 245,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.020630105587755104,
+ "median_trial_seconds": 0.020598478734693875,
+ "min_trial_seconds": 0.02059094112244898,
+ "max_trial_seconds": 0.02071327193877551,
+ "mean_cycles": 43188788.06530612,
+ "median_trial_cycles": 43119438.3877551,
+ "operations_per_second": 48.472849338858694,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 128,
+  "sk_bytes": 256,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 98476,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+ "baseline_rss_bytes": 1884160,
+ "peak_rss_bytes": 1970176,
+ "timing_scope": "loop"
+}

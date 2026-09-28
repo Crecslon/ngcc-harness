@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-05",
+ "label": "sm4th_d3_128s_loose",
+ "instance": "sm4th_d3_128s_loose",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 20000,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 1.6049636554577638,
+  "timeout_per_process_s": 300.96297819327464
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-05/lib/libsm4th_d3_128s_loose.so",
+ "library_sha256": "9ec2bc60917c1504880054b710a98e82ac7f4920da1de520fdb21f20f909b07a",
+ "kat_log": "kat/sign-05/sm4th_d3_128s_loose.log",
+ "kat_log_sha256": "d1b8bbe31ff1e6a34c9db0252617c09fc184cd7acca3d69c10c1c411c9d5850d",
+ "started_utc": "2026-09-25T17:06:59.315763+00:00",
+ "ended_utc": "2026-09-25T17:06:59.899544+00:00",
+ "load_average_start": [
+  1.64453125,
+  1.2158203125,
+  1.064453125
+ ],
+ "load_average_end": [
+  1.64453125,
+  1.2158203125,
+  1.064453125
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-05",
+    "instance": "sm4th_d3_128s_loose",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1794048",
+    "pk_bytes": "32",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "5056",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1871872",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.114336557,
+     "cycles": 239260676
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-05/lib/libsm4th_d3_128s_loose.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.11648392677307129,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-05",
+    "instance": "sm4th_d3_128s_loose",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1605632",
+    "pk_bytes": "32",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "5056",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1740800",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.114857557,
+     "cycles": 239851996
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-05/lib/libsm4th_d3_128s_loose.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.11699271202087402,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-05",
+    "instance": "sm4th_d3_128s_loose",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1806336",
+    "pk_bytes": "32",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "5056",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1888256",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.114406372,
+     "cycles": 239443607
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-05/lib/libsm4th_d3_128s_loose.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.11647391319274902,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-05",
+    "instance": "sm4th_d3_128s_loose",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1687552",
+    "pk_bytes": "32",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "5056",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1830912",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.11435514,
+     "cycles": 239305565
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-05/lib/libsm4th_d3_128s_loose.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.11642217636108398,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-05",
+    "instance": "sm4th_d3_128s_loose",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1802240",
+    "pk_bytes": "32",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "5056",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1884160",
+    "measurement_count": "20000",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 20000,
+     "seconds": 0.115194836,
+     "cycles": 241107078
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-05/lib/libsm4th_d3_128s_loose.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "20000",
+    "3"
+   ],
+   "wall_s": 0.11718583106994629,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 20000,
+   "seconds": 0.114336557,
+   "cycles": 239260676
+  },
+  {
+   "measurements": 20000,
+   "seconds": 0.114857557,
+   "cycles": 239851996
+  },
+  {
+   "measurements": 20000,
+   "seconds": 0.114406372,
+   "cycles": 239443607
+  },
+  {
+   "measurements": 20000,
+   "seconds": 0.11435514,
+   "cycles": 239305565
+  },
+  {
+   "measurements": 20000,
+   "seconds": 0.115194836,
+   "cycles": 241107078
+  }
+ ],
+ "measurements": 100000,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 5.7315046199999995e-06,
+ "median_trial_seconds": 5.720318600000001e-06,
+ "min_trial_seconds": 5.71682785e-06,
+ "max_trial_seconds": 5.7597418e-06,
+ "mean_cycles": 11989.68922,
+ "median_trial_cycles": 11972.18035,
+ "operations_per_second": 174474.25524364316,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 32,
+  "sk_bytes": 32,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 5056,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1806336,
+ "peak_rss_bytes": 1888256,
+ "timing_scope": "loop"
+}

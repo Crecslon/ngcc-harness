@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-01",
+ "label": "AFS-TrEDM-512",
+ "instance": "AFS-TrEDM-512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 65536,
+ "plan": {
+  "iterations_per_trial": 171,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.121236955436402,
+  "timeout_per_process_s": 303.0727421732618
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-01/lib/libAFS-TrEDM-512.so",
+ "library_sha256": "eb6e8a75820fac4de10bb8e8cc4afc8f0cb2c2b0f799807aa41e1ad4d8d54539",
+ "kat_log": "kat/hash-01/AFS-TrEDM-512.log",
+ "kat_log_sha256": "fc40f689e72722faeed3731921c0eea0276afa5104a9b0c1b3381a4fcf5e5f84",
+ "started_utc": "2026-09-25T18:57:55.914667+00:00",
+ "ended_utc": "2026-09-25T18:58:00.947317+00:00",
+ "load_average_start": [
+  2.173828125,
+  2.11865234375,
+  2.04150390625
+ ],
+ "load_average_end": [
+  2.15966796875,
+  2.1162109375,
+  2.041015625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-01",
+    "instance": "AFS-TrEDM-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1609728",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1736704",
+    "measurement_count": "171",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 171,
+     "seconds": 0.985169912,
+     "cycles": 2062508204
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-01/lib/libAFS-TrEDM-512.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "171",
+    "3"
+   ],
+   "wall_s": 1.004714012145996,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-01",
+    "instance": "AFS-TrEDM-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1740800",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1871872",
+    "measurement_count": "171",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 171,
+     "seconds": 0.988520391,
+     "cycles": 2069229557
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-01/lib/libAFS-TrEDM-512.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "171",
+    "3"
+   ],
+   "wall_s": 1.0081417560577393,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-01",
+    "instance": "AFS-TrEDM-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1761280",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1888256",
+    "measurement_count": "171",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 171,
+     "seconds": 0.989041976,
+     "cycles": 2070684103
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-01/lib/libAFS-TrEDM-512.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "171",
+    "3"
+   ],
+   "wall_s": 1.008518934249878,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-01",
+    "instance": "AFS-TrEDM-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1798144",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1863680",
+    "measurement_count": "171",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 171,
+     "seconds": 0.985124775,
+     "cycles": 2062092371
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-01/lib/libAFS-TrEDM-512.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "171",
+    "3"
+   ],
+   "wall_s": 1.004812479019165,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-01",
+    "instance": "AFS-TrEDM-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "65536",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1777664",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1843200",
+    "measurement_count": "171",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 171,
+     "seconds": 0.986547692,
+     "cycles": 2065353263
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-01/lib/libAFS-TrEDM-512.so",
+    "hash",
+    "65536",
+    "1",
+    "1",
+    "171",
+    "3"
+   ],
+   "wall_s": 1.0062134265899658,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 171,
+   "seconds": 0.985169912,
+   "cycles": 2062508204
+  },
+  {
+   "measurements": 171,
+   "seconds": 0.988520391,
+   "cycles": 2069229557
+  },
+  {
+   "measurements": 171,
+   "seconds": 0.989041976,
+   "cycles": 2070684103
+  },
+  {
+   "measurements": 171,
+   "seconds": 0.985124775,
+   "cycles": 2062092371
+  },
+  {
+   "measurements": 171,
+   "seconds": 0.986547692,
+   "cycles": 2065353263
+  }
+ ],
+ "measurements": 855,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.005771233621052632,
+ "median_trial_seconds": 0.0057692847485380115,
+ "min_trial_seconds": 0.005760963596491228,
+ "max_trial_seconds": 0.005783871204678362,
+ "mean_cycles": 12081716.371929824,
+ "median_trial_cycles": 12078089.257309942,
+ "operations_per_second": 173.2731796460541,
+ "throughput_MB_per_second": 11.355631101283802,
+ "sizes": {
+  "input_bytes": 65536,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 64
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1798144,
+ "peak_rss_bytes": 1888256,
+ "timing_scope": "loop"
+}

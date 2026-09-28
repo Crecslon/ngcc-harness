@@ -1,0 +1,53 @@
+{
+ "schema": 2,
+ "candidate": "sign-33",
+ "label": "vdoo_512",
+ "operation": "verify",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-33/libvdoo_512.so",
+  "verify",
+  "0",
+  "73",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-33",
+  "instance": "VDOO-512",
+  "operation": "verify",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111985095",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 73,
+  "ticks": 2124689944
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 512,
+   "out_bits": 256,
+   "calls": 73,
+   "ticks": 358038
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 384,
+   "out_bits": 1560,
+   "calls": 73,
+   "ticks": 962395
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.0006214709133108223
+ },
+ "hash_share": 0.0006214709133108223
+}

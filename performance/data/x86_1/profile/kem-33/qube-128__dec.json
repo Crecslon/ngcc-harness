@@ -1,0 +1,110 @@
+{
+ "schema": 2,
+ "candidate": "kem-33",
+ "label": "qube-128",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-33/libqube-128.so",
+  "dec",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-33",
+  "instance": "qube_128",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997244",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 1193158635
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 512,
+   "calls": 2000,
+   "ticks": 6333235
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 4096,
+   "calls": 1000,
+   "ticks": 24271109
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 26560,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 73328350
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 2048,
+   "calls": 2000,
+   "ticks": 24486272
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 392,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 1500977
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 26360,
+   "out_bits": 256,
+   "calls": 2000,
+   "ticks": 144449315
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 16384,
+   "calls": 1000,
+   "ticks": 96522135
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 32768,
+   "calls": 1000,
+   "ticks": 193276205
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 1024,
+   "calls": 2000,
+   "ticks": 12345684
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 256,
+   "calls": 2000,
+   "ticks": 3179814
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.3020675067234459,
+  "sm3hash": 0.18377995646823608
+ },
+ "hash_share": 0.485847463191682
+}

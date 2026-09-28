@@ -1,0 +1,69 @@
+{
+ "schema": 2,
+ "candidate": "kem-25",
+ "label": "NEV_1024_1409_ICCS",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-25/libNEV_1024_1409_ICCS.so",
+  "keygen",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-25",
+  "instance": "NEV_1024_1409_ICCS",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996585",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 258205438
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 10752,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 31316292
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 256,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 1510642
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 4096,
+   "calls": 2000,
+   "ticks": 48703608
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 4857297
+  }
+ ],
+ "share": {
+  "sm3hash": 0.12713494438486614,
+  "pseudoXOF": 0.1886234789524456,
+  "drng": 0.018811753298549817
+ },
+ "hash_share": 0.31575842333731174
+}

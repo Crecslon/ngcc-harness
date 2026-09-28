@@ -1,0 +1,60 @@
+{
+ "schema": 2,
+ "candidate": "sign-19",
+ "label": "Phoenix-SM3-512f",
+ "operation": "verify",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-19/libPhoenix-SM3-512f.so",
+  "verify",
+  "0",
+  "16",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-19",
+  "instance": "Phoenix-SM3-512f",
+  "operation": "verify",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998115",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 16,
+  "ticks": 2163661882
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 768,
+   "out_bits": 512,
+   "calls": 272,
+   "ticks": 1638831
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1024,
+   "out_bits": 4096,
+   "calls": 32,
+   "ticks": 2182714
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1280,
+   "out_bits": 1224,
+   "calls": 16,
+   "ticks": 349332
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.0019276935248979906
+ },
+ "hash_share": 0.0019276935248979906
+}

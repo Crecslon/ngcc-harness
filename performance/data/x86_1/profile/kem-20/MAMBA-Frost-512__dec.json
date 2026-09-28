@@ -1,0 +1,81 @@
+{
+ "schema": 2,
+ "candidate": "kem-20",
+ "label": "MAMBA-Frost-512",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-20/libMAMBA-Frost-512.so",
+  "dec",
+  "0",
+  "3",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-20",
+  "instance": "MAMBA-Frost-512",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111995725",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 3014074874
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 665600,
+   "calls": 6,
+   "ticks": 23208810
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 2048,
+   "calls": 6,
+   "ticks": 79554
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 332800,
+   "calls": 3,
+   "ticks": 5830008
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1032,
+   "out_bits": 665600,
+   "calls": 3,
+   "ticks": 32740374
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 584064,
+   "out_bits": 512,
+   "calls": 3,
+   "ticks": 9401862
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1024,
+   "out_bits": 1536,
+   "calls": 3,
+   "ticks": 76710
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.023668064325597774
+ },
+ "hash_share": 0.023668064325597774
+}

@@ -1,0 +1,69 @@
+{
+ "schema": 2,
+ "candidate": "sign-02",
+ "label": "BiT-128",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-02/libBiT-128.so",
+  "keygen",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-02",
+  "instance": "BiT-128",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996706",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 463859169
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 2000,
+   "ticks": 9158235
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 192,
+   "out_bits": 5376,
+   "calls": 9032,
+   "ticks": 282312479
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 8384,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 23690592
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 176,
+   "out_bits": 1024,
+   "calls": 6000,
+   "ticks": 36489968
+  }
+ ],
+ "share": {
+  "drng": 0.019743567901748214,
+  "pseudoXOF": 0.6872828399345492,
+  "sm3hash": 0.05107281171367769
+ },
+ "hash_share": 0.7383556516482269
+}

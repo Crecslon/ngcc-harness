@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-22",
+ "label": "Rhyme-SM3-256",
+ "instance": "Rhyme-SM3-256",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "sign",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 132,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 12.998554534053344,
+  "timeout_per_process_s": 307.799132720432
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-22/lib/libRhyme-SM3-256.so",
+ "library_sha256": "349d533596b3e06609f2684d834900a85fb367bce8a8d3549a8daaa2f3c96806",
+ "kat_log": "kat/sign-22/Rhyme-SM3-256.log",
+ "kat_log_sha256": "ffdcf5cf85f00df6ad1d939a5c5e8d05de0fab2ccf0740b56689a8fc5f80fda5",
+ "started_utc": "2026-09-25T19:53:12.483240+00:00",
+ "ended_utc": "2026-09-25T19:53:25.363645+00:00",
+ "load_average_start": [
+  2.1103515625,
+  2.03515625,
+  2.00537109375
+ ],
+ "load_average_end": [
+  2.0927734375,
+  2.033203125,
+  2.00439453125
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-22",
+    "instance": "Rhyme-SM3-256",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "3452928",
+    "pk_bytes": "1824",
+    "sk_bytes": "22336",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "10308",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "22036480",
+    "measurement_count": "132",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 132,
+     "seconds": 0.98724133,
+     "cycles": 2053931160
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-22/lib/libRhyme-SM3-256.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "132",
+    "3"
+   ],
+   "wall_s": 2.5500471591949463,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-22",
+    "instance": "Rhyme-SM3-256",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "3395584",
+    "pk_bytes": "1824",
+    "sk_bytes": "22336",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "10308",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "22052864",
+    "measurement_count": "132",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 132,
+     "seconds": 0.986444853,
+     "cycles": 2051975263
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-22/lib/libRhyme-SM3-256.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "132",
+    "3"
+   ],
+   "wall_s": 2.549009084701538,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-22",
+    "instance": "Rhyme-SM3-256",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "3395584",
+    "pk_bytes": "1824",
+    "sk_bytes": "22336",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "10308",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "22044672",
+    "measurement_count": "132",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 132,
+     "seconds": 0.987216533,
+     "cycles": 2053350420
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-22/lib/libRhyme-SM3-256.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "132",
+    "3"
+   ],
+   "wall_s": 2.5496373176574707,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-22",
+    "instance": "Rhyme-SM3-256",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "3485696",
+    "pk_bytes": "1824",
+    "sk_bytes": "22336",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "10308",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "22069248",
+    "measurement_count": "132",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 132,
+     "seconds": 0.987587695,
+     "cycles": 2054542404
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-22/lib/libRhyme-SM3-256.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "132",
+    "3"
+   ],
+   "wall_s": 2.683384656906128,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-22",
+    "instance": "Rhyme-SM3-256",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+    "baseline_rss_bytes": "3317760",
+    "pk_bytes": "1824",
+    "sk_bytes": "22336",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "10308",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "21970944",
+    "measurement_count": "132",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 132,
+     "seconds": 0.986201204,
+     "cycles": 2051995623
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-22/lib/libRhyme-SM3-256.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "132",
+    "3"
+   ],
+   "wall_s": 2.548046350479126,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 132,
+   "seconds": 0.98724133,
+   "cycles": 2053931160
+  },
+  {
+   "measurements": 132,
+   "seconds": 0.986444853,
+   "cycles": 2051975263
+  },
+  {
+   "measurements": 132,
+   "seconds": 0.987216533,
+   "cycles": 2053350420
+  },
+  {
+   "measurements": 132,
+   "seconds": 0.987587695,
+   "cycles": 2054542404
+  },
+  {
+   "measurements": 132,
+   "seconds": 0.986201204,
+   "cycles": 2051995623
+  }
+ ],
+ "measurements": 660,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.007476805477272728,
+ "median_trial_seconds": 0.007478913128787879,
+ "min_trial_seconds": 0.007471221242424242,
+ "max_trial_seconds": 0.007481724962121212,
+ "mean_cycles": 15554234.651515152,
+ "median_trial_cycles": 15555685.0,
+ "operations_per_second": 133.74695958584232,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 1824,
+  "sk_bytes": 22336,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 10308,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c99",
+ "baseline_rss_bytes": 3485696,
+ "peak_rss_bytes": 22069248,
+ "timing_scope": "loop"
+}

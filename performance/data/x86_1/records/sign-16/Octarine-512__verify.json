@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-16",
+ "label": "Octarine-512",
+ "instance": "Octarine-512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "verify",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 479,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.087685248339843,
+  "timeout_per_process_s": 303.0526111490039
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-16/lib/libOctarine-512.so",
+ "library_sha256": "37bbfb4eb572a1d85b531213b58348f62b940823099574783195ae9c7c2c344b",
+ "kat_log": "kat/sign-16/Octarine-512.log",
+ "kat_log_sha256": "ad0d23d697962d09fcef81061a12ae889004dd7bc9063c4bcc9138bf02f4ef45",
+ "started_utc": "2026-09-25T18:48:38.686267+00:00",
+ "ended_utc": "2026-09-25T18:48:43.762410+00:00",
+ "load_average_start": [
+  2.1962890625,
+  2.064453125,
+  2.01513671875
+ ],
+ "load_average_end": [
+  2.18017578125,
+  2.06298828125,
+  2.0146484375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-16",
+    "instance": "Octarine-512",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2035712",
+    "pk_bytes": "5184",
+    "sk_bytes": "11776",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "14713",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2174976",
+    "measurement_count": "479",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 479,
+     "seconds": 0.995482156,
+     "cycles": 2083942251
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-16/lib/libOctarine-512.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "479",
+    "3"
+   ],
+   "wall_s": 1.0108592510223389,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-16",
+    "instance": "Octarine-512",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2060288",
+    "pk_bytes": "5184",
+    "sk_bytes": "11776",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "14713",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2195456",
+    "measurement_count": "479",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 479,
+     "seconds": 0.995322838,
+     "cycles": 2083672004
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-16/lib/libOctarine-512.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "479",
+    "3"
+   ],
+   "wall_s": 1.0106205940246582,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-16",
+    "instance": "Octarine-512",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2101248",
+    "pk_bytes": "5184",
+    "sk_bytes": "11776",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "14713",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2174976",
+    "measurement_count": "479",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 479,
+     "seconds": 0.995079474,
+     "cycles": 2082958057
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-16/lib/libOctarine-512.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "479",
+    "3"
+   ],
+   "wall_s": 1.0104172229766846,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-16",
+    "instance": "Octarine-512",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2072576",
+    "pk_bytes": "5184",
+    "sk_bytes": "11776",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "14713",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2146304",
+    "measurement_count": "479",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 479,
+     "seconds": 0.995120518,
+     "cycles": 2083192216
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-16/lib/libOctarine-512.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "479",
+    "3"
+   ],
+   "wall_s": 1.0104925632476807,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-16",
+    "instance": "Octarine-512",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1892352",
+    "pk_bytes": "5184",
+    "sk_bytes": "11776",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "14713",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2027520",
+    "measurement_count": "479",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 479,
+     "seconds": 0.995615489,
+     "cycles": 2084126808
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-16/lib/libOctarine-512.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "479",
+    "3"
+   ],
+   "wall_s": 1.0335211753845215,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 479,
+   "seconds": 0.995482156,
+   "cycles": 2083942251
+  },
+  {
+   "measurements": 479,
+   "seconds": 0.995322838,
+   "cycles": 2083672004
+  },
+  {
+   "measurements": 479,
+   "seconds": 0.995079474,
+   "cycles": 2082958057
+  },
+  {
+   "measurements": 479,
+   "seconds": 0.995120518,
+   "cycles": 2083192216
+  },
+  {
+   "measurements": 479,
+   "seconds": 0.995615489,
+   "cycles": 2084126808
+  }
+ ],
+ "measurements": 2395,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0020779208663883088,
+ "median_trial_seconds": 0.00207791824217119,
+ "min_trial_seconds": 0.0020774101753653442,
+ "max_trial_seconds": 0.0020785292045929016,
+ "mean_cycles": 4349850.244676409,
+ "median_trial_cycles": 4350045.93736952,
+ "operations_per_second": 481.2502805932775,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 5184,
+  "sk_bytes": 11776,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 14713,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 2101248,
+ "peak_rss_bytes": 2195456,
+ "timing_scope": "loop"
+}

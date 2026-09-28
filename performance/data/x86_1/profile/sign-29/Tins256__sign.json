@@ -1,0 +1,125 @@
+{
+ "schema": 2,
+ "candidate": "sign-29",
+ "label": "Tins256",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-29/libTins256.so",
+  "sign",
+  "0",
+  "3",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-29",
+  "instance": "Tins256",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111991438",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 14670521446
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 3,
+   "ticks": 22271
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 27672,
+   "out_bits": 512,
+   "calls": 3,
+   "ticks": 484061
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 292,
+   "calls": 28388,
+   "ticks": 172741696
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 544,
+   "calls": 294912,
+   "ticks": 2215975691
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 140976,
+   "calls": 3,
+   "ticks": 2463495
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 266,
+   "calls": 6,
+   "ticks": 36277
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 13800,
+   "out_bits": 512,
+   "calls": 3,
+   "ticks": 275457
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 256,
+   "calls": 589818,
+   "ticks": 905767913
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 808,
+   "out_bits": 512,
+   "calls": 294912,
+   "ticks": 3756496971
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 50331656,
+   "out_bits": 512,
+   "calls": 3,
+   "ticks": 827971147
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 141504,
+   "calls": 3,
+   "ticks": 2477918
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 3,
+   "ticks": 13914
+  }
+ ],
+ "share": {
+  "drng": 0.1631660654197581,
+  "pseudohash": 0.3125470115617593,
+  "pseudoXOF": 0.06174067611257013
+ },
+ "hash_share": 0.3742876876743294
+}

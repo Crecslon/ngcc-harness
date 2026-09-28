@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-24",
+ "label": "QSH-768",
+ "instance": "QSH-768",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 8192,
+ "plan": {
+  "iterations_per_trial": 1001,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.028984402374268,
+  "timeout_per_process_s": 303.0173906414246
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-24/lib/libQSH-768.so",
+ "library_sha256": "c86844ed0a21bfa36770935c566a06e12a2475777186d5ef7ca014cd70d17de8",
+ "kat_log": "kat/hash-24/QSH-768.log",
+ "kat_log_sha256": "73746257fe9e66f5a847bfb2a7808365a4e8b3fb6b9e2c58a8e4b8b608c21fe0",
+ "started_utc": "2026-09-25T18:17:59.372541+00:00",
+ "ended_utc": "2026-09-25T18:18:04.376649+00:00",
+ "load_average_start": [
+  2.0,
+  2.02001953125,
+  2.0
+ ],
+ "load_average_end": [
+  2.0,
+  2.01953125,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-24",
+    "instance": "QSH-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1638400",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1773568",
+    "measurement_count": "1001",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1001,
+     "seconds": 0.998255885,
+     "cycles": 2089755585
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-24/lib/libQSH-768.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "1001",
+    "3"
+   ],
+   "wall_s": 1.0035412311553955,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-24",
+    "instance": "QSH-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1536000",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1667072",
+    "measurement_count": "1001",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1001,
+     "seconds": 0.987540429,
+     "cycles": 2067197145
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-24/lib/libQSH-768.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "1001",
+    "3"
+   ],
+   "wall_s": 0.992910623550415,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-24",
+    "instance": "QSH-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1691648",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1826816",
+    "measurement_count": "1001",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1001,
+     "seconds": 0.998956509,
+     "cycles": 2091095704
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-24/lib/libQSH-768.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "1001",
+    "3"
+   ],
+   "wall_s": 1.0041701793670654,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-24",
+    "instance": "QSH-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1720320",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1789952",
+    "measurement_count": "1001",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1001,
+     "seconds": 0.994733968,
+     "cycles": 2082437550
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-24/lib/libQSH-768.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "1001",
+    "3"
+   ],
+   "wall_s": 0.9999690055847168,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-24",
+    "instance": "QSH-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1716224",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1785856",
+    "measurement_count": "1001",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1001,
+     "seconds": 0.998090616,
+     "cycles": 2089324989
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-24/lib/libQSH-768.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "1001",
+    "3"
+   ],
+   "wall_s": 1.0032668113708496,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 1001,
+   "seconds": 0.998255885,
+   "cycles": 2089755585
+  },
+  {
+   "measurements": 1001,
+   "seconds": 0.987540429,
+   "cycles": 2067197145
+  },
+  {
+   "measurements": 1001,
+   "seconds": 0.998956509,
+   "cycles": 2091095704
+  },
+  {
+   "measurements": 1001,
+   "seconds": 0.994733968,
+   "cycles": 2082437550
+  },
+  {
+   "measurements": 1001,
+   "seconds": 0.998090616,
+   "cycles": 2089324989
+  }
+ ],
+ "measurements": 5005,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0009945209604395604,
+ "median_trial_seconds": 0.0009970935224775225,
+ "min_trial_seconds": 0.0009865538751248752,
+ "max_trial_seconds": 0.0009979585504495505,
+ "mean_cycles": 2081880.3142857142,
+ "median_trial_cycles": 2087237.7512487513,
+ "operations_per_second": 1005.5092248211822,
+ "throughput_MB_per_second": 8.237131569735125,
+ "sizes": {
+  "input_bytes": 8192,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 96
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1720320,
+ "peak_rss_bytes": 1826816,
+ "timing_scope": "loop"
+}

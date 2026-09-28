@@ -1,0 +1,77 @@
+{
+ "schema": 2,
+ "candidate": "kem-13",
+ "label": "DKEM-512",
+ "operation": "enc",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-13/libDKEM-512.so",
+  "enc",
+  "0",
+  "959",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-13",
+  "instance": "DKEM-512",
+  "operation": "enc",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998150",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 959,
+  "ticks": 2083231098
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 959,
+   "ticks": 5919676
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 512,
+   "out_bits": 512,
+   "calls": 959,
+   "ticks": 12415007
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 552,
+   "out_bits": 256,
+   "calls": 103572,
+   "ticks": 292746736
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1024,
+   "out_bits": 1024,
+   "calls": 959,
+   "ticks": 16149629
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 560,
+   "out_bits": 256,
+   "calls": 491008,
+   "ticks": 1377384603
+  }
+ ],
+ "share": {
+  "drng": 0.002841583924934285,
+  "pseudohash": 0.00595949581009951,
+  "sm3hash": 0.8017023846290529,
+  "pseudoXOF": 0.007752202343515515
+ },
+ "hash_share": 0.8154140827826679
+}

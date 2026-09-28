@@ -1,0 +1,68 @@
+{
+ "schema": 2,
+ "candidate": "sign-19",
+ "label": "Phoenix-SM3-128f",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-19/libPhoenix-SM3-128f.so",
+  "sign",
+  "0",
+  "10",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-19",
+  "instance": "Phoenix-SM3-128f",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997987",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 10,
+  "ticks": 2223585193
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 10,
+   "ticks": 50084
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 512,
+   "out_bits": 336,
+   "calls": 3003,
+   "ticks": 17625777
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 4096,
+   "calls": 3003,
+   "ticks": 73375130
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 384,
+   "out_bits": 128,
+   "calls": 170,
+   "ticks": 285832
+  }
+ ],
+ "share": {
+  "drng": 2.2523985209861936e-05,
+  "pseudoXOF": 0.04105385270929891
+ },
+ "hash_share": 0.04105385270929891
+}

@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-35",
+ "label": "Scloudplus-128-SHAKE-packed10",
+ "instance": "Scloudplus-128-SHAKE-packed10",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 331,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.070824993329468,
+  "timeout_per_process_s": 303.0424949959977
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-35/lib/libScloudplus-128-SHAKE-packed10.so",
+ "library_sha256": "cf1a822b9ab57d150e307f70f375b9d83c617a38b120625b9651bb313f1f913e",
+ "kat_log": "kat/kem-35/Scloudplus-128-SHAKE-packed10.log",
+ "kat_log_sha256": "271091ceb6e314e6de52f4373d22c8671f6dc98cca840354f536ed4d12d4d176",
+ "started_utc": "2026-09-25T18:43:07.643798+00:00",
+ "ended_utc": "2026-09-25T18:43:12.690031+00:00",
+ "load_average_start": [
+  2.04541015625,
+  2.0205078125,
+  2.0029296875
+ ],
+ "load_average_end": [
+  2.04150390625,
+  2.02001953125,
+  2.00244140625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-35",
+    "instance": "Scloudplus-128-SHAKE-packed10",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1708032",
+    "pk_bytes": "6096",
+    "sk_bytes": "7440",
+    "ct_bytes": "6160",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1855488",
+    "measurement_count": "331",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 331,
+     "seconds": 0.999124478,
+     "cycles": 2091551721
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-35/lib/libScloudplus-128-SHAKE-packed10.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "331",
+    "3"
+   ],
+   "wall_s": 1.0104608535766602,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-35",
+    "instance": "Scloudplus-128-SHAKE-packed10",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1626112",
+    "pk_bytes": "6096",
+    "sk_bytes": "7440",
+    "ct_bytes": "6160",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1769472",
+    "measurement_count": "331",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 331,
+     "seconds": 0.997433707,
+     "cycles": 2087849934
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-35/lib/libScloudplus-128-SHAKE-packed10.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "331",
+    "3"
+   ],
+   "wall_s": 1.0090336799621582,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-35",
+    "instance": "Scloudplus-128-SHAKE-packed10",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1638400",
+    "pk_bytes": "6096",
+    "sk_bytes": "7440",
+    "ct_bytes": "6160",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1785856",
+    "measurement_count": "331",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 331,
+     "seconds": 0.998561176,
+     "cycles": 2090454911
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-35/lib/libScloudplus-128-SHAKE-packed10.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "331",
+    "3"
+   ],
+   "wall_s": 1.0097427368164062,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-35",
+    "instance": "Scloudplus-128-SHAKE-packed10",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1634304",
+    "pk_bytes": "6096",
+    "sk_bytes": "7440",
+    "ct_bytes": "6160",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1777664",
+    "measurement_count": "331",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 331,
+     "seconds": 0.995993291,
+     "cycles": 2084830164
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-35/lib/libScloudplus-128-SHAKE-packed10.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "331",
+    "3"
+   ],
+   "wall_s": 1.0072312355041504,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-35",
+    "instance": "Scloudplus-128-SHAKE-packed10",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1765376",
+    "pk_bytes": "6096",
+    "sk_bytes": "7440",
+    "ct_bytes": "6160",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1851392",
+    "measurement_count": "331",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 331,
+     "seconds": 0.998393146,
+     "cycles": 2090112949
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-35/lib/libScloudplus-128-SHAKE-packed10.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "331",
+    "3"
+   ],
+   "wall_s": 1.0095243453979492,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 331,
+   "seconds": 0.999124478,
+   "cycles": 2091551721
+  },
+  {
+   "measurements": 331,
+   "seconds": 0.997433707,
+   "cycles": 2087849934
+  },
+  {
+   "measurements": 331,
+   "seconds": 0.998561176,
+   "cycles": 2090454911
+  },
+  {
+   "measurements": 331,
+   "seconds": 0.995993291,
+   "cycles": 2084830164
+  },
+  {
+   "measurements": 331,
+   "seconds": 0.998393146,
+   "cycles": 2090112949
+  }
+ ],
+ "measurements": 1655,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0030148071287009063,
+ "median_trial_seconds": 0.0030162934924471297,
+ "min_trial_seconds": 0.003009043175226586,
+ "max_trial_seconds": 0.0030185029546827796,
+ "mean_cycles": 6311057.207854985,
+ "median_trial_cycles": 6314540.63141994,
+ "operations_per_second": 331.6961773375216,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 6096,
+  "sk_bytes": 7440,
+  "ct_bytes": 6160,
+  "ss_bytes": 16,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1765376,
+ "peak_rss_bytes": 1855488,
+ "timing_scope": "loop"
+}

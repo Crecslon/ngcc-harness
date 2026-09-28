@@ -1,0 +1,16 @@
+library     = lib/libSigurd256_REF.so
+id          = sign-24
+type        = sig
+algorithm   = Sigurd
+instance    = Sigurd256_REF
+variant     = Reference_Implementation
+source_dir  = Implementations/Reference_Implementation/Sigurd-256
+compiler    = gcc 14.2.0
+build_flags = -std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-poin
+pk_len      = 212
+sk_len      = 128
+sn_len      = 137412
+timing  keygen 56.480 ms  sign 157.362 ms  verify 53.877 ms (avg over 10)
+wrote  kat/KAT_SIG_Sigurd256_REF.txt (1486412 bytes)
+manifest d8e828092316861c76a932a1c93d3c7b824df35842347b81b6d176afb53772cf strict KAT_SIG_Sigurd256_REF.txt
+RESULT sign-24 Sigurd256_REF PASS 

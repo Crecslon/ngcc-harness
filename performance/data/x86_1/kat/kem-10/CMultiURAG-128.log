@@ -1,0 +1,17 @@
+library     = lib/libCMultiURAG-128.so
+id          = kem-10
+type        = kem
+algorithm   = C-Multi-UR-AG
+instance    = CMultiURAG-128
+variant     = Reference_Implementation
+source_dir  = Implementations/Reference_Implementation/CMultiURAG-128
+compiler    = gcc 14.2.0
+build_flags = -std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-poin
+pk_len      = 3866
+sk_len      = 3960
+ct_len      = 7332
+ss_len      = 64
+timing  keygen 3.430 ms  enc 5.946 ms  dec 32.295 ms (avg over 10)
+wrote  kat/KAT_KEM_CMultiURAG-128.txt (306830 bytes)
+manifest 6a54cdf9f594c9cbeaab3af5b945c9afbc9134084ce17af392d1d30f2901ed48 strict KAT_KEM_CMultiURAG-128.txt
+RESULT kem-10 CMultiURAG-128 PASS 

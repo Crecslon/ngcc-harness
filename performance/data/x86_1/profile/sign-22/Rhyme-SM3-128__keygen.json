@@ -1,0 +1,68 @@
+{
+ "schema": 2,
+ "candidate": "sign-22",
+ "label": "Rhyme-SM3-128",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-22/libRhyme-SM3-128.so",
+  "keygen",
+  "0",
+  "7",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-22",
+  "instance": "Rhyme-SM3-128",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997830",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 7,
+  "ticks": 4343300974
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 568,
+   "out_bits": 256,
+   "calls": 4950,
+   "ticks": 14098572
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 312,
+   "out_bits": 256,
+   "calls": 588,
+   "ticks": 863701
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 296,
+   "out_bits": 256,
+   "calls": 35,
+   "ticks": 56437
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 7,
+   "ticks": 39343
+  }
+ ],
+ "share": {
+  "sm3hash": 0.003457902201552565,
+  "drng": 9.058317679459992e-06
+ },
+ "hash_share": 0.003457902201552565
+}

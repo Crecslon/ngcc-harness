@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-13",
+ "label": "JuziHash-512",
+ "instance": "JuziHash-512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 16384,
+ "plan": {
+  "iterations_per_trial": 363,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.051423480718994,
+  "timeout_per_process_s": 303.0308540884314
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 1,
+ "library": "hash-13/lib/libJuziHash-512.so",
+ "library_sha256": "0ba13ab7839a4c9efe1592a0746bc8989712934261770e969f1dfaa20f518460",
+ "kat_log": "kat/hash-13/JuziHash-512.log",
+ "kat_log_sha256": "030e646888072c3619283eb3691d58ecf1da9ca58f36eb405ef9cfc007907846",
+ "started_utc": "2026-09-25T18:34:41.150160+00:00",
+ "ended_utc": "2026-09-25T18:34:47.359734+00:00",
+ "load_average_start": [
+  2.013671875,
+  2.01611328125,
+  2.0
+ ],
+ "load_average_end": [
+  2.0107421875,
+  2.01513671875,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-13",
+    "instance": "JuziHash-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1540096",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1667072",
+    "measurement_count": "363",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 363,
+     "seconds": 0.998411391,
+     "cycles": 2090066201
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-13/lib/libJuziHash-512.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "363",
+    "3"
+   ],
+   "wall_s": 1.0087559223175049,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-13",
+    "instance": "JuziHash-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1617920",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1744896",
+    "measurement_count": "363",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 363,
+     "seconds": 1.003417701,
+     "cycles": 2100774733
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-13/lib/libJuziHash-512.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "363",
+    "3"
+   ],
+   "wall_s": 1.0137791633605957,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-13",
+    "instance": "JuziHash-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1720320",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1785856",
+    "measurement_count": "363",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 363,
+     "seconds": 0.998987237,
+     "cycles": 2091246725
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-13/lib/libJuziHash-512.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "363",
+    "3"
+   ],
+   "wall_s": 1.0092954635620117,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-13",
+    "instance": "JuziHash-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1617920",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1744896",
+    "measurement_count": "363",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 363,
+     "seconds": 0.999053663,
+     "cycles": 2091297082
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-13/lib/libJuziHash-512.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "363",
+    "3"
+   ],
+   "wall_s": 1.0094218254089355,
+   "disturbed_retries": 1
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-13",
+    "instance": "JuziHash-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "16384",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1642496",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1769472",
+    "measurement_count": "363",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 363,
+     "seconds": 1.003576187,
+     "cycles": 2101051475
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-13/lib/libJuziHash-512.so",
+    "hash",
+    "16384",
+    "1",
+    "1",
+    "363",
+    "3"
+   ],
+   "wall_s": 1.0138905048370361,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 363,
+   "seconds": 0.998411391,
+   "cycles": 2090066201
+  },
+  {
+   "measurements": 363,
+   "seconds": 1.003417701,
+   "cycles": 2100774733
+  },
+  {
+   "measurements": 363,
+   "seconds": 0.998987237,
+   "cycles": 2091246725
+  },
+  {
+   "measurements": 363,
+   "seconds": 0.999053663,
+   "cycles": 2091297082
+  },
+  {
+   "measurements": 363,
+   "seconds": 1.003576187,
+   "cycles": 2101051475
+  }
+ ],
+ "measurements": 1815,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0027567196578512396,
+ "median_trial_seconds": 0.002752213947658402,
+ "min_trial_seconds": 0.002750444603305785,
+ "max_trial_seconds": 0.002764672691460055,
+ "mean_cycles": 5771039.237465565,
+ "median_trial_cycles": 5761148.986225896,
+ "operations_per_second": 362.74997972752254,
+ "throughput_MB_per_second": 5.943295667855729,
+ "sizes": {
+  "input_bytes": 16384,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 64
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1720320,
+ "peak_rss_bytes": 1785856,
+ "timing_scope": "loop"
+}

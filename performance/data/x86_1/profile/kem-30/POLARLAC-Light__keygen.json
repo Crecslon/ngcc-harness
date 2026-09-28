@@ -1,0 +1,75 @@
+{
+ "schema": 2,
+ "candidate": "kem-30",
+ "label": "POLARLAC-Light",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-30/libPOLARLAC-Light.so",
+  "keygen",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-30",
+  "instance": "POLARLAC-Light",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997567",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 150331148
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 1000,
+   "ticks": 4828341
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 6332558
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 512,
+   "out_bits": 640,
+   "calls": 1000,
+   "ticks": 8648157
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 552,
+   "out_bits": 768,
+   "calls": 4072,
+   "ticks": 35580010
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 184,
+   "out_bits": 2048,
+   "calls": 4000,
+   "ticks": 48120633
+  }
+ ],
+ "share": {
+  "drng": 0.07424209253028521,
+  "pseudoXOF": 0.6143024997055168
+ },
+ "hash_share": 0.6143024997055168
+}

@@ -1,0 +1,53 @@
+{
+ "schema": 2,
+ "candidate": "sign-26",
+ "label": "SQIsign2D-lvl1",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-26/libSQIsign2D-lvl1.so",
+  "keygen",
+  "0",
+  "4",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-26",
+  "instance": "SQIsign2D-lvl1",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997908",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 4,
+  "ticks": 2165865481
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 369,
+   "ticks": 1689435
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 136,
+   "calls": 2012,
+   "ticks": 9212673
+  }
+ ],
+ "share": {
+  "drng": 0.005033603469669961
+ },
+ "hash_share": 0
+}

@@ -1,0 +1,46 @@
+{
+ "schema": 2,
+ "candidate": "sign-05",
+ "label": "sm4th_em_d2_128f_tight",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-05/libsm4th_em_d2_128f_tight.so",
+  "keygen",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-05",
+  "instance": "sm4th_em_d2_128f_tight",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996889",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 12135808
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 2340,
+   "ticks": 10763384
+  }
+ ],
+ "share": {
+  "drng": 0.8869111970130048
+ },
+ "hash_share": 0
+}

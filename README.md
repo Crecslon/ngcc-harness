@@ -16,9 +16,9 @@ sources explicitly and compiles them with fixed flags (see `api/README.md`,
 
 Software source and include files from all 119 submission packages, including
 optimized/AVX2 and ARM variants, are retained under their original paths for a
-separate, KAT-gated [performance study](performance/README.md).
-The current virtual-machine measurements are preliminary and are kept separate
-from the security findings and from later measurements on physical hosts.
+separate [performance evaluation](performance/README.md): per-candidate
+`<id>/perf_<system>.md` reports measured on fixed-frequency hosts, with the raw
+evidence in `performance/data/<system>/`, kept separate from the security findings.
 
 This repository is not affiliated with NICCS. `SOURCE_ARCHIVES.md` records the
 official submission archives from which the included source files were taken.
@@ -73,7 +73,7 @@ affect the separate `kem-33-1` witness.
 ```
 api/            KAT harness (bin/ngcc_kat), link shim, generic make rules; api/README.md
 tools/          ngcc_attack.c reproducer, reproduce.sh runner; tools/README.md
-performance/    source importer, staged variants, bounded benchmark and raw VM data
+performance/    benchmark campaign, reports, published evidence, source importer
 security/       vulnerability inventory, focused validators and crash-safe witnesses
 data/           machine-readable parameters, candidate metadata and spec provenance
 <id>/           specification and extracted pseudocode/parameters for every candidate;

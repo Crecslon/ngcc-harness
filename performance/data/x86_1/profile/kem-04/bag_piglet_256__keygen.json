@@ -1,0 +1,61 @@
+{
+ "schema": 2,
+ "candidate": "kem-04",
+ "label": "bag_piglet_256",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-04/libbag_piglet_256.so",
+  "keygen",
+  "0",
+  "262",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-04",
+  "instance": "bag_piglet_256",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997983",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 262,
+  "ticks": 1904866818
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 98304,
+   "calls": 786,
+   "ticks": 453730007
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 512,
+   "calls": 262,
+   "ticks": 901330
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 262,
+   "ticks": 1295759
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.23866830620596174,
+  "drng": 0.0006802360079748106
+ },
+ "hash_share": 0.23866830620596174
+}

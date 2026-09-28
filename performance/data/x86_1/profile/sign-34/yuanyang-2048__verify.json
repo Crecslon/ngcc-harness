@@ -1,0 +1,54 @@
+{
+ "schema": 2,
+ "candidate": "sign-34",
+ "label": "yuanyang-2048",
+ "operation": "verify",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-34/libyuanyang-2048.so",
+  "verify",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-34",
+  "instance": "yuanyang-2048",
+  "operation": "verify",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111995635",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 1026417791
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 33280,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 91146522
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 832,
+   "out_bits": 37008,
+   "calls": 1000,
+   "ticks": 412316796
+  }
+ ],
+ "share": {
+  "sm3hash": 0.08880060614615749,
+  "pseudoXOF": 0.40170464660233074
+ },
+ "hash_share": 0.4905052527484882
+}

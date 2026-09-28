@@ -1,0 +1,18 @@
+library     = lib/libZC-DMC-1536-1024-avx2.so
+id          = hash-31
+type        = hash
+algorithm   = ZC-DMC
+instance    = ZC-DMC-1536_OPT-1024
+variant     = Optimized_Implementation
+source_dir  = ZC-DMC/Implementations/Implementations/Optimized_Implementation/ZC-DMC-1536-1024
+compiler    = gcc 14.2.0
+build_flags = -O3 -march=x86-64 -mavx2 -mtune=native -flto -fomit-frame-pointer -std=c99 -Wpedantic -Wall -Wextra -fPIC 
+digest_bits = 1024
+digest_len  = 128
+timing  KAT_2_12 0.201 s
+wrote  kat/KAT_2_12_ZC-DMC-1536-1024.txt (3333335 bytes)
+manifest 1dc07185165769777f27e060d2f41fe2ac5ad870bc7afca87d591348c1851bab strict KAT_2_12_ZC-DMC-1536-1024.txt
+timing  KAT_2_23 0.063 s
+wrote  kat/KAT_2_23_ZC-DMC-1536-1024.txt (1202 bytes)
+manifest 03a8328267e4b926a4a3ed18b944449c5c4417aa346a330ad0bacab46820f340 strict KAT_2_23_ZC-DMC-1536-1024.txt
+RESULT hash-31 ZC-DMC-1536_OPT-1024 PASS 

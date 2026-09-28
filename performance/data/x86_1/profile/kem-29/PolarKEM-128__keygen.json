@@ -1,0 +1,69 @@
+{
+ "schema": 2,
+ "candidate": "kem-29",
+ "label": "PolarKEM-128",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-29/libPolarKEM-128.so",
+  "keygen",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-29",
+  "instance": "PolarKEM-128",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997124",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 166808332
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 392,
+   "out_bits": 7808,
+   "calls": 1000,
+   "ticks": 45791013
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 8192,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 23132993
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 2000,
+   "ticks": 9160180
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 648,
+   "out_bits": 7808,
+   "calls": 1000,
+   "ticks": 88016026
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.8021604040738205,
+  "sm3hash": 0.13868008104055618,
+  "drng": 0.05491440319659812
+ },
+ "hash_share": 0.9408404851143767
+}

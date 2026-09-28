@@ -1,0 +1,54 @@
+{
+ "schema": 2,
+ "candidate": "sign-10",
+ "label": "Facto-DSA-512",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-10/libFacto-DSA-512.so",
+  "sign",
+  "0",
+  "180",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-10",
+  "instance": "Facto-DSA-512",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996537",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 180,
+  "ticks": 22572311406
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 32768,
+   "calls": 180,
+   "ticks": 35330375
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 880,
+   "out_bits": 1024,
+   "calls": 180,
+   "ticks": 2194165
+  }
+ ],
+ "share": {
+  "drng": 0.001565208558597537,
+  "pseudoXOF": 9.720603975970152e-05
+ },
+ "hash_share": 9.720603975970152e-05
+}

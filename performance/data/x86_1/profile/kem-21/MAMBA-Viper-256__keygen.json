@@ -1,0 +1,75 @@
+{
+ "schema": 2,
+ "candidate": "kem-21",
+ "label": "MAMBA-Viper-256",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-21/libMAMBA-Viper-256.so",
+  "keygen",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-21",
+  "instance": "MAMBA-Viper-256",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996320",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 806866501
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 368,
+   "out_bits": 8192,
+   "calls": 1000,
+   "ticks": 48149805
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 400,
+   "out_bits": 3072,
+   "calls": 16000,
+   "ticks": 287058800
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 10608,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 29096750
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 400,
+   "out_bits": 512,
+   "calls": 4000,
+   "ticks": 12508311
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 3000,
+   "ticks": 13896162
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.4670086879712955,
+  "drng": 0.017222380632703947
+ },
+ "hash_share": 0.4670086879712955
+}

@@ -1,0 +1,96 @@
+{
+ "schema": 2,
+ "candidate": "sign-16",
+ "label": "Octarine-256",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-16/libOctarine-256.so",
+  "sign",
+  "0",
+  "797",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-16",
+  "instance": "Octarine-256",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998277",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 797,
+  "ticks": 3670445536
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 797,
+   "ticks": 5051385
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1000,
+   "out_bits": 640,
+   "calls": 1963,
+   "ticks": 25198661
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1912,
+   "out_bits": 1024,
+   "calls": 797,
+   "ticks": 18099525
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1160,
+   "out_bits": 5120,
+   "calls": 15704,
+   "ticks": 1319216548
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1000,
+   "out_bits": 88,
+   "calls": 1963,
+   "ticks": 8535136
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 616,
+   "out_bits": 6144,
+   "calls": 6376,
+   "ticks": 434692107
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 2512,
+   "out_bits": 1024,
+   "calls": 797,
+   "ticks": 26657286
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 11640,
+   "out_bits": 512,
+   "calls": 1963,
+   "ticks": 124326801
+  }
+ ],
+ "share": {
+  "drng": 0.001376232108733298,
+  "pseudoXOF": 0.5331031464186804
+ },
+ "hash_share": 0.5331031464186804
+}

@@ -147,52 +147,60 @@ Share of each operation spent in the ICCS placeholder hash functions and in the 
 
 ## 7. Raw evidence index
 
-All paths are relative to the campaign run directory; commands are recorded in each JSON file.
+Paths are relative to `performance/data/x86_1/` in the [harness](https://github.com/ngcc-dev/ngcc-harness); each JSON file records its commands, environment and trials.
 
 | instance | item | file |
 |---|---|---|
+| `Galas-160F` | KAT log (sha256 `d390f96532059a82…`) | `kat/sign-12/Galas-160F.log` |
 | `Galas-160F` | timing keygen | `records/sign-12/Galas-160F__keygen.json` |
 | `Galas-160F` | timing sign | `records/sign-12/Galas-160F__sign.json` |
 | `Galas-160F` | timing verify | `records/sign-12/Galas-160F__verify.json` |
 | `Galas-160F` | hash profile keygen | `profile/sign-12/Galas-160F__keygen.json` |
 | `Galas-160F` | hash profile sign | `profile/sign-12/Galas-160F__sign.json` |
 | `Galas-160F` | hash profile verify | `profile/sign-12/Galas-160F__verify.json` |
+| `Galas-160S` | KAT log (sha256 `422e3efbdef6caed…`) | `kat/sign-12/Galas-160S.log` |
 | `Galas-160S` | timing keygen | `records/sign-12/Galas-160S__keygen.json` |
 | `Galas-160S` | timing sign | `records/sign-12/Galas-160S__sign.json` |
 | `Galas-160S` | timing verify | `records/sign-12/Galas-160S__verify.json` |
 | `Galas-160S` | hash profile keygen | `profile/sign-12/Galas-160S__keygen.json` |
 | `Galas-160S` | hash profile sign | `profile/sign-12/Galas-160S__sign.json` |
 | `Galas-160S` | hash profile verify | `profile/sign-12/Galas-160S__verify.json` |
+| `Galas-256F` | KAT log (sha256 `0f05989039c3406e…`) | `kat/sign-12/Galas-256F.log` |
 | `Galas-256F` | timing keygen | `records/sign-12/Galas-256F__keygen.json` |
 | `Galas-256F` | timing sign | `records/sign-12/Galas-256F__sign.json` |
 | `Galas-256F` | timing verify | `records/sign-12/Galas-256F__verify.json` |
 | `Galas-256F` | hash profile keygen | `profile/sign-12/Galas-256F__keygen.json` |
 | `Galas-256F` | hash profile sign | `profile/sign-12/Galas-256F__sign.json` |
 | `Galas-256F` | hash profile verify | `profile/sign-12/Galas-256F__verify.json` |
+| `Galas-256S` | KAT log (sha256 `7c3471c83d5a206f…`) | `kat/sign-12/Galas-256S.log` |
 | `Galas-256S` | timing keygen | `records/sign-12/Galas-256S__keygen.json` |
 | `Galas-256S` | timing sign | `records/sign-12/Galas-256S__sign.json` |
 | `Galas-256S` | timing verify | `records/sign-12/Galas-256S__verify.json` |
 | `Galas-256S` | hash profile keygen | `profile/sign-12/Galas-256S__keygen.json` |
 | `Galas-256S` | hash profile sign | `profile/sign-12/Galas-256S__sign.json` |
 | `Galas-256S` | hash profile verify | `profile/sign-12/Galas-256S__verify.json` |
+| `Galas-384F` | KAT log (sha256 `b71d473d8c7862ac…`) | `kat/sign-12/Galas-384F.log` |
 | `Galas-384F` | timing keygen | `records/sign-12/Galas-384F__keygen.json` |
 | `Galas-384F` | timing sign | `records/sign-12/Galas-384F__sign.json` |
 | `Galas-384F` | timing verify | `records/sign-12/Galas-384F__verify.json` |
 | `Galas-384F` | hash profile keygen | `profile/sign-12/Galas-384F__keygen.json` |
 | `Galas-384F` | hash profile sign | `profile/sign-12/Galas-384F__sign.json` |
 | `Galas-384F` | hash profile verify | `profile/sign-12/Galas-384F__verify.json` |
+| `Galas-384S` | KAT log (sha256 `137d78ac3c2056c1…`) | `kat/sign-12/Galas-384S.log` |
 | `Galas-384S` | timing keygen | `records/sign-12/Galas-384S__keygen.json` |
 | `Galas-384S` | timing sign | `records/sign-12/Galas-384S__sign.json` |
 | `Galas-384S` | timing verify | `records/sign-12/Galas-384S__verify.json` |
 | `Galas-384S` | hash profile keygen | `profile/sign-12/Galas-384S__keygen.json` |
 | `Galas-384S` | hash profile sign | `profile/sign-12/Galas-384S__sign.json` |
 | `Galas-384S` | hash profile verify | `profile/sign-12/Galas-384S__verify.json` |
+| `Galas-512F` | KAT log (sha256 `b6b80fc45a83d57d…`) | `kat/sign-12/Galas-512F.log` |
 | `Galas-512F` | timing keygen | `records/sign-12/Galas-512F__keygen.json` |
 | `Galas-512F` | timing sign | `records/sign-12/Galas-512F__sign.json` |
 | `Galas-512F` | timing verify | `records/sign-12/Galas-512F__verify.json` |
 | `Galas-512F` | hash profile keygen | `profile/sign-12/Galas-512F__keygen.json` |
 | `Galas-512F` | hash profile sign | `profile/sign-12/Galas-512F__sign.json` |
 | `Galas-512F` | hash profile verify | `profile/sign-12/Galas-512F__verify.json` |
+| `Galas-512S` | KAT log (sha256 `d0cc58f59ba98ad8…`) | `kat/sign-12/Galas-512S.log` |
 | `Galas-512S` | timing keygen | `records/sign-12/Galas-512S__keygen.json` |
 | `Galas-512S` | timing sign | `records/sign-12/Galas-512S__sign.json` |
 | `Galas-512S` | timing verify | `records/sign-12/Galas-512S__verify.json` |

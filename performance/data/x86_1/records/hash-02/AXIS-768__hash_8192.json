@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-02",
+ "label": "AXIS-768",
+ "instance": "AXIS-768",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 8192,
+ "plan": {
+  "iterations_per_trial": 2822,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.015744078791504,
+  "timeout_per_process_s": 303.0094464472749
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-02/lib/libAXIS-768.so",
+ "library_sha256": "c079a4e707edde9c0a52b1d1f4baf4f994676c0f3e451f597e0f10c028f1c668",
+ "kat_log": "kat/hash-02/AXIS-768.log",
+ "kat_log_sha256": "6c6cc30153809afd3cae341de708ab633eb71127a14caaf690bb992e37c27c6f",
+ "started_utc": "2026-09-25T17:52:59.174248+00:00",
+ "ended_utc": "2026-09-25T17:53:04.854738+00:00",
+ "load_average_start": [
+  2.08740234375,
+  2.04150390625,
+  2.005859375
+ ],
+ "load_average_end": [
+  2.080078125,
+  2.04052734375,
+  2.00537109375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-02",
+    "instance": "AXIS-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1679360",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1810432",
+    "measurement_count": "2822",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2822,
+     "seconds": 1.157580791,
+     "cycles": 2423100974
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-02/lib/libAXIS-768.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "2822",
+    "3"
+   ],
+   "wall_s": 1.1607186794281006,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-02",
+    "instance": "AXIS-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1708032",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1839104",
+    "measurement_count": "2822",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2822,
+     "seconds": 1.154420739,
+     "cycles": 2416636125
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-02/lib/libAXIS-768.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "2822",
+    "3"
+   ],
+   "wall_s": 1.157682180404663,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-02",
+    "instance": "AXIS-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1753088",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1818624",
+    "measurement_count": "2822",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2822,
+     "seconds": 1.153968522,
+     "cycles": 2415890789
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-02/lib/libAXIS-768.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "2822",
+    "3"
+   ],
+   "wall_s": 1.1574254035949707,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-02",
+    "instance": "AXIS-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1753088",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1818624",
+    "measurement_count": "2822",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2822,
+     "seconds": 1.154266453,
+     "cycles": 2416376868
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-02/lib/libAXIS-768.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "2822",
+    "3"
+   ],
+   "wall_s": 1.1574859619140625,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-02",
+    "instance": "AXIS-768",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1769472",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "96",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1835008",
+    "measurement_count": "2822",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2822,
+     "seconds": 1.043812762,
+     "cycles": 2185352053
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-02/lib/libAXIS-768.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "2822",
+    "3"
+   ],
+   "wall_s": 1.046928882598877,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 2822,
+   "seconds": 1.157580791,
+   "cycles": 2423100974
+  },
+  {
+   "measurements": 2822,
+   "seconds": 1.154420739,
+   "cycles": 2416636125
+  },
+  {
+   "measurements": 2822,
+   "seconds": 1.153968522,
+   "cycles": 2415890789
+  },
+  {
+   "measurements": 2822,
+   "seconds": 1.154266453,
+   "cycles": 2416376868
+  },
+  {
+   "measurements": 2822,
+   "seconds": 1.043812762,
+   "cycles": 2185352053
+  }
+ ],
+ "measurements": 14110,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0004014209260807938,
+ "median_trial_seconds": 0.0004090242569099929,
+ "min_trial_seconds": 0.00036988404039688165,
+ "max_trial_seconds": 0.00041019872111977323,
+ "mean_cycles": 840351.2975903614,
+ "median_trial_cycles": 856263.9503897944,
+ "operations_per_second": 2491.1506476837994,
+ "throughput_MB_per_second": 20.407506105825686,
+ "sizes": {
+  "input_bytes": 8192,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 96
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1769472,
+ "peak_rss_bytes": 1839104,
+ "timing_scope": "loop"
+}

@@ -1,0 +1,124 @@
+{
+ "schema": 2,
+ "candidate": "kem-33",
+ "label": "qube-384",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-33/libqube-384.so",
+  "dec",
+  "0",
+  "156",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-33",
+  "instance": "qube_384",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997994",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 156,
+  "ticks": 2106916003
+ },
+ "calls": [
+  {
+   "fn": "pseudohash",
+   "in_bits": 165840,
+   "out_bits": 512,
+   "calls": 156,
+   "ticks": 143789144
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 165912,
+   "out_bits": 512,
+   "calls": 312,
+   "ticks": 284259466
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 392,
+   "out_bits": 2048,
+   "calls": 312,
+   "ticks": 3814770
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 392,
+   "out_bits": 512,
+   "calls": 312,
+   "ticks": 985845
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 1160,
+   "out_bits": 768,
+   "calls": 156,
+   "ticks": 3869808
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 392,
+   "out_bits": 4096,
+   "calls": 312,
+   "ticks": 7601869
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 392,
+   "out_bits": 1024,
+   "calls": 312,
+   "ticks": 1935714
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 392,
+   "out_bits": 256,
+   "calls": 312,
+   "ticks": 530774
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 392,
+   "out_bits": 8192,
+   "calls": 312,
+   "ticks": 15339891
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 392,
+   "out_bits": 131072,
+   "calls": 156,
+   "ticks": 121999894
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 392,
+   "out_bits": 262144,
+   "calls": 156,
+   "ticks": 244525773
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 392,
+   "out_bits": 16384,
+   "calls": 156,
+   "ticks": 15331643
+  }
+ ],
+ "share": {
+  "pseudohash": 0.20500030252036583,
+  "pseudoXOF": 0.1955778836998088
+ },
+ "hash_share": 0.4005781862201746
+}

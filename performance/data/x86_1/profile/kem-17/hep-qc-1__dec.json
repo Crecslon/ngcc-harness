@@ -1,0 +1,125 @@
+{
+ "schema": 2,
+ "candidate": "kem-17",
+ "label": "hep-qc-1",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-17/libhep-qc-1.so",
+  "dec",
+  "0",
+  "9",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-17",
+  "instance": "hep-qc-1",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111995185",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 9,
+  "ticks": 2251085117
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 35584,
+   "out_bits": 256,
+   "calls": 9,
+   "ticks": 856641
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1664,
+   "out_bits": 208,
+   "calls": 172296,
+   "ticks": 967964535
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1664,
+   "out_bits": 24,
+   "calls": 1188,
+   "ticks": 6663941
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 512,
+   "out_bits": 256,
+   "calls": 9,
+   "ticks": 26491
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 512,
+   "out_bits": 512,
+   "calls": 9,
+   "ticks": 121383
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 384,
+   "out_bits": 256,
+   "calls": 9,
+   "ticks": 15093
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1664,
+   "out_bits": 17672,
+   "calls": 9,
+   "ticks": 3515815
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 208,
+   "calls": 27,
+   "ticks": 50066
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 2287112,
+   "out_bits": 256,
+   "calls": 9,
+   "ticks": 55125910
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1664,
+   "out_bits": 32,
+   "calls": 159552,
+   "ticks": 896682866
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1664,
+   "out_bits": 2400,
+   "calls": 27,
+   "ticks": 1512794
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1664,
+   "out_bits": 128,
+   "calls": 11520,
+   "ticks": 64247929
+  }
+ ],
+ "share": {
+  "sm3hash": 0.024887612901400565,
+  "pseudoXOF": 0.8620899899983657,
+  "pseudohash": 5.392199481189143e-05
+ },
+ "hash_share": 0.8870315248945781
+}

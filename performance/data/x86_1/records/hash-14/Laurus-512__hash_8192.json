@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-14",
+ "label": "Laurus-512",
+ "instance": "laurus_512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 8192,
+ "plan": {
+  "iterations_per_trial": 7753,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.012196440628052,
+  "timeout_per_process_s": 303.00731786437683
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "hash-14/lib/libLaurus-512.so",
+ "library_sha256": "cc62bd48a5ce87b6c8d6f6ff46d778efb20df518b6e455536f78bfd3434690b0",
+ "kat_log": "kat/hash-14/Laurus-512.log",
+ "kat_log_sha256": "70b1cd5b7aa845fdf7b1f1a32b6ac60c50653565bc0170c6ba8ac9483dadc0c9",
+ "started_utc": "2026-09-25T17:34:12.557945+00:00",
+ "ended_utc": "2026-09-25T17:34:17.613216+00:00",
+ "load_average_start": [
+  2.0732421875,
+  2.03955078125,
+  1.9189453125
+ ],
+ "load_average_end": [
+  2.06689453125,
+  2.03857421875,
+  1.91943359375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-14",
+    "instance": "laurus_512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1646592",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1777664",
+    "measurement_count": "7753",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7753,
+     "seconds": 1.009898875,
+     "cycles": 2114057848
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-14/lib/libLaurus-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "7753",
+    "3"
+   ],
+   "wall_s": 1.0123319625854492,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-14",
+    "instance": "laurus_512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1716224",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1781760",
+    "measurement_count": "7753",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7753,
+     "seconds": 1.007337674,
+     "cycles": 2109001723
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-14/lib/libLaurus-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "7753",
+    "3"
+   ],
+   "wall_s": 1.0098133087158203,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-14",
+    "instance": "laurus_512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1720320",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1785856",
+    "measurement_count": "7753",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7753,
+     "seconds": 1.005789909,
+     "cycles": 2105499045
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-14/lib/libLaurus-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "7753",
+    "3"
+   ],
+   "wall_s": 1.008260726928711,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-14",
+    "instance": "laurus_512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1679360",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1810432",
+    "measurement_count": "7753",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7753,
+     "seconds": 1.009175864,
+     "cycles": 2112880698
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-14/lib/libLaurus-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "7753",
+    "3"
+   ],
+   "wall_s": 1.0116240978240967,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-14",
+    "instance": "laurus_512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1552384",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1679360",
+    "measurement_count": "7753",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 7753,
+     "seconds": 1.010581165,
+     "cycles": 2115512341
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-14/lib/libLaurus-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "7753",
+    "3"
+   ],
+   "wall_s": 1.0130105018615723,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 7753,
+   "seconds": 1.009898875,
+   "cycles": 2114057848
+  },
+  {
+   "measurements": 7753,
+   "seconds": 1.007337674,
+   "cycles": 2109001723
+  },
+  {
+   "measurements": 7753,
+   "seconds": 1.005789909,
+   "cycles": 2105499045
+  },
+  {
+   "measurements": 7753,
+   "seconds": 1.009175864,
+   "cycles": 2112880698
+  },
+  {
+   "measurements": 7753,
+   "seconds": 1.010581165,
+   "cycles": 2115512341
+  }
+ ],
+ "measurements": 38765,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.00013008599218367083,
+ "median_trial_seconds": 0.00013016585373403842,
+ "min_trial_seconds": 0.0001297291253708242,
+ "max_trial_seconds": 0.00013034711273055593,
+ "mean_cycles": 272332.04320908035,
+ "median_trial_cycles": 272524.27421643236,
+ "operations_per_second": 7687.2227609878355,
+ "throughput_MB_per_second": 62.97372885801235,
+ "sizes": {
+  "input_bytes": 8192,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 64
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1720320,
+ "peak_rss_bytes": 1810432,
+ "timing_scope": "loop"
+}

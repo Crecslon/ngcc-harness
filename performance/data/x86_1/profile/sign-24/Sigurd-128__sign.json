@@ -1,0 +1,154 @@
+{
+ "schema": 2,
+ "candidate": "sign-24",
+ "label": "Sigurd-128",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-24/libSigurd128_REF.so",
+  "sign",
+  "0",
+  "56",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-24",
+  "instance": "Sigurd128_REF",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111992124",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 56,
+  "ticks": 2147003256
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 512,
+   "out_bits": 256,
+   "calls": 88200,
+   "ticks": 248273562
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 1664,
+   "out_bits": 256,
+   "calls": 56,
+   "ticks": 324246
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 344,
+   "out_bits": 2560,
+   "calls": 56,
+   "ticks": 873224
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 392,
+   "out_bits": 5920,
+   "calls": 56,
+   "ticks": 2057937
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 3712,
+   "out_bits": 256,
+   "calls": 56,
+   "ticks": 631432
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 832,
+   "out_bits": 256,
+   "calls": 56,
+   "ticks": 180891
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 384,
+   "out_bits": 3472,
+   "calls": 56,
+   "ticks": 1209563
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 63232,
+   "out_bits": 256,
+   "calls": 56,
+   "ticks": 9619961
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 392,
+   "out_bits": 160,
+   "calls": 56,
+   "ticks": 103781
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 28000,
+   "calls": 56,
+   "ticks": 9395511
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 62720,
+   "calls": 56,
+   "ticks": 20525086
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 320,
+   "out_bits": 256,
+   "calls": 87808,
+   "ticks": 129991202
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 1472,
+   "out_bits": 256,
+   "calls": 56,
+   "ticks": 344246
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 384,
+   "out_bits": 749952,
+   "calls": 56,
+   "ticks": 254629389
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 368,
+   "out_bits": 34736,
+   "calls": 56,
+   "ticks": 11484735
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 344,
+   "out_bits": 160,
+   "calls": 56,
+   "ticks": 99201
+  }
+ ],
+ "share": {
+  "sm3hash": 0.1813530272540956,
+  "pseudoXOF": 0.1259699207461286,
+  "drng": 0.013935981194431873
+ },
+ "hash_share": 0.3073229480002242,
+ "relabelled_from": "Sigurd128_REF"
+}

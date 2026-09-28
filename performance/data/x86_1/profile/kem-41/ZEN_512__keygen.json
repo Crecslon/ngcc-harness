@@ -1,0 +1,62 @@
+{
+ "schema": 2,
+ "candidate": "kem-41",
+ "label": "ZEN_512",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-41/libZEN_512.so",
+  "keygen",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-41",
+  "instance": "ZEN_512",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997041",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 968353755
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 2000,
+   "ticks": 12604009
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 19664,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 115377555
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 10240,
+   "calls": 2931,
+   "ticks": 334152708
+  }
+ ],
+ "share": {
+  "drng": 0.013015913796916087,
+  "pseudohash": 0.11914814643332487,
+  "pseudoXOF": 0.3450729718087374
+ },
+ "hash_share": 0.4642211182420623
+}

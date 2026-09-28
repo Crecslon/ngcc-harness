@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-33",
+ "label": "vdoo_128",
+ "instance": "VDOO-128",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "sign",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 38,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 8.505496755810547,
+  "timeout_per_process_s": 305.10329805348636
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-33/lib/libvdoo_128.so",
+ "library_sha256": "3b818271485b3823e2ad2e7a21afb0139774752beb20cb44f1c966ac5c877004",
+ "kat_log": "kat/sign-33/vdoo_128.log",
+ "kat_log_sha256": "444ccd23bec52d2dcbb5117fce58106df8f6a74b1ec822d445f51019e0f29cca",
+ "started_utc": "2026-09-25T19:41:39.314121+00:00",
+ "ended_utc": "2026-09-25T19:42:02.863035+00:00",
+ "load_average_start": [
+  2.00390625,
+  2.02197265625,
+  2.0
+ ],
+ "load_average_end": [
+  2.00146484375,
+  2.01953125,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-33",
+    "instance": "VDOO-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "4374528",
+    "pk_bytes": "330855",
+    "sk_bytes": "342790",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "85",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "4505600",
+    "measurement_count": "38",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 38,
+     "seconds": 4.004539585,
+     "cycles": 8354744192
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-33/lib/libvdoo_128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "38",
+    "3"
+   ],
+   "wall_s": 4.68319845199585,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-33",
+    "instance": "VDOO-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "4448256",
+    "pk_bytes": "330855",
+    "sk_bytes": "342790",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "85",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "4513792",
+    "measurement_count": "38",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 38,
+     "seconds": 4.013381679,
+     "cycles": 8347844162
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-33/lib/libvdoo_128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "38",
+    "3"
+   ],
+   "wall_s": 4.819837808609009,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-33",
+    "instance": "VDOO-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "4452352",
+    "pk_bytes": "330855",
+    "sk_bytes": "342790",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "85",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "4517888",
+    "measurement_count": "38",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 38,
+     "seconds": 4.004783238,
+     "cycles": 8355377304
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-33/lib/libvdoo_128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "38",
+    "3"
+   ],
+   "wall_s": 4.683995246887207,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-33",
+    "instance": "VDOO-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "4456448",
+    "pk_bytes": "330855",
+    "sk_bytes": "342790",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "85",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "4521984",
+    "measurement_count": "38",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 38,
+     "seconds": 4.001692278,
+     "cycles": 8349173473
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-33/lib/libvdoo_128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "38",
+    "3"
+   ],
+   "wall_s": 4.6798577308654785,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-33",
+    "instance": "VDOO-128",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "4288512",
+    "pk_bytes": "330855",
+    "sk_bytes": "342790",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "85",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "4415488",
+    "measurement_count": "38",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 38,
+     "seconds": 4.00284809,
+     "cycles": 8350691309
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-33/lib/libvdoo_128.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "38",
+    "3"
+   ],
+   "wall_s": 4.681730031967163,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 38,
+   "seconds": 4.004539585,
+   "cycles": 8354744192
+  },
+  {
+   "measurements": 38,
+   "seconds": 4.013381679,
+   "cycles": 8347844162
+  },
+  {
+   "measurements": 38,
+   "seconds": 4.004783238,
+   "cycles": 8355377304
+  },
+  {
+   "measurements": 38,
+   "seconds": 4.001692278,
+   "cycles": 8349173473
+  },
+  {
+   "measurements": 38,
+   "seconds": 4.00284809,
+   "cycles": 8350691309
+  }
+ ],
+ "measurements": 190,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.10540655194736842,
+ "median_trial_seconds": 0.10538262065789473,
+ "min_trial_seconds": 0.10530769152631579,
+ "max_trial_seconds": 0.10561530734210527,
+ "mean_cycles": 219778054.9473684,
+ "median_trial_cycles": 219755034.4473684,
+ "operations_per_second": 9.487076291987236,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 330855,
+  "sk_bytes": 342790,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 85,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 4456448,
+ "peak_rss_bytes": 4521984,
+ "timing_scope": "loop"
+}

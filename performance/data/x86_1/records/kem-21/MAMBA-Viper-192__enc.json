@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-21",
+ "label": "MAMBA-Viper-192",
+ "instance": "MAMBA-Viper-192",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "enc",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 2723,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.019950354171753,
+  "timeout_per_process_s": 303.01197021250306
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-21/lib/libMAMBA-Viper-192.so",
+ "library_sha256": "f47c34c4f02fd2a9139fae39956f14bd2d5a8303c8f52135623ad0cf3f46f179",
+ "kat_log": "kat/kem-21/MAMBA-Viper-192.log",
+ "kat_log_sha256": "7989ee0a5a1d29d443e12e4d1b299dbaa36be149932b20aefc65bec55da02d6e",
+ "started_utc": "2026-09-25T18:03:58.034057+00:00",
+ "ended_utc": "2026-09-25T18:04:02.313511+00:00",
+ "load_average_start": [
+  2.2060546875,
+  2.13232421875,
+  2.04150390625
+ ],
+ "load_average_end": [
+  2.27001953125,
+  2.14697265625,
+  2.046875
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-21",
+    "instance": "MAMBA-Viper-192",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1572864",
+    "pk_bytes": "992",
+    "sk_bytes": "2200",
+    "ct_bytes": "1088",
+    "ss_bytes": "24",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1703936",
+    "measurement_count": "2723",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2723,
+     "seconds": 0.851306041,
+     "cycles": 1779908086
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-21/lib/libMAMBA-Viper-192.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "2723",
+    "3"
+   ],
+   "wall_s": 0.854872465133667,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-21",
+    "instance": "MAMBA-Viper-192",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1777664",
+    "pk_bytes": "992",
+    "sk_bytes": "2200",
+    "ct_bytes": "1088",
+    "ss_bytes": "24",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1847296",
+    "measurement_count": "2723",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2723,
+     "seconds": 0.852259967,
+     "cycles": 1781720341
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-21/lib/libMAMBA-Viper-192.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "2723",
+    "3"
+   ],
+   "wall_s": 0.8558456897735596,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-21",
+    "instance": "MAMBA-Viper-192",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1757184",
+    "pk_bytes": "992",
+    "sk_bytes": "2200",
+    "ct_bytes": "1088",
+    "ss_bytes": "24",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1826816",
+    "measurement_count": "2723",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2723,
+     "seconds": 0.85174156,
+     "cycles": 1780627458
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-21/lib/libMAMBA-Viper-192.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "2723",
+    "3"
+   ],
+   "wall_s": 0.8554701805114746,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-21",
+    "instance": "MAMBA-Viper-192",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1683456",
+    "pk_bytes": "992",
+    "sk_bytes": "2200",
+    "ct_bytes": "1088",
+    "ss_bytes": "24",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1818624",
+    "measurement_count": "2723",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2723,
+     "seconds": 0.852219173,
+     "cycles": 1781789926
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-21/lib/libMAMBA-Viper-192.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "2723",
+    "3"
+   ],
+   "wall_s": 0.8560941219329834,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-21",
+    "instance": "MAMBA-Viper-192",
+    "variant": "Reference_Implementation",
+    "operation": "enc",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1642496",
+    "pk_bytes": "992",
+    "sk_bytes": "2200",
+    "ct_bytes": "1088",
+    "ss_bytes": "24",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1773568",
+    "measurement_count": "2723",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2723,
+     "seconds": 0.853167486,
+     "cycles": 1784372044
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-21/lib/libMAMBA-Viper-192.so",
+    "enc",
+    "0",
+    "1",
+    "1",
+    "2723",
+    "3"
+   ],
+   "wall_s": 0.8569180965423584,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 2723,
+   "seconds": 0.851306041,
+   "cycles": 1779908086
+  },
+  {
+   "measurements": 2723,
+   "seconds": 0.852259967,
+   "cycles": 1781720341
+  },
+  {
+   "measurements": 2723,
+   "seconds": 0.85174156,
+   "cycles": 1780627458
+  },
+  {
+   "measurements": 2723,
+   "seconds": 0.852219173,
+   "cycles": 1781789926
+  },
+  {
+   "measurements": 2723,
+   "seconds": 0.853167486,
+   "cycles": 1784372044
+  }
+ ],
+ "measurements": 13615,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.00031294118450238707,
+ "median_trial_seconds": 0.00031297068417186926,
+ "min_trial_seconds": 0.00031263534373852367,
+ "max_trial_seconds": 0.0003133189445464561,
+ "mean_cycles": 654309.06022769,
+ "median_trial_cycles": 654322.5637164891,
+ "operations_per_second": 3195.4886397906253,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 992,
+  "sk_bytes": 2200,
+  "ct_bytes": 1088,
+  "ss_bytes": 24,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1777664,
+ "peak_rss_bytes": 1847296,
+ "timing_scope": "loop"
+}

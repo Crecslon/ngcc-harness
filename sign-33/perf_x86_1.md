@@ -92,7 +92,7 @@ Share of each operation spent in the ICCS placeholder hash functions and in the 
 
 ## 7. Raw evidence index
 
-All paths are relative to the campaign run directory; commands are recorded in each JSON file.
+Paths are relative to `performance/data/x86_1/` in the [harness](https://github.com/ngcc-dev/ngcc-harness); each JSON file records its commands, environment and trials.
 
 | instance | item | file |
 |---|---|---|
@@ -110,6 +110,7 @@ All paths are relative to the campaign run directory; commands are recorded in e
 | `vdoo_256` | hash profile keygen | `profile/sign-33/vdoo_256__keygen.json` |
 | `vdoo_256` | hash profile sign | `profile/sign-33/vdoo_256__sign.json` |
 | `vdoo_256` | hash profile verify | `profile/sign-33/vdoo_256__verify.json` |
+| `vdoo_512` | KAT log (sha256 `0984f1d1cb098f94…`) | `kat/sign-33/vdoo_512.log` |
 | `vdoo_512` | timing keygen | `records/sign-33/vdoo_512__keygen.json` |
 | `vdoo_512` | timing sign | `records/sign-33/vdoo_512__sign.json` |
 | `vdoo_512` | timing verify | `records/sign-33/vdoo_512__verify.json` |

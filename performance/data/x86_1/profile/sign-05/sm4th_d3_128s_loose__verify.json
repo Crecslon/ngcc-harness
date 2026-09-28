@@ -1,0 +1,82 @@
+{
+ "schema": 2,
+ "candidate": "sign-05",
+ "label": "sm4th_d3_128s_loose",
+ "operation": "verify",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-05/libsm4th_d3_128s_loose.so",
+  "verify",
+  "0",
+  "8",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-05",
+  "instance": "sm4th_d3_128s_loose",
+  "operation": "verify",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111993330",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 8,
+  "ticks": 2367050327
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 22728,
+   "out_bits": 704,
+   "calls": 8,
+   "ticks": 1473534
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 776,
+   "out_bits": 256,
+   "calls": 16,
+   "ticks": 49021
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 168,
+   "out_bits": 256,
+   "calls": 8,
+   "ticks": 12627
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 21096,
+   "out_bits": 448,
+   "calls": 8,
+   "ticks": 919470
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 2824,
+   "out_bits": 256,
+   "calls": 8,
+   "ticks": 68062
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 524296,
+   "out_bits": 256,
+   "calls": 88,
+   "ticks": 123227310
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.0010109645632388788,
+  "sm3hash": 0.05211423626820082
+ },
+ "hash_share": 0.05312520083143969
+}

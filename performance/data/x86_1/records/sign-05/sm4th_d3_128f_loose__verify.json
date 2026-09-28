@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-05",
+ "label": "sm4th_d3_128f_loose",
+ "instance": "sm4th_d3_128f_loose",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "verify",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 26,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 6.303054864964599,
+  "timeout_per_process_s": 303.78183291897875
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-05/lib/libsm4th_d3_128f_loose.so",
+ "library_sha256": "fda63d6cea44f657c76c0189ccdf992598f98598956d8840adb26337d7f72f94",
+ "kat_log": "kat/sign-05/sm4th_d3_128f_loose.log",
+ "kat_log_sha256": "6bc8eaf9d5f2fa418c457796425f653e0475b948c72813b53da2a4acfdb3482a",
+ "started_utc": "2026-09-25T19:35:14.832452+00:00",
+ "ended_utc": "2026-09-25T19:35:20.949417+00:00",
+ "load_average_start": [
+  2.00390625,
+  2.02294921875,
+  2.0
+ ],
+ "load_average_end": [
+  2.00341796875,
+  2.0224609375,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-05",
+    "instance": "sm4th_d3_128f_loose",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2215936",
+    "pk_bytes": "32",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "6724",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3239936",
+    "measurement_count": "26",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 26,
+     "seconds": 1.040068656,
+     "cycles": 2176846481
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-05/lib/libsm4th_d3_128f_loose.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "26",
+    "3"
+   ],
+   "wall_s": 1.2235445976257324,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-05",
+    "instance": "sm4th_d3_128f_loose",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2314240",
+    "pk_bytes": "32",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "6724",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3338240",
+    "measurement_count": "26",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 26,
+     "seconds": 1.04127182,
+     "cycles": 2179870784
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-05/lib/libsm4th_d3_128f_loose.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "26",
+    "3"
+   ],
+   "wall_s": 1.2245664596557617,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-05",
+    "instance": "sm4th_d3_128f_loose",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2318336",
+    "pk_bytes": "32",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "6724",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3338240",
+    "measurement_count": "26",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 26,
+     "seconds": 1.039857391,
+     "cycles": 2176628435
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-05/lib/libsm4th_d3_128f_loose.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "26",
+    "3"
+   ],
+   "wall_s": 1.2232370376586914,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-05",
+    "instance": "sm4th_d3_128f_loose",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2293760",
+    "pk_bytes": "32",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "6724",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3317760",
+    "measurement_count": "26",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 26,
+     "seconds": 1.040946985,
+     "cycles": 2179048859
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-05/lib/libsm4th_d3_128f_loose.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "26",
+    "3"
+   ],
+   "wall_s": 1.2245550155639648,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-05",
+    "instance": "sm4th_d3_128f_loose",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2215936",
+    "pk_bytes": "32",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "6724",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "3239936",
+    "measurement_count": "26",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 26,
+     "seconds": 1.037358182,
+     "cycles": 2171566220
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-05/lib/libsm4th_d3_128f_loose.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "26",
+    "3"
+   ],
+   "wall_s": 1.2208170890808105,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 26,
+   "seconds": 1.040068656,
+   "cycles": 2176846481
+  },
+  {
+   "measurements": 26,
+   "seconds": 1.04127182,
+   "cycles": 2179870784
+  },
+  {
+   "measurements": 26,
+   "seconds": 1.039857391,
+   "cycles": 2176628435
+  },
+  {
+   "measurements": 26,
+   "seconds": 1.040946985,
+   "cycles": 2179048859
+  },
+  {
+   "measurements": 26,
+   "seconds": 1.037358182,
+   "cycles": 2171566220
+  }
+ ],
+ "measurements": 130,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.039996177184615386,
+ "median_trial_seconds": 0.04000264061538462,
+ "min_trial_seconds": 0.03989839161538462,
+ "max_trial_seconds": 0.040048916153846155,
+ "mean_cycles": 83722775.22307692,
+ "median_trial_cycles": 83724864.65384616,
+ "operations_per_second": 25.00238948797967,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 32,
+  "sk_bytes": 32,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 6724,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 2318336,
+ "peak_rss_bytes": 3338240,
+ "timing_scope": "loop"
+}

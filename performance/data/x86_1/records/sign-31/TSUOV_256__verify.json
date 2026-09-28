@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-31",
+ "label": "TSUOV_256",
+ "instance": "TSUOV_256",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "verify",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 27,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 6.282986858876343,
+  "timeout_per_process_s": 303.7697921153258
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-31/lib/libTSUOV_256.so",
+ "library_sha256": "a9f2153c16f2bf2458d246c072c87def965884a0541a169e56f75c38d2174fb0",
+ "kat_log": "kat/sign-31/TSUOV_256.log",
+ "kat_log_sha256": "d282e795801b7da96e619bcaedf109ed3dd356f442637a1d6d42169bb67c46e8",
+ "started_utc": "2026-09-25T19:35:08.741172+00:00",
+ "ended_utc": "2026-09-25T19:35:14.831943+00:00",
+ "load_average_start": [
+  2.0048828125,
+  2.02392578125,
+  2.0
+ ],
+ "load_average_end": [
+  2.00390625,
+  2.02294921875,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-31",
+    "instance": "TSUOV_256",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1941504",
+    "pk_bytes": "2170",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "2412",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2015232",
+    "measurement_count": "27",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 27,
+     "seconds": 1.023454727,
+     "cycles": 2142393260
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-31/lib/libTSUOV_256.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "27",
+    "3"
+   ],
+   "wall_s": 1.2167694568634033,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-31",
+    "instance": "TSUOV_256",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1945600",
+    "pk_bytes": "2170",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "2412",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2019328",
+    "measurement_count": "27",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 27,
+     "seconds": 1.023969605,
+     "cycles": 2143763918
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-31/lib/libTSUOV_256.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "27",
+    "3"
+   ],
+   "wall_s": 1.2177653312683105,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-31",
+    "instance": "TSUOV_256",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1757184",
+    "pk_bytes": "2170",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "2412",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1892352",
+    "measurement_count": "27",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 27,
+     "seconds": 1.02453694,
+     "cycles": 2144680589
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-31/lib/libTSUOV_256.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "27",
+    "3"
+   ],
+   "wall_s": 1.2181975841522217,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-31",
+    "instance": "TSUOV_256",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1830912",
+    "pk_bytes": "2170",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "2412",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1966080",
+    "measurement_count": "27",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 27,
+     "seconds": 1.026719968,
+     "cycles": 2149284647
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-31/lib/libTSUOV_256.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "27",
+    "3"
+   ],
+   "wall_s": 1.2205157279968262,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-31",
+    "instance": "TSUOV_256",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1859584",
+    "pk_bytes": "2170",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "2412",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1994752",
+    "measurement_count": "27",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 27,
+     "seconds": 1.023936644,
+     "cycles": 2143623470
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-31/lib/libTSUOV_256.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "27",
+    "3"
+   ],
+   "wall_s": 1.217287302017212,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 27,
+   "seconds": 1.023454727,
+   "cycles": 2142393260
+  },
+  {
+   "measurements": 27,
+   "seconds": 1.023969605,
+   "cycles": 2143763918
+  },
+  {
+   "measurements": 27,
+   "seconds": 1.02453694,
+   "cycles": 2144680589
+  },
+  {
+   "measurements": 27,
+   "seconds": 1.026719968,
+   "cycles": 2149284647
+  },
+  {
+   "measurements": 27,
+   "seconds": 1.023936644,
+   "cycles": 2143623470
+  }
+ ],
+ "measurements": 135,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.037945317659259264,
+ "median_trial_seconds": 0.03792480018518519,
+ "min_trial_seconds": 0.03790573062962963,
+ "max_trial_seconds": 0.03802666548148149,
+ "mean_cycles": 79435154.69629629,
+ "median_trial_cycles": 79398663.62962963,
+ "operations_per_second": 26.353712702573308,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 2170,
+  "sk_bytes": 64,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 2412,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1945600,
+ "peak_rss_bytes": 2019328,
+ "timing_scope": "loop"
+}

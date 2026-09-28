@@ -1,0 +1,117 @@
+{
+ "schema": 2,
+ "candidate": "kem-10",
+ "label": "CMultiURAG-256",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-10/libCMultiURAG-256.so",
+  "dec",
+  "0",
+  "7",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-10",
+  "instance": "CMultiURAG-256",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997072",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 7,
+  "ticks": 2397508153
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 7800,
+   "calls": 14,
+   "ticks": 683631
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 6656,
+   "calls": 14,
+   "ticks": 579353
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 87136,
+   "out_bits": 512,
+   "calls": 7,
+   "ticks": 3340346
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 320,
+   "calls": 14,
+   "ticks": 86125
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 5760,
+   "calls": 630,
+   "ticks": 23320764
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 2520,
+   "calls": 7,
+   "ticks": 125993
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 209056,
+   "out_bits": 512,
+   "calls": 7,
+   "ticks": 7893210
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 1152,
+   "calls": 7,
+   "ticks": 73967
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 352,
+   "calls": 21,
+   "ticks": 128817
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 1408,
+   "calls": 7,
+   "ticks": 83843
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 30720,
+   "calls": 21,
+   "ticks": 3801412
+  }
+ ],
+ "share": {
+  "drng": 0.012047468937220336,
+  "pseudohash": 0.0046855131591287645
+ },
+ "hash_share": 0.0046855131591287645
+}

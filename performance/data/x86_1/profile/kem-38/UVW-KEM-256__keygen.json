@@ -1,0 +1,53 @@
+{
+ "schema": 2,
+ "candidate": "kem-38",
+ "label": "UVW-KEM-256",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-38/libUVW-KEM-256.so",
+  "keygen",
+  "0",
+  "3",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-38",
+  "instance": "UVW_KEM_256",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111991497",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 15503492991
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 16384,
+   "calls": 2572,
+   "ticks": 250701902
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 3,
+   "ticks": 16197
+  }
+ ],
+ "share": {
+  "drng": 0.016171716860551712
+ },
+ "hash_share": 0
+}

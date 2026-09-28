@@ -1,0 +1,118 @@
+{
+ "schema": 2,
+ "candidate": "kex-03",
+ "label": "CreTAKE-K2K-PLAC128",
+ "operation": "exchange",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kex-03/libCreTAKE-K2K-PLAC128.so",
+  "exchange",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kex-03",
+  "instance": "CreTAKE-K2K-PLAC128",
+  "operation": "exchange",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997906",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 2018455470
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 4000,
+   "ticks": 19490776
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 4000,
+   "ticks": 25460982
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 512,
+   "out_bits": 640,
+   "calls": 4000,
+   "ticks": 34681459
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 552,
+   "out_bits": 1024,
+   "calls": 41412,
+   "ticks": 485370553
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 4496,
+   "out_bits": 128,
+   "calls": 2000,
+   "ticks": 25831153
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 1634,
+   "out_bits": 512,
+   "calls": 2000,
+   "ticks": 37422008
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 4368,
+   "out_bits": 640,
+   "calls": 4000,
+   "ticks": 152710782
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 184,
+   "out_bits": 2048,
+   "calls": 36000,
+   "ticks": 436836370
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 5248,
+   "out_bits": 128,
+   "calls": 2000,
+   "ticks": 30766696
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 64,
+   "out_bits": 640,
+   "calls": 1000,
+   "ticks": 4749013
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 28336,
+   "out_bits": 256,
+   "calls": 2000,
+   "ticks": 155659262
+  }
+ ],
+ "share": {
+  "drng": 0.02227037389137943,
+  "pseudoXOF": 0.6572378274958922,
+  "pseudohash": 0.018539922508174034
+ },
+ "hash_share": 0.6757777500040663
+}

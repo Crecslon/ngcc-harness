@@ -1,0 +1,132 @@
+{
+ "schema": 2,
+ "candidate": "kem-33",
+ "label": "qube-512",
+ "operation": "enc",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-33/libqube-512.so",
+  "enc",
+  "0",
+  "112",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-33",
+  "instance": "qube_512",
+  "operation": "enc",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998055",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 112,
+  "ticks": 2116391885
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 224,
+   "ticks": 1395974
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 262144,
+   "calls": 112,
+   "ticks": 334170989
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 524288,
+   "calls": 112,
+   "ticks": 670817908
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 8192,
+   "calls": 112,
+   "ticks": 10410179
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 16384,
+   "calls": 112,
+   "ticks": 20814371
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 32768,
+   "calls": 112,
+   "ticks": 41653449
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 256,
+   "calls": 112,
+   "ticks": 376730
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 1544,
+   "out_bits": 1024,
+   "calls": 112,
+   "ticks": 4674031
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 1024,
+   "calls": 112,
+   "ticks": 1317765
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 4096,
+   "calls": 112,
+   "ticks": 5202786
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 272232,
+   "out_bits": 512,
+   "calls": 112,
+   "ticks": 168059197
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 512,
+   "calls": 112,
+   "ticks": 667566
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 2048,
+   "calls": 112,
+   "ticks": 2614146
+  }
+ ],
+ "share": {
+  "drng": 0.0006596009037333839,
+  "pseudoXOF": 0.5141041679055578,
+  "pseudohash": 0.08161684479337342
+ },
+ "hash_share": 0.5957210126989312
+}

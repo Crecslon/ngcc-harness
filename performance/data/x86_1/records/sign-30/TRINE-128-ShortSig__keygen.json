@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-30",
+ "label": "TRINE-128-ShortSig",
+ "instance": "TRINE-128-ShortSig",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 104,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.4089105865118405,
+  "timeout_per_process_s": 303.24534635190713
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-30/lib/libTRINE-128-ShortSig.so",
+ "library_sha256": "a45cba62f25f0caedab028caf5f0d98cf9757cc025015a29c9992e9e8d226f7a",
+ "kat_log": "kat/sign-30/TRINE-128-ShortSig.log",
+ "kat_log_sha256": "441f4563c576ff3b71c0c7f8cd6a0961b8319ec7c803ac0694863be899168d6d",
+ "started_utc": "2026-09-25T19:20:08.227833+00:00",
+ "ended_utc": "2026-09-25T19:20:13.316444+00:00",
+ "load_average_start": [
+  2.03271484375,
+  2.052734375,
+  2.0146484375
+ ],
+ "load_average_end": [
+  2.02978515625,
+  2.0517578125,
+  2.01416015625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-30",
+    "instance": "TRINE-128-ShortSig",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1728512",
+    "pk_bytes": "63920",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1652",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2105344",
+    "measurement_count": "104",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 104,
+     "seconds": 0.985908982,
+     "cycles": 2064516501
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-30/lib/libTRINE-128-ShortSig.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "104",
+    "3"
+   ],
+   "wall_s": 1.0168836116790771,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-30",
+    "instance": "TRINE-128-ShortSig",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1712128",
+    "pk_bytes": "63920",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1652",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2084864",
+    "measurement_count": "104",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 104,
+     "seconds": 0.98725387,
+     "cycles": 2067009354
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-30/lib/libTRINE-128-ShortSig.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "104",
+    "3"
+   ],
+   "wall_s": 1.018289566040039,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-30",
+    "instance": "TRINE-128-ShortSig",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1814528",
+    "pk_bytes": "63920",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1652",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2129920",
+    "measurement_count": "104",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 104,
+     "seconds": 0.986078209,
+     "cycles": 2064836140
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-30/lib/libTRINE-128-ShortSig.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "104",
+    "3"
+   ],
+   "wall_s": 1.0170621871948242,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-30",
+    "instance": "TRINE-128-ShortSig",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1699840",
+    "pk_bytes": "63920",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1652",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2076672",
+    "measurement_count": "104",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 104,
+     "seconds": 0.987573902,
+     "cycles": 2067691181
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-30/lib/libTRINE-128-ShortSig.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "104",
+    "3"
+   ],
+   "wall_s": 1.0186216831207275,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-30",
+    "instance": "TRINE-128-ShortSig",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1712128",
+    "pk_bytes": "63920",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1652",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2088960",
+    "measurement_count": "104",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 104,
+     "seconds": 0.98657283,
+     "cycles": 2065938680
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-30/lib/libTRINE-128-ShortSig.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "104",
+    "3"
+   ],
+   "wall_s": 1.0175211429595947,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 104,
+   "seconds": 0.985908982,
+   "cycles": 2064516501
+  },
+  {
+   "measurements": 104,
+   "seconds": 0.98725387,
+   "cycles": 2067009354
+  },
+  {
+   "measurements": 104,
+   "seconds": 0.986078209,
+   "cycles": 2064836140
+  },
+  {
+   "measurements": 104,
+   "seconds": 0.987573902,
+   "cycles": 2067691181
+  },
+  {
+   "measurements": 104,
+   "seconds": 0.98657283,
+   "cycles": 2065938680
+  }
+ ],
+ "measurements": 520,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.009487284217307691,
+ "median_trial_seconds": 0.009486277211538462,
+ "min_trial_seconds": 0.009479894057692308,
+ "max_trial_seconds": 0.009495902903846153,
+ "mean_cycles": 19865368.953846153,
+ "median_trial_cycles": 19864795.0,
+ "operations_per_second": 105.40424183516036,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 63920,
+  "sk_bytes": 32,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 1652,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1814528,
+ "peak_rss_bytes": 2129920,
+ "timing_scope": "loop"
+}

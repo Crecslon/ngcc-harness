@@ -1,0 +1,104 @@
+{
+ "schema": 2,
+ "candidate": "sign-29",
+ "label": "Tins128",
+ "operation": "verify",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-29/libTins128.so",
+  "verify",
+  "0",
+  "3",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-29",
+  "instance": "Tins128",
+  "operation": "verify",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111993823",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 3,
+  "ticks": 3786063851
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 424,
+   "out_bits": 256,
+   "calls": 147420,
+   "ticks": 216549370
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 38640,
+   "calls": 3,
+   "ticks": 693144
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 150,
+   "calls": 3,
+   "ticks": 14101
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 128,
+   "out_bits": 128,
+   "calls": 294108,
+   "ticks": 453783667
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 38364,
+   "calls": 3,
+   "ticks": 688083
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 3832,
+   "out_bits": 256,
+   "calls": 3,
+   "ticks": 34186
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 288,
+   "calls": 147420,
+   "ticks": 911005647
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 12582920,
+   "out_bits": 256,
+   "calls": 3,
+   "ticks": 103350414
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 8060,
+   "out_bits": 256,
+   "calls": 3,
+   "ticks": 70408
+  }
+ ],
+ "share": {
+  "sm3hash": 0.08452165377915598,
+  "drng": 0.24098932582951835,
+  "pseudoXOF": 0.11985631644330132
+ },
+ "hash_share": 0.2043779702224573
+}

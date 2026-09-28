@@ -1,0 +1,74 @@
+{
+ "schema": 2,
+ "candidate": "kem-24",
+ "label": "scabbard128",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-24/libscabbard128.so",
+  "dec",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-24",
+  "instance": "scabbard128",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997888",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 795887451
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 6080,
+   "out_bits": 128,
+   "calls": 1000,
+   "ticks": 18099591
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 256,
+   "calls": 1000,
+   "ticks": 1559998
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 128,
+   "calls": 1000,
+   "ticks": 1557235
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 144,
+   "out_bits": 896,
+   "calls": 81000,
+   "ticks": 494769578
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 136,
+   "out_bits": 256,
+   "calls": 9000,
+   "ticks": 13990827
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.6658946919367874
+ },
+ "hash_share": 0.6658946919367874
+}

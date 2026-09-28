@@ -1,0 +1,69 @@
+{
+ "schema": 2,
+ "candidate": "kem-28",
+ "label": "OAEP-NTRU-1296",
+ "operation": "enc",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-28/libOAEP-NTRU-1296.so",
+  "enc",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-28",
+  "instance": "OAEP-NTRU-1296",
+  "operation": "enc",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996959",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 435687709
+ },
+ "calls": [
+  {
+   "fn": "pseudohash",
+   "in_bits": 19448,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 115060001
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 2600,
+   "out_bits": 2592,
+   "calls": 1000,
+   "ticks": 91155889
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 5704,
+   "out_bits": 768,
+   "calls": 1000,
+   "ticks": 49696953
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 2592,
+   "calls": 1000,
+   "ticks": 19588649
+  }
+ ],
+ "share": {
+  "pseudohash": 0.2640882416997446,
+  "pseudoXOF": 0.32328853692771947,
+  "drng": 0.04496029746847874
+ },
+ "hash_share": 0.5873767786274641
+}

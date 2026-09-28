@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-29",
+ "label": "Tins128",
+ "instance": "Tins128",
+ "variant": "reference",
+ "flags": "harness-default",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 1170,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.029186545684815,
+  "timeout_per_process_s": 303.0175119274109
+ },
+ "kat": "CRYPTOFAIL",
+ "kat_not_passed": true,
+ "disturbed_retries": 0,
+ "library": "sign-29/lib/libTins128.so",
+ "library_sha256": "98e02652911a4fc0aedeb64ae06528f8b1b6bc4daab089ed8ffcb55ea3265d96",
+ "kat_log": "kat/sign-29/Tins128.log",
+ "kat_log_sha256": "5b3e2d11ab37b3313376cd69fd0f63fda39d88f892444224de6524c93e216aba",
+ "started_utc": "2026-09-25T18:18:29.557882+00:00",
+ "ended_utc": "2026-09-25T18:18:34.368753+00:00",
+ "load_average_start": [
+  2.0,
+  2.01708984375,
+  2.0
+ ],
+ "load_average_end": [
+  2.0,
+  2.0166015625,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-29",
+    "instance": "Tins128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1757184",
+    "pk_bytes": "51",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "3284",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1843200",
+    "measurement_count": "1170",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1170,
+     "seconds": 0.957564991,
+     "cycles": 2004679381
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-29/lib/libTins128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "1170",
+    "3"
+   ],
+   "wall_s": 0.9622645378112793,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-29",
+    "instance": "Tins128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1769472",
+    "pk_bytes": "51",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "3284",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1855488",
+    "measurement_count": "1170",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1170,
+     "seconds": 0.957301401,
+     "cycles": 2004100156
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-29/lib/libTins128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "1170",
+    "3"
+   ],
+   "wall_s": 0.9619286060333252,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-29",
+    "instance": "Tins128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1748992",
+    "pk_bytes": "51",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "3284",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1835008",
+    "measurement_count": "1170",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1170,
+     "seconds": 0.957366895,
+     "cycles": 2004046907
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-29/lib/libTins128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "1170",
+    "3"
+   ],
+   "wall_s": 0.9619741439819336,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-29",
+    "instance": "Tins128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1773568",
+    "pk_bytes": "51",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "3284",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1859584",
+    "measurement_count": "1170",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1170,
+     "seconds": 0.957545994,
+     "cycles": 2004587695
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-29/lib/libTins128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "1170",
+    "3"
+   ],
+   "wall_s": 0.9621047973632812,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-29",
+    "instance": "Tins128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1748992",
+    "pk_bytes": "51",
+    "sk_bytes": "32",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "3284",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1835008",
+    "measurement_count": "1170",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 1170,
+     "seconds": 0.957779014,
+     "cycles": 2004870647
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-29/lib/libTins128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "1170",
+    "3"
+   ],
+   "wall_s": 0.9623715877532959,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 1170,
+   "seconds": 0.957564991,
+   "cycles": 2004679381
+  },
+  {
+   "measurements": 1170,
+   "seconds": 0.957301401,
+   "cycles": 2004100156
+  },
+  {
+   "measurements": 1170,
+   "seconds": 0.957366895,
+   "cycles": 2004046907
+  },
+  {
+   "measurements": 1170,
+   "seconds": 0.957545994,
+   "cycles": 2004587695
+  },
+  {
+   "measurements": 1170,
+   "seconds": 0.957779014,
+   "cycles": 2004870647
+  }
+ ],
+ "measurements": 5850,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0008183860333333333,
+ "median_trial_seconds": 0.0008184153794871795,
+ "min_trial_seconds": 0.0008182063256410257,
+ "max_trial_seconds": 0.0008186145418803419,
+ "mean_cycles": 1713211.0745299144,
+ "median_trial_cycles": 1713322.8162393162,
+ "operations_per_second": 1221.9172362056847,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 51,
+  "sk_bytes": 32,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 3284,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1773568,
+ "peak_rss_bytes": 1859584,
+ "timing_scope": "loop"
+}

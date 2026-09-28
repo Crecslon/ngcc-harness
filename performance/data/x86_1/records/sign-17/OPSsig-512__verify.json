@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-17",
+ "label": "OPSsig-512",
+ "instance": "OPSsig-512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "verify",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 289,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.1395524318426515,
+  "timeout_per_process_s": 303.0837314591056
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-17/lib/libOPSsig-512.so",
+ "library_sha256": "8128e9978f991f6b80f4c650689de2697809ae2a7b55e16abb61d062ca09ba9a",
+ "kat_log": "kat/sign-17/OPSsig-512.log",
+ "kat_log_sha256": "018fcafd6513eeb69d7c5089c667a4893044ac4bf38a7e26a7348b624fd57dce",
+ "started_utc": "2026-09-25T19:01:10.706341+00:00",
+ "ended_utc": "2026-09-25T19:01:15.746380+00:00",
+ "load_average_start": [
+  2.10791015625,
+  2.107421875,
+  2.044921875
+ ],
+ "load_average_end": [
+  2.09912109375,
+  2.10546875,
+  2.04443359375
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-17",
+    "instance": "OPSsig-512",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2060288",
+    "pk_bytes": "6720",
+    "sk_bytes": "9920",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12021",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2203648",
+    "measurement_count": "289",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 289,
+     "seconds": 0.985410942,
+     "cycles": 2062743818
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-17/lib/libOPSsig-512.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "289",
+    "3"
+   ],
+   "wall_s": 1.0078356266021729,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-17",
+    "instance": "OPSsig-512",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1990656",
+    "pk_bytes": "6720",
+    "sk_bytes": "9920",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12021",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2134016",
+    "measurement_count": "289",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 289,
+     "seconds": 0.985191063,
+     "cycles": 2062561254
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-17/lib/libOPSsig-512.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "289",
+    "3"
+   ],
+   "wall_s": 1.0075619220733643,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-17",
+    "instance": "OPSsig-512",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1974272",
+    "pk_bytes": "6720",
+    "sk_bytes": "9920",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12021",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2117632",
+    "measurement_count": "289",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 289,
+     "seconds": 0.986402544,
+     "cycles": 2064755587
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-17/lib/libOPSsig-512.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "289",
+    "3"
+   ],
+   "wall_s": 1.0087482929229736,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-17",
+    "instance": "OPSsig-512",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1970176",
+    "pk_bytes": "6720",
+    "sk_bytes": "9920",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12021",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2113536",
+    "measurement_count": "289",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 289,
+     "seconds": 0.985698634,
+     "cycles": 2063586860
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-17/lib/libOPSsig-512.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "289",
+    "3"
+   ],
+   "wall_s": 1.008110761642456,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-17",
+    "instance": "OPSsig-512",
+    "variant": "Reference_Implementation",
+    "operation": "verify",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2072576",
+    "pk_bytes": "6720",
+    "sk_bytes": "9920",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12021",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2154496",
+    "measurement_count": "289",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 289,
+     "seconds": 0.985155667,
+     "cycles": 2062137691
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-17/lib/libOPSsig-512.so",
+    "verify",
+    "0",
+    "1",
+    "1",
+    "289",
+    "3"
+   ],
+   "wall_s": 1.0075504779815674,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 289,
+   "seconds": 0.985410942,
+   "cycles": 2062743818
+  },
+  {
+   "measurements": 289,
+   "seconds": 0.985191063,
+   "cycles": 2062561254
+  },
+  {
+   "measurements": 289,
+   "seconds": 0.986402544,
+   "cycles": 2064755587
+  },
+  {
+   "measurements": 289,
+   "seconds": 0.985698634,
+   "cycles": 2063586860
+  },
+  {
+   "measurements": 289,
+   "seconds": 0.985155667,
+   "cycles": 2062137691
+  }
+ ],
+ "measurements": 1445,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0034102829411764702,
+ "median_trial_seconds": 0.0034097264429065743,
+ "min_trial_seconds": 0.0034088431384083047,
+ "max_trial_seconds": 0.003413157591695502,
+ "mean_cycles": 7138951.702422146,
+ "median_trial_cycles": 7137521.861591696,
+ "operations_per_second": 293.2308014463523,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 6720,
+  "sk_bytes": 9920,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 12021,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 2072576,
+ "peak_rss_bytes": 2203648,
+ "timing_scope": "loop"
+}

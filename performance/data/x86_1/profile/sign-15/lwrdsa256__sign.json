@@ -1,0 +1,67 @@
+{
+ "schema": 2,
+ "candidate": "sign-15",
+ "label": "lwrdsa256",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-15/liblwrdsa256.so",
+  "sign",
+  "0",
+  "216",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-15",
+  "instance": "lwrdsa256",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997954",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 216,
+  "ticks": 2598568728
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 6720,
+   "calls": 12096,
+   "ticks": 497237491
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 8576,
+   "out_bits": 1088,
+   "calls": 648,
+   "ticks": 76687610
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 896,
+   "out_bits": 384,
+   "calls": 216,
+   "ticks": 1317627
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 656,
+   "out_bits": 6528,
+   "calls": 4536,
+   "ticks": 342549625
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.35319148695612257
+ },
+ "hash_share": 0.35319148695612257
+}

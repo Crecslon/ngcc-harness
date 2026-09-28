@@ -1,0 +1,75 @@
+{
+ "schema": 2,
+ "candidate": "sign-11",
+ "label": "Flextree-160f",
+ "operation": "verify",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-11/libFlextree-160f.so",
+  "verify",
+  "0",
+  "136",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-11",
+  "instance": "Flextree-160f",
+  "operation": "verify",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111995297",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 136,
+  "ticks": 2137371930
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 736,
+   "out_bits": 256,
+   "calls": 33456,
+   "ticks": 95033622
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 992,
+   "out_bits": 232,
+   "calls": 136,
+   "ticks": 602357
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 6816,
+   "out_bits": 256,
+   "calls": 2312,
+   "ticks": 44286069
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 576,
+   "out_bits": 256,
+   "calls": 690336,
+   "ticks": 1952258908
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 352,
+   "out_bits": 400,
+   "calls": 136,
+   "ticks": 412956
+  }
+ ],
+ "share": {
+  "sm3hash": 0.9785749357155635,
+  "pseudoXOF": 0.0004750286956374504
+ },
+ "hash_share": 0.979049964411201
+}

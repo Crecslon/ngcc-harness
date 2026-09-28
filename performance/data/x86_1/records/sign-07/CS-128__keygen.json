@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-07",
+ "label": "CS-128",
+ "instance": "CS_128",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 3512,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.015747124440918,
+  "timeout_per_process_s": 303.0094482746646
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-07/lib/libCS-128.so",
+ "library_sha256": "3313577767b3e72d4d1796c6e7babe0346d2fc8f74dc9e6c9bb746385b7b6f80",
+ "kat_log": "kat/sign-07/CS-128.log",
+ "kat_log_sha256": "d54361d3e5dd46adb41b7c39f7bbda84e5af282fe0c972452308894268c5c9a4",
+ "started_utc": "2026-09-25T17:53:08.576572+00:00",
+ "ended_utc": "2026-09-25T17:53:13.176987+00:00",
+ "load_average_start": [
+  2.0732421875,
+  2.03955078125,
+  2.0048828125
+ ],
+ "load_average_end": [
+  2.06689453125,
+  2.03857421875,
+  2.00439453125
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-07",
+    "instance": "CS_128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -fcommon -w",
+    "baseline_rss_bytes": "1699840",
+    "pk_bytes": "976",
+    "sk_bytes": "1888",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1548",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1855488",
+    "measurement_count": "3512",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3512,
+     "seconds": 0.917002913,
+     "cycles": 1919490175
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-07/lib/libCS-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3512",
+    "3"
+   ],
+   "wall_s": 0.919975996017456,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-07",
+    "instance": "CS_128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -fcommon -w",
+    "baseline_rss_bytes": "1785856",
+    "pk_bytes": "976",
+    "sk_bytes": "1888",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1548",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1941504",
+    "measurement_count": "3512",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3512,
+     "seconds": 0.917718902,
+     "cycles": 1921372682
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-07/lib/libCS-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3512",
+    "3"
+   ],
+   "wall_s": 0.920689582824707,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-07",
+    "instance": "CS_128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -fcommon -w",
+    "baseline_rss_bytes": "1724416",
+    "pk_bytes": "976",
+    "sk_bytes": "1888",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1548",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1880064",
+    "measurement_count": "3512",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3512,
+     "seconds": 0.916748782,
+     "cycles": 1919246404
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-07/lib/libCS-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3512",
+    "3"
+   ],
+   "wall_s": 0.9197192192077637,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-07",
+    "instance": "CS_128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -fcommon -w",
+    "baseline_rss_bytes": "1691648",
+    "pk_bytes": "976",
+    "sk_bytes": "1888",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1548",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1847296",
+    "measurement_count": "3512",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3512,
+     "seconds": 0.917096861,
+     "cycles": 1919831893
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-07/lib/libCS-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3512",
+    "3"
+   ],
+   "wall_s": 0.9200911521911621,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-07",
+    "instance": "CS_128",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -fcommon -w",
+    "baseline_rss_bytes": "1785856",
+    "pk_bytes": "976",
+    "sk_bytes": "1888",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "1548",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1941504",
+    "measurement_count": "3512",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3512,
+     "seconds": 0.91680929,
+     "cycles": 1919314107
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-07/lib/libCS-128.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "3512",
+    "3"
+   ],
+   "wall_s": 0.9197070598602295,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 3512,
+   "seconds": 0.917002913,
+   "cycles": 1919490175
+  },
+  {
+   "measurements": 3512,
+   "seconds": 0.917718902,
+   "cycles": 1921372682
+  },
+  {
+   "measurements": 3512,
+   "seconds": 0.916748782,
+   "cycles": 1919246404
+  },
+  {
+   "measurements": 3512,
+   "seconds": 0.917096861,
+   "cycles": 1919831893
+  },
+  {
+   "measurements": 3512,
+   "seconds": 0.91680929,
+   "cycles": 1919314107
+  }
+ ],
+ "measurements": 17560,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.00026112623849658314,
+ "median_trial_seconds": 0.00026110561304100227,
+ "min_trial_seconds": 0.00026103325227790433,
+ "max_trial_seconds": 0.00026130948234624144,
+ "mean_cycles": 546654.62761959,
+ "median_trial_cycles": 546551.8721526196,
+ "operations_per_second": 3829.5653694451894,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 976,
+  "sk_bytes": 1888,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 1548,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -fcommon -w",
+ "baseline_rss_bytes": 1785856,
+ "peak_rss_bytes": 1941504,
+ "timing_scope": "loop"
+}

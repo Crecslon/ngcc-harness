@@ -1,0 +1,75 @@
+{
+ "schema": 2,
+ "candidate": "kem-23",
+ "label": "Mito-2-E-512",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-23/libMito-2-E-512.so",
+  "dec",
+  "0",
+  "4",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-23",
+  "instance": "MITO_2_E_512",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997126",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 4,
+  "ticks": 2662331733
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 65296,
+   "calls": 16,
+   "ticks": 6130545
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 261696,
+   "out_bits": 512,
+   "calls": 4,
+   "ticks": 5695501
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 1280,
+   "out_bits": 1024,
+   "calls": 4,
+   "ticks": 154815
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 328000,
+   "out_bits": 512,
+   "calls": 4,
+   "ticks": 7212719
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 24,
+   "calls": 3840,
+   "ticks": 17564059
+  }
+ ],
+ "share": {
+  "drng": 0.008899944250486083,
+  "pseudohash": 0.004906614317848421
+ },
+ "hash_share": 0.004906614317848421
+}

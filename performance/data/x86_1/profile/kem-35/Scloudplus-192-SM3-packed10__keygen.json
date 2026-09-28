@@ -1,0 +1,69 @@
+{
+ "schema": 2,
+ "candidate": "kem-35",
+ "label": "Scloudplus-192-SM3-packed10",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-35/libScloudplus-192-SM3-packed10.so",
+  "keygen",
+  "0",
+  "47",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-35",
+  "instance": "Scloudplus-192-SM3-packed10",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997222",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 47,
+  "ticks": 2103082651
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 94,
+   "ticks": 576523
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 1152,
+   "calls": 47,
+   "ticks": 679515
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 91656,
+   "out_bits": 512,
+   "calls": 47,
+   "ticks": 23390525
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 160,
+   "out_bits": 8320,
+   "calls": 39104,
+   "ticks": 1922699557
+  }
+ ],
+ "share": {
+  "drng": 0.00027413235505788024,
+  "pseudoXOF": 0.9145522983062258,
+  "pseudohash": 0.011122018903478654
+ },
+ "hash_share": 0.9256743172097044
+}

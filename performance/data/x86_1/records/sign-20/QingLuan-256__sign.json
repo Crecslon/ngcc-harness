@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-20",
+ "label": "QingLuan-256",
+ "instance": "QingLuan-256",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "sign",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 21,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 6.3560438734484865,
+  "timeout_per_process_s": 303.8136263240691
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-20/lib/libQingLuan-256.so",
+ "library_sha256": "db747083f7d6e3a905088df38ef190f2ade6ce8dc2ad9125d524a7a9293d5b45",
+ "kat_log": "kat/sign-20/QingLuan-256.log",
+ "kat_log_sha256": "654d932cf1d9afd77cba5e39e7fa699aa549ad03444b61475bc153d40b8e4f31",
+ "started_utc": "2026-09-25T19:35:34.711357+00:00",
+ "ended_utc": "2026-09-25T19:35:40.707471+00:00",
+ "load_average_start": [
+  2.00244140625,
+  2.021484375,
+  2.0
+ ],
+ "load_average_end": [
+  2.00146484375,
+  2.0205078125,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-20",
+    "instance": "QingLuan-256",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c11",
+    "baseline_rss_bytes": "1802240",
+    "pk_bytes": "153",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "74248",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2375680",
+    "measurement_count": "21",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 21,
+     "seconds": 1.045240121,
+     "cycles": 2180791846
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-20/lib/libQingLuan-256.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "21",
+    "3"
+   ],
+   "wall_s": 1.1979999542236328,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-20",
+    "instance": "QingLuan-256",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c11",
+    "baseline_rss_bytes": "1650688",
+    "pk_bytes": "153",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "74248",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2289664",
+    "measurement_count": "21",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 21,
+     "seconds": 1.047668202,
+     "cycles": 2185724814
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-20/lib/libQingLuan-256.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "21",
+    "3"
+   ],
+   "wall_s": 1.200627088546753,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-20",
+    "instance": "QingLuan-256",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c11",
+    "baseline_rss_bytes": "1830912",
+    "pk_bytes": "153",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "74248",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2404352",
+    "measurement_count": "21",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 21,
+     "seconds": 1.04607338,
+     "cycles": 2182063144
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-20/lib/libQingLuan-256.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "21",
+    "3"
+   ],
+   "wall_s": 1.198819875717163,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-20",
+    "instance": "QingLuan-256",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c11",
+    "baseline_rss_bytes": "1839104",
+    "pk_bytes": "153",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "74248",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2412544",
+    "measurement_count": "21",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 21,
+     "seconds": 1.045359629,
+     "cycles": 2180739110
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-20/lib/libQingLuan-256.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "21",
+    "3"
+   ],
+   "wall_s": 1.1976697444915771,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-20",
+    "instance": "QingLuan-256",
+    "variant": "Reference_Implementation",
+    "operation": "sign",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c11",
+    "baseline_rss_bytes": "1789952",
+    "pk_bytes": "153",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "74248",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2494464",
+    "measurement_count": "21",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 21,
+     "seconds": 1.047507874,
+     "cycles": 2185516837
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-20/lib/libQingLuan-256.so",
+    "sign",
+    "0",
+    "1",
+    "1",
+    "21",
+    "3"
+   ],
+   "wall_s": 1.2007668018341064,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 21,
+   "seconds": 1.045240121,
+   "cycles": 2180791846
+  },
+  {
+   "measurements": 21,
+   "seconds": 1.047668202,
+   "cycles": 2185724814
+  },
+  {
+   "measurements": 21,
+   "seconds": 1.04607338,
+   "cycles": 2182063144
+  },
+  {
+   "measurements": 21,
+   "seconds": 1.045359629,
+   "cycles": 2180739110
+  },
+  {
+   "measurements": 21,
+   "seconds": 1.047507874,
+   "cycles": 2185516837
+  }
+ ],
+ "measurements": 105,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.04982713529523809,
+ "median_trial_seconds": 0.049813018095238096,
+ "min_trial_seconds": 0.049773339095238095,
+ "max_trial_seconds": 0.049888962,
+ "mean_cycles": 103950816.67619048,
+ "median_trial_cycles": 103907768.76190476,
+ "operations_per_second": 20.06938576891392,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 153,
+  "sk_bytes": 64,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 74248,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int -std=c11",
+ "baseline_rss_bytes": 1839104,
+ "peak_rss_bytes": 2494464,
+ "timing_scope": "loop"
+}

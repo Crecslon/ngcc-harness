@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-13",
+ "label": "GreatWall256s",
+ "instance": "GreatWall256s",
+ "variant": "reference",
+ "flags": "harness-default",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 72,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.259778733079834,
+  "timeout_per_process_s": 303.1558672398479
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "sign-13/lib/libGreatWall256s.so",
+ "library_sha256": "8e21b1fbdef5787aac1f2758dbb11a0d4407d8847335a74958fca2018f238cdb",
+ "kat_log": "kat/sign-13/GreatWall256s.log",
+ "kat_log_sha256": "3716fa72e725e5b8ad41bcbe1f60da9a66b63e8c757974952f0af79507cdabf7",
+ "started_utc": "2026-09-25T19:12:08.399728+00:00",
+ "ended_utc": "2026-09-25T19:12:13.366644+00:00",
+ "load_average_start": [
+  2.00634765625,
+  2.046875,
+  2.02685546875
+ ],
+ "load_average_end": [
+  2.00537109375,
+  2.0458984375,
+  2.0263671875
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-13",
+    "instance": "GreatWall256s",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1740800",
+    "pk_bytes": "66",
+    "sk_bytes": "66",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12236",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1974272",
+    "measurement_count": "72",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 72,
+     "seconds": 0.942224294,
+     "cycles": 1972385176
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-13/lib/libGreatWall256s.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "72",
+    "3"
+   ],
+   "wall_s": 0.9945130348205566,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-13",
+    "instance": "GreatWall256s",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1855488",
+    "pk_bytes": "66",
+    "sk_bytes": "66",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12236",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2027520",
+    "measurement_count": "72",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 72,
+     "seconds": 0.940858083,
+     "cycles": 1969405550
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-13/lib/libGreatWall256s.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "72",
+    "3"
+   ],
+   "wall_s": 0.993159294128418,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-13",
+    "instance": "GreatWall256s",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1679360",
+    "pk_bytes": "66",
+    "sk_bytes": "66",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12236",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "1912832",
+    "measurement_count": "72",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 72,
+     "seconds": 0.940930646,
+     "cycles": 1969862936
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-13/lib/libGreatWall256s.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "72",
+    "3"
+   ],
+   "wall_s": 0.9930872917175293,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-13",
+    "instance": "GreatWall256s",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1826816",
+    "pk_bytes": "66",
+    "sk_bytes": "66",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12236",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2060288",
+    "measurement_count": "72",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 72,
+     "seconds": 0.941030266,
+     "cycles": 1969842041
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-13/lib/libGreatWall256s.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "72",
+    "3"
+   ],
+   "wall_s": 0.9931585788726807,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-13",
+    "instance": "GreatWall256s",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1855488",
+    "pk_bytes": "66",
+    "sk_bytes": "66",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12236",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2027520",
+    "measurement_count": "72",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 72,
+     "seconds": 0.940663532,
+     "cycles": 1969267775
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-13/lib/libGreatWall256s.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "72",
+    "3"
+   ],
+   "wall_s": 0.9927546977996826,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 72,
+   "seconds": 0.942224294,
+   "cycles": 1972385176
+  },
+  {
+   "measurements": 72,
+   "seconds": 0.940858083,
+   "cycles": 1969405550
+  },
+  {
+   "measurements": 72,
+   "seconds": 0.940930646,
+   "cycles": 1969862936
+  },
+  {
+   "measurements": 72,
+   "seconds": 0.941030266,
+   "cycles": 1969842041
+  },
+  {
+   "measurements": 72,
+   "seconds": 0.940663532,
+   "cycles": 1969267775
+  }
+ ],
+ "measurements": 360,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.013071407836111111,
+ "median_trial_seconds": 0.013068481194444445,
+ "min_trial_seconds": 0.013064771277777778,
+ "max_trial_seconds": 0.013086448527777777,
+ "mean_cycles": 27363231.883333333,
+ "median_trial_cycles": 27358917.236111112,
+ "operations_per_second": 76.50285359755948,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 66,
+  "sk_bytes": 66,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 12236,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1855488,
+ "peak_rss_bytes": 2060288,
+ "timing_scope": "loop"
+}

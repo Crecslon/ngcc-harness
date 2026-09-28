@@ -1,0 +1,81 @@
+{
+ "schema": 2,
+ "candidate": "sign-22",
+ "label": "Rhyme-SM3-256",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-22/libRhyme-SM3-256.so",
+  "sign",
+  "0",
+  "132",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-22",
+  "instance": "Rhyme-SM3-256",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111991150",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 132,
+  "ticks": 2091457991
+ },
+ "calls": [
+  {
+   "fn": "sm3hash",
+   "in_bits": 568,
+   "out_bits": 256,
+   "calls": 540804,
+   "ticks": 1521028890
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 15912,
+   "out_bits": 256,
+   "calls": 528,
+   "ticks": 23118703
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 552,
+   "out_bits": 256,
+   "calls": 1320,
+   "ticks": 3778481
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 312,
+   "out_bits": 256,
+   "calls": 30624,
+   "ticks": 44716920
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 15144,
+   "out_bits": 256,
+   "calls": 264,
+   "ticks": 10824305
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 808,
+   "out_bits": 256,
+   "calls": 264,
+   "ticks": 756977
+  }
+ ],
+ "share": {
+  "sm3hash": 0.767036336805868
+ },
+ "hash_share": 0.767036336805868
+}

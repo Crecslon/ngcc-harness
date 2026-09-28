@@ -1,0 +1,16 @@
+library     = lib/libSigurd512_REF.so
+id          = sign-24
+type        = sig
+algorithm   = Sigurd
+instance    = Sigurd512_REF
+variant     = Reference_Implementation
+source_dir  = Implementations/Reference_Implementation/Sigurd-512
+compiler    = gcc 14.2.0
+build_flags = -std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-poin
+pk_len      = 435
+sk_len      = 256
+sn_len      = 494532
+timing  keygen 273.897 ms  sign 1437.137 ms  verify 463.776 ms (avg over 10)
+wrote  kat/KAT_SIG_Sigurd512_REF.txt (5654210 bytes)
+manifest 88b636d74ddc852ab9e646737aa576ad54e43b6081fbfc4f144f73edefc76fe7 strict KAT_SIG_Sigurd512_REF.txt
+RESULT sign-24 Sigurd512_REF PASS 

@@ -1,0 +1,124 @@
+{
+ "schema": 2,
+ "candidate": "sign-07",
+ "label": "CS-256",
+ "operation": "sign",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-07/libCS-256.so",
+  "sign",
+  "0",
+  "149",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-07",
+  "instance": "CS_256",
+  "operation": "sign",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997942",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 149,
+  "ticks": 1997383787
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 149,
+   "ticks": 912039
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 272,
+   "out_bits": 82944,
+   "calls": 879,
+   "ticks": 422803727
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 48,
+   "calls": 293,
+   "ticks": 1364606
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1024,
+   "out_bits": 512,
+   "calls": 149,
+   "ticks": 1338548
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 64,
+   "calls": 4521,
+   "ticks": 21028391
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 272,
+   "out_bits": 92160,
+   "calls": 879,
+   "ticks": 469489425
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 9,
+   "calls": 13469,
+   "ticks": 61319381
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 7168,
+   "out_bits": 512,
+   "calls": 293,
+   "ticks": 12288274
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 1280,
+   "out_bits": 512,
+   "calls": 149,
+   "ticks": 1309137
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 272,
+   "out_bits": 36864,
+   "calls": 293,
+   "ticks": 62894941
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 8,
+   "calls": 3193,
+   "ticks": 14675248
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 8448,
+   "calls": 1341,
+   "ticks": 69322902
+  }
+ ],
+ "share": {
+  "drng": 0.08442171609556576,
+  "pseudoXOF": 0.4856973698865815
+ },
+ "hash_share": 0.4856973698865815
+}

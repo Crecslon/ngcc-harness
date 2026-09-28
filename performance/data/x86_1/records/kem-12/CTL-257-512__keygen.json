@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-12",
+ "label": "CTL-257-512",
+ "instance": "CTL-257-512",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 119,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.153771563685302,
+  "timeout_per_process_s": 303.0922629382112
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-12/lib/libCTL-257-512.so",
+ "library_sha256": "2489d45bdef410b7688ce718229d19631c6c6950fd8b3dcc5df63a9590f00d76",
+ "kat_log": "kat/kem-12/CTL-257-512.log",
+ "kat_log_sha256": "6d4cbf596edd65401919c24073d9fb8eaccd423b3bf13b30ce109a0113c651d4",
+ "started_utc": "2026-09-25T19:03:16.194745+00:00",
+ "ended_utc": "2026-09-25T19:03:21.421699+00:00",
+ "load_average_start": [
+  2.0107421875,
+  2.06591796875,
+  2.03271484375
+ ],
+ "load_average_end": [
+  2.009765625,
+  2.064453125,
+  2.0322265625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-12",
+    "instance": "CTL-257-512",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2478080",
+    "pk_bytes": "521",
+    "sk_bytes": "2953",
+    "ct_bytes": "473",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2928640",
+    "measurement_count": "119",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 119,
+     "seconds": 1.010009063,
+     "cycles": 2114373199
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-12/lib/libCTL-257-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "119",
+    "3"
+   ],
+   "wall_s": 1.0456926822662354,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-12",
+    "instance": "CTL-257-512",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2486272",
+    "pk_bytes": "521",
+    "sk_bytes": "2953",
+    "ct_bytes": "473",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2940928",
+    "measurement_count": "119",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 119,
+     "seconds": 1.009431304,
+     "cycles": 2112862453
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-12/lib/libCTL-257-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "119",
+    "3"
+   ],
+   "wall_s": 1.0450639724731445,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-12",
+    "instance": "CTL-257-512",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2555904",
+    "pk_bytes": "521",
+    "sk_bytes": "2953",
+    "ct_bytes": "473",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "3010560",
+    "measurement_count": "119",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 119,
+     "seconds": 1.009735616,
+     "cycles": 2113880936
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-12/lib/libCTL-257-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "119",
+    "3"
+   ],
+   "wall_s": 1.0454750061035156,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-12",
+    "instance": "CTL-257-512",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2547712",
+    "pk_bytes": "521",
+    "sk_bytes": "2953",
+    "ct_bytes": "473",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2994176",
+    "measurement_count": "119",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 119,
+     "seconds": 1.009859919,
+     "cycles": 2113829301
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-12/lib/libCTL-257-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "119",
+    "3"
+   ],
+   "wall_s": 1.045534610748291,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-12",
+    "instance": "CTL-257-512",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "2490368",
+    "pk_bytes": "521",
+    "sk_bytes": "2953",
+    "ct_bytes": "473",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2940928",
+    "measurement_count": "119",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 119,
+     "seconds": 1.009412857,
+     "cycles": 2113110261
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-12/lib/libCTL-257-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "119",
+    "3"
+   ],
+   "wall_s": 1.0449585914611816,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 119,
+   "seconds": 1.010009063,
+   "cycles": 2114373199
+  },
+  {
+   "measurements": 119,
+   "seconds": 1.009431304,
+   "cycles": 2112862453
+  },
+  {
+   "measurements": 119,
+   "seconds": 1.009735616,
+   "cycles": 2113880936
+  },
+  {
+   "measurements": 119,
+   "seconds": 1.009859919,
+   "cycles": 2113829301
+  },
+  {
+   "measurements": 119,
+   "seconds": 1.009412857,
+   "cycles": 2113110261
+  }
+ ],
+ "measurements": 595,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.008484787830252102,
+ "median_trial_seconds": 0.00848517324369748,
+ "min_trial_seconds": 0.008482460983193277,
+ "max_trial_seconds": 0.008487471117647059,
+ "mean_cycles": 17761438.907563027,
+ "median_trial_cycles": 17763271.43697479,
+ "operations_per_second": 117.85798537407716,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 521,
+  "sk_bytes": 2953,
+  "ct_bytes": 473,
+  "ss_bytes": 16,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 2555904,
+ "peak_rss_bytes": 3010560,
+ "timing_scope": "loop"
+}

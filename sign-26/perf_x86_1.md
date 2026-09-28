@@ -103,7 +103,7 @@ Share of each operation spent in the ICCS placeholder hash functions and in the 
 
 ## 7. Raw evidence index
 
-All paths are relative to the campaign run directory; commands are recorded in each JSON file.
+Paths are relative to `performance/data/x86_1/` in the [harness](https://github.com/ngcc-dev/ngcc-harness); each JSON file records its commands, environment and trials.
 
 | instance | item | file |
 |---|---|---|
@@ -121,6 +121,7 @@ All paths are relative to the campaign run directory; commands are recorded in e
 | `SQIsign2D-lvl2` | hash profile keygen | `profile/sign-26/SQIsign2D-lvl2__keygen.json` |
 | `SQIsign2D-lvl2` | hash profile sign | `profile/sign-26/SQIsign2D-lvl2__sign.json` |
 | `SQIsign2D-lvl2` | hash profile verify | `profile/sign-26/SQIsign2D-lvl2__verify.json` |
+| `SQIsign2D-lvl3` | KAT log (sha256 `2199418541c0f31c…`) | `kat/sign-26/SQIsign2D-lvl3.log` |
 | `SQIsign2D-lvl3` | timing keygen | `records/sign-26/SQIsign2D-lvl3__keygen.json` |
 | `SQIsign2D-lvl3` | timing sign | `records/sign-26/SQIsign2D-lvl3__sign.json` |
 | `SQIsign2D-lvl3` | timing verify | `records/sign-26/SQIsign2D-lvl3__verify.json` |

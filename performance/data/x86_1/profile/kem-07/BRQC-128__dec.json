@@ -1,0 +1,103 @@
+{
+ "schema": 2,
+ "candidate": "kem-07",
+ "label": "BRQC-128",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-07/libBRQC-128.so",
+  "dec",
+  "0",
+  "23",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-07",
+  "instance": "BRQC-128",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998038",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 23,
+  "ticks": 2180872394
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 23,
+   "ticks": 105596
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 896,
+   "calls": 23,
+   "ticks": 207926
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 46768,
+   "out_bits": 512,
+   "calls": 23,
+   "ticks": 5973182
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 1280,
+   "calls": 23,
+   "ticks": 240752
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 576,
+   "calls": 92,
+   "ticks": 695269
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 15232,
+   "calls": 115,
+   "ticks": 10542326
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 80,
+   "calls": 92,
+   "ticks": 425890
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 16528,
+   "out_bits": 512,
+   "calls": 23,
+   "ticks": 2282364
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 2304,
+   "calls": 23,
+   "ticks": 376844
+  }
+ ],
+ "share": {
+  "drng": 0.005775029770036146,
+  "pseudohash": 0.0037854328491261557
+ },
+ "hash_share": 0.0037854328491261557
+}

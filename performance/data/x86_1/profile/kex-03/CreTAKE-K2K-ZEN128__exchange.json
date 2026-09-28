@@ -1,0 +1,133 @@
+{
+ "schema": 2,
+ "candidate": "kex-03",
+ "label": "CreTAKE-K2K-ZEN128",
+ "operation": "exchange",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kex-03/libCreTAKE-K2K-ZEN128.so",
+  "exchange",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kex-03",
+  "instance": "CreTAKE-K2K-ZEN128",
+  "operation": "exchange",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996609",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 1921250324
+ },
+ "calls": [
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 128,
+   "calls": 4000,
+   "ticks": 19233404
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 512,
+   "calls": 4000,
+   "ticks": 25203078
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 4920,
+   "out_bits": 256,
+   "calls": 4000,
+   "ticks": 55859040
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 27304,
+   "out_bits": 256,
+   "calls": 2000,
+   "ticks": 147810371
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 2560,
+   "calls": 4000,
+   "ticks": 114907816
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 1024,
+   "calls": 7792,
+   "ticks": 90001005
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 256,
+   "out_bits": 768,
+   "calls": 4000,
+   "ticks": 75003186
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 1367,
+   "out_bits": 512,
+   "calls": 2000,
+   "ticks": 31392327
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 64,
+   "out_bits": 640,
+   "calls": 1000,
+   "ticks": 4641856
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 3584,
+   "calls": 5000,
+   "ticks": 199644470
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 520,
+   "out_bits": 2048,
+   "calls": 5000,
+   "ticks": 115032032
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 5176,
+   "out_bits": 128,
+   "calls": 2000,
+   "ticks": 30808568
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 4224,
+   "out_bits": 256,
+   "calls": 2000,
+   "ticks": 24834482
+  }
+ ],
+ "share": {
+  "drng": 0.023128939235510054,
+  "sm3hash": 0.042000524862370825,
+  "pseudoXOF": 0.36582745580840825,
+  "pseudohash": 0.05537826678331376
+ },
+ "hash_share": 0.46320624745409283
+}

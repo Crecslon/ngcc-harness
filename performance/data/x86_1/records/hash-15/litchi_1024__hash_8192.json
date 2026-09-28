@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "hash-15",
+ "label": "litchi_1024",
+ "instance": "litchi_1024",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 8192,
+ "plan": {
+  "iterations_per_trial": 3939,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.014547104037476,
+  "timeout_per_process_s": 303.0087282624225
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 1,
+ "library": "hash-15/lib/liblitchi_1024.so",
+ "library_sha256": "df10c887023ba1a593cbca1bffa7059bee79dc6f1e5d8578633ba9653fa3f81b",
+ "kat_log": "kat/hash-15/litchi_1024.log",
+ "kat_log_sha256": "7318526a5770f9b9865f1177df0b92fae3d09e9ab29896c9905844abddcbd4c9",
+ "started_utc": "2026-09-25T17:48:18.529726+00:00",
+ "ended_utc": "2026-09-25T17:48:24.359170+00:00",
+ "load_average_start": [
+  2.052734375,
+  2.04931640625,
+  2.0078125
+ ],
+ "load_average_end": [
+  2.04833984375,
+  2.04833984375,
+  2.00732421875
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-15",
+    "instance": "litchi_1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1712128",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1777664",
+    "measurement_count": "3939",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3939,
+     "seconds": 0.945111376,
+     "cycles": 1978651193
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-15/lib/liblitchi_1024.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "3939",
+    "3"
+   ],
+   "wall_s": 0.9479925632476807,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-15",
+    "instance": "litchi_1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1642496",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1773568",
+    "measurement_count": "3939",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3939,
+     "seconds": 0.937323213,
+     "cycles": 1962192976
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-15/lib/liblitchi_1024.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "3939",
+    "3"
+   ],
+   "wall_s": 0.9401209354400635,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-15",
+    "instance": "litchi_1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1552384",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1679360",
+    "measurement_count": "3939",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3939,
+     "seconds": 0.939598582,
+     "cycles": 1967133862
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-15/lib/liblitchi_1024.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "3939",
+    "3"
+   ],
+   "wall_s": 0.9423670768737793,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-15",
+    "instance": "litchi_1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1712128",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1777664",
+    "measurement_count": "3939",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3939,
+     "seconds": 0.962259767,
+     "cycles": 2014300547
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-15/lib/liblitchi_1024.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "3939",
+    "3"
+   ],
+   "wall_s": 0.9650363922119141,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "hash-15",
+    "instance": "litchi_1024",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1531904",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "128",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1658880",
+    "measurement_count": "3939",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 3939,
+     "seconds": 0.938572531,
+     "cycles": 1964766108
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "hash-15/lib/liblitchi_1024.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "3939",
+    "3"
+   ],
+   "wall_s": 0.9413762092590332,
+   "disturbed_retries": 1
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 3939,
+   "seconds": 0.945111376,
+   "cycles": 1978651193
+  },
+  {
+   "measurements": 3939,
+   "seconds": 0.937323213,
+   "cycles": 1962192976
+  },
+  {
+   "measurements": 3939,
+   "seconds": 0.939598582,
+   "cycles": 1967133862
+  },
+  {
+   "measurements": 3939,
+   "seconds": 0.962259767,
+   "cycles": 2014300547
+  },
+  {
+   "measurements": 3939,
+   "seconds": 0.938572531,
+   "cycles": 1964766108
+  }
+ ],
+ "measurements": 19695,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.00023980022691038336,
+ "median_trial_seconds": 0.0002385373399339934,
+ "min_trial_seconds": 0.00023795968849961918,
+ "max_trial_seconds": 0.0002442903698908352,
+ "mean_cycles": 502007.8540746382,
+ "median_trial_cycles": 499399.30489972077,
+ "operations_per_second": 4170.13783883413,
+ "throughput_MB_per_second": 34.16176917572919,
+ "sizes": {
+  "input_bytes": 8192,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 128
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1712128,
+ "peak_rss_bytes": 1777664,
+ "timing_scope": "loop"
+}

@@ -335,7 +335,7 @@ def phase_build(run: Path, args) -> None:
 
 def driver(args, lib: str, op: str, size: int, trials: int, iters: int, warmups: int,
            timeout: float) -> dict:
-    cmd = ["taskset", "-c", str(args.cpu), str(PERF / "ngcc_perf"), lib, op, str(size),
+    cmd = ["taskset", "-c", str(args.cpu), "performance/ngcc_perf", lib, op, str(size),
            str(trials), "1", str(iters), str(warmups)]
     t0 = time.time()
     try:
@@ -626,7 +626,8 @@ def phase_profile(run: Path, args) -> None:
             iters = 1 if t1 > 60 else min(1000, max(3, math.ceil(1.0 / t1)))
             warm = 1 if t1 < 5 else 0
             setup = cal.get("setup_s") or 0.0
-            cmd = ["taskset", "-c", str(args.cpu), str(PERF / "hashprof/hashprof"), lib, op, str(size),
+            cmd = ["taskset", "-c", str(args.cpu), "performance/hashprof/hashprof",
+                   os.path.relpath(lib, ROOT), op, str(size),
                    str(iters), str(warm)]
             try:
                 pr = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True,
@@ -721,11 +722,53 @@ def phase_hashcost(run: Path, args) -> None:
         log(run, f"hashcost {e['candidate']} {e['label']} ({digest_bits}-bit): {len(missing)} lengths, rc={p.returncode}")
 
 
+# ---------------------------------------------------------------- phase: publish
+
+def phase_publish(run: Path) -> int:
+    """Copy the evidence that the reports cite into performance/data/<system>/.
+
+    Published: campaign.json, build.json, records/, profile/ (the timing and
+    hash-profile records), kat/ (the KAT logs of the timed libraries) and the
+    katcheck/ logs. Not published: calibration runs, build logs, hash-cost
+    tables and generated KAT text. Paths under the repository are rewritten to
+    repository-relative form; any other absolute path aborts the publication.
+    """
+    import shutil
+    meta = load(run / "campaign.json") or {}
+    sid = meta.get("system_id")
+    if not sid:
+        print(f"{run}: campaign.json has no system_id", file=sys.stderr)
+        return 2
+    dest = PERF / "data" / sid
+    files = [run / "campaign.json", run / "build.json"]
+    files += sorted((run / "records").rglob("*.json"))
+    files += sorted(f for f in (run / "profile").rglob("*__*.json") if "RELINK" not in f.name)
+    files += sorted((run / "kat").rglob("*.log")) + sorted((run / "katcheck").glob("*.log"))
+    prefix = str(ROOT) + "/"
+    staged = {}
+    for f in files:
+        text = f.read_text(encoding="utf-8", errors="replace").replace(prefix, "").replace(str(ROOT), ".")
+        for bad in ("/home/", "/tmp/", "/root/", "/Users/"):
+            if bad in text:
+                print(f"{f.relative_to(run)}: absolute path {bad!r} remains; not publishing", file=sys.stderr)
+                return 2
+        staged[f.relative_to(run).as_posix()] = text
+    if dest.exists():
+        shutil.rmtree(dest)
+    for rel, text in staged.items():
+        out = dest / rel
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(text, encoding="utf-8")
+    print(f"publish: {len(staged)} files for system {sid} -> {dest.relative_to(ROOT)}/")
+    return 0
+
+
 # ---------------------------------------------------------------- main
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("phase", choices=["check", "build", "calibrate", "measure", "profile", "hashcost", "all", "plan"])
+    ap.add_argument("phase", choices=["check", "build", "calibrate", "measure", "profile", "hashcost", "all",
+                                      "plan", "publish"])
     ap.add_argument("--cpu", type=int, default=2)
     ap.add_argument("--run-dir", type=Path, help="existing or new run directory (default: new)")
     ap.add_argument("--only", help="regex over candidate ids (e.g. '^kem-2')")
@@ -744,6 +787,10 @@ def main() -> int:
             print("HOST:", p)
         print("host ready" if not problems else f"{len(problems)} problem(s)")
         return 1 if problems else 0
+    if args.phase == "publish":
+        if not args.run_dir:
+            ap.error("publish needs --run-dir")
+        return phase_publish(args.run_dir if args.run_dir.is_absolute() else ROOT / args.run_dir)
     if problems and args.phase in ("calibrate", "measure", "profile", "hashcost", "all") and not args.allow_unfixed_host:
         for p in problems:
             print("HOST:", p, file=sys.stderr)
@@ -767,7 +814,12 @@ def main() -> int:
         meta["system_id"] = sid
     meta.setdefault("started_utc", dt.datetime.now(dt.UTC).isoformat())
     meta.setdefault("environment_at_start", environment(args.cpu))
-    meta["host_problems"] = sorted(set(meta.get("host_problems", [])) | set(problems))
+    measuring = args.phase in ("calibrate", "measure", "profile", "hashcost", "all")
+    meta.setdefault("host_checks", []).append({"phase": args.phase, "cpu": args.cpu,
+                                               "utc": dt.datetime.now(dt.UTC).isoformat(),
+                                               "problems": problems})
+    if measuring:
+        meta["host_problems"] = sorted(set(meta.get("host_problems", [])) | set(problems))
     meta["arch_config"] = ARCH.get(platform.machine())
     meta["harness_additions"] = HARNESS_ADDITIONS
     meta["planning"] = {"trials": TRIALS, "trial_target_s": TRIAL_TARGET_S, "min_total": MIN_TOTAL,

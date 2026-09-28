@@ -1,0 +1,383 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "sign-12",
+ "label": "Galas-256S",
+ "instance": "Galas-256S",
+ "variant": "reference",
+ "flags": "harness-default",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 37,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.542291307659301,
+  "timeout_per_process_s": 303.32537478459557
+ },
+ "kat": "MISMATCH",
+ "kat_not_passed": true,
+ "disturbed_retries": 0,
+ "library": "sign-12/lib/libGalas-256S.so",
+ "library_sha256": "2246bbf34f99aaf6aaec0eb3ef71e3fb501ebc82f21c87a64bf202088aa097b4",
+ "kat_log": "kat/sign-12/Galas-256S.log",
+ "kat_log_sha256": "7c3471c83d5a206ff4a02fbd19f98b0fecca3826cd2b0be3c4c2374f1c7ecdba",
+ "started_utc": "2026-09-25T19:23:24.389891+00:00",
+ "ended_utc": "2026-09-25T19:23:29.937003+00:00",
+ "load_average_start": [
+  2.0,
+  2.021484375,
+  2.0
+ ],
+ "load_average_end": [
+  2.0,
+  2.02099609375,
+  2.0
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-12",
+    "instance": "Galas-256S",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1867776",
+    "pk_bytes": "64",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12114",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2060288",
+    "measurement_count": "37",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 37,
+     "seconds": 1.024879225,
+     "cycles": 2141041314
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-12/lib/libGalas-256S.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "37",
+    "3"
+   ],
+   "wall_s": 1.1102585792541504,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-12",
+    "instance": "Galas-256S",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1937408",
+    "pk_bytes": "64",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12114",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2134016",
+    "measurement_count": "37",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 37,
+     "seconds": 1.02343042,
+     "cycles": 2137739484
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-12/lib/libGalas-256S.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "37",
+    "3"
+   ],
+   "wall_s": 1.108813762664795,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-12",
+    "instance": "Galas-256S",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1953792",
+    "pk_bytes": "64",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12114",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2150400",
+    "measurement_count": "37",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 37,
+     "seconds": 1.023542862,
+     "cycles": 2138340282
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-12/lib/libGalas-256S.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "37",
+    "3"
+   ],
+   "wall_s": 1.1092565059661865,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-12",
+    "instance": "Galas-256S",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1945600",
+    "pk_bytes": "64",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12114",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2142208",
+    "measurement_count": "37",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 37,
+     "seconds": 1.023749463,
+     "cycles": 2138977485
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-12/lib/libGalas-256S.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "37",
+    "3"
+   ],
+   "wall_s": 1.1089551448822021,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "sign-12",
+    "instance": "Galas-256S",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1839104",
+    "pk_bytes": "64",
+    "sk_bytes": "64",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "12114",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "sign_failures_retried": "0",
+    "message_tweaks": "0",
+    "setup_verify_failed": "0",
+    "signature_length_excess": "0",
+    "verify_rejections": "0",
+    "peak_rss_bytes": "2101248",
+    "measurement_count": "37",
+    "guide_100_measurements": "not_met"
+   },
+   "trials": [
+    {
+     "measurements": 37,
+     "seconds": 1.024228874,
+     "cycles": 2139839688
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "sign-12/lib/libGalas-256S.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "37",
+    "3"
+   ],
+   "wall_s": 1.1094574928283691,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 37,
+   "seconds": 1.024879225,
+   "cycles": 2141041314
+  },
+  {
+   "measurements": 37,
+   "seconds": 1.02343042,
+   "cycles": 2137739484
+  },
+  {
+   "measurements": 37,
+   "seconds": 1.023542862,
+   "cycles": 2138340282
+  },
+  {
+   "measurements": 37,
+   "seconds": 1.023749463,
+   "cycles": 2138977485
+  },
+  {
+   "measurements": 37,
+   "seconds": 1.024228874,
+   "cycles": 2139839688
+  }
+ ],
+ "measurements": 185,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.027674761318918918,
+ "median_trial_seconds": 0.027668904405405405,
+ "min_trial_seconds": 0.02766028162162162,
+ "max_trial_seconds": 0.027699438513513516,
+ "mean_cycles": 57815882.44864865,
+ "median_trial_cycles": 57810202.2972973,
+ "operations_per_second": 36.13400630546301,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 64,
+  "sk_bytes": 64,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 12114,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1953792,
+ "peak_rss_bytes": 2150400,
+ "timing_scope": "loop"
+}

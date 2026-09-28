@@ -1,0 +1,17 @@
+library     = lib/libCMultiURAG-512.so
+id          = kem-10
+type        = kem
+algorithm   = C-Multi-UR-AG
+instance    = CMultiURAG-512
+variant     = Reference_Implementation
+source_dir  = Implementations/Reference_Implementation/CMultiURAG-512
+compiler    = gcc 14.2.0
+build_flags = -std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-poin
+pk_len      = 28866
+sk_len      = 29021
+ct_len      = 40926
+ss_len      = 64
+timing  keygen 42.319 ms  enc 60.511 ms  dec 360.691 ms (avg over 10)
+wrote  kat/KAT_KEM_CMultiURAG-512.txt (1979960 bytes)
+manifest e15b53d2ab2bb95ea4fd024376eb2fec8c40944a0cc295242d55da0b797fdac9 strict KAT_KEM_CMultiURAG-512.txt
+RESULT kem-10 CMultiURAG-512 PASS 

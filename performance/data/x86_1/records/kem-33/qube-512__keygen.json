@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-33",
+ "label": "qube-512",
+ "instance": "qube_512",
+ "variant": "reference",
+ "flags": "harness-default",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 109,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.175282933328858,
+  "timeout_per_process_s": 303.1051697599973
+ },
+ "kat": "MISMATCH",
+ "kat_not_passed": true,
+ "disturbed_retries": 0,
+ "library": "kem-33/lib/libqube-512.so",
+ "library_sha256": "16b0d431eec9fc53b48ca83718eeb72219bc11a0b387f41499e2a5353a618551",
+ "kat_log": "kat/kem-33/qube-512.log",
+ "kat_log_sha256": "735bd1cc5ccd2967cd3fceb65204620634cd5993f171de93262e3fdfa156300e",
+ "started_utc": "2026-09-25T19:05:31.367803+00:00",
+ "ended_utc": "2026-09-25T19:05:36.470091+00:00",
+ "load_average_start": [
+  2.1201171875,
+  2.08984375,
+  2.04248046875
+ ],
+ "load_average_end": [
+  2.1103515625,
+  2.087890625,
+  2.0419921875
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-33",
+    "instance": "qube_512",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1761280",
+    "pk_bytes": "34028",
+    "sk_bytes": "34156",
+    "ct_bytes": "33846",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2183168",
+    "measurement_count": "109",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 109,
+     "seconds": 0.991210813,
+     "cycles": 2074524789
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-33/lib/libqube-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "109",
+    "3"
+   ],
+   "wall_s": 1.0208134651184082,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-33",
+    "instance": "qube_512",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1671168",
+    "pk_bytes": "34028",
+    "sk_bytes": "34156",
+    "ct_bytes": "33846",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2088960",
+    "measurement_count": "109",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 109,
+     "seconds": 0.990682093,
+     "cycles": 2073793886
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-33/lib/libqube-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "109",
+    "3"
+   ],
+   "wall_s": 1.020226001739502,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-33",
+    "instance": "qube_512",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1736704",
+    "pk_bytes": "34028",
+    "sk_bytes": "34156",
+    "ct_bytes": "33846",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2150400",
+    "measurement_count": "109",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 109,
+     "seconds": 0.989638048,
+     "cycles": 2071385949
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-33/lib/libqube-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "109",
+    "3"
+   ],
+   "wall_s": 1.0191705226898193,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-33",
+    "instance": "qube_512",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1859584",
+    "pk_bytes": "34028",
+    "sk_bytes": "34156",
+    "ct_bytes": "33846",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2215936",
+    "measurement_count": "109",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 109,
+     "seconds": 0.990685308,
+     "cycles": 2073824493
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-33/lib/libqube-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "109",
+    "3"
+   ],
+   "wall_s": 1.0202968120574951,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-33",
+    "instance": "qube_512",
+    "variant": "Reference_Implementation",
+    "operation": "keygen",
+    "input_bytes": "0",
+    "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1855488",
+    "pk_bytes": "34028",
+    "sk_bytes": "34156",
+    "ct_bytes": "33846",
+    "ss_bytes": "64",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "2211840",
+    "measurement_count": "109",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 109,
+     "seconds": 0.991841527,
+     "cycles": 2075672028
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-33/lib/libqube-512.so",
+    "keygen",
+    "0",
+    "1",
+    "1",
+    "109",
+    "3"
+   ],
+   "wall_s": 1.0215494632720947,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 109,
+   "seconds": 0.991210813,
+   "cycles": 2074524789
+  },
+  {
+   "measurements": 109,
+   "seconds": 0.990682093,
+   "cycles": 2073793886
+  },
+  {
+   "measurements": 109,
+   "seconds": 0.989638048,
+   "cycles": 2071385949
+  },
+  {
+   "measurements": 109,
+   "seconds": 0.990685308,
+   "cycles": 2073824493
+  },
+  {
+   "measurements": 109,
+   "seconds": 0.991841527,
+   "cycles": 2075672028
+  }
+ ],
+ "measurements": 545,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.00909001429174312,
+ "median_trial_seconds": 0.009088856036697247,
+ "min_trial_seconds": 0.00907924814678899,
+ "max_trial_seconds": 0.009099463550458715,
+ "mean_cycles": 19026057.146788992,
+ "median_trial_cycles": 19025912.779816512,
+ "operations_per_second": 110.010828135699,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 34028,
+  "sk_bytes": 34156,
+  "ct_bytes": 33846,
+  "ss_bytes": 64,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-O2 -fPIC -std=gnu11 -Wall -Wno-unused -Wno-unknown-pragmas -fno-strict-aliasing -fwrapv -fno-omit-frame-pointer -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1859584,
+ "peak_rss_bytes": 2215936,
+ "timing_scope": "loop"
+}

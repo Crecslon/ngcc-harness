@@ -1,0 +1,125 @@
+{
+ "schema": 2,
+ "candidate": "kem-33",
+ "label": "qube-256",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-33/libqube-256.so",
+  "dec",
+  "0",
+  "348",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-33",
+  "instance": "qube_256",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111997979",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 348,
+  "ticks": 2081548290
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 2048,
+   "calls": 696,
+   "ticks": 8497037
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 4096,
+   "calls": 696,
+   "ticks": 16840321
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 83904,
+   "out_bits": 256,
+   "calls": 348,
+   "ticks": 79129713
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 512,
+   "calls": 696,
+   "ticks": 2194664
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 776,
+   "out_bits": 512,
+   "calls": 348,
+   "ticks": 4545839
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 256,
+   "calls": 696,
+   "ticks": 1225216
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 1024,
+   "calls": 696,
+   "ticks": 4301783
+  },
+  {
+   "fn": "sm3hash",
+   "in_bits": 83576,
+   "out_bits": 256,
+   "calls": 696,
+   "ticks": 158029634
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 65536,
+   "calls": 348,
+   "ticks": 135064864
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 131072,
+   "calls": 348,
+   "ticks": 271020338
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 8192,
+   "calls": 348,
+   "ticks": 16907379
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 264,
+   "out_bits": 16384,
+   "calls": 348,
+   "ticks": 33652602
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.23525959323288148,
+  "sm3hash": 0.11393410767328391,
+  "pseudohash": 0.002183873908589457
+ },
+ "hash_share": 0.35137757481475485
+}

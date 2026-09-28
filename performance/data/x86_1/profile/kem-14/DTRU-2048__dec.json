@@ -1,0 +1,61 @@
+{
+ "schema": 2,
+ "candidate": "kem-14",
+ "label": "DTRU-2048",
+ "operation": "dec",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/kem-14/libDTRU-2048.so",
+  "dec",
+  "0",
+  "1000",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "kem-14",
+  "instance": "DTRU-2048",
+  "operation": "dec",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111998161",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 1000,
+  "ticks": 1031199983
+ },
+ "calls": [
+  {
+   "fn": "pseudohash",
+   "in_bits": 1040,
+   "out_bits": 512,
+   "calls": 2000,
+   "ticks": 32127605
+  },
+  {
+   "fn": "pseudohash",
+   "in_bits": 20992,
+   "out_bits": 512,
+   "calls": 1000,
+   "ticks": 123260996
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 512,
+   "out_bits": 12288,
+   "calls": 1000,
+   "ticks": 135027301
+  }
+ ],
+ "share": {
+  "pseudohash": 0.15068716404352384,
+  "pseudoXOF": 0.1309419154635498
+ },
+ "hash_share": 0.2816290795070736
+}

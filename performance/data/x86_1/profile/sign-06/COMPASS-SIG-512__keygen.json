@@ -1,0 +1,89 @@
+{
+ "schema": 2,
+ "candidate": "sign-06",
+ "label": "COMPASS-SIG-512",
+ "operation": "keygen",
+ "input_bytes": 0,
+ "status": "complete",
+ "command": [
+  "taskset",
+  "-c",
+  "4",
+  "performance/hashprof/hashprof",
+  "performance/hashprof/lib/sign-06/libCOMPASS-SIG-512.so",
+  "keygen",
+  "0",
+  "334",
+  "1"
+ ],
+ "stderr": "",
+ "meta": {
+  "id": "sign-06",
+  "instance": "COMPASS-SIG-512",
+  "operation": "keygen",
+  "tick_source": "rdtsc",
+  "tick_hz": "2111996950",
+  "warmups": "1",
+  "overflow_calls": "0"
+ },
+ "total": {
+  "operations": 334,
+  "ticks": 2042591508
+ },
+ "calls": [
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 528,
+   "out_bits": 1280,
+   "calls": 4676,
+   "ticks": 67091606
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 4096,
+   "out_bits": 256,
+   "calls": 5010,
+   "ticks": 62675091
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 272,
+   "out_bits": 16384,
+   "calls": 16366,
+   "ticks": 1589259103
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 256,
+   "out_bits": 1024,
+   "calls": 334,
+   "ticks": 2026729
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 3584,
+   "out_bits": 1024,
+   "calls": 334,
+   "ticks": 14861749
+  },
+  {
+   "fn": "pseudoXOF",
+   "in_bits": 528,
+   "out_bits": 2304,
+   "calls": 4676,
+   "ticks": 120413986
+  },
+  {
+   "fn": "drng",
+   "in_bits": 0,
+   "out_bits": 256,
+   "calls": 334,
+   "ticks": 1604037
+  }
+ ],
+ "share": {
+  "pseudoXOF": 0.9088103307634039,
+  "drng": 0.0007852950498019989
+ },
+ "hash_share": 0.9088103307634039
+}

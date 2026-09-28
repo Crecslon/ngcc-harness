@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "kem-24",
+ "label": "scabbard128",
+ "instance": "scabbard128",
+ "variant": "reference",
+ "flags": "guide",
+ "operation": "dec",
+ "input_bytes": 0,
+ "plan": {
+  "iterations_per_trial": 2630,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.022857271088257,
+  "timeout_per_process_s": 303.01371436265293
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "kem-24/lib/libscabbard128.so",
+ "library_sha256": "cd590bfec6bb975f8c88394daed1d2fb1b1f160638f70bcd71948e26b4d4335b",
+ "kat_log": "kat/kem-24/scabbard128.log",
+ "kat_log_sha256": "aed56a053af9471cc918777e2155aa97d283eb3c5b7be3189ba6180d0743426a",
+ "started_utc": "2026-09-25T18:10:11.075685+00:00",
+ "ended_utc": "2026-09-25T18:10:16.001294+00:00",
+ "load_average_start": [
+  2.0048828125,
+  2.0498046875,
+  2.0224609375
+ ],
+ "load_average_end": [
+  2.00439453125,
+  2.048828125,
+  2.02197265625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551768,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-24",
+    "instance": "scabbard128",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1757184",
+    "pk_bytes": "736",
+    "sk_bytes": "1056",
+    "ct_bytes": "760",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1822720",
+    "measurement_count": "2630",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2630,
+     "seconds": 0.980952896,
+     "cycles": 2050330381
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-24/lib/libscabbard128.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "2630",
+    "3"
+   ],
+   "wall_s": 0.985398530960083,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-24",
+    "instance": "scabbard128",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1744896",
+    "pk_bytes": "736",
+    "sk_bytes": "1056",
+    "ct_bytes": "760",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1810432",
+    "measurement_count": "2630",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2630,
+     "seconds": 0.980610357,
+     "cycles": 2050166554
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-24/lib/libscabbard128.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "2630",
+    "3"
+   ],
+   "wall_s": 0.9849364757537842,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-24",
+    "instance": "scabbard128",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1748992",
+    "pk_bytes": "736",
+    "sk_bytes": "1056",
+    "ct_bytes": "760",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1814528",
+    "measurement_count": "2630",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2630,
+     "seconds": 0.981152209,
+     "cycles": 2051448761
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-24/lib/libscabbard128.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "2630",
+    "3"
+   ],
+   "wall_s": 0.9854881763458252,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-24",
+    "instance": "scabbard128",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1744896",
+    "pk_bytes": "736",
+    "sk_bytes": "1056",
+    "ct_bytes": "760",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1810432",
+    "measurement_count": "2630",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2630,
+     "seconds": 0.981240201,
+     "cycles": 2051821266
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-24/lib/libscabbard128.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "2630",
+    "3"
+   ],
+   "wall_s": 0.9856307506561279,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "kem-24",
+    "instance": "scabbard128",
+    "variant": "Reference_Implementation",
+    "operation": "dec",
+    "input_bytes": "0",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1703936",
+    "pk_bytes": "736",
+    "sk_bytes": "1056",
+    "ct_bytes": "760",
+    "ss_bytes": "16",
+    "signature_bytes": "0",
+    "digest_bytes": "0",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1835008",
+    "measurement_count": "2630",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 2630,
+     "seconds": 0.979543522,
+     "cycles": 2048816091
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "kem-24/lib/libscabbard128.so",
+    "dec",
+    "0",
+    "1",
+    "1",
+    "2630",
+    "3"
+   ],
+   "wall_s": 0.9839272499084473,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 2630,
+   "seconds": 0.980952896,
+   "cycles": 2050330381
+  },
+  {
+   "measurements": 2630,
+   "seconds": 0.980610357,
+   "cycles": 2050166554
+  },
+  {
+   "measurements": 2630,
+   "seconds": 0.981152209,
+   "cycles": 2051448761
+  },
+  {
+   "measurements": 2630,
+   "seconds": 0.981240201,
+   "cycles": 2051821266
+  },
+  {
+   "measurements": 2630,
+   "seconds": 0.979543522,
+   "cycles": 2048816091
+  }
+ ],
+ "measurements": 13150,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.0003728896718631179,
+ "median_trial_seconds": 0.00037298589201520914,
+ "min_trial_seconds": 0.00037245000836501905,
+ "max_trial_seconds": 0.00037309513346007604,
+ "mean_cycles": 779664.1104942965,
+ "median_trial_cycles": 779593.3007604562,
+ "operations_per_second": 2681.7583737397927,
+ "throughput_MB_per_second": null,
+ "sizes": {
+  "input_bytes": 0,
+  "pk_bytes": 736,
+  "sk_bytes": 1056,
+  "ct_bytes": 760,
+  "ss_bytes": 16,
+  "signature_bytes": 0,
+  "digest_bytes": 0
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1757184,
+ "peak_rss_bytes": 1835008,
+ "timing_scope": "loop"
+}
