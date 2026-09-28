@@ -97,8 +97,8 @@ fixed projection of the final state. Variable digest lengths are not supported.
 
 ## Implementation vs specification
 
-Checked: `src/JuziHash-512/CryptHash_AlgorithmInstance.c` and
-`src/JuziHash-1024/CryptHash_AlgorithmInstance.c` (the two files differ only in
+Checked: `Juzi/Implementations/Implementation/Reference_Implementation/JuziHash-512/CryptHash_AlgorithmInstance.c` and
+`Juzi/Implementations/Implementation/Reference_Implementation/JuziHash-1024/CryptHash_AlgorithmInstance.c` (the two files differ only in
 the 5 lines listed below). `drng.c` is the KAT RNG only; `KAT_CryptHash.c` is
 the shipped KAT driver and is excluded by `hash-13/Makefile`.
 
