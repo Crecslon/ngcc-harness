@@ -32,11 +32,14 @@ $(eval $(call DKEM,512))
 
 include ../api/link_finish.mk
 
-.PHONY: reproduce reproduce-rejection-binding reproduce-malicious-key
-reproduce: reproduce-rejection-binding reproduce-malicious-key
+.PHONY: reproduce reproduce-rejection-binding reproduce-malicious-key reproduce-ntt-overflow
+reproduce: reproduce-rejection-binding reproduce-malicious-key reproduce-ntt-overflow
 
 reproduce-rejection-binding: libs
 	python3 reproduce_rejection_binding.py $(LIBS)
 
 reproduce-malicious-key: libs
 	python3 reproduce_malicious_key.py $(LIBS)
+
+reproduce-ntt-overflow: libs
+	python3 reproduce_ntt_overflow.py $(LIBS)

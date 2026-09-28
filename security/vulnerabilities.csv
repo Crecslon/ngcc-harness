@@ -73,6 +73,7 @@ kem-12-1;Confirmed;static;The specified CTL-512 public-key space has at most 256
 kem-12-2;Confirmed;static;CTL-512 returns only 384 shared-secret bits
 kem-13-1;Confirmed;runtime;DKEM's rejection key does not bind the full ciphertext
 kem-13-2;Confirmed;runtime;Malicious public key defeats DKEM's contributory key derivation
+kem-13-3;Confirmed;runtime;A 16-bit NTT butterfly silently breaks honest DKEM-512 sessions
 kem-14-1;Confirmed;runtime;Caller-declared ciphertext length overflows a decapsulation stack buffer
 kem-14-2;Confirmed;runtime;Decapsulation return value exposes the implicit-rejection branch
 kem-14-3;Confirmed;runtime;Rejection key omits the specified public-key binding
@@ -139,6 +140,7 @@ sign-05-1;Confirmed;runtime;The final Fiat–Shamir challenge omits ã0, allowin
 sign-05-2;Confirmed;review;Signing indexes lookup tables with the secret key
 sign-06-1;Confirmed;static;The implemented message representative caps forgery security at 256 bits
 sign-06-2;Confirmed;static;The implementation expands the entire key pair from a 256-bit root
+sign-06-3;Confirmed;runtime;Rejected signatures leak heap memory without bound
 sign-07-1;Confirmed;runtime;Trivial signature malleability violates SUF-CMA
 sign-07-2;Confirmed;runtime;Verifier challenge-sign blindness enables universal forgery
 sign-07-3;Lead;review;Compressed signatures may leak the CS-128 signing key

@@ -31,3 +31,9 @@ $(eval $(call CMP,384))
 $(eval $(call CMP,512))
 
 include ../api/link_finish.mk
+
+.PHONY: reproduce reproduce-verify-leak
+reproduce: reproduce-verify-leak
+
+reproduce-verify-leak: libs
+	python3 reproduce_verify_leak.py $(LIBS)

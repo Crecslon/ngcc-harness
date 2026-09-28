@@ -280,6 +280,10 @@ echo "== kem-13-2 DKEM: malicious public key repeats the sender key (Medium) =="
 run_target kem-13 "kem-13-2" make -C kem-13 reproduce-malicious-key
 
 echo
+echo "== kem-13-3 DKEM: int16 NTT overflow breaks honest DKEM-512 sessions (Medium) =="
+run_target kem-13 "kem-13-3" make -C kem-13 reproduce-ntt-overflow
+
+echo
 echo "== kem-14-1 DTRU: caller length causes stack overflow (High) =="
 run_target kem-14 "kem-14-1" make -C kem-14 exploit
 
@@ -486,6 +490,10 @@ run_target sign-04 "sign-04-1/sign-04-2" make -C sign-04 exploit
 echo
 echo "== sign-05-1 Chinith: public-key-only forgery in all 14 sets (Critical) =="
 run_target sign-05 "sign-05-1" make -C sign-05 reproduce
+
+echo
+echo "== sign-06-3 COMPASS-SIG: rejected signatures leak heap memory (Low) =="
+run_target sign-06 "sign-06-3" make -C sign-06 reproduce-verify-leak
 
 echo
 echo "== sign-01-1 / sign-01-2: SUF-CMA malleability and malformed-hint stack write =="
