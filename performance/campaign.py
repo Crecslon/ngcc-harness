@@ -22,6 +22,12 @@ Phases (each resumable; finished work in the run directory is skipped):
   profile    Relink reference libraries with performance/hashprof/wrap.c and
              record the time and call shapes of pseudohash, pseudoXOF, sm3hash
              and the ICCS DRNG inside each operation.
+  baseline   Build the ICCS helpers sm3hash, pseudohash and pseudoXOF as hash
+             instances (performance/iccs, candidate id "iccs"), check them
+             against an independent SM3-based model, then calibrate and measure
+             them at the hash message lengths exactly like a hash candidate: the
+             reference point for the hash comparison in the summary. Adding it to
+             an existing run requires the same fixed host state as its records.
   hashcost   Price every recorded call shape with the official ICCS helpers and
              with each hash candidate (performance/hashprof/hashcost.c), for the
              hash-substitution estimate in performance/report.py.
@@ -363,7 +369,7 @@ def operations(entry: dict, args, run: Path) -> list[tuple[str, int]]:
         return [("keygen", 0), ("enc", 0), ("dec", 0)]
     if kind == "sign":
         return [("keygen", 0), ("sign", 0), ("verify", 0)]
-    if kind == "hash":
+    if kind in ("hash", BASELINE):
         return [("hash", n) for n in HASH_SIZES]
     # KEX: the full exchange, then each step that the protocol actually runs
     probe = load(run / "calibrate" / cand / f"{entry['label']}__exchange.json")
@@ -591,6 +597,59 @@ def phase_measure(run: Path, args) -> None:
                  f"(left ~{max(remaining, 0) / 3600:.1f} h)")
 
 
+# ---------------------------------------------------------------- phase: baseline
+
+BASELINE = "iccs"
+BASELINE_DIR = "performance/iccs"
+# host settings that every record of one run must share
+FIXED_ENV = ("hostname", "cpu_model", "cpu_number", "cpufreq_governor", "cpufreq_max_khz",
+             "intel_pstate_no_turbo", "cpufreq_boost", "smt_control", "perf_event_paranoid")
+
+
+def phase_baseline(run: Path, args) -> None:
+    env = environment(args.cpu)
+    ref = next((r["environment"] for f in sorted((run / "records").rglob("*.json"))
+                if not f.parent.name == BASELINE and (r := load(f)) and r.get("status") == "complete"
+                and r.get("environment", {}).get("cpu_number") == args.cpu), None)
+    if ref:
+        diff = [f"{k}: run {ref.get(k)!r}, now {env.get(k)!r}" for k in FIXED_ENV if ref.get(k) != env.get(k)]
+        if diff:
+            log(run, "baseline: host state differs from the run's records; not measuring: " + "; ".join(diff))
+            raise SystemExit(2)
+        for k in ("kernel", "compiler"):
+            if ref.get(k) != env.get(k):
+                log(run, f"baseline: note {k} differs from the run's records ({ref.get(k)!r} -> {env.get(k)!r})")
+    state = load(run / "build.json", {"instances": {}})
+    labels = instances(BASELINE_DIR)
+    if not all(f"{BASELINE}/{l}" in state["instances"] for l in labels):
+        arch = ARCH[platform.machine()]
+        blog = run / "build" / f"{BASELINE}.log"
+        rc = run_make(["make", "-B", f"-j{args.jobs}", "-C", BASELINE_DIR, "libs",
+                       f"NGCC_CFLAGS={arch['reference']} {HARNESS_ADDITIONS}"], blog)
+        for label in labels:
+            lib = ROOT / BASELINE_DIR / "lib" / f"lib{label}.so"
+            entry = {"candidate": BASELINE, "label": label, "instance": label, "variant": "iccs-baseline",
+                     "flags": "guide", "kat": "BUILDFAIL"}
+            if rc == 0 and lib.is_file():
+                dst = run / "kat" / BASELINE / f"{label}.log"
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                p = subprocess.run([sys.executable, str(PERF / "iccs/selftest.py"),
+                                    lib.relative_to(ROOT).as_posix(), label],
+                                   cwd=ROOT, capture_output=True, text=True)
+                dst.write_text(p.stdout + p.stderr, encoding="utf-8")
+                res = re.findall(rf"^RESULT {BASELINE} \S+ (\S+)", p.stdout, re.M)
+                entry.update(kat=res[-1] if res else "NORESULT", library=lib.relative_to(ROOT).as_posix(),
+                             library_sha256=sha256(lib), elf_load_bytes=elf_load_bytes(lib),
+                             kat_log=dst.relative_to(run).as_posix(), kat_log_sha256=sha256(dst))
+            state["instances"][f"{BASELINE}/{label}"] = entry
+        save(run / "build.json", state)
+        passed = sum(state["instances"][f"{BASELINE}/{l}"]["kat"] == "PASS" for l in labels)
+        log(run, f"baseline build: make rc={rc}, {passed}/{len(labels)} self-tests PASS")
+    sub = argparse.Namespace(**{**vars(args), "only": rf"^{BASELINE}$", "defer": None, "deferred_only": False})
+    phase_calibrate(run, sub)
+    phase_measure(run, sub)
+
+
 # ---------------------------------------------------------------- phase: profile
 
 def phase_profile(run: Path, args) -> None:
@@ -767,7 +826,7 @@ def phase_publish(run: Path) -> int:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("phase", choices=["check", "build", "calibrate", "measure", "profile", "hashcost", "all",
+    ap.add_argument("phase", choices=["check", "build", "baseline", "calibrate", "measure", "profile", "hashcost", "all",
                                       "plan", "publish"])
     ap.add_argument("--cpu", type=int, default=2)
     ap.add_argument("--run-dir", type=Path, help="existing or new run directory (default: new)")
@@ -791,7 +850,7 @@ def main() -> int:
         if not args.run_dir:
             ap.error("publish needs --run-dir")
         return phase_publish(args.run_dir if args.run_dir.is_absolute() else ROOT / args.run_dir)
-    if problems and args.phase in ("calibrate", "measure", "profile", "hashcost", "all") and not args.allow_unfixed_host:
+    if problems and args.phase in ("baseline", "calibrate", "measure", "profile", "hashcost", "all") and not args.allow_unfixed_host:
         for p in problems:
             print("HOST:", p, file=sys.stderr)
         print("refusing to measure on an unfixed host (use --allow-unfixed-host for tests)", file=sys.stderr)
@@ -814,7 +873,7 @@ def main() -> int:
         meta["system_id"] = sid
     meta.setdefault("started_utc", dt.datetime.now(dt.UTC).isoformat())
     meta.setdefault("environment_at_start", environment(args.cpu))
-    measuring = args.phase in ("calibrate", "measure", "profile", "hashcost", "all")
+    measuring = args.phase in ("baseline", "calibrate", "measure", "profile", "hashcost", "all")
     meta.setdefault("host_checks", []).append({"phase": args.phase, "cpu": args.cpu,
                                                "utc": dt.datetime.now(dt.UTC).isoformat(),
                                                "problems": problems})
@@ -831,7 +890,7 @@ def main() -> int:
     shown = run.relative_to(ROOT) if run.is_relative_to(ROOT) else run
     log(run, f"phase {args.phase} in {shown} on CPU {args.cpu}"
              + (f" (HOST NOT FIXED: {'; '.join(problems)})" if problems else ""))
-    if args.phase in ("calibrate", "measure", "profile", "hashcost", "all"):
+    if args.phase in ("baseline", "calibrate", "measure", "profile", "hashcost", "all"):
         # one measuring process per benchmark CPU at a time; later phases wait here
         import fcntl
         lock = open(PERF / "runs" / f".cpu{args.cpu}.lock", "w")
@@ -846,7 +905,7 @@ def main() -> int:
             dlock = open(PERF / "runs" / ".deferred.lock", "w")
             fcntl.flock(dlock, fcntl.LOCK_EX)
             args._dlock = dlock
-    phases = {"build": phase_build, "calibrate": phase_calibrate, "measure": phase_measure,
+    phases = {"build": phase_build, "baseline": phase_baseline, "calibrate": phase_calibrate, "measure": phase_measure,
               "profile": phase_profile, "hashcost": phase_hashcost}
     if args.phase == "plan":
         todo = all_plans(run, args)
@@ -855,7 +914,7 @@ def main() -> int:
             print(f"  {est / 60:8.1f} min  {e['candidate']} {e['label']} {op_key(op, size)}  "
                   f"iters/trial={p['iterations_per_trial']} separate={p['separate_processes']}")
         return 0
-    for name in (["build", "calibrate", "measure", "profile", "hashcost"] if args.phase == "all" else [args.phase]):
+    for name in (["build", "baseline", "calibrate", "measure", "profile", "hashcost"] if args.phase == "all" else [args.phase]):
         phases[name](run, args)
     meta = load(run / "campaign.json", {})
     meta["ended_utc"] = dt.datetime.now(dt.UTC).isoformat()

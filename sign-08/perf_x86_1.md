@@ -20,7 +20,7 @@ Independent measurement following the structure of the NICCS x86 self-assessment
 | memory | 31788 MiB |
 | OS / kernel | Debian GNU/Linux 13 (trixie) / 6.12.107+deb13-amd64 |
 | compiler / build tool | gcc (Debian 14.2.0-19) 14.2.0 / cmake version 3.31.6 |
-| campaign start / end (UTC) | 2026-09-25T10:02:21 / 2026-09-28T04:35:59 |
+| campaign start / end (UTC) | 2026-09-25T10:02:21 / 2026-09-28T10:51:21 |
 
 ## 3. Functional testing (KAT)
 

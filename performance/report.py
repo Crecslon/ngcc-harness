@@ -15,9 +15,11 @@ and, in --out (default performance/):
   symmetric-survey.md    which candidates use the ICCS helpers (source analysis,
                          shared by all systems), with this system's measured share
 
-Numbers are taken only from records in RUN_DIR. The summary gives a direct
-32-byte comparison between each hash candidate and an exact-shape `pseudoXOF`
-call already present in the published profiles. It does not estimate the cost
+Numbers are taken only from records in RUN_DIR. The summary compares each
+hash candidate with the ICCS `pseudoXOF` of the same output width at the same
+message length, timed directly as candidate "iccs" (campaign.py baseline); a run
+without those records falls back to the median profiled `pseudoXOF` call of that
+shape, for 32-byte messages only. Neither estimates the cost
 of substituting that hash into a public-key scheme; several hash submissions
 are not yet constant-time, so their timings are not production figures. The
 hash-cost data stays in RUN_DIR/hashcost/.
@@ -47,6 +49,8 @@ def op_order(key: str):
     return (ORDER.index(base) if base in ORDER else len(ORDER), int(size or 0), key)
 
 
+BASELINE = "iccs"        # the ICCS helpers timed as hash instances (performance/iccs)
+HASH_SIZES = (32, 128, 512, 1024, 4096, 8192, 16384, 65536)   # the guide's S1-S8
 OPS = {"kem": ["keygen", "enc", "dec"], "sign": ["keygen", "sign", "verify"], "kex": ["exchange"],
        "hash": ["hash_32", "hash_1024", "hash_65536"]}
 
@@ -140,6 +144,8 @@ class Run:
                         costs[(call.get("in_bits"), call.get("out_bits"))].append(
                             call["ticks"] / call["calls"] * to_core_cycles)
         self.pseudoxof_cost = {shape: statistics.median(values) for shape, values in costs.items()}
+        # the ICCS helpers timed directly at every hash message length
+        self.baseline = {l: recs for (c, l), recs in self.records.items() if c == BASELINE}
         self.params = defaultdict(list)
         with (ROOT / "data/parameters.csv").open(encoding="utf-8") as f:
             for row in csv.DictReader(f, delimiter=";"):
@@ -233,13 +239,39 @@ def cell(rec):
     return s + ("" if rec.get("guide_100_measurements_met") else f" (n={rec.get('measurements')})")
 
 
+def pk_cell(rec, share):
+    """Cycles with the symmetric share and any short count in one parenthesis:
+    `3.27 G (99%)`, `48.20 G (99%, n=35)`."""
+    text = cell(rec)
+    if not rec or rec.get("status") != "complete":
+        return text
+    notes = [share] if share else []
+    if not rec.get("guide_100_measurements_met"):
+        text = text.rsplit(" (n=", 1)[0]
+        notes.append(f"n={rec.get('measurements')}")
+    return f"{text} ({', '.join(notes)})" if notes else text
+
+
+def size_text(n: int) -> str:
+    return f"{n // 1024} KiB" if n >= 1024 and n % 1024 == 0 else f"{n} B"
+
+
+def xof_cycles(run: Run, input_bytes: int, out_bits: int):
+    """Cycles of pseudoXOF with this message length and output width: the direct
+    baseline measurement or, in a run without one, the median profiled call of
+    that shape (32-byte messages only)."""
+    if run.baseline:
+        return value(run.baseline.get(f"pseudoXOF-{out_bits}", {}).get(f"hash_{input_bytes}"))
+    return run.pseudoxof_cost.get((8 * input_bytes, out_bits)) if input_bytes == 32 else None
+
+
 def hash_cell(run: Run, rec, input_bytes: int):
-    """Cycle count, plus an exact-shape pseudoXOF ratio for the 32-byte row."""
+    """Cycle count, plus the ratio to pseudoXOF of the same shape."""
     rendered = cell(rec)
-    if not rec or rec.get("status") != "complete" or input_bytes != 32:
+    if not rec or rec.get("status") != "complete" or (input_bytes != 32 and not run.baseline):
         return rendered
     out_bits = 8 * int(rec.get("sizes", {}).get("digest_bytes", 0))
-    baseline = run.pseudoxof_cost.get((8 * input_bytes, out_bits))
+    baseline = xof_cycles(run, input_bytes, out_bits)
     cycles = rec.get("mean_cycles")
     if not baseline or not cycles:
         return f"{rendered} (ratio –)"
@@ -279,6 +311,26 @@ def omit_non_iccs_zero_row(run: Run, cand: str, label: str, cat: str) -> bool:
     return bool(shares) and all(share == 0 for share in shares)
 
 
+def baseline_table(run: Run) -> list[str]:
+    """The ICCS helpers at every hash message length (records/iccs/)."""
+    def order(label):
+        fn, bits = label.rsplit("-", 1)
+        return (["sm3hash", "pseudohash", "pseudoXOF"].index(fn), int(bits))
+    rows = []
+    for label in sorted(run.baseline, key=order):
+        recs = run.baseline[label]
+        fn, bits = label.rsplit("-", 1)
+        big = recs.get(f"hash_{HASH_SIZES[-1]}")
+        cpb = value(big) / HASH_SIZES[-1] if value(big) else None
+        status = run.build.get(f"{BASELINE}/{label}", {}).get("kat")
+        mark = "" if status == "PASS" else f" ⚠ self-test {status}"
+        rows.append(f"| `{fn}`{mark} | {bits} | " + " | ".join(cell(recs.get(f"hash_{n}")) for n in HASH_SIZES)
+                    + f" | {'–' if cpb is None else f'{cpb:.1f}'} |")
+    return ["| ICCS helper | output bits | " + " | ".join(size_text(n) for n in HASH_SIZES)
+            + f" | cycles/byte ({size_text(HASH_SIZES[-1])}) |",
+            "|---|---|" + "---|" * (len(HASH_SIZES) + 1)] + rows
+
+
 def instances_of(run: Run, cand: str):
     labels = sorted({l for (c, l) in run.records if c == cand} |
                     {e["label"] for e in run.build.values() if e["candidate"] == cand})
@@ -293,7 +345,7 @@ def summary(run: Run, out: Path, arch: str):
              "Independent measurements of the NGCC Round 1 implementations on one "
              f"{env.get('cpu_model', 'x86-64')} core ({clock_text(env)}).", "",
              "- **Cycles** are the mean of all timed calls in five trials, normally with each trial in a fresh process.",
-             "- **Symmetric %** is the measured share of an operation spent specifically in the ICCS placeholder "
+             "- **Symmetric %**, in parentheses after each public-key cycle count, is the measured share of an operation spent specifically in the ICCS placeholder "
              "functions (`pseudohash`, `pseudoXOF`, `sm3hash`). It excludes the ICCS DRNG and candidates' own "
              "hash primitives, so a low value does not necessarily mean little symmetric-cryptography work; see "
              "the [symmetric cryptography survey](symmetric-survey.md).",
@@ -303,8 +355,12 @@ def summary(run: Run, out: Path, arch: str):
              "not submitter self-assessments or NICCS results.",
              "- **Notation:** `–` means not measured, `n=` marks fewer than 100 timed calls, and ⚠ marks an instance "
              "whose submitted KAT vectors are not reproduced by the submitted code.",
-             "- **Hash rows** give three message sizes; the parenthesized 32-byte value is relative to an "
-             "exact-shape measured `pseudoXOF` call, not an estimate of a production replacement.",
+             ("- **Hash rows** give three message sizes; each parenthesized value is the candidate's cycles divided "
+              "by those of the ICCS `pseudoXOF` with the same output width and message length, timed the same way "
+              "([ICCS helpers](#iccs-hash-helpers)). It is a relative speed, not an estimate of a production "
+              "replacement." if run.baseline else
+              "- **Hash rows** give three message sizes; the parenthesized 32-byte value is relative to an "
+              "exact-shape measured `pseudoXOF` call, not an estimate of a production replacement."),
              "- **Scope:** the table keeps ICCS-facing reference parameter sets. Notes flag important caveats; "
              "additional measured variants remain on the linked instance reports.", ""]
     for cat, title in CATS:
@@ -323,10 +379,9 @@ def summary(run: Run, out: Path, arch: str):
                     if cat == "hash":
                         cells.append(hash_cell(run, recs.get(op), int(op.split("_")[1])))
                     else:
-                        cells.append(cell(recs.get(op)))
-                    if cat in ("kem", "sign", "kex"):
                         p = run.profiles.get((cand, label), {}).get(op)
-                        cells.append(pct(p.get("hash_share")) if p and "hash_share" in p else "–")
+                        share = pct(p["hash_share"]) if p and "hash_share" in p else None
+                        cells.append(pk_cell(recs.get(op), share))
                 variant = " (AVX2)" if label.endswith("-avx2") else ""
                 status = entry.get("kat")
                 if status and status != "PASS":
@@ -338,14 +393,24 @@ def summary(run: Run, out: Path, arch: str):
                             f"`{label}`{variant} | " + " | ".join(cells) + f" | {notes} |")
         if not rows:
             continue
+        if cat == "hash" and run.baseline:
+            lines += ["## ICCS hash helpers", "",
+                      "The ICCS placeholder functions from `api/auxfunc.c`, built with the reference flags and "
+                      "timed as hash instances at the guide's S1–S8 message lengths (mean cycles per call). "
+                      "`pseudohash` exists only with 512-, 768- and 1024-bit output; `pseudoXOF` is given at every "
+                      "digest width of a hash candidate.", ""] + baseline_table(run) + [""]
         lines += [f"## {title}", ""]
-        if cat == "hash":
+        if cat == "hash" and run.baseline:
+            lines += ["| id | algorithm | instance performance report | 32 B cycles (× pseudoXOF) | "
+                      "1 KiB cycles (× pseudoXOF) | 64 KiB cycles (× pseudoXOF) | notes |",
+                      "|---|---|---|---|---|---|---|"]
+        elif cat == "hash":
             lines += ["| id | algorithm | instance performance report | 32 B cycles (vs pseudoXOF) | 1 KiB cycles | 64 KiB cycles | notes |",
                       "|---|---|---|---|---|---|---|"]
         else:
-            hdr = " | ".join(f"{op} | sym %" for op in OPS[cat])
+            hdr = " | ".join(f"{op} cycles (sym %)" for op in OPS[cat])
             lines += [f"| id | algorithm | instance performance report | {hdr} | notes |",
-                      "|---|---|---|" + "---|" * (2 * len(OPS[cat]) + 1)]
+                      "|---|---|---|" + "---|" * (len(OPS[cat]) + 1)]
         lines += rows + [""]
     emit(summary_page(out), "\n".join(lines) + "\n")
 
@@ -596,10 +661,17 @@ def method_page(run: Run, out: Path, arch: str):
          "time inside these functions divided by the time of the whole operation, measured in the "
          "same process on the same inputs as the benchmark. The wrappers cost a few tens of cycles "
          "per call.", "",
-         "The summary compares each hash candidate's 32-byte timing with the median measured "
-         "`pseudoXOF` call having exactly the same input and output widths in the published profiles. "
-         "Profile TSC ticks are converted to fixed-frequency core cycles using each profile's recorded "
-         "tick calibration and the campaign's fixed CPU frequency. "
+         (f"The ICCS helpers `sm3hash`, `pseudohash` and `pseudoXOF` are also timed directly, as hash "
+          f"instances of `api/auxfunc.c` (`performance/iccs`, records under `{BASELINE}/`): same reference "
+          "flags, driver, message lengths and planning as the hash candidates. Before timing, each is checked "
+          "against an independent model on OpenSSL's SM3, and `sm3hash` against the GB/T 32905 examples. "
+          "The summary divides each hash candidate's cycles by those of `pseudoXOF` with the same output "
+          "width and message length. "
+          if run.baseline else
+          "The summary compares each hash candidate's 32-byte timing with the median measured "
+          "`pseudoXOF` call having exactly the same input and output widths in the published profiles. "
+          "Profile TSC ticks are converted to fixed-frequency core cycles using each profile's recorded "
+          "tick calibration and the campaign's fixed CPU frequency. ") +
          "This is a direct, self-contained relative measurement, not an estimate of substituting "
          "that hash into a public-key scheme. Several hash submissions are not yet constant-time "
          "(e.g. table-based S-boxes), so their current timings are not production figures; the "
@@ -641,7 +713,7 @@ def main():
     arch = {"x86_64": "x86-64", "aarch64": "AArch64"}.get(systems[system]["Arch"], systems[system]["Arch"])
     out = a.out.resolve()
     out.mkdir(parents=True, exist_ok=True)
-    cands = sorted({c for (c, l) in run.records} | {e["candidate"] for e in run.build.values()})
+    cands = sorted(({c for (c, l) in run.records} | {e["candidate"] for e in run.build.values()}) - {BASELINE})
     for cand in cands:
         candidate_page(run, cand, out, arch)
     summary(run, out, arch)

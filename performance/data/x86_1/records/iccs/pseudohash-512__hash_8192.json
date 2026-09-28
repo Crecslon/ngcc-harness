@@ -1,0 +1,358 @@
+{
+ "schema": 2,
+ "status": "complete",
+ "candidate": "iccs",
+ "label": "pseudohash-512",
+ "instance": "pseudohash-512",
+ "variant": "iccs-baseline",
+ "flags": "guide",
+ "operation": "hash",
+ "input_bytes": 8192,
+ "plan": {
+  "iterations_per_trial": 5430,
+  "warmups": 3,
+  "trials": 5,
+  "separate_processes": true,
+  "estimated_s": 5.013379144414673,
+  "timeout_per_process_s": 303.0080274866488
+ },
+ "kat": "PASS",
+ "kat_not_passed": false,
+ "disturbed_retries": 0,
+ "library": "performance/iccs/lib/libpseudohash-512.so",
+ "library_sha256": "55c707779b1c644ac91898f61ada566905eaa44f58a8f90a344e222119b3b72d",
+ "kat_log": "kat/iccs/pseudohash-512.log",
+ "kat_log_sha256": "b82066041170579b0cbdd061205de4469cb53888e56f4478c0699a52638bb429",
+ "started_utc": "2026-09-28T10:48:48.480677+00:00",
+ "ended_utc": "2026-09-28T10:48:53.106124+00:00",
+ "load_average_start": [
+  0.9443359375,
+  0.7001953125,
+  0.55078125
+ ],
+ "load_average_end": [
+  0.94921875,
+  0.70556640625,
+  0.55322265625
+ ],
+ "environment": {
+  "hostname": "blk",
+  "architecture": "x86_64",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i7-12700",
+  "cpu_number": 2,
+  "logical_cpus_online": "0,2,4,6,8,10,12,14,16-19",
+  "virtualized": false,
+  "memory_total_kib": 32551764,
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.12.107+deb13-amd64",
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "cmake": "cmake version 3.31.6",
+  "python": "3.13.5",
+  "perf_event_paranoid": "2",
+  "cpufreq_governor": "performance",
+  "cpufreq_driver": "intel_pstate",
+  "cpufreq_min_khz": "800000",
+  "cpufreq_max_khz": "2100000",
+  "intel_pstate_no_turbo": "1",
+  "cpufreq_boost": null,
+  "smt_control": "off"
+ },
+ "processes": [
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "iccs",
+    "instance": "pseudohash-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1548288",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1691648",
+    "measurement_count": "5430",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 5430,
+     "seconds": 0.921275854,
+     "cycles": 1928657250
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "performance/iccs/lib/libpseudohash-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "5430",
+    "3"
+   ],
+   "wall_s": 0.9241132736206055,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "iccs",
+    "instance": "pseudohash-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1708032",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1789952",
+    "measurement_count": "5430",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 5430,
+     "seconds": 0.922403273,
+     "cycles": 1930988349
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "performance/iccs/lib/libpseudohash-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "5430",
+    "3"
+   ],
+   "wall_s": 0.9252557754516602,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "iccs",
+    "instance": "pseudohash-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1724416",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1806336",
+    "measurement_count": "5430",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 5430,
+     "seconds": 0.922196282,
+     "cycles": 1930344320
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "performance/iccs/lib/libpseudohash-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "5430",
+    "3"
+   ],
+   "wall_s": 0.9250965118408203,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "iccs",
+    "instance": "pseudohash-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1552384",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1695744",
+    "measurement_count": "5430",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 5430,
+     "seconds": 0.921361491,
+     "cycles": 1929082811
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "performance/iccs/lib/libpseudohash-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "5430",
+    "3"
+   ],
+   "wall_s": 0.9240355491638184,
+   "disturbed_retries": 0
+  },
+  {
+   "status": "complete",
+   "exit_code": 0,
+   "meta": {
+    "id": "iccs",
+    "instance": "pseudohash-512",
+    "variant": "Reference_Implementation",
+    "operation": "hash",
+    "input_bytes": "8192",
+    "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+    "baseline_rss_bytes": "1712128",
+    "pk_bytes": "0",
+    "sk_bytes": "0",
+    "ct_bytes": "0",
+    "ss_bytes": "0",
+    "signature_bytes": "0",
+    "digest_bytes": "64",
+    "mode": "fixed_iterations",
+    "cpu_cycles_available": "yes",
+    "timing_scope": "loop",
+    "warmups": "3",
+    "peak_rss_bytes": "1794048",
+    "measurement_count": "5430",
+    "guide_100_measurements": "met"
+   },
+   "trials": [
+    {
+     "measurements": 5430,
+     "seconds": 0.924056667,
+     "cycles": 1934301411
+    }
+   ],
+   "stderr": "",
+   "command": [
+    "taskset",
+    "-c",
+    "2",
+    "performance/ngcc_perf",
+    "performance/iccs/lib/libpseudohash-512.so",
+    "hash",
+    "8192",
+    "1",
+    "1",
+    "5430",
+    "3"
+   ],
+   "wall_s": 0.9267435073852539,
+   "disturbed_retries": 0
+  }
+ ],
+ "trials": [
+  {
+   "measurements": 5430,
+   "seconds": 0.921275854,
+   "cycles": 1928657250
+  },
+  {
+   "measurements": 5430,
+   "seconds": 0.922403273,
+   "cycles": 1930988349
+  },
+  {
+   "measurements": 5430,
+   "seconds": 0.922196282,
+   "cycles": 1930344320
+  },
+  {
+   "measurements": 5430,
+   "seconds": 0.921361491,
+   "cycles": 1929082811
+  },
+  {
+   "measurements": 5430,
+   "seconds": 0.924056667,
+   "cycles": 1934301411
+  }
+ ],
+ "measurements": 27150,
+ "guide_100_measurements_met": true,
+ "mean_seconds": 0.00016984506692449355,
+ "median_trial_seconds": 0.0001698335694290976,
+ "min_trial_seconds": 0.00016966406151012892,
+ "max_trial_seconds": 0.0001701761817679558,
+ "mean_cycles": 355557.0586003683,
+ "median_trial_cycles": 355496.1915285451,
+ "operations_per_second": 5887.718837571896,
+ "throughput_MB_per_second": 48.232192717388976,
+ "sizes": {
+  "input_bytes": 8192,
+  "pk_bytes": 0,
+  "sk_bytes": 0,
+  "ct_bytes": 0,
+  "ss_bytes": 0,
+  "signature_bytes": 0,
+  "digest_bytes": 64
+ },
+ "kex": {},
+ "build_flags": "-std=c99 -Wpedantic -Wall -Wextra -O2 -fPIC -D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-int ",
+ "baseline_rss_bytes": 1724416,
+ "peak_rss_bytes": 1806336,
+ "timing_scope": "loop"
+}

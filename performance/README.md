@@ -15,10 +15,10 @@ Results are published per test system (`performance/systems.csv`):
 The [symmetric cryptography survey](symmetric-survey.md) records how each
 public-key submission implements its hashing and randomness (from
 `symmetric_survey.csv`), with the measured share of the ICCS placeholder
-functions. The compact summary also gives each 32-byte hash measurement
-relative to a published-profile `pseudoXOF` call with the same input and output
-width (with profile TSC ticks converted to the campaign's fixed-frequency core
-cycles); `summary_notes.csv` supplies brief per-instance interpretation notes.
+functions. The compact summary also times the ICCS helpers themselves at every
+hash message length and gives each hash measurement relative to `pseudoXOF`
+with the same message length and output width; `summary_notes.csv` supplies
+brief per-instance interpretation notes.
 The aggregate public-key tables omit non-ICCS variants whose measured
 operations never call a placeholder hash helper; their measurements remain on
 the per-candidate pages.
@@ -47,9 +47,16 @@ are the guide's S1–S8 lengths. Static and peak memory are process-level proxie
 (ELF image, VmHWM). The system's `method_<ID>.md` gives the details and
 limitations.
 
-The compact summary compares each hash candidate's 32-byte timing with an
-exact-shape `pseudoXOF` call from the published profiles. This does not estimate
-the cost of replacing every public-key helper call with that candidate. Several
+The ICCS helpers `sm3hash`, `pseudohash` and `pseudoXOF` (from `api/auxfunc.c`,
+unchanged) are built by `iccs/Makefile` as hash instances and timed exactly like
+a hash candidate at the S1–S8 lengths (`campaign.py baseline`, candidate id
+`iccs`); `pseudoXOF` is built at every digest width a hash candidate has, and
+`iccs/selftest.py` checks each against an independent model on OpenSSL's SM3
+first. The summary divides each hash candidate's cycles by those of `pseudoXOF`
+with the same output width and message length. (A dataset without these
+records falls back to the median profiled 32-byte `pseudoXOF` call.) This does
+not estimate the cost of replacing every public-key helper call with that
+candidate. Several
 hash submissions are not yet constant-time (e.g. table-based S-boxes), so their
 current timings are not production figures; brief notes flag known cases.
 
@@ -85,8 +92,10 @@ python3 performance/report.py performance/data/<ID>
 make -C performance check
 ```
 
-`campaign.py` phases are `build`, `calibrate`, `measure`, `profile` and
-`hashcost`, each resumable; `--defer` / `--deferred-only` move very slow
+`campaign.py` phases are `build`, `baseline`, `calibrate`, `measure`, `profile`
+and `hashcost`, each resumable; `baseline` added to an existing run refuses to
+measure unless the host state (CPU, clock limit, governor, turbo, SMT, counter
+access) matches that of the run's records; `--defer` / `--deferred-only` move very slow
 instances out of the way. Run directories (`performance/runs/`) are Git-ignored;
 `publish` copies the evidence that the reports cite — `campaign.json`,
 `build.json`, `records/`, `profile/`, `kat/` and `katcheck/` logs — into
@@ -101,6 +110,7 @@ the same scripts select the ARM guide flags, and the hash wrappers use
 |---|---|
 | `campaign.py` | build, KAT gate, calibration, measurement, profiling, publication |
 | `ngcc_perf.c` | the timing driver: one API operation per process, fixed iteration counts, KEX steps |
+| `iccs/` | the ICCS helpers as hash instances, and their self-test (`campaign.py baseline`) |
 | `hashprof/` | link-time wrappers and tools for the ICCS hash share ([README](hashprof/README.md)) |
 | `report.py` | renders `<id>/perf_<ID>.md`, `summary_<ID>.md`, `method_<ID>.md`, `symmetric-survey.md` |
 | `validate.py` | checks the published datasets and reports (above) and the source catalog |
